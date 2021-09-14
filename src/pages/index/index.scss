@@ -1,0 +1,15 @@
+.index{
+  flex-grow: 1;
+
+  &__banner{
+    margin-bottom: 80px;
+  }
+
+  &__better{
+    margin-bottom: 65px;
+  }
+}
+
+@import "blocks/banner";
+@import "blocks/better";
+@import "blocks/cats";

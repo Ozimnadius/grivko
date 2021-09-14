@@ -1,0 +1,45 @@
+.header{
+  background-color: $bg;
+  padding: 15px 0;
+
+  &__top{
+    .container{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+
+
+  &__nav{
+    display: flex;
+    gap: 30px;
+
+    &-item{
+      padding: 10px 0;
+      @include tr;
+
+      &:hover,&.active{
+        color: $link;
+      }
+    }
+  }
+
+  &__contacts{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__tel{
+    font-size: 20px;
+    @include tr;
+    &:hover{
+      color: $link;
+      transform: scale(1.6);
+      transform-origin: right;
+    }
+  }
+
+}

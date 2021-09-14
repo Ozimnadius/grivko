@@ -1,0 +1,8 @@
+.nav{
+  display: flex;
+
+  &__item{
+    color: $bg;
+    margin: 10px;
+  }
+}

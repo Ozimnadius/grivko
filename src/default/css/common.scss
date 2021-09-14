@@ -1,0 +1,24 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $bg;
+  width: 333px;
+  height: 58px;
+  color: $bg;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 300;
+  @include tr;
+
+  svg{
+    fill: currentColor;
+    margin-left: 15px;
+  }
+  
+  &:hover{
+    background: $bg;
+    color: $txt;
+  }
+
+}

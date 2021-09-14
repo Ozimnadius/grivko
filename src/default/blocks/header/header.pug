@@ -1,0 +1,23 @@
+//- heeader
+if isMain
+    header.header
+        .header__top
+            .container
+                .header__top-left
+                    nav.header__nav
+                        a(href="#").header__nav-item Для женщин
+                        a(href="#").header__nav-item Для мужчин
+                .header__top-center
+                    a(href="#").header__logo
+                        +image("images/content/logo.png")
+                .header__top-right.header__contacts
+                    .header__tel
+                        a(href="tel:+7495123-45-67") +7 495 123-45-67
+                    .header__langs
+                        include ../../../components/lang/index
+
+else
+    header.header.header--second
+        .header__top
+            .container
+                include ../nav/nav

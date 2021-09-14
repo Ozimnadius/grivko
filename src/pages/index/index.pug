@@ -1,0 +1,92 @@
+extends ../../main
+include mixins
+
+block variables
+    - var title = 'Главная'
+    - var isMain = true
+
+block content
+    main.index
+        //- banner
+        section.index__banner
+            .index-banner
+                .index-banner__container
+                    .index-banner__img
+                        +image("images/content/index/banner/img.jpg")
+                    .index-banner__wrap
+                        .index-banner__sub ДОМ МОДЫ LEONID GRIVKO
+                        h2.index-banner__title
+                            | Костюмы ручной работы
+                            br
+                            | для женщин и мужчин.
+                        .index-banner__txt
+                            | по индивидуальным меркам
+                            br
+                            | с гарантией идеальной посадки
+        //- better
+        section.index__better
+            .index-better
+                .container
+                    .index-better__grid
+                        -
+                            var list = [
+                                "Большой размерный ряд",
+                                "Коллекции костюмов Для Женщин",
+                                "Индивидуальный пошив Для мужчин",
+                            ];
+                        each i,x in list
+                            .index-better__item
+                                .index-better__pic
+                                    +image("images/content/index/better/"+(x+1)+".svg")
+                                .index-better__name= i
+        //- cats
+        section.index__cats
+            .index-cats
+                .container
+                    .index-cats__section
+                        h2.index-cats__title Для женщин
+                        .index-cats__list.index-cats__list--women
+                            -
+                                var list = [
+                                    {
+                                        title: "Готовые колекции",
+                                        txt: "Лучший выбор, чтобы подчеркнуть <br> высокий статус.",
+                                        img: "images/content/index/cats/w1.jpg"
+                                    },
+                                    {
+                                        title: "Индивидуальный пошив",
+                                        txt: "Шедевр для настоящих ценителей эксклюзива.",
+                                        img: "images/content/index/cats/w2.jpg"
+                                    },
+                                    {
+                                        title: "Большой размерный ряд",
+                                        txt: "от 38 до 54",
+                                        img: "images/content/index/cats/w3.jpg"
+                                    },
+
+                                ];
+                            each i in list
+                                .index-cats__item
+                                    +cat(i)
+                    .index-cats__section
+                        h2.index-cats__title Для мужчин
+                        .index-cats__list.index-cats__list
+                            -
+                                var list = [
+                                    {
+                                        title: "Индивидуальный пошив",
+                                        txt: "Шедевр для настоящих ценителей эксклюзива.",
+                                        img: "images/content/index/cats/m1.jpg"
+                                    },
+                                    {
+                                        title: "Обувь",
+                                        txt: "Ручной работы",
+                                        img: "images/content/index/cats/m2.jpg"
+                                    },
+                                ];
+                            each i in list
+                                .index-cats__item
+                                    +cat(i)
+
+
+
