@@ -10,9 +10,12 @@
 @import "default/blocks/header/header";
 @import "default/blocks/nav/nav";
 @import "default/blocks/footer/footer";
+@import "blocks/banner";
 
 //COMPONENTS
 @import "components/lang/style";
+@import "components/revs/style";
+
 
 //PAGES
 @import "pages/index/index";

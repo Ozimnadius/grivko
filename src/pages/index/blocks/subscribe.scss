@@ -1,0 +1,30 @@
+.index-subscribe{
+  .container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+  }
+
+  &__content{
+    @extend .index-about__content;
+    margin-left: 0;
+    margin-right: -80px;
+    padding-top: 65px;
+    padding-bottom: 210px;
+
+    &:after{
+      content: url("/images/content/index/subscribe/mail.png");
+      left: -70px;
+      bottom: -145px;
+    }
+
+    h2{
+      margin-bottom: 35px;
+    }
+  }
+
+  &__form{
+    margin-top: 65px;
+  }
+
+}

@@ -11,14 +11,29 @@
   font-weight: 300;
   @include tr;
 
-  svg{
-    fill: currentColor;
-    margin-left: 15px;
-  }
-  
   &:hover{
     background: $bg;
     color: $txt;
   }
 
+  &--black{
+    color: $txt;
+    border-color: $txt;
+
+    &:hover{
+      background: $txt;
+      color: $bg;
+    }
+  }
+
+
+  svg{
+    fill: currentColor;
+    margin-left: 15px;
+  }
+
+}
+
+.mb80{
+  margin-bottom: 80px;
 }
