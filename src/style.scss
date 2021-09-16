@@ -11,14 +11,20 @@
 @import "default/blocks/nav/nav";
 @import "default/blocks/footer/footer";
 @import "blocks/banner";
+@import "blocks/catalog";
+@import "blocks/item";
+@import "blocks/list";
+@import "blocks/fitting";
 
 //COMPONENTS
 @import "components/lang/style";
 @import "components/revs/style";
+@import "components/breadcrumbs/style";
 
 
 //PAGES
-@import "pages/index/index";
+@import "pages/index/style";
+@import "pages/women/style";
 
 
 .debug {

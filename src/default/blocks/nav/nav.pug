@@ -1,2 +1,6 @@
+- var nav = isWomen? navWomen: navMen
+
 nav.nav
-    .nav__item
+    each i in nav
+        .nav__item
+            a(href=i.href).nav__link= i.name

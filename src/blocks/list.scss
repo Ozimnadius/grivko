@@ -1,0 +1,30 @@
+.list{
+  padding: 0 100px;
+  display: flex;
+  justify-content: space-between;
+
+  &__item{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__img{
+    padding-left: 65px;
+    margin-bottom: 60px;
+  }
+
+  &__link{
+    padding: 17px 25px;
+    background-color: #bfa058;
+    color: $bg;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  &__txt{
+    font-size: 20px;
+  }
+}

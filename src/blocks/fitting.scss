@@ -1,0 +1,102 @@
+.fitting {
+
+  display: grid;
+  grid-template-columns: 8fr 4fr;
+
+  &__list {
+    display: grid;
+    grid-gap: 10px;
+  }
+
+  &__item {
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      display: block;
+      padding-top: calc(587 / 895 * 100%);
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 76.62%;
+      height: 100%;
+      background-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+      opacity: 0.5;
+      @include tr;
+    }
+
+    &:hover, &:focus, &:active {
+      &:after {
+        opacity: 0.75;
+      }
+
+      .fitting {
+
+        &__img {
+          img {
+            transform: scale(1.05);
+          }
+        }
+
+        &__btn{
+          background: $bg;
+          color: $txt;
+        }
+      }
+
+
+    }
+  }
+
+  &__img {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include tr;
+    }
+  }
+
+  &__desc {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    bottom: 0;
+    left: 80px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $bg;
+  }
+
+  &__title {
+    color: $bg;
+    margin-bottom: 20px;
+  }
+
+  &__txt {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+}
+
+.fitting-form {
+
+}

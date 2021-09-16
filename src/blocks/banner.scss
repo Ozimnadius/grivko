@@ -1,5 +1,13 @@
 .banner{
 
+  &--small{
+    .banner{
+      &__img{
+        padding-top: calc(588/1760*100%);
+      }
+    }
+  }
+
   &__container{
     max-width: 1760px;
     width: 100%;

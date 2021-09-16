@@ -35,6 +35,52 @@
 
 }
 
+.btn2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $bg;
+  background: $bg;
+  width: 333px;
+  height: 58px;
+  color: $bg;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 300;
+  @include tr;
+
+  &:hover,&:focus,&:active{
+    background: transparent;
+    color: $txt;
+  }
+
+  &--black{
+    background: $txt;
+    color: $txt;
+    border-color: $txt;
+
+    &:hover,&:focus,&:active{
+      background: transparent;
+      color: $bg;
+    }
+
+  }
+
+
+  svg{
+    fill: currentColor;
+    margin-left: 15px;
+  }
+
+}
+
+.title{
+  color: $txt;
+  font-size: 32px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
 .mb80{
   margin-bottom: 80px;
 }

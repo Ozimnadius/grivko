@@ -1,0 +1,23 @@
+.breadcrumbs{
+
+  &__item{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    &:hover,&:focus,&:active{
+      text-decoration: underline;
+    }
+
+    &--sep,&--active{
+      &:hover,&:focus,&:active{
+        text-decoration: initial;
+      }
+    }
+
+    &--active{
+      color: $link;
+    }
+  }
+}

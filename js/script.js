@@ -35,6 +35,10 @@ const jsTools = {
 (function(){
     console.log('INDEX.JS');
 }());
+//women.js
+(function(){
+    console.log('WOMEN.JS');
+}());
 //revs.js
 window.addEventListener("load", function (){
     console.log('REVS.JS');

@@ -2,6 +2,14 @@
   background-color: $bg;
   padding: 15px 0;
 
+  &--second{
+    padding: 0;
+    .header__top{
+      background-color: #e1e1e1;
+      padding: 8px 0;
+    }
+  }
+
   &__top{
     .container{
       display: flex;
@@ -19,6 +27,22 @@
 
     &-right{
       margin-right: 12px;
+    }
+  }
+
+  &__bottom{
+    padding: 15px 0;
+    .container{
+      display: flex;
+      align-items: center;
+    }
+
+    &-left{
+      margin-right: 110px;
+    }
+
+    &-center{
+      margin-right: auto;
     }
   }
 
