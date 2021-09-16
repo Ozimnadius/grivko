@@ -1,4 +1,82 @@
-.footer{
-  height: 200px;
-  background: $txt;
+.footer {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  &__top {
+    border-top: 1px solid #E1E1E1;
+    padding-top: 55px;
+    margin-bottom: 55px;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+    font-size: 20px;
+    padding: 10px 0;
+    @include tr;
+
+    &:hover, &:focus, &:active {
+      color: $link;
+    }
+  }
+
+  &__grid {
+    display: flex;
+    align-items: center;
+  }
+
+  &__left {
+    flex-shrink: 0;
+    margin-right: 55px;
+  }
+
+  &__logo{
+    width: 124px;
+    display: block;
+  }
+
+  &__center {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: 90px;
+    gap: 15px;
+  }
+
+  &__copy {
+    font-size: 20px;
+  }
+
+  &__policy{
+    font-size: 20px;
+    color: $link;
+    text-decoration: underline;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__contact {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    @include tr;
+
+    &:hover,&:focus,&:active{
+      color: $link;
+    }
+
+    svg {
+      margin-right: 7px;
+      fill: currentColor;
+    }
+  }
 }

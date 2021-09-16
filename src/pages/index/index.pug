@@ -9,7 +9,11 @@ block content
     main.index
         //- banner
         section.index__banner.mb80
-            +banner("images/content/index/banner/img.jpg")
+            +banner(
+                "images/content/index/banner/img.jpg",
+                "ДОМ МОДЫ LEONID GRIVKO",
+                "Костюмы ручной работы <br> для женщин и мужчин.",
+                "по индивидуальным меркам <br> с гарантией идеальной посадки")
         //- better
         section.index__better
             .index-better
@@ -24,7 +28,7 @@ block content
                         each i,x in list
                             .index-better__item
                                 .index-better__pic
-                                    +image("images/content/index/better/"+(x+1)+".svg")
+                                    +image("images/content/index/better/" + (x + 1) + ".svg")
                                 .index-better__name= i
         //- cats
         section.index__cats.mb80
@@ -101,15 +105,16 @@ block content
                         .index-subscribe__content
                             h2 Подпишитесь на рассылку, мы расскажем много интересного.
                             p
-                                |Одежда для нас – особый атрибут, в каждой детали которого
+                                | Одежда для нас – особый атрибут, в каждой детали которого
                                 br
-                                |кроется история, труд и люди, влюбленные в то, что делают.
+                                | кроется история, труд и люди, влюбленные в то, что делают.
                             form.index-subscribe__form
                                 .index-subscribe__field
-                                    input(type="email" name="email" placeholder="E-mail").input
+                                    input(type="email" name="email" placeholder="E-mail" required).input
                                 .index-subscribe__policy
-                                    |Нажимая на кнопку, вы принимаете
-                                    a(href="#") Нажимая на кнопку, вы принимаете
+                                    | Нажимая на кнопку, вы принимаете
+                                    |
+                                    a(href="#") политику конфиденциальности
                                 button(type='submit').index-subscribe__submit.btn.btn--black
                                     span Подписка на рассылку
                                     <svg width="26" height="9" viewBox="0 0 26 9" xmlns="http://www.w3.org/2000/svg">

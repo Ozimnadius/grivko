@@ -13,18 +13,12 @@ mixin image(imagePath, imageClass, imageAlt)
         - var alt = imageAlt
     img(src=`${imagePath}`, alt=`${alt}`, class=`${imageClass}`)
 
-mixin banner(img)
+mixin banner(img, sub,title,txt)
     .banner
         .banner__container
             .banner__img
                 +image(img)
             .banner__wrap
-                .banner__sub ДОМ МОДЫ LEONID GRIVKO
-                h2.banner__title
-                    | Костюмы ручной работы
-                    br
-                    | для женщин и мужчин.
-                .banner__txt
-                    | по индивидуальным меркам
-                    br
-                    | с гарантией идеальной посадки
+                .banner__sub!=sub
+                h2.banner__title!=title
+                .banner__txt!=txt

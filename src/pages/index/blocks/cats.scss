@@ -11,7 +11,7 @@
     font-size: 32px;
     font-weight: 500;
     text-transform: uppercase;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
 
   &__list{
@@ -20,7 +20,7 @@
     grid-gap: 8px;
 
     &--women{
-      grid-template-rows: 339fr 339fr 293fr;
+      grid-template-rows: 342fr 342fr 296fr;
       grid-template-areas: "first second" "first second" "third second";
 
       .index-cats__item {
@@ -72,7 +72,7 @@
   height: 100%;
   overflow: hidden;
 
-  &:hover{
+  &:hover,&:focus,&:active {
     .index-cat{
 
       &__img{

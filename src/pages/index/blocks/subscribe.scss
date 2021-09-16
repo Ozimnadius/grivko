@@ -1,8 +1,40 @@
 .index-subscribe{
+
+  &:hover,&:focus,&:active{
+    .index-subscribe{
+
+      &__img{
+        img{
+          transform: scale(1.05);
+        }
+      }
+
+      &__content{
+        &:after{
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+
   .container{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     align-items: center;
+  }
+
+  &__left{
+    position: relative;
+    z-index: 1;
+  }
+
+  &__img{
+    overflow: hidden;
+    img{
+      display: block;
+      width: 100%;
+      @include tr;
+    }
   }
 
   &__content{
@@ -25,6 +57,21 @@
 
   &__form{
     margin-top: 65px;
+  }
+
+  &__field{
+    margin-bottom: 30px;
+  }
+
+  &__policy{
+    margin-bottom: 30px;
+    a{
+      color: $link;
+    }
+  }
+
+  &__submit{
+    width: 317px;
   }
 
 }

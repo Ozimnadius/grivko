@@ -7,23 +7,39 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
+    }
+
+    &-center{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+
+    &-right{
+      margin-right: 12px;
     }
   }
-
-
 
   &__nav{
     display: flex;
     gap: 30px;
 
     &-item{
+      font-size: 20px;
       padding: 10px 0;
       @include tr;
 
-      &:hover,&.active{
+      &:hover,&:focus,&:active    ,&.active{
         color: $link;
       }
     }
+  }
+
+  &__logo{
+    display: block;
+    width: 108px;
   }
 
   &__contacts{

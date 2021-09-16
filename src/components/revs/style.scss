@@ -10,6 +10,7 @@
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
+    padding-top: 18px;
   }
 
   &__right{
@@ -21,7 +22,7 @@
     font-size: 32px;
     font-weight: 500;
     text-transform: uppercase;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
   }
 
   &__sub{
@@ -61,7 +62,7 @@
     justify-content: center;
     @include tr;
 
-    &:hover{
+    &:hover,&:focus,&:active{
       transform: scale(1.125);
       box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     }
@@ -98,8 +99,7 @@
     @include tr;
   }
 
-  &:hover{
-
+  &:hover,&:focus,&:active{
     &:before{
       height: 72.6%;
       opacity: 1;
