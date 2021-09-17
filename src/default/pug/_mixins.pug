@@ -18,19 +18,23 @@ mixin image(imagePath, imageClass, imageAlt)
         - var cls = imageClass
     img(src=`${imagePath}`, alt=`${alt}`, class=`${cls}`)
 
-mixin banner(imgPath, sub,title,txt, dopCls)
-    div(class=dopCls).banner
+mixin banner(props)
+    div(class=props.dopCls).banner
         .banner__container
             .banner__img
                 picture
-                  source(srcset=imgPath+'img375.jpg' media='(max-width: 767.98px)')
-                  source(srcset=imgPath+'img768.jpg' media='(max-width: 1279.98px)')
-                  source(srcset=imgPath+'img1280.jpg' media='(max-width: 1919.98px)')
-                  img(src=imgPath+'img.jpg' alt='')
+                  source(srcset=props.imgPath+'img375.jpg' media='(max-width: 767.98px)')
+                  source(srcset=props.imgPath+'img768.jpg' media='(max-width: 1279.98px)')
+                  source(srcset=props.imgPath+'img1280.jpg' media='(max-width: 1919.98px)')
+                  img(src=props.imgPath+'img.jpg' alt='')
             .banner__wrap
-                .banner__sub!=sub
-                h2.banner__title!=title
-                .banner__txt!=txt
+                .banner__sub!=props.sub
+                h2.banner__title!=props.title
+                if props.txt
+                    .banner__txt!=props.txt
+                if props.big
+                    .banner__big!=props.big
+
 
 mixin item(i)
     a(href=i.href).item
@@ -46,7 +50,7 @@ mixin item(i)
                 </svg>
 
 mixin catalog(props)
-    .catalog
+    div(class=props.cls).catalog
         .container
             .catalog__top
                 h2.title.catalog__title= props.title
@@ -90,23 +94,21 @@ mixin fitting(props)
                                 <path id="Контур_154"d="M25.271,3.758,21.683.17a.579.579,0,0,0-.819.819l2.6,2.6H.579a.579.579,0,0,0,0,1.159H23.463l-2.6,2.6a.579.579,0,1,0,.819.819l3.588-3.588A.579.579,0,0,0,25.271,3.758Z" />
                                 </svg>
         .fitting__right
-            .fitting__wrap
+            .fitting__content.bordered
                 form.fitting__form.fitting-form
-                    .fitting-form__title
+                    .fitting-form__title.title
                         | записаться
                         br
                         | в бутик на примерку
                     .fitting-form__txt
                         | На ней мы узнаем о ваших предпочтениях
-                        br
                         | и пожеланиях, снимем мерки
-                        br
                         | и после этого приступим к исполнению.
                     .fitting-form__fields
                         .fitting-form__field
-                            input(type="text" name="name" placeholder="Имя").input
+                            input(type="text" name="name" placeholder="Имя" required).input
                         .fitting-form__field
-                            input(type="tel" name="tel" placeholder="Телефон").input
+                            input(type="tel" name="tel" placeholder="Телефон" required).input
                         .fitting-form__field
                             textarea(name="message" placeholder="Напишите удобный день и время").input.input--area
                     button(type='submit').fitting-form__submit.btn2.btn2--black

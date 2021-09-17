@@ -7,7 +7,6 @@
   height: 58px;
   color: $bg;
   font-family: Roboto;
-  font-size: 20px;
   font-weight: 300;
   @include tr;
 
@@ -45,7 +44,6 @@
   height: 58px;
   color: $bg;
   font-family: Roboto;
-  font-size: 20px;
   font-weight: 300;
   @include tr;
 
@@ -56,12 +54,12 @@
 
   &--black{
     background: $txt;
-    color: $txt;
+    color: $bg ;
     border-color: $txt;
 
     &:hover,&:focus,&:active{
       background: transparent;
-      color: $bg;
+      color: $txt;
     }
 
   }
@@ -97,7 +95,13 @@
   font-weight: 300;
   padding: 0 30px;
   border: 1px solid transparent;
+  resize: none;
   @include tr;
+
+  &--area{
+    height: 123px;
+    padding-top: 20px;
+  }
 
   &:focus{
     border-color: $link;

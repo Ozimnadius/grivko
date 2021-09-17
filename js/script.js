@@ -1,5 +1,7 @@
 //USER
 
+//COMPONENTS
+
 // common.js
 const jsTools = {
     getNumber: function (str) {
@@ -31,14 +33,11 @@ const jsTools = {
         return km + kw + kd;
     }
 };
-//index.js
-(function(){
-    console.log('INDEX.JS');
-}());
-//women.js
-(function(){
-    console.log('WOMEN.JS');
-}());
+
+window.addEventListener("load", function (){
+    $('.input[type="tel"]').inputmask("+7(999)999-99-99");
+});
+
 //revs.js
 window.addEventListener("load", function (){
     console.log('REVS.JS');
@@ -81,5 +80,9 @@ window.addEventListener("load", function (){
 
 
 
+});
+//choose.js
+window.addEventListener("load", function (){
+    console.log('CHOOSE.JS');
 });
 //# sourceMappingURL=script.js.map

@@ -1,0 +1,106 @@
+.corsettech {
+
+  background: url("/images/content/bordered/bg.png") 0 0;
+  padding: 80px;
+  display: grid;
+  grid-template-columns: 754fr 787fr;
+  grid-gap: 60px;
+
+  &__img{
+    margin-bottom: 70px;
+
+    img{
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &__title{
+    width: 100%;
+    height: 107px;
+    background-color: $gold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    color: $bg;
+    text-transform: uppercase;
+    text-align: center;
+
+    margin-bottom: 35px;
+  }
+
+  &__video{
+    width: 100%;
+    display: block;
+    padding-top: calc(640/787*100%);
+    position: relative;
+    color: $bg;
+    overflow: hidden;
+
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 58.125%;
+      background-image: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+      opacity: 0.32;
+    }
+
+    &:hover{
+
+      &:before{
+        height: 90%;
+        opacity: .75;
+      }
+
+      img{
+        transform: scale(1.05);
+      }
+
+      .corsettech__video-btn{
+        color: $gold;
+      }
+    }
+
+    img{
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include tr;
+    }
+
+    &-btn{
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      color: $bg;
+
+      svg{
+        fill: currentColor;
+        @include tr;
+      }
+    }
+
+    &-txt{
+      position: absolute;
+      z-index: 2;
+      bottom: 60px;
+      left: 70px;
+    }
+  }
+
+
+}

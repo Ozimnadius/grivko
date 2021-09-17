@@ -29,7 +29,6 @@
     }
   }
 
-
   &__wrap {
     background-color: $bg;
     display: flex;
@@ -46,8 +45,16 @@
     display: block;
     margin-bottom: 4px;
     overflow: hidden;
-    padding-top: calc(487/264*100%);
+
     position: relative;
+
+    &:before{
+      content: "";
+      display: block;
+      padding-top: calc(487/264*100%);
+      width: 100%;
+
+    }
 
     img {
       display: block;
@@ -63,12 +70,11 @@
 
   &__title {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   &__price {
     width: 100%;
-    font-size: 20px;
     margin-bottom: 30px;
   }
 
@@ -80,9 +86,8 @@
     justify-content: center;
     border: 1px solid $txt;
     flex-shrink: 0;
-
-    font-size: 20px;
     color: $txt;
+    margin-top: auto;
 
     svg {
       fill: currentColor;

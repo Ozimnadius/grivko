@@ -1,5 +1,6 @@
 //USER
 // @prepros-append default/js/common.js
-// @prepros-append pages/index/script.js
-// @prepros-append pages/women/script.js
+
+//COMPONENTS
 // @prepros-append components/revs/script.js
+// @prepros-append components/choose/script.js

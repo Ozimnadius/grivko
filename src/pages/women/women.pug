@@ -1,4 +1,4 @@
-extends ../../main
+extends ./../../main
 
 block variables
     - var title = 'Для женщин'
@@ -8,12 +8,15 @@ block content
     main.women
         //- banner
         section.women__banner
-            +banner(
-                "images/content/women/banner/",
-                "ДОМ МОДЫ LEONID GRIVKO",
-                "Мода для женщин",
-                "«Мы используем собственные <br> разработки для идеальной посадки <br> на любую фигуру, лучшие ткани <br> и вдохновляющих людей».",
-                "banner--small")
+            -
+                var props = {
+                    imgPath: "/images/content/women/banner/",
+                    sub: "ДОМ МОДЫ LEONID GRIVKO",
+                    title: "Мода для женщин",
+                    big: "«Мы используем собственные <br> разработки для идеальной посадки <br> на любую фигуру, лучшие ткани <br> и вдохновляющих людей».",
+                    dopCls: "banner--small"
+                };
+            +banner(props)
         //- breadcrumbs
         section.women__breadcrumbs
             .container
@@ -26,49 +29,49 @@ block content
                     txt: "Шедевр для настоящих ценителей эксклюзива.",
                     list: [
                         {
-                            img: "images/content/women/collections/1.jpg",
+                            img: "/images/content/women/collections/1.jpg",
                             title: "Пальто",
                             price: "от 75 000 руб.",
                             href: "/"
                         },
                         {
-                            img: "images/content/women/collections/2.jpg",
+                            img: "/images/content/women/collections/2.jpg",
                             title: "Пиджаки",
                             price: "от 75 000 руб.",
                             href: "/"
                         },
                         {
-                            img: "images/content/women/collections/3.jpg",
+                            img: "/images/content/women/collections/3.jpg",
                             title: "Сорочки",
                             price: "от 75 000 руб.",
                             href: "/"
                         },
                         {
-                            img: "images/content/women/collections/4.jpg",
+                            img: "/images/content/women/collections/4.jpg",
                             title: "Жилеты",
                             price: "от 75 000 руб.",
                             href: "/"
                         },
                         {
-                            img: "images/content/women/collections/5.jpg",
+                            img: "/images/content/women/collections/5.jpg",
                             title: "Костюмы",
                             price: "от 75 000 руб.",
                             href: "/"
                         },
                         {
-                            img: "images/content/women/collections/6.jpg",
+                            img: "/images/content/women/collections/6.jpg",
                             title: "Смокинги",
                             price: "от 75 000 руб.",
                             href: "/"
                         },
                         {
-                            img: "images/content/women/collections/7.jpg",
+                            img: "/images/content/women/collections/7.jpg",
                             title: "Брюки",
                             price: "от 75 000 руб.",
                             href: "/"
                         },
                         {
-                            img: "images/content/women/collections/8.jpg",
+                            img: "/images/content/women/collections/8.jpg",
                             title: "Обувь",
                             price: "от 75 000 руб.",
                             href: "/"
@@ -87,7 +90,7 @@ block content
                     var list = {
                         list: [
                             {
-                                img: "images/content/women/list/1.jpg",
+                                img: "/images/content/women/list/1.jpg",
                                 link: {
                                     href: "/",
                                     name: "В бутике"
@@ -95,7 +98,7 @@ block content
                                 txt: "Представлен весь ассортимент <br> готовой коллекции"
                             },
                             {
-                                img: "images/content/women/list/2.jpg",
+                                img: "/images/content/women/list/2.jpg",
                                 link: {
                                     href: "/",
                                     name: "Доставкой"
@@ -103,7 +106,7 @@ block content
                                 txt: "Отправим выбранные на сайте образы <br> в любую точку мира"
                             },
                             {
-                                img: "images/content/women/list/3.jpg",
+                                img: "/images/content/women/list/3.jpg",
                                 link: {
                                     href: "/",
                                     name: "Пошив на заказ"
@@ -115,19 +118,19 @@ block content
                     };
                 +list(list)
         //- fitting
-        section.women__fitting
+        section.women__fitting.mb80
             .container
                 -
                     var props = {
                         list: [
                             {
-                                img: "images/content/women/fitting/1.jpg",
+                                img: "/images/content/women/fitting/1.jpg",
                                 href: "/",
                                 title: "Одежда больших размеров",
                                 txt: "от 38 до 54"
                             },
                             {
-                                img: "images/content/women/fitting/2.jpg",
+                                img: "/images/content/women/fitting/2.jpg",
                                 href: "/",
                                 title: "Индивидуальный пошив",
                                 txt: "Шедевр для настоящих ценителей эксклюзива."
@@ -135,4 +138,15 @@ block content
                         ]
                     };
                 +fitting(props)
-
+        //- tech
+        section.women__tech.mb80
+            .container
+                include ../../components/corsettech/index
+        //- revs
+        section.women__revs.mb80
+            .container
+                include ../../components/revs/index
+        //- signup
+        section.women__signup
+            .container
+                include ../../components/signup/index

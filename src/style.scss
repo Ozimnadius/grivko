@@ -11,6 +11,7 @@
 @import "default/blocks/nav/nav";
 @import "default/blocks/footer/footer";
 @import "blocks/banner";
+@import "blocks/bordered";
 @import "blocks/catalog";
 @import "blocks/item";
 @import "blocks/list";
@@ -19,7 +20,11 @@
 //COMPONENTS
 @import "components/lang/style";
 @import "components/revs/style";
+@import "components/subscribe/style";
 @import "components/breadcrumbs/style";
+@import "components/corsettech/style";
+@import "components/signup/style";
+@import "components/choose/style";
 
 
 //PAGES

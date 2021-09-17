@@ -1,0 +1,65 @@
+.signup{
+  //border: 32px solid $bg;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+  background-color: $bg;
+  padding: 32px;
+
+  &__wrap{
+    padding: 80px;
+    padding-right: 145px;
+    background: url("/images/content/bordered/bg.png") 0 0;
+    position: relative;
+
+    &:before{
+      content: 'Бесплатно';
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 65px;
+      height: 100%;
+      background-color: $gold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $bg;
+      font-weight: 700;
+      writing-mode:vertical-rl;
+      transform: rotate(180deg);
+    }
+
+    &:after{
+      content: '';
+      display: block;
+      width: 481px;
+      height: 213px;
+      background: url("/images/content/women/fitting/img.png") 0 0 no-repeat;
+      background-size: cover;
+      position: absolute;
+      right: 135px;
+      top: -25px;
+    }
+
+  }
+
+  &__title{
+    margin-bottom: 15px;
+  }
+
+  &__txt{
+    margin-bottom: 30px;
+  }
+
+  &__fields{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    grid-gap: 10px;
+
+    margin-bottom: 10px;
+  }
+
+  &__submit{
+    width: 319px;
+    height: 74px;
+  }
+}

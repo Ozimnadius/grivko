@@ -3,15 +3,17 @@
   padding-top: 65px;
   padding-bottom: 40px;
 
+  &--small-title{
+    .item__title{
+      font-size: 24px;
+    }
+  }
+
   &__top{
     display: flex;
     align-items: baseline;
     gap: 30px;
     margin-bottom: 65px;
-  }
-
-  &__txt{
-    font-size: 20px;
   }
 
   &__list{

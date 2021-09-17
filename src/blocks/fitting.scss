@@ -2,6 +2,7 @@
 
   display: grid;
   grid-template-columns: 8fr 4fr;
+  align-items: center;
 
   &__list {
     display: grid;
@@ -15,7 +16,8 @@
     &:before {
       content: '';
       display: block;
-      padding-top: calc(587 / 895 * 100%);
+      width: 100%;
+      padding-top: calc(587 / 1168 * 100%);
     }
 
     &:after {
@@ -91,12 +93,63 @@
   }
 
   &__txt {
-    font-size: 20px;
     margin-bottom: 30px;
+  }
+
+  &__right{
+    margin-left: -65px;
+  }
+
+  &__content{
+    padding: 70px 60px 240px;
+    margin-bottom: 15px;
+    position: relative;
+
+    &:before{
+      content: 'Бесплатно';
+      position: absolute;
+      top: 65px;
+      right: -65px;
+      width: 65px;
+      height: 209px;
+      background-color: $gold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $bg;
+      font-weight: 700;
+      writing-mode:vertical-rl;
+      transform: rotate(180deg);
+    }
+
+    &:after{
+      content: '';
+      display: block;
+      width: 392px;
+      height: 174px;
+      background: url("/images/content/women/fitting/img.png") 0 0 no-repeat;
+      background-size: cover;
+      position: absolute;
+      bottom: -105px;
+      right: -65px;
+    }
   }
 
 }
 
 .fitting-form {
 
+  &__title{
+    margin-bottom: 15px;
+  }
+
+  &__txt{
+    margin-bottom: 15px;
+  }
+
+  &__fields{
+    display: grid;
+    grid-gap: 10px;
+    margin-bottom: 50px;
+  }
 }

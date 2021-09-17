@@ -15,7 +15,6 @@
   }
 
   &__item {
-    font-size: 20px;
     padding: 10px 0;
     @include tr;
 
@@ -48,11 +47,9 @@
   }
 
   &__copy {
-    font-size: 20px;
   }
 
   &__policy{
-    font-size: 20px;
     color: $link;
     text-decoration: underline;
   }
@@ -65,7 +62,6 @@
   }
 
   &__contact {
-    font-size: 20px;
     display: flex;
     align-items: center;
     @include tr;

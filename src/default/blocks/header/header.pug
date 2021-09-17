@@ -5,11 +5,11 @@ if isMain
             .container
                 .header__top-left
                     nav.header__nav
-                        a(href="/women.html").header__nav-item Для женщин
-                        a(href="/men.html").header__nav-item Для мужчин
+                        a(href="/women/").header__nav-item Для женщин
+                        a(href="/men/").header__nav-item Для мужчин
                 .header__top-center
                     a(href="/").header__logo
-                        +image("images/content/logo.png")
+                        +image("/images/content/logo.png")
                 .header__top-right.header__contacts
                     .header__tel
                         a(href="tel:+7495123-45-67") +7 495 123-45-67
@@ -21,13 +21,13 @@ else
         .header__top
             .container
                 nav.header__nav
-                    a(href="/women.html").header__nav-item Для женщин
-                    a(href="/men.html").header__nav-item Для мужчин
+                    a(href="/women/").header__nav-item Для женщин
+                    a(href="/men/").header__nav-item Для мужчин
         .header__bottom
             .container
                 .header__bottom-left
                     a(href="/").header__logo
-                        +image("images/content/logo.png")
+                        +image("/images/content/logo.png")
                 .header__bottom-center
                     include ../nav/nav
                 .header__bottom-right.header__contacts

@@ -1,0 +1,10 @@
+.choose-models
+    each i,x in ["Костюм однобортный с брюками","Костюм двубортный с брюками","Костюм тройка с брюками","Костюм с юбкой"]
+        .choose-models__item
+            label.choose-model
+                input(type="radio" name="model" value=i checked=(x==0)?true:false)
+                span.choose-model__wrap
+                    span.choose-model__round
+                    span.choose-model__img
+                        +image("/images/content/choose/model.jpg")
+                    span.choose-model__name=i

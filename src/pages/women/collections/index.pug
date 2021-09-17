@@ -1,0 +1,199 @@
+extends ../../../main
+
+block variables
+    - var title = 'Для женщин'
+    - var isWomen = true
+
+block content
+    main.collections
+        //- desc
+        section.collections__desc
+            .container
+                h2.collections__title.title Готовые коллекции женской одежды
+                .collections__breadcrumbs
+                    include ../../../components/breadcrumbs/index
+                .collections__content.content
+                    p При разработке моделей для коллекций мы учли особенности всех типов фигур женщин, а также разработали уникальную корсетную технологию пошива, чтобы обеспечить идеальную посадку одежды на любую фигуру и рост. Также мы работаем с лучшими производителями и выбираем лучших людей, чтобы наша одежда радовала вас долго
+        //- list
+        section.collections__list.mb80
+            -
+                var list = [
+                    {
+                        title: "Коллекции",
+                        link: {
+                            href: "/",
+                            name: "Открыть всю коллекцию"
+                        },
+                        list:[
+                            {
+                                img: "/images/content/women/collections/9.jpg",
+                                title: "КОСТЮМ-ТРОЙКА",
+                                price: "от 75 000 руб.",
+                                href: "/"
+                            },
+                            {
+                                img: "/images/content/women/collections/10.jpg",
+                                title: "ОДНОБОРТНЫЙ КОСТЮМ",
+                                price: "от 75 000 руб.",
+                                href: "/"
+                            },
+                            {
+                                img: "/images/content/women/collections/11.jpg",
+                                title: "ОДНОБОРТНЫЙ КОСТЮМ",
+                                price: "от 75 000 руб.",
+                                href: "/"
+                            },
+                            {
+                                img: "/images/content/women/collections/12.jpg",
+                                title: "КОСТЮМ-ТРОЙКА",
+                                price: "от 75 000 руб.",
+                                href: "/"
+                            }
+                        ],
+                        cls: "catalog--small-title"
+                    },
+                    {
+                        title: "Жакеты",
+                        link: {
+                            href: "/",
+                            name: "Посмотреть больше"
+                        },
+                        list:[
+                            {
+                                img: "/images/content/women/collections/13.jpg",
+                                title: "ЖАКЕТ С ЮБКОЙ",
+                                price: "от 75 000 руб.",
+                                href: "/"
+                            },
+                            {
+                                img: "/images/content/women/collections/14.jpg",
+                                title: "ЖАКЕТ С ПЛАТЬЕМ",
+                                price: "от 75 000 руб.",
+                                href: "/"
+                            },
+                            {
+                                img: "/images/content/women/collections/15.jpg",
+                                title: "ЖАКЕТ С ЮБКОЙ",
+                                price: "от 75 000 руб.",
+                                href: "/"
+                            },
+                            {
+                                img: "/images/content/women/collections/16.jpg",
+                                title: "ЖАКЕТ С ЮБКОЙ",
+                                price: "от 75 000 руб.",
+                                href: "/"
+                            }
+                        ],
+                        cls: "catalog--small-title"
+                    },
+                    {
+                        title: "Брюки",
+                        link: {
+                            href: "/",
+                            name: "Посмотреть больше"
+                        },
+                        list:[
+                            {
+                                img: "/images/content/women/collections/17.jpg",
+                                title: "Брюки",
+                                price: "от 75 000 руб.",
+                                href: "/"
+                            },
+                            {
+                                img: "/images/content/women/collections/18.jpg",
+                                title: "Брюки",
+                                price: "от 75 000 руб.",
+                                href: "/"
+                            },
+                            {
+                                img: "/images/content/women/collections/19.jpg",
+                                title: "Брюки",
+                                price: "от 75 000 руб.",
+                                href: "/"
+                            },
+                            {
+                                img: "/images/content/women/collections/20.jpg",
+                                title: "Брюки",
+                                price: "от 75 000 руб.",
+                                href: "/"
+                            }
+                        ],
+                        cls: "catalog--small-title"
+                    },
+                    {
+                        title: "Платья",
+                        link: {
+                            href: "/",
+                            name: "Посмотреть больше"
+                        },
+                        list:[
+                            {
+                                img: "/images/content/women/collections/21.jpg",
+                                title: "ПЛАТЬЕ-ПИДЖАК",
+                                price: "от 75 000 руб.",
+                                href: "/"
+                            },
+                            {
+                                img: "/images/content/women/collections/22.jpg",
+                                title: "ПЛАТЬЕ ФУТЛЯР",
+                                price: "от 75 000 руб.",
+                                href: "/"
+                            },
+                            {
+                                img: "/images/content/women/collections/23.jpg",
+                                title: "ПЛАТЬЕ ФУТЛЯР",
+                                price: "от 75 000 руб.",
+                                href: "/"
+                            },
+                            {
+                                img: "/images/content/women/collections/24.jpg",
+                                title: "ПЛАТЬЕ ФУТЛЯР",
+                                price: "от 75 000 руб.",
+                                href: "/"
+                            }
+                        ],
+                        cls: "catalog--small-title"
+                    },
+                    {
+                        title: "Жилеты",
+                        link: {
+                            href: "/",
+                            name: "Посмотреть больше"
+                        },
+                        list:[
+                            {
+                                img: "/images/content/women/collections/25.jpg",
+                                title: "ЖИЛЕТ С БРЮКАМИ",
+                                price: "от 75 000 руб.",
+                                href: "/"
+                            },
+                            {
+                                img: "/images/content/women/collections/26.jpg",
+                                title: "ЖИЛЕТ С БРЮКАМИ",
+                                price: "от 75 000 руб.",
+                                href: "/"
+                            },
+                            {
+                                img: "/images/content/women/collections/27.jpg",
+                                title: "ЖИЛЕТ С БАНТОМ",
+                                price: "от 75 000 руб.",
+                                href: "/"
+                            },
+                            {
+                                img: "/images/content/women/collections/28.jpg",
+                                title: "ЖИЛЕТ С ЮБКОЙ",
+                                price: "от 75 000 руб.",
+                                href: "/"
+                            }
+                        ],
+                        cls: "catalog--small-title"
+                    },
+                ]
+            each i in list
+                .collections__item
+                    +catalog(i)
+        //- choose
+        section.collections__choose
+            .container
+                include ../../../components/choose/index
+

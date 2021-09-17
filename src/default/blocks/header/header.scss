@@ -51,7 +51,6 @@
     gap: 30px;
 
     &-item{
-      font-size: 20px;
       padding: 10px 0;
       @include tr;
 
@@ -73,12 +72,12 @@
   }
 
   &__tel{
-    font-size: 20px;
+    transform-origin: right;
     @include tr;
     &:hover{
       color: $link;
       transform: scale(1.6);
-      transform-origin: right;
+
     }
   }
 

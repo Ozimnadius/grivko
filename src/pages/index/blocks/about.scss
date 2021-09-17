@@ -33,16 +33,10 @@
   }
 
   &__right {
+    margin-left: -80px;
   }
 
   &__content {
-    background: $bg url("/images/content/index/about/bg.png") 0 0;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
-    border: 65px solid $bg;
-    padding: 70px 65px 110px 65px;
-    margin-left: -80px;
-    position: relative;
-
     &:after {
       content: url("/images/content/index/about/dummy.png");
       display: block;
@@ -50,26 +44,6 @@
       bottom: -85px;
       left: calc(100% - 45px);
       @include tr;
-    }
-
-    h2 {
-      font-size: 32px;
-      text-transform: uppercase;
-      margin-bottom: 15px;
-      line-height: 1.2;
-    }
-
-    p {
-      font-size: 20px;
-      margin-bottom: 25px;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-
-      b {
-        font-weight: 500;
-      }
     }
   }
 }
