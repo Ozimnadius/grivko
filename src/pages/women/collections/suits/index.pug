@@ -1,0 +1,99 @@
+extends ../../../../main
+
+block variables
+    - var title = 'Женские костюмы'
+    - var isWomen = true
+
+block content
+    main.suits
+        //- desc
+        section.collections__desc
+            .container
+                h2.collections__title.title Женские костюмы
+                .collections__breadcrumbs
+                    include ../../../../components/breadcrumbs/index
+                .collections__content.content
+                    p Наша цель — подарить миру идеальные костюмы, подчёркивающие образ и индивидуальность каждой женщины. Команда бренда провела колоссальную работу и создала коллекцию костюмов, сочетающую красоту, элегантность и неповторимый запоминающийся стиль
+        //- catalog
+        section.suits__catalog
+            -
+                var i = {
+                    filters: true,
+                    list: [
+                        {
+                            img: "/images/content/women/collections/9.jpg",
+                            title: "КОСТЮМ-ТРОЙКА",
+                            price: "от 75 000 руб.",
+                            href: "/"
+                        },
+                        {
+                            img: "/images/content/women/collections/10.jpg",
+                            title: "ОДНОБОРТНЫЙ КОСТЮМ",
+                            price: "от 75 000 руб.",
+                            href: "/"
+                        },
+                        {
+                            img: "/images/content/women/collections/11.jpg",
+                            title: "ОДНОБОРТНЫЙ КОСТЮМ",
+                            price: "от 75 000 руб.",
+                            href: "/"
+                        },
+                        {
+                            img: "/images/content/women/collections/12.jpg",
+                            title: "ОДНОБОРТНЫЙ КОСТЮМ",
+                            price: "от 75 000 руб.",
+                            href: "/"
+                        },
+                        {
+                            img: "/images/content/women/collections/21.jpg",
+                            title: "ОДНОБОРТНЫЙ КОСТЮМ",
+                            price: "от 75 000 руб.",
+                            href: "/"
+                        },
+                        {
+                            img: "/images/content/women/collections/29.jpg",
+                            title: "ОДНОБОРТНЫЙ КОСТЮМ",
+                            price: "от 75 000 руб.",
+                            href: "/"
+                        },
+                        {
+                            img: "/images/content/women/collections/30.jpg",
+                            title: "ОДНОБОРТНЫЙ КОСТЮМ",
+                            price: "от 75 000 руб.",
+                            href: "/"
+                        },
+                        {
+                            img: "/images/content/women/collections/31.jpg",
+                            title: "ОДНОБОРТНЫЙ КОСТЮМ",
+                            price: "от 75 000 руб.",
+                            href: "/"
+                        },
+                        {
+                            img: "/images/content/women/collections/32.jpg",
+                            title: "ОДНОБОРТНЫЙ КОСТЮМ",
+                            price: "от 75 000 руб.",
+                            href: "/"
+                        },
+                        {
+                            img: "/images/content/women/collections/33.jpg",
+                            title: "ОДНОБОРТНЫЙ КОСТЮМ",
+                            price: "от 75 000 руб.",
+                            href: "/"
+                        },
+                        {
+                            img: "/images/content/women/collections/34.jpg",
+                            title: "ОДНОБОРТНЫЙ КОСТЮМ",
+                            price: "от 75 000 руб.",
+                            href: "/"
+                        },
+                        {
+                            img: "/images/content/women/collections/35.jpg",
+                            title: "ОДНОБОРТНЫЙ КОСТЮМ",
+                            price: "от 75 000 руб.",
+                            href: "/"
+                        }
+                    ],
+                    cls: "catalog--small-title",
+                    nav: true
+                }
+            +catalog(i)

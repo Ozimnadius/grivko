@@ -10,7 +10,7 @@
   font-weight: 300;
   @include tr;
 
-  &:hover,&:focus,&:active{
+  &:hover {
     background: $bg;
     color: $txt;
   }
@@ -19,7 +19,7 @@
     color: $txt;
     border-color: $txt;
 
-    &:hover,&:focus,&:active{
+    &:hover{
       background: $txt;
       color: $bg;
     }
@@ -47,7 +47,7 @@
   font-weight: 300;
   @include tr;
 
-  &:hover,&:focus,&:active{
+  &:hover{
     background: transparent;
     color: $txt;
   }
@@ -57,7 +57,7 @@
     color: $bg ;
     border-color: $txt;
 
-    &:hover,&:focus,&:active{
+    &:hover{
       background: transparent;
       color: $txt;
     }

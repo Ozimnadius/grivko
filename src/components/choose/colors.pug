@@ -1,0 +1,45 @@
+-
+    var list = [
+        {
+            img: "/images/content/choose/color1.png",
+            name:"Бордовый"
+        },
+        {
+            img: "/images/content/choose/color2.png",
+            name:"Бежевый"
+        },
+        {
+            img: "/images/content/choose/color3.png",
+            name:"Серый"
+        },
+        {
+            img: "/images/content/choose/color4.png",
+            name:"Синий"
+        },
+        {
+            img: "/images/content/choose/color5.png",
+            name:"Голубой"
+        },
+        {
+            img: "/images/content/choose/color6.png",
+            name:"Черный"
+        },
+        {
+            img: "/images/content/choose/color7.png",
+            name:"Белый"
+        },
+        {
+            img: "/images/content/choose/color8.png",
+            name:"Другое"
+        }
+    ]
+
+.choose-colors
+    each i,x in list
+        .choose-colors__item
+            label.choose-color
+                input(type="radio" name="colors" value=i.name).choose-color__input.choose-slide__input
+                span.choose-color__wrap
+                    span.choose-color__img
+                        +image(i.img)
+                    span.choose-color__name= i.name

@@ -1,0 +1,13 @@
+.choose-form
+    input(type="radio" name="form" disabled hidden checked).choose-slide__input
+    .choose-form__left
+        ul.choose-form__ul
+            each i in ["Мы знаем тонкости и особенности разных типов женской фигуры;", "Широкий размерный ряд: от 38 до 52 в наличии; от 54 до 62 шьем на заказ;", "Уникальная корсетная технология гарантирует посадку жакета без складок и заломов;", "Используем натуральные итальянские ткани;"]
+                li.choose-form__li= i
+    .choose-form__right
+        .choose-form__fields
+            .choose-form__field
+                input(type="text" name="name" placeholder="Имя" required).input
+            .choose-form__field
+                input(type="tel" name="tel" placeholder="Телефон" required).input
+        button(type='submit').choose-form__submit Получить подборку костюмов от LEONID GRIVKO

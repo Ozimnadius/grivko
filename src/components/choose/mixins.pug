@@ -1,6 +1,6 @@
-mixin radio(i, name, checked)
+mixin radio(i, name)
     label.choose-radio
-        input(type="radio" name=name checked=checked?true:false value=i)
+        input(type="radio" name=name).choose-slide__input
         span.choose-radio__wrap
             span.choose-radio__round
             span.choose-radio__title= i
@@ -9,8 +9,7 @@ mixin radio(i, name, checked)
 mixin radios(props)
     .choose-radios
         each i,x in props.items
-            - var checked=x==0
             .choose-radios__item
-                +radio(i,props.name,checked)
+                +radio(i,props.name)
 
 

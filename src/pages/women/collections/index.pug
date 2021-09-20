@@ -1,7 +1,7 @@
 extends ../../../main
 
 block variables
-    - var title = 'Для женщин'
+    - var title = 'Готовые коллекции'
     - var isWomen = true
 
 block content
@@ -21,7 +21,7 @@ block content
                     {
                         title: "Коллекции",
                         link: {
-                            href: "/",
+                            href: "/women/collections/suits/",
                             name: "Открыть всю коллекцию"
                         },
                         list:[
@@ -193,7 +193,11 @@ block content
                 .collections__item
                     +catalog(i)
         //- choose
-        section.collections__choose
+        section.collections__choose.mb80
             .container
                 include ../../../components/choose/index
+        //- subscribe
+        section.collections__subscribe
+            .container
+                include ../../../components/subscribe/index
 
