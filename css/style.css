@@ -545,6 +545,9 @@ input, textarea {
 .catalog--small-title .item__title {
   font-size: 24px;
 }
+.catalog__filters {
+  margin-bottom: 40px;
+}
 .catalog__top {
   display: flex;
   align-items: baseline;
@@ -1476,6 +1479,117 @@ input, textarea {
   border-radius: 5px;
   color: #ffffff;
   padding: 0 30px;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.filter {
+  position: relative;
+  -webkit-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.filter:hover .filter-view__arr {
+  transform: translateY(-50%) rotate(-180deg);
+}
+.filter__btn {
+  height: 90px;
+  border: 1px solid #dfdfdf;
+}
+.filter__drop {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 0.3s;
+}
+
+.filter-view {
+  position: relative;
+  padding: 10px 30px;
+  padding-right: 45px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.filter-view__name {
+  position: relative;
+  z-index: 10;
+}
+.filter-view__vals {
+  position: relative;
+  z-index: 10;
+}
+.filter-view__arr {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  transition: 0.3s;
+}
+.filter-view__arr svg {
+  display: block;
+}
+
+.filter-drop {
+  background: #ffffff;
+  border: 1px solid #dfdfdf;
+  padding-top: 90px;
+}
+.filter-drop__vals {
+  padding: 0 30px;
+  padding-bottom: 35px;
+}
+
+.filter-select {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.filter-select__option {
+  cursor: pointer;
+  padding: 5px 0;
+}
+.filter-select__option input {
+  display: none;
+}
+.filter-select__option input:checked + span {
+  text-decoration: underline;
+}
+
+.filter-colors {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+}
+.filter-colors__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.filter-colors__item {
+  flex-shrink: 0;
+}
+
+.filter-color {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #707070;
+}
+.filter-color__round {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
 }
 
 .index {
