@@ -24,6 +24,7 @@
     display: grid;
     grid-template-columns: repeat(4,calc(25% - 7.5px));
     grid-gap: 10px;
+    margin-bottom: 70px;
   }
 
   &__item{
@@ -43,5 +44,47 @@
 }
 
 .catalog-nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 
+  &__arr{
+    padding: 10px 0;
+
+    svg{
+      fill: $txt;
+    }
+
+    &:hover{
+      svg{
+        fill: $gold;
+      }
+    }
+  }
+
+  &__item{
+    width: 57px;
+    height: 57px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+
+    &:hover{
+      color: $gold;
+    }
+
+    &--active{
+      background-color: $gold;
+      color: $bg;
+      &:hover{
+        color: $bg;
+      }
+    }
+
+  }
 }

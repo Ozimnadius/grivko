@@ -15,7 +15,7 @@ block content
                 .collections__content.content
                     p Наша цель — подарить миру идеальные костюмы, подчёркивающие образ и индивидуальность каждой женщины. Команда бренда провела колоссальную работу и создала коллекцию костюмов, сочетающую красоту, элегантность и неповторимый запоминающийся стиль
         //- catalog
-        section.suits__catalog
+        section.suits__catalog.mb80
             -
                 var i = {
                     filters: true,
@@ -97,3 +97,7 @@ block content
                     nav: true
                 }
             +catalog(i)
+        //- faq
+        section.suits__faq
+            .container
+                include ../../../../components/faq/index

@@ -228,10 +228,4 @@ fabric.properties
 # https://plugins.jetbrains.com/plugin/12206-codestream
 .idea/codestream.xml
 
-### Prepros ###
-# Config Prepros files to ignore
-prepros.cfg
-prepros-6.config
-prepros.config
-
-# End of https://www.toptal.com/developers/gitignore/api/phpstorm,prepros,node
+# End of https://www.toptal.com/developers/gitignore/api/phpstorm,node

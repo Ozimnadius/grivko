@@ -176,72 +176,164 @@ window.addEventListener("load", function () {
     //     $drop.css("height", "0px");
     // });
 
-    document.querySelectorAll('.jsFilter').forEach(function (i){
-       new Filter(i);
+    document.querySelectorAll('.jsFilter').forEach(function (i) {
+        new Filter(i);
     });
 
-    $(".filter-select__option input").on("change", function (){
-        let $this = $(this),
-            val = $this.val(),
-            $filter = $this.closest(".jsFilter");
-            $filter.find(".filter-view .filter-select__option").text(val);
-    });
-
+    // $(".filter-select__option input").on("change", function (){
+    //     let $this = $(this),
+    //         val = $this.val(),
+    //         $filter = $this.closest(".jsFilter");
+    //         $filter.find(".filter-view .filter-select__option").text(val);
+    // });
 
 
 });
 
-class Filters{
-    constructor() {
+class Filter {
 
-    }
-}
-
-class Filter{
     constructor(elem) {
         this.filter = elem;
         this.drop = this.filter.querySelector('.filter__drop');
         this.view = this.filter.querySelector('.jsFilter__view');
-        this.vals = this.filter.querySelectorAll('.jsFilter__val:checked');
-
+        this.items = this.drop.querySelectorAll('.jsFilter__val');
+        this.vals = this.drop.querySelectorAll('.jsFilter__val:checked');
         this.template = this.filter.querySelector('template').content;
         this.templateParent = this.template.querySelector('.filter-template__parent').cloneNode(true);
         this.templateChild = this.template.querySelector('.filter-template__item');
+        this.btnAll = this.filter.querySelector('.jsFilter__all');
         this.init();
     }
 
-    init(){
-        $(this.filter).hover(this.slideDown,this.slideUp);
+    init() {
+        $(this.filter).hover(this.slideDown, this.slideUp);
+        this.renderView();
+
+        this.items.forEach((i) => {
+            i.addEventListener('change', this.renderView);
+        });
+
+        if (this.btnAll) {
+            this.btnAll.addEventListener('click', this.selectAll);
+        }
+    }
+
+    selectAll=()=>{
+        this.items.forEach((i)=>this.setChecked(i));
         this.renderView();
     }
 
-    renderView(){
-        this.vals.forEach((e)=>{
-            let item = this.templateChild.cloneNode(true);
+    setChecked=(el)=>{
+        el.checked = true;
+    }
 
-
-            let html = item.outerHTML.replace("{{val}}", e.value);
-
-            this.templateParent.insertAdjacentHTML("beforeend",html);
-        });
+    renderView = () => {
+        this.updateVals();
 
         this.view.innerHTML = "";
+        this.templateParent.innerHTML = "";
+
+        this.vals.forEach((e) => {
+            let item = this.templateChild.cloneNode(true);
+            let html = item.outerHTML.replace("{{val}}", e.value);
+
+            this.templateParent.insertAdjacentHTML("beforeend", html);
+        });
+
         this.view.append(this.templateParent);
-
-        // console.log(this.templateParent);
     }
 
-    get getDropHeight(){
-       return  this.drop.querySelector('.filter-drop').offsetHeight;
+    updateVals() {
+        this.vals = this.drop.querySelectorAll('.jsFilter__val:checked');
     }
 
-    slideDown=()=>{
+    get getDropHeight() {
+        return this.drop.querySelector('.filter-drop').offsetHeight;
+    }
+
+    slideDown = () => {
         this.drop.style.height = `${this.getDropHeight}px`;
     }
 
-    slideUp=()=>{
+    slideUp = () => {
         this.drop.style.height = "0px";
     }
 
 }
+//faq.js
+window.addEventListener("load", function () {
+    console.log("FAQ.JS");
+
+    let faq = new Faq();
+
+});
+
+class FaqItem {
+    constructor(elem) {
+        this.item = elem;
+        this.wrap = this.item.querySelector(".jsFaq__wrap");
+        this.content = this.item.querySelector(".jsFaq__content");
+        this.active = false;
+    }
+
+    get height() {
+        return this.content.offsetHeight;
+    }
+
+    click = () => {
+        if (this.active) {
+            this.close();
+        } else {
+            this.open();
+        }
+    }
+
+    open = () => {
+        this.active = true;
+        this.wrap.style.height = `${this.height}px`;
+        this.item.classList.add('active');
+    }
+
+    close = () => {
+        this.active = false;
+        this.wrap.style.height = `0px`;
+        this.item.classList.remove('active');
+    }
+}
+
+class Faq {
+    constructor() {
+        this.faq = document.querySelector('.jsFaq');
+        this.elems = this.faq.querySelectorAll('.jsFaq__item');
+        this.items = [];
+        this.activeItem = undefined;
+        this.init();
+    }
+
+    init() {
+        this.elems.forEach((i) => this.items.push(new FaqItem(i)));
+
+        this.elems.forEach((i, x) => {
+            let index = x;
+
+
+            i.addEventListener('click', () => {
+
+                if (this.activeItem) {
+                    this.activeItem.close();
+                }
+
+
+                this.activeItem = this.items[x];
+                this.items[x].click();
+            });
+
+        });
+    }
+}
+
+
+
+
+
 //# sourceMappingURL=script.js.map

@@ -28,8 +28,8 @@
     top: 0;
     left: 0;
     right: 0;
-    //height: 0;
-    //overflow: hidden;
+    height: 0;
+    overflow: hidden;
     @include tr;
   }
 }
@@ -48,6 +48,7 @@
   &__name {
     position: relative;
     z-index: 10;
+    margin-right: 20px;
   }
 
   &__vals {
@@ -91,7 +92,6 @@
 
     input {
       display: none;
-
       &:checked + span {
         text-decoration: underline;
       }
@@ -104,10 +104,16 @@
   align-items: flex-start;
   gap: 25px;
 
+
+
   &__list {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
+
+    &--view{
+      gap: 10px;
+    }
   }
 
   &__item {
@@ -117,15 +123,78 @@
 
 .filter-color {
   display: block;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 1px solid #707070;
+  cursor: pointer;
+
+  &--view{
+    .filter-color__wrap{
+      width: auto;
+      height: auto;
+    }
+  }
+
+  input{
+    display: none;
+    &:checked+.filter-color__wrap{
+      border-color: #707070;
+    }
+  }
+
+
+  &__wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+  }
 
   &__round {
     display: block;
     width: 16px;
     height: 16px;
+    border-radius: 50%;
+  }
+}
+
+.filter-sizes{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 35px;
+
+  &--view{
+    gap: 10px;
+  }
+}
+
+.filter-size{
+  cursor: pointer;
+
+  &--view{
+    .filter-size__num{
+      width: auto;
+      height: auto;
+    }
+  }
+
+  input{
+    display: none;
+
+
+    &:checked+.filter-size__num{
+        background-color: #202020;
+        color: $bg;
+    }
+  }
+
+  &__num{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
   }
 }
