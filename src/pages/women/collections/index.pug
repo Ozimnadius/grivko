@@ -5,17 +5,17 @@ block variables
     - var isWomen = true
 
 block content
-    main.collections
+    main.women
         //- desc
-        section.collections__desc
+        section.women__desc
             .container
-                h2.collections__title.title Готовые коллекции женской одежды
-                .collections__breadcrumbs
+                h2.women__title.title Готовые коллекции женской одежды
+                .women__breadcrumbs
                     include ../../../components/breadcrumbs/index
-                .collections__content.content
+                .women__content.content
                     p При разработке моделей для коллекций мы учли особенности всех типов фигур женщин, а также разработали уникальную корсетную технологию пошива, чтобы обеспечить идеальную посадку одежды на любую фигуру и рост. Также мы работаем с лучшими производителями и выбираем лучших людей, чтобы наша одежда радовала вас долго
         //- list
-        section.collections__list.mb80
+        section.women__list.mb80
             -
                 var list = [
                     {
@@ -190,14 +190,14 @@ block content
                     },
                 ]
             each i in list
-                .collections__item
+                .women__item
                     +catalog(i)
         //- choose
-        section.collections__choose.mb80
+        section.women__choose.mb80
             .container
                 include ../../../components/choose/index
         //- subscribe
-        section.collections__subscribe
+        section.women__subscribe
             .container
                 include ../../../components/subscribe/index
 

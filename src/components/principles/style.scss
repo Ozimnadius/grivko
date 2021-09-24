@@ -1,0 +1,53 @@
+.principles {
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 100px;
+    padding: 0 40px;
+  }
+}
+
+.principle {
+
+  &__top{
+    position: relative;
+    margin-bottom: 45px;
+    &:before{
+      content: '';
+      display: block;
+      padding-top: calc(495/357*100%);
+    }
+  }
+
+  &__img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__name{
+    background-color: $gold;
+    color: $bg;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 17px 25px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}

@@ -1,4 +1,5 @@
 .banner{
+  position: relative;
 
   &--small{
     .banner{
@@ -72,4 +73,63 @@
     font-size: 32px;
   }
 
+  &__form{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+
+}
+
+.banner-form{
+  display: flex;
+  align-items: center;
+  border: 32px solid $bg;
+  background: url("/images/content/index/banner/bg-sharp.jpg") 0 0;
+  padding: 45px 10px 45px 30px;
+
+  &:hover{
+    .banner-form__wrap{
+      width: 857px;
+    }
+  }
+
+  &__name{
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-weight: 500;
+    padding-left: 20px;
+  }
+
+  &__wrap{
+    width: 0px;
+    overflow: hidden;
+    @include tr;
+  }
+
+  &__form{
+    display: block;
+    padding-right: 35px;
+    width: 822px+35px;
+  }
+
+  &__fields{
+    display: grid;
+    grid-template-columns: repeat(2,405px);
+    grid-gap: 10px;
+    margin-bottom: 40px;
+  }
+
+  &__field{
+
+    &--double{
+      grid-column: span 2;
+    }
+  }
+
+  &__submit{
+    height: 74px;
+    width: 319px;
+  }
 }

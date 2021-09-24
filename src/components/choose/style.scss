@@ -1,6 +1,6 @@
 .choose {
   display: grid;
-  grid-template-columns: repeat(2, calc(50% - 30px));
+  grid-template-columns: calc(50%) calc(50% - 60px);
   grid-gap: 60px;
 
   &__img {
@@ -10,11 +10,11 @@
   }
 
   &__title {
-    margin-bottom: 35px;
+    margin-bottom: 25px;
   }
 
   &__txt {
-    margin-bottom: 60px;
+    margin-bottom: 55px;
   }
 
   &__quiz {

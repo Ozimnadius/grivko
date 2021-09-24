@@ -5,17 +5,17 @@ block variables
     - var isWomen = true
 
 block content
-    main.suits
+    main.women
         //- desc
-        section.collections__desc
+        section.women__desc
             .container
-                h2.collections__title.title Женские костюмы
-                .collections__breadcrumbs
+                h2.women__title.title Женские костюмы
+                .women__breadcrumbs
                     include ../../../../components/breadcrumbs/index
-                .collections__content.content
+                .women__content.content
                     p Наша цель — подарить миру идеальные костюмы, подчёркивающие образ и индивидуальность каждой женщины. Команда бренда провела колоссальную работу и создала коллекцию костюмов, сочетающую красоту, элегантность и неповторимый запоминающийся стиль
         //- catalog
-        section.suits__catalog.mb80
+        section.women__catalog.mb80
             -
                 var i = {
                     filters: true,
@@ -98,6 +98,14 @@ block content
                 }
             +catalog(i)
         //- faq
-        section.suits__faq
+        section.women__faq.mb80
             .container
                 include ../../../../components/faq/index
+        //- choose
+        section.women__cjoose.mb80
+            .container
+                include ../../../../components/choose/index
+        //- subscribe
+        section.women__subscribe
+            .container
+                include ../../../../components/subscribe/index

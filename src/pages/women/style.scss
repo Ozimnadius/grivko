@@ -1,6 +1,32 @@
 .women {
   flex-grow: 1;
 
+  &__desc{
+    margin-top: 25px;
+    margin-bottom: 55px;
+  }
+
+  &__title{
+    padding-top: 30px;
+    position: relative;
+
+    &:before{
+      content: '';
+      display: block;
+      width: 64px;
+      height: 8px;
+      background-color: $gold;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__list{
+    display: grid;
+    grid-gap: 10px;
+  }
+
   &__banner{
     margin-bottom: 25px;
   }
@@ -8,10 +34,4 @@
   &__breadcrumbs{
     margin-bottom: 30px;
   }
-
-  &__collections{
-    margin-bottom: 175px;
-  }
 }
-
-@import "collections/style";

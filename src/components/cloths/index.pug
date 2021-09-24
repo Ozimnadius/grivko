@@ -1,0 +1,31 @@
+.cloths
+    h2.cloths__title.title Ткани
+    .cloths__txt
+        | Мы работаем с лучшими итальянскими и английскими брендами
+        br
+        | для пошива по-настоящему качественной мужской одежды.
+    .cloths__grid
+        .cloths__list
+            -
+                var list = [
+                    "/images/content/cloths/1.png",
+                    "/images/content/cloths/2.png",
+                    "/images/content/cloths/3.png",
+                    "/images/content/cloths/4.png",
+                    "/images/content/cloths/5.png",
+                    "/images/content/cloths/6.png"
+                ];
+            each i in list
+                .cloths__item
+                    .cloths__wrap
+                        .cloths__img
+                            img(src=i alt="lorem")
+        .cloths__banner
+            .cloths__banner-txt
+                |За выбор
+                br
+                |ткани Берем
+                br
+                |ответственность
+                br
+                |на себя

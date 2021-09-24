@@ -2,7 +2,10 @@
 window.addEventListener("load", function () {
     console.log("FAQ.JS");
 
-    let faq = new Faq();
+    if (document.querySelector('.jsFaq')){
+        let faq = new Faq();
+    }
+
 
 });
 
@@ -12,6 +15,11 @@ class FaqItem {
         this.wrap = this.item.querySelector(".jsFaq__wrap");
         this.content = this.item.querySelector(".jsFaq__content");
         this.active = false;
+        this.init();
+    }
+
+    init(){
+        this.item.addEventListener('click',this.click)
     }
 
     get height() {
@@ -50,23 +58,6 @@ class Faq {
 
     init() {
         this.elems.forEach((i) => this.items.push(new FaqItem(i)));
-
-        this.elems.forEach((i, x) => {
-            let index = x;
-
-
-            i.addEventListener('click', () => {
-
-                if (this.activeItem) {
-                    this.activeItem.close();
-                }
-
-
-                this.activeItem = this.items[x];
-                this.items[x].click();
-            });
-
-        });
     }
 }
 

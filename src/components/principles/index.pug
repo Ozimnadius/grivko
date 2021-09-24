@@ -1,0 +1,35 @@
+.principles
+    h2.principles__title.title Принципы работы
+    .principles__list
+        -
+            var list = [
+                {
+                    img: "/images/content/principles/1.png",
+                    name: "Первый визит",
+                    txt:"Выбираем модель изделия, ткань и снимаем мерки"
+                },
+                {
+                    img: "/images/content/principles/2.png",
+                    name: "Пошив изделия",
+                    txt:"От 3 до 4 недель займет пошив Вашего изделия"
+                },
+                {
+                    img: "/images/content/principles/3.png",
+                    name: "Пошив изделия",
+                    txt:"Приглашаем Васна примерку.При необходимости осуществляем дополнительную подгонку изделия"
+                },
+                {
+                    img: "/images/content/principles/4.png",
+                    name: "Получение изделия",
+                    txt:"Через 4 дня Вы получаете готовое изделие, сшитое по фигуре, с учетом всех особенностей"
+                }
+            ];
+        each i in list
+            .principles__item
+                .principle
+                    .principle__top
+                        .principle__img
+                            img(src=i.img alt="lorem")
+                    .principle__bottom
+                        .principle__name= i.name
+                        .principle__txt= i.txt

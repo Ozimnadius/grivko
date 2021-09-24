@@ -264,7 +264,10 @@ class Filter {
 window.addEventListener("load", function () {
     console.log("FAQ.JS");
 
-    let faq = new Faq();
+    if (document.querySelector('.jsFaq')){
+        let faq = new Faq();
+    }
+
 
 });
 
@@ -274,6 +277,11 @@ class FaqItem {
         this.wrap = this.item.querySelector(".jsFaq__wrap");
         this.content = this.item.querySelector(".jsFaq__content");
         this.active = false;
+        this.init();
+    }
+
+    init(){
+        this.item.addEventListener('click',this.click)
     }
 
     get height() {
@@ -312,23 +320,6 @@ class Faq {
 
     init() {
         this.elems.forEach((i) => this.items.push(new FaqItem(i)));
-
-        this.elems.forEach((i, x) => {
-            let index = x;
-
-
-            i.addEventListener('click', () => {
-
-                if (this.activeItem) {
-                    this.activeItem.close();
-                }
-
-
-                this.activeItem = this.items[x];
-                this.items[x].click();
-            });
-
-        });
     }
 }
 
@@ -336,4 +327,49 @@ class Faq {
 
 
 
+//fashion.js
+window.addEventListener('load', function () {
+    console.log("FASHION.JS");
+
+    document.querySelectorAll('.fashion__item').forEach((i) => i.addEventListener('click', (e) => {
+        e.preventDefault();
+        sendAjax(e.target.dataset.id);
+    }));
+
+    function sendAjax(id) {
+        $.ajax({
+            dataType: "json",
+            type: "POST",
+            url: '/php/fashion.php',
+            data: {
+                id: id
+            },
+            success: function (result) {
+                if (result.status) {
+                    $.fancybox.open(result.html);
+
+                    const slider = new Swiper('.fashion-card__swiper', {
+                        loop: true,
+                        spaceBetween: 10,
+                        // Navigation arrows
+                        navigation: {
+                            nextEl: '.fashion-card__next',
+                            prevEl: '.fashion-card__prev',
+                        },
+                        pagination: {
+                            el: '.fashion-card__pag',
+                        },
+                    });
+
+                } else {
+                    alert('Что-то пошло не так, попробуйте еще раз!!!');
+                }
+            },
+            error: function (result) {
+                alert('Что-то пошло не так, попробуйте еще раз!!!');
+            }
+        });
+    }
+
+});
 //# sourceMappingURL=script.js.map

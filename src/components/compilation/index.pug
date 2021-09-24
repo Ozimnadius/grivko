@@ -1,0 +1,27 @@
+.compilation
+    h2.compilation__title.title Идеальные костюмы на каждый день и для особого случая
+    .compilation__grid
+        -
+            var list = [
+                {
+                    img: "/images/content/compilation/1.jpg",
+                    name: "На праздник <br> или торжество"
+                },
+                {
+                    img: "/images/content/compilation/2.jpg",
+                    name: "На свадьбу"
+                },
+                {
+                    img: "/images/content/compilation/3.jpg",
+                    name: "На деловое <br> мероприятие"
+                },
+                {
+                    img: "/images/content/compilation/4.jpg",
+                    name: "На каждый <br> день"
+                }
+            ];
+        each i in list
+            a(href="/").compilation__item
+                span.compilation__img
+                    +image(i.img)
+                span.compilation__name.title!=i.name

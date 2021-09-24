@@ -1,0 +1,132 @@
+extends ./../../../main
+
+block variables
+    - var title = 'Пошив на заказ'
+    - var isWomen = true
+
+block content
+    main.women
+        //- banner
+        section.women__banner
+            -
+                var props = {
+                    imgPath: "/images/content/women/tailoring/banner/",
+                    sub: "ДОМ МОДЫ LEONID GRIVKO",
+                    title: "Пошив женской <br> одежды на заказ",
+                    big: "«Мы используем собственные <br> разработки для идеальной посадки <br> на любую фигуру, лучшие ткани <br> и вдохновляющих людей».",
+                    dopCls: "banner--small",
+                    form: true
+                };
+            +banner(props)
+        //- breadcrumbs
+        section.women__breadcrumbs
+            .container
+                include ../../../components/breadcrumbs/index
+        //- collections
+        section.women__collections.mb80
+            -
+                var props = {
+                    title: "каталог",
+                    txt: "Модельный ряд доступный к пошиву",
+                    list: [
+                        {
+                            img: "/images/content/women/tailoring/catalog/1.jpg",
+                            title: "Пальто",
+                            price: "от 75 000 руб.",
+                            href: "/"
+                        },
+                        {
+                            img: "/images/content/women/tailoring/catalog/2.jpg",
+                            title: "Пиджаки",
+                            price: "от 75 000 руб.",
+                            href: "/"
+                        },
+                        {
+                            img: "/images/content/women/tailoring/catalog/3.jpg",
+                            title: "Сорочки",
+                            price: "от 75 000 руб.",
+                            href: "/"
+                        },
+                        {
+                            img: "/images/content/women/tailoring/catalog/4.jpg",
+                            title: "Жилеты",
+                            price: "от 75 000 руб.",
+                            href: "/"
+                        },
+                        {
+                            img: "/images/content/women/tailoring/catalog/5.jpg",
+                            title: "Костюмы",
+                            price: "от 75 000 руб.",
+                            href: "/"
+                        },
+                        {
+                            img: "/images/content/women/tailoring/catalog/6.jpg",
+                            title: "Смокинги",
+                            price: "от 75 000 руб.",
+                            href: "/"
+                        },
+                        {
+                            img: "/images/content/women/tailoring/catalog/7.jpg",
+                            title: "Брюки",
+                            price: "от 75 000 руб.",
+                            href: "/"
+                        },
+                        {
+                            img: "/images/content/women/tailoring/catalog/8.jpg",
+                            title: "Платья",
+                            price: "от 75 000 руб.",
+                            href: "/"
+                        }
+                    ],
+                    link: {
+                        href: "/",
+                        name: "Открыть всю коллекцию"
+                    }
+                };
+            +catalog(props)
+        //- tech
+        section.women__tech.mb80
+            .container
+                include ../../../components/corsettech/index
+        //- cloths
+        section.women__cloths.mb80
+            .container
+                include ../../../components/cloths/index
+        //- principles
+        section.women__principles.mb80
+            .container
+                include ../../../components/principles/index
+        //- gallery
+        section.women__gallery.mb80
+            .container
+                -
+                    var props = {
+                        title: "Работы LEONID GRIVKO",
+                        list: [
+                            "/images/content/women/tailoring/gallery/1.jpg",
+                            "/images/content/women/tailoring/gallery/2.jpg",
+                            "/images/content/women/tailoring/gallery/3.jpg",
+                            "/images/content/women/tailoring/gallery/4.jpg",
+                            "/images/content/women/tailoring/gallery/5.jpg",
+                            "/images/content/women/tailoring/gallery/6.jpg",
+                            "/images/content/women/tailoring/gallery/7.jpg",
+                            "/images/content/women/tailoring/gallery/8.jpg",
+                        ]
+                    };
+                +gallery(props)
+        //- revs
+        section.women__revs.mb80
+            .container
+                include ../../../components/revs/index
+        //- founder
+        section.women__founder.mb80
+            .container
+                include ../../../components/founder/index
+        //- compilation
+        section.women__compilation.mb80
+            .container
+                include ../../../components/compilation/index
+        //- signup
+        section.women__signup
+            .container
+                include ../../../components/signup/index

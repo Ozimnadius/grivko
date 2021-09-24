@@ -1,0 +1,16 @@
+.fancybox-webcomp {
+  padding: 65px;
+  overflow: visible;
+
+  .fancybox {
+    &-close-small {
+      width: auto;
+      height: auto;
+
+      svg {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}
