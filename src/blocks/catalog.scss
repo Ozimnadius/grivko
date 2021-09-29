@@ -28,11 +28,20 @@
     display: grid;
     grid-template-columns: repeat(4,calc(25% - 7.5px));
     grid-gap: 10px;
-    margin-bottom: 70px;
-  }
 
-  &__item{
+    &--3{
+      grid-template-columns: repeat(3,1fr);
 
+      .item{
+        &__img{
+          max-width: 421px;
+
+          &:before{
+            padding-top: calc(593/421*100%);
+          }
+        }
+      }
+    }
   }
 
   &__bottom{
@@ -44,6 +53,22 @@
   &__link{
     max-width: 876px;
     width: 100%;
+  }
+
+  &__nav{
+    margin-top: 70px;
+  }
+
+  &__desc{
+    background-color: $gold;
+    padding: 40px;
+    text-align: center;
+    color: $bg;
+    font-size: 32px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-bottom: 80px;
   }
 }
 

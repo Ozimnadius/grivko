@@ -1,0 +1,66 @@
+.product{
+  padding-top: 20px;
+
+  &__breadcrumbs{
+    margin-bottom: 25px;
+  }
+
+  &__grid{
+    display: grid;
+    grid-template-columns: 900fr 860fr;
+    grid-gap: 60px;
+    margin-bottom: 70px;
+  }
+
+  &__top{
+    margin-bottom: 27px;
+  }
+
+  &__title{
+    margin-bottom: 15px;
+  }
+
+  &__price{
+    display: flex;
+    align-items: center;
+
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    svg{
+      margin-left: 15px;
+    }
+  }
+
+  &__composition{
+    margin-bottom: 25px;
+  }
+
+  &__size{
+    margin-bottom: 35px;
+  }
+
+  &__delivery{
+    margin-bottom: 35px;
+  }
+
+  &__tabs{
+    margin-bottom: 95px;
+  }
+
+}
+
+.product-top{
+  display: flex;
+  justify-content: space-between;
+}
+
+@import "avaible/style";
+@import "composition/style";
+@import "photo/style";
+@import "size/style";
+@import "delivery/style";
+@import "btns/style";
+@import "tabs/style";
+@import "revs/style";

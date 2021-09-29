@@ -23,6 +23,10 @@
         }
       }
 
+      &__txt{
+        display: block;
+      }
+
       &__btn {
         display: flex;
       }
@@ -109,6 +113,11 @@
   &__price {
     width: 100%;
     margin-bottom: 30px;
+  }
+
+  &__txt{
+    display: none;
+    margin-bottom: 25px;
   }
 
   &__btn {

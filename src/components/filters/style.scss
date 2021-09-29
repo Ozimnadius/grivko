@@ -6,10 +6,12 @@
 
 .filter {
   position: relative;
+  z-index: 1;
   user-select: none;
   cursor: pointer;
 
   &:hover {
+    z-index: 10;
     .filter-view {
       &__arr {
         transform: translateY(-50%) rotate(-180deg);
@@ -54,6 +56,11 @@
   &__vals {
     position: relative;
     z-index: 10;
+    margin-right: 15px;
+
+    &--right{
+      margin-left: auto;
+    }
   }
 
   &__arr {

@@ -2,6 +2,7 @@
 
 //COMPONENTS
 
+
 // common.js
 const jsTools = {
     getNumber: function (str) {
@@ -160,33 +161,9 @@ window.addEventListener("load", function () {
 
     console.log("FILTERS.JS");
 
-    // $(".jsFilter").hover(function () {
-    //     let $this = $(this),
-    //         $drop = $this.find(".filter__drop"),
-    //         $dropInner = $drop.find(".filter-drop"),
-    //         height = $dropInner.outerHeight();
-    //     $drop.css("height", height + "px");
-    //
-    // }, function () {
-    //     let $this = $(this),
-    //         $drop = $this.find(".filter__drop"),
-    //         $dropInner = $drop.find(".filter-drop"),
-    //         height = $dropInner.outerHeight();
-    //
-    //     $drop.css("height", "0px");
-    // });
-
     document.querySelectorAll('.jsFilter').forEach(function (i) {
         new Filter(i);
     });
-
-    // $(".filter-select__option input").on("change", function (){
-    //     let $this = $(this),
-    //         val = $this.val(),
-    //         $filter = $this.closest(".jsFilter");
-    //         $filter.find(".filter-view .filter-select__option").text(val);
-    // });
-
 
 });
 
@@ -372,4 +349,80 @@ window.addEventListener('load', function () {
     }
 
 });
+//photo.js
+window.addEventListener('load', function () {
+    console.log("PHOTO.JS");
+
+    let photos = new Photo();
+});
+
+class Photo {
+    constructor() {
+        this.photos = document.querySelector('.jsPhotos');
+        this.thumbs = this.photos.querySelectorAll('.jsThumb');
+        this.photo = this.photos.querySelector('.jsPhoto');
+        this.activeThumb = this.thumbs[0];
+        this.init();
+    }
+
+    init() {
+        this.activeThumb.classList.add("photo__thumb--active");
+        this.photo.src = this.activeThumb.href;
+
+        this.thumbs.forEach(i => i.addEventListener('click', (e) => {
+            e.preventDefault();
+            this.setPhoto(e.currentTarget);
+        }));
+    }
+
+    setPhoto(el) {
+        if (this.activeThumb) {
+            this.activeThumb.classList.remove("photo__thumb--active");
+        }
+
+        this.setActive(el);
+
+        this.photo.src = this.activeThumb.href;
+    }
+
+    setActive(el) {
+        this.activeThumb = el;
+        this.activeThumb.classList.add("photo__thumb--active");
+    }
+
+}
+window.addEventListener('load', function (){
+    new Tabs();
+});
+
+class Tabs{
+    constructor() {
+        this.tabs = document.querySelector(".jsTabs");
+        this.btnsList = this.tabs.querySelectorAll('.jsTabs__btn');
+        this.tabsList = this.tabs.querySelectorAll('.jsTabs__tab');
+        this.activeIndex = 0;
+        this.init();
+    }
+
+    init(){
+        this.activate();
+        this.btnsList.forEach(i=>i.addEventListener('click',this.click));
+    }
+
+    click=(e)=>{
+        this.deactivate();
+        this.activeIndex = Array.from(this.btnsList).indexOf(e.currentTarget);
+        this.activate();
+    }
+
+    deactivate(){
+        this.btnsList[this.activeIndex].classList.remove('active');
+        this.tabsList[this.activeIndex].classList.remove('active');
+    }
+
+    activate(){
+        this.btnsList[this.activeIndex].classList.add('active');
+        this.tabsList[this.activeIndex].classList.add('active');
+    }
+}
 //# sourceMappingURL=script.js.map

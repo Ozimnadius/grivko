@@ -1,0 +1,20 @@
+.composition
+    .composition__name Состав:
+    .composition__list
+        -
+            var list =[
+                {
+                    name: "Ткань:",
+                    list: ["97 % - шерсть","3% - эластан"]
+                },
+                {
+                    name: "Подкладка:",
+                    list: ["95% - вискоза","5% - эластан"]
+                }
+            ]
+        each i in list
+            .composition__item.composition-item
+                .composition-item__name= i.name
+                .composition-item__list
+                    each j in i.list
+                        .composition-item__item= j

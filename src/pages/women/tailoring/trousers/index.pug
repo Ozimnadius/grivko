@@ -1,0 +1,111 @@
+extends ./../../../../main
+
+block variables
+    - var title = 'Брюки'
+    - var isWomen = true
+
+block content
+    main.women
+        //- banner
+        section.women__banner
+            -
+                var props = {
+                    imgPath: "/images/content/women/tailoring/banner/",
+                    sub: "ДОМ МОДЫ LEONID GRIVKO",
+                    title: "Пошив женских <br> брюк на заказ",
+                    big: "по индивидуальным меркам <br> с гарантией идеальной посадки",
+                    dopCls: "banner--small",
+                    form: true
+                };
+            +banner(props)
+        //- breadcrumbs
+        section.women__breadcrumbs
+            .container
+                include ../../../../components/breadcrumbs/index
+        //- suit
+        section.women__suit.mb120
+            .container
+                -
+                    var props = {
+                        img: "/images/content/women/tailoring/trousers/img.jpg"
+                    };
+                +suit(props)
+        //- prices
+        section.women__prices.mb40
+            -
+                var props = {
+                    title: "Цены",
+                    listClass: "catalog__list--3",
+                    list: [
+                        {
+                            img: "/images/content/women/tailoring/trousers/prices/1.jpg",
+                            title: "Classic",
+                            price: "от 75 000 руб.",
+                            txt: "Костюм для повседневной носки, сшитый по индивидуальным лекалам из итальянских и английских тканей высокого качества. <br> Основные операции при пошиве осуществляются с помощью современных технологий.",
+                            href: "/"
+                        },
+                        {
+                            img: "/images/content/women/tailoring/trousers/prices/2.jpg",
+                            title: "Premium",
+                            price: "от 95 000р.",
+                            txt: "Лучший выбор, чтобы подчеркнуть высокий статус. Изделие шьется из английских и итальянских тканей по традиционной технологии с использованием большого объёма ручной работы. Костюм отличает особая мягкость и удобство.",
+                            href: "/"
+                        },
+                        {
+                            img: "/images/content/women/tailoring/trousers/prices/2.jpg",
+                            title: "Luxury",
+                            price: "от 190 000р.",
+                            txt: "Шедевр для настоящих ценителей эксклюзива. Сшит по старинной английской технологии из лучших английских и итальянских тканей. Костюм практически весь собирается портным вручную.",
+                            href: "/"
+                        },
+
+                    ],
+                    desc: "Костюм, который идеально выглядит и сидит — <br> не давит, не тянет, не висит и не полнит — это реальность."
+                };
+            +catalog(props)
+        //- appointment
+        section.women__appointment.mb80
+            .container
+                include ../../../../components/appointment/index
+        //- tech
+        section.women__tech.mb80
+            .container
+                include ../../../../components/corsettech/index
+        //- cloths
+        section.women__cloths.mb80
+            .container
+                include ../../../../components/cloths/index
+        //- principles
+        section.women__principles.mb80
+            .container
+                include ../../../../components/principles/index
+        //- gallery
+        section.women__gallery.mb80
+            .container
+                -
+                    var props = {
+                        title: "Работы LEONID GRIVKO",
+                        list: [
+                            "/images/content/women/tailoring/gallery/1.jpg",
+                            "/images/content/women/tailoring/gallery/2.jpg",
+                            "/images/content/women/tailoring/gallery/3.jpg",
+                            "/images/content/women/tailoring/gallery/4.jpg",
+                            "/images/content/women/tailoring/gallery/5.jpg",
+                            "/images/content/women/tailoring/gallery/6.jpg",
+                            "/images/content/women/tailoring/gallery/7.jpg",
+                            "/images/content/women/tailoring/gallery/8.jpg",
+                        ]
+                    };
+                +gallery(props)
+        //- revs
+        section.women__revs.mb80
+            .container
+                include ../../../../components/revs/index
+        //- founder
+        section.women__founder.mb80
+            .container
+                include ../../../../components/founder/index
+        //- signup
+        section.women__signup
+            .container
+                include ../../../../components/signup/index

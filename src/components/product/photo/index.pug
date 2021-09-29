@@ -1,0 +1,44 @@
+.photo.jsPhotos
+    .photo__thumbs
+        -
+            var thumbs = [
+                {
+                    img: "/images/content/women/collections/product/img1.jpg",
+                    thumb: "/images/content/women/collections/product/thumb1.jpg",
+                    cls: "jsThumb"
+                },
+                {
+                    img: "/images/content/women/collections/product/img2.jpg",
+                    thumb: "/images/content/women/collections/product/thumb2.jpg",
+                    cls: "jsThumb"
+                },
+                {
+                    img: "/images/content/women/collections/product/img3.jpg",
+                    thumb: "/images/content/women/collections/product/thumb3.jpg",
+                    cls: "jsThumb"
+                },
+                {
+                    thumb: "/images/content/women/collections/product/thumb3.jpg",
+                    img: "https://www.youtube.com/watch?v=_sI_Ps7JSEk",
+                    fancy: true
+                }
+            ]
+        each i in thumbs
+            a(href=i.img data-fancybox=(i.fancy)?true:false class=i.cls).photo__thumb
+                .photo__thumb-img
+                    img(src=i.thumb alt="lorem")
+                if i.fancy
+                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                    <path d="M32 64C24.6174 63.9957 17.4632 61.4395 11.7495 56.7644C6.03579 52.0894 2.11381 45.5829 0.64797 38.3473C-0.817865 31.1117 0.262581 23.5918 3.70627 17.0616C7.14996 10.5313 12.7452 5.39228 19.544 2.51501C27.3591 -0.76169 36.1546 -0.805554 44.0019 2.39304C51.8493 5.59162 58.1079 11.7716 61.4056 19.5778C64.7032 27.3841 64.7706 36.1795 61.5931 44.0354C58.4156 51.8912 52.2524 58.1665 44.455 61.485C40.5148 63.1527 36.2786 64.0081 32 64V64ZM28.006 24.374C27.2099 24.3745 26.4464 24.6906 25.8828 25.2528C25.3192 25.8151 25.0014 26.5779 24.999 27.374V37.621C24.9975 38.1557 25.1392 38.681 25.4093 39.1425C25.6795 39.6039 26.0682 39.9846 26.5352 40.245C27.0022 40.5055 27.5304 40.6361 28.0649 40.6235C28.5995 40.6108 29.1209 40.4553 29.575 40.173L37.867 35.052C38.3011 34.783 38.6594 34.4075 38.9078 33.9613C39.1563 33.515 39.2866 33.0127 39.2866 32.502C39.2866 31.9913 39.1563 31.489 38.9078 31.0427C38.6594 30.5965 38.3011 30.2211 37.867 29.952L29.575 24.831C29.1046 24.5358 28.5613 24.3776 28.006 24.374V24.374Z" fill="#BFA058"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0">
+                    <rect width="64" height="64" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+
+    .photo__img
+        .photo__img-img
+            img(src="/images/content/women/collections/product/img1.jpg" alt="lorem").jsPhoto

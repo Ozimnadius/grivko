@@ -1,0 +1,33 @@
+.product-tabs{
+
+  &__btns{
+    display: flex;
+  }
+
+  &__btn{
+    background: none;
+    white-space: nowrap;
+    padding: 25px 40px;
+
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    &.active{
+      background: url("/images/content/bordered/bg.png") 0 0;
+    }
+  }
+
+  &__tab{
+    background: url("/images/content/bordered/bg.png") 0 0;
+    display: none;
+    padding: 65px;
+
+    &.active{
+      display: block;
+    }
+  }
+
+}
+
+@import "about/style";

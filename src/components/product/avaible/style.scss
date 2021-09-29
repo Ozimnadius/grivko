@@ -1,0 +1,13 @@
+.avaible{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  &__status{
+    margin-bottom: 10px;
+  }
+
+  &__count{
+    color: $gold;
+  }
+}

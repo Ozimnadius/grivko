@@ -1,0 +1,31 @@
+.product-select {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+
+  &__item {
+    .filter {
+
+      &__btn {
+        border-color: $txt;
+        height: 58px;
+      }
+
+      &-view{
+        &__name{
+          font-weight: 500;
+        }
+
+        &__vals{
+          margin-left: auto;
+          font-weight: 500;
+        }
+      }
+
+      &-drop{
+        border-color: $txt;
+        padding-top: 58px;
+      }
+    }
+  }
+}

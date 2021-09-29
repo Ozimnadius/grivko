@@ -1,0 +1,33 @@
+extends ./../../../../main
+
+block variables
+    - var title = 'Ткани'
+    - var isWomen = true
+
+block content
+    main.women
+        section.women__fabrics.mb80
+            .container
+                include ../../../../components/fabrics/index
+        //- fitting
+        section.women__fitting.mb80
+            .container
+                -
+                    var props = {
+                        list: [
+                            {
+                                img: "/images/content/women/fitting/1.jpg",
+                                href: "/",
+                                title: "Одежда больших размеров",
+                                txt: "от 38 до 54"
+                            },
+                            {
+                                img: "/images/content/women/fitting/2.jpg",
+                                href: "/",
+                                title: "Индивидуальный пошив",
+                                txt: "Шедевр для настоящих ценителей эксклюзива."
+                            }
+                        ]
+                    };
+                +fitting(props)
+

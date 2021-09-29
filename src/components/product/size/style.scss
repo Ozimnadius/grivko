@@ -1,0 +1,16 @@
+.product-size{
+
+  &__standart{
+    margin-bottom: 30px;
+  }
+
+  &__filters{
+    margin-bottom: 20px;
+  }
+
+
+}
+
+@import "standart/style";
+@import "select/style";
+@import "desc/style";

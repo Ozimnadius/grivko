@@ -26,11 +26,31 @@
 
   }
 
+  &--gold{
+    border-color: $gold;
+    color: $txt;
+
+    &:hover{
+      background: $txt;
+      border-color: $txt;
+      color: $bg;
+    }
+  }
+
+  &--revers{
+    svg{
+      margin-right: 15px;
+      margin-left: 0!important;
+    }
+  }
 
   svg{
     fill: currentColor;
     margin-left: 15px;
   }
+
+
+
 
 }
 
@@ -77,10 +97,38 @@
   font-size: 32px;
   font-weight: 500;
   text-transform: uppercase;
+
+  &--line{
+    padding-top: 30px;
+    position: relative;
+
+    &:before{
+      content: '';
+      display: block;
+      width: 64px;
+      height: 8px;
+      background-color: $gold;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
 }
 
-.mb80{
-  margin-bottom: 80px;
+.mb{
+
+  &40{
+    margin-bottom: 40px;
+  }
+
+  &80{
+    margin-bottom: 80px;
+  }
+
+  &120{
+    margin-bottom: 120px;
+  }
+
 }
 
 //Form elements

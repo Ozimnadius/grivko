@@ -1,0 +1,23 @@
+.product-btns{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 10px;
+  grid-template-areas: 'check check' 'cons fit';
+
+  &__item{
+    width: 100%;
+  }
+
+  &__checkout{
+    grid-area: check;
+    height: 84px;
+  }
+
+  &__consultation{
+    grid-area: cons;
+  }
+
+  &__fitting{
+    grid-area: fit;
+  }
+}

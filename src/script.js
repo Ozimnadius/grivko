@@ -7,3 +7,5 @@
 // @prepros-append components/filters/script.js
 // @prepros-append components/faq/script.js
 // @prepros-append components/fashion/script.js
+// @prepros-append components/product/script.js
+

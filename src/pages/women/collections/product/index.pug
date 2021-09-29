@@ -1,0 +1,14 @@
+extends ../../../../main
+
+block variables
+    - var title = 'Карточка товара'
+    - var isWomen = true
+
+block content
+    main.women
+        //- product
+        section.women__product
+            .container
+                include ../../../../components/product/index
+
+

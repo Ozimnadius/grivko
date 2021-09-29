@@ -1,0 +1,47 @@
+.appointment{
+  position: relative;
+  border-width: 30px;
+  padding: 0px 160px 0px 0px;
+
+  &:before{
+    content: 'Бесплатно';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 65px;
+    background-color: $gold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $bg;
+    font-weight: 700;
+    writing-mode:vertical-rl;
+    transform: rotate(180deg);
+  }
+
+  &__flex{
+    display: flex;
+    align-items: center;
+  }
+
+  &__left{
+    margin-top: -18px;
+    margin-bottom: -18px;
+    margin-right: 90px;
+  }
+
+  &__center{
+    margin-right: auto;
+  }
+
+  &__title{
+    margin-bottom: 15px;
+  }
+
+  &__btn{
+    width: 319px;
+    height: 74px;
+  }
+
+}

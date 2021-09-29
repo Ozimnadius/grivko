@@ -3,33 +3,9 @@ window.addEventListener("load", function () {
 
     console.log("FILTERS.JS");
 
-    // $(".jsFilter").hover(function () {
-    //     let $this = $(this),
-    //         $drop = $this.find(".filter__drop"),
-    //         $dropInner = $drop.find(".filter-drop"),
-    //         height = $dropInner.outerHeight();
-    //     $drop.css("height", height + "px");
-    //
-    // }, function () {
-    //     let $this = $(this),
-    //         $drop = $this.find(".filter__drop"),
-    //         $dropInner = $drop.find(".filter-drop"),
-    //         height = $dropInner.outerHeight();
-    //
-    //     $drop.css("height", "0px");
-    // });
-
     document.querySelectorAll('.jsFilter').forEach(function (i) {
         new Filter(i);
     });
-
-    // $(".filter-select__option input").on("change", function (){
-    //     let $this = $(this),
-    //         val = $this.val(),
-    //         $filter = $this.closest(".jsFilter");
-    //         $filter.find(".filter-view .filter-select__option").text(val);
-    // });
-
 
 });
 
