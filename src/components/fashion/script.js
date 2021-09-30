@@ -1,6 +1,5 @@
 //fashion.js
 window.addEventListener('load', function () {
-    console.log("FASHION.JS");
 
     document.querySelectorAll('.fashion__item').forEach((i) => i.addEventListener('click', (e) => {
         e.preventDefault();

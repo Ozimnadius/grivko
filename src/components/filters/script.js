@@ -1,8 +1,6 @@
 //filters.js
 window.addEventListener("load", function () {
 
-    console.log("FILTERS.JS");
-
     document.querySelectorAll('.jsFilter').forEach(function (i) {
         new Filter(i);
     });

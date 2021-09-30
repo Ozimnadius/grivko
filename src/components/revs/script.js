@@ -1,6 +1,5 @@
 //revs.js
 window.addEventListener("load", function (){
-    console.log('REVS.JS');
 
     const revsSwiper = new Swiper('.revs__swiper', {
         slidesPerView: "auto",
@@ -37,7 +36,5 @@ window.addEventListener("load", function (){
     //         }
     //     });
     // }
-
-
 
 });

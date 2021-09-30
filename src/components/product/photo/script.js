@@ -1,8 +1,8 @@
 //photo.js
 window.addEventListener('load', function () {
-    console.log("PHOTO.JS");
-
-    let photos = new Photo();
+    if(document.querySelector('.jsPhotos')) {
+        let photos = new Photo();
+    }
 });
 
 class Photo {

@@ -1,0 +1,61 @@
+extends ./../../../main
+
+block variables
+    - var title = 'Для женщин'
+    - var isWomen = true
+
+block content
+    main.women
+        //- breadcrumbs
+        section.women__breadcrumbs.women__breadcrumbs--mb20
+            .container
+                include ../../../components/breadcrumbs/index
+        //- banner
+        section.women__banner.women__banner--mb0
+            -
+                var props = {
+                    imgPath: "/images/content/women/banner/",
+                    dopCls: "banner--small"
+                };
+            +banner(props)
+        //- content
+        section.women__content.mb80
+            .container
+                .women-content
+                    .content
+                        h2 ДОМ МОДЫ LEONIDGRIVKO
+                        p
+                            b Главная задача нашего салона – создание идеального гардероба мужчины.
+                        p Российский дизайнер, эксперт по мужскому стилю. Учесть индивидуальные особенности каждого клиента, подчеркнуть его достоинства и скрыть малейшие недостатки – важнейшие направления нашей работы.
+                        p В пошиве костюма мы используем уникальную технологию, благодаря которой он превосходно держит форму и при этом остается мягким и удобным. Я лично работаю с каждым клиентом, разрабатывая его персональный стиль и уделяя максимальное внимание посадке изделия.
+                        p Ведь мужской костюм – это современные доспехи, которые указывают на статус и профессиональную принадлежность их обладателя. Именно так, учитывая все нюансы, создается костюм, в котором мужчина выглядит поистине безукоризненно.
+        //- map
+        section.women__map.mb80
+            .container
+                include ../../../components/map/index
+        //- signup
+        section.women__signup.mb80
+            .container
+                include ../../../components/signup/index
+        //- gallery
+        section.women__gallery.mb80
+            .container
+                -
+                    var props = {
+                        title: "Фотогалерея",
+                        list: [
+                            "/images/content/women/tailoring/gallery/1.jpg",
+                            "/images/content/women/tailoring/gallery/2.jpg",
+                            "/images/content/women/tailoring/gallery/3.jpg",
+                            "/images/content/women/tailoring/gallery/4.jpg",
+                            "/images/content/women/tailoring/gallery/5.jpg",
+                            "/images/content/women/tailoring/gallery/6.jpg",
+                            "/images/content/women/tailoring/gallery/7.jpg",
+                            "/images/content/women/tailoring/gallery/8.jpg",
+                        ]
+                    };
+                +gallery(props)
+        //- subscribe
+        section.women__subscribe
+            .container
+                include ../../../components/subscribe/index

@@ -11,6 +11,7 @@
   "devDependencies": {},
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
+    "dropzone": "^5.9.3",
     "inputmask": "^5.0.6",
     "jquery": "^3.6.0",
     "normalize.css": "^8.0.1",

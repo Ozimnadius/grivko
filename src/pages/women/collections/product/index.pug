@@ -7,8 +7,48 @@ block variables
 block content
     main.women
         //- product
-        section.women__product
+        section.women__product.mb80
             .container
                 include ../../../../components/product/index
-
-
+        //- similar
+        section.women__similar.mb80
+            -
+                var props = {
+                    title: "Похожие костюмы",
+                    link: {
+                        href: "/women/collections/suits/",
+                        name: "Открыть всю коллекцию"
+                    },
+                    list: [
+                        {
+                            img: "/images/content/women/collections/9.jpg",
+                            title: "КОСТЮМ-ТРОЙКА",
+                            price: "от 75 000 руб.",
+                            href: "/"
+                        },
+                        {
+                            img: "/images/content/women/collections/10.jpg",
+                            title: "ОДНОБОРТНЫЙ КОСТЮМ",
+                            price: "от 75 000 руб.",
+                            href: "/"
+                        },
+                        {
+                            img: "/images/content/women/collections/11.jpg",
+                            title: "ОДНОБОРТНЫЙ КОСТЮМ",
+                            price: "от 75 000 руб.",
+                            href: "/"
+                        },
+                        {
+                            img: "/images/content/women/collections/12.jpg",
+                            title: "КОСТЮМ-ТРОЙКА",
+                            price: "от 75 000 руб.",
+                            href: "/"
+                        }
+                    ],
+                    cls: "catalog--small-title"
+                };
+            +catalog(props)
+        //- choose
+        section.women__choose
+            .container
+                include ../../../../components/choose/index

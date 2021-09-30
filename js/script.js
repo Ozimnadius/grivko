@@ -41,7 +41,6 @@ window.addEventListener("load", function (){
 
 //revs.js
 window.addEventListener("load", function (){
-    console.log('REVS.JS');
 
     const revsSwiper = new Swiper('.revs__swiper', {
         slidesPerView: "auto",
@@ -79,12 +78,9 @@ window.addEventListener("load", function (){
     //     });
     // }
 
-
-
 });
 //choose.js
 window.addEventListener("load", function () {
-    console.log('CHOOSE.JS');
 
     class Check {
         constructor() {
@@ -158,8 +154,6 @@ window.addEventListener("load", function () {
 });
 //filters.js
 window.addEventListener("load", function () {
-
-    console.log("FILTERS.JS");
 
     document.querySelectorAll('.jsFilter').forEach(function (i) {
         new Filter(i);
@@ -239,13 +233,9 @@ class Filter {
 }
 //faq.js
 window.addEventListener("load", function () {
-    console.log("FAQ.JS");
-
     if (document.querySelector('.jsFaq')){
         let faq = new Faq();
     }
-
-
 });
 
 class FaqItem {
@@ -306,7 +296,6 @@ class Faq {
 
 //fashion.js
 window.addEventListener('load', function () {
-    console.log("FASHION.JS");
 
     document.querySelectorAll('.fashion__item').forEach((i) => i.addEventListener('click', (e) => {
         e.preventDefault();
@@ -351,9 +340,9 @@ window.addEventListener('load', function () {
 });
 //photo.js
 window.addEventListener('load', function () {
-    console.log("PHOTO.JS");
-
-    let photos = new Photo();
+    if(document.querySelector('.jsPhotos')) {
+        let photos = new Photo();
+    }
 });
 
 class Photo {
@@ -392,7 +381,9 @@ class Photo {
 
 }
 window.addEventListener('load', function (){
-    new Tabs();
+    if(document.querySelector('.jsTabs')) {
+        new Tabs();
+    }
 });
 
 class Tabs{
@@ -424,5 +415,61 @@ class Tabs{
         this.btnsList[this.activeIndex].classList.add('active');
         this.tabsList[this.activeIndex].classList.add('active');
     }
+}
+// product-revs.js
+window.addEventListener('load', function () {
+    if(document.querySelector('.jsRevs')) {
+        const revs = new Revs();
+    }
+
+    // $.fancybox.open(formReview.content);
+    //
+    // let myDropzone = new Dropzone(".call-photos__list", {
+    //     url: "/php/review.php",
+    //     paramName: "file",
+    //     thumbnailWidth: 70,
+    //     thumbnailHeight: 70,
+    //     thumbnailMethod: "contain"
+    // });
+});
+
+class Revs {
+    constructor() {
+        this.revs = document.querySelector('.jsRevs');
+        this.hiddens = {
+            items: this.revs.querySelectorAll('.jsRev[data-more]'),
+            open: false,
+            btn: this.revs.querySelector('.jsRevs__more')
+        };
+        this.init();
+    }
+
+    init() {
+        this.hiddens.btn.addEventListener('click', this.hiddensBtnClick);
+    }
+
+    hiddensBtnClick = () => {
+        if (this.hiddens.open) {
+            this.hiddensHide();
+        } else {
+            this.hiddensShow();
+        }
+    }
+
+    hiddensShow() {
+        this.hiddens.items.forEach(i => i.hidden = false);
+        this.hiddens.btn.classList.add('active');
+        this.hiddens.btn.firstElementChild.innerText = "Скрыть";
+        this.hiddens.open = true;
+    }
+
+    hiddensHide() {
+        this.hiddens.items.forEach(i => i.hidden = true);
+        this.hiddens.btn.classList.remove('active');
+        this.hiddens.btn.firstElementChild.innerText = "Все отзывы";
+        this.hiddens.open = false;
+    }
+
+
 }
 //# sourceMappingURL=script.js.map

@@ -1,12 +1,8 @@
 //faq.js
 window.addEventListener("load", function () {
-    console.log("FAQ.JS");
-
     if (document.querySelector('.jsFaq')){
         let faq = new Faq();
     }
-
-
 });
 
 class FaqItem {

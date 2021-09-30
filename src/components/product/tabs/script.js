@@ -1,5 +1,7 @@
 window.addEventListener('load', function (){
-    new Tabs();
+    if(document.querySelector('.jsTabs')) {
+        new Tabs();
+    }
 });
 
 class Tabs{

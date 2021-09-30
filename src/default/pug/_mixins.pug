@@ -28,8 +28,10 @@ mixin banner(props)
                     source(srcset=props.imgPath + 'img1280.jpg' media='(max-width: 1919.98px)')
                     img(src=props.imgPath + 'img.jpg' alt='')
             .banner__wrap
-                .banner__sub!=props.sub
-                h2.banner__title!=props.title
+                if props.sub
+                    .banner__sub!=props.sub
+                if props.title
+                    h2.banner__title!=props.title
                 if props.txt
                     .banner__txt!=props.txt
                 if props.big
