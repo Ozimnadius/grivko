@@ -1,0 +1,17 @@
+.fabrics-top{
+  display: grid;
+  grid-template-columns: 754fr 787fr;
+  grid-gap: 60px;
+
+  &--center{
+    align-items: center;
+  }
+
+  &__title{
+    margin-bottom: 10px;
+  }
+
+  &__breadcrumbs{
+    margin-bottom: 20px;
+  }
+}

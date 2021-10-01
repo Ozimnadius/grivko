@@ -1,0 +1,63 @@
+.delivery{
+
+  &__item{
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+    padding: 30px 60px 60px;
+    margin-bottom: 80px;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  &__top{
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__title{
+    font-size: 24px;
+  }
+
+  &__logos{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+
+  &__ol{
+    background: url("/images/content/bordered/bg.png") 0 0;
+    padding: 60px;
+    counter-reset: li;
+    display: grid;
+    gap: 30px;
+  }
+
+  &__li{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    a{
+      color: $gold;
+    }
+
+    &:before{
+      counter-increment: li;
+      content: counter(li);
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 64px;
+      height: 64px;
+      background-color: $gold;
+      color: $bg;
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+}

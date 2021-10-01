@@ -1,34 +1,49 @@
 .women {
   flex-grow: 1;
 
-  &__desc{
+  &__desc {
     margin-top: 25px;
-    margin-bottom: 55px;
+    margin-bottom: 30px;
+
   }
 
-  &__list{
+  &__list {
     display: grid;
     grid-gap: 10px;
   }
 
-  &__banner{
+  &__banner {
     margin-bottom: 25px;
 
-    &--mb0{
+    &--mb0 {
       margin-bottom: 0;
     }
   }
 
-  &__breadcrumbs{
+  &__breadcrumbs {
     margin-bottom: 30px;
 
-    &--mb20{
+    &--mb20 {
       margin-bottom: 20px;
     }
   }
+
+  &__fabrics {
+    margin-top: 60px;
+  }
 }
 
-.women-content{
+.women-desc {
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__breadcrumbs {
+    margin-bottom: 25px;
+  }
+}
+
+.women-content {
   position: relative;
   z-index: 2;
   max-width: 1630px;
@@ -37,4 +52,16 @@
   background: $bg url("/images/content/bordered/bg.png") 0 0;
   padding: 60px;
   margin-top: -60px;
+}
+
+.women-faqs {
+  &__item {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+    margin-bottom: 80px;
+    padding: 60px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }

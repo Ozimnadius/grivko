@@ -1,0 +1,19 @@
+extends ../../../../main
+
+block variables
+    - var title = 'Готовые коллекции'
+    - var isWomen = true
+
+block content
+    main.women
+        //- desc
+        section.women__desc
+            .container
+                .women-desc
+                    h2.women-desc__title.title.title--line Готовые коллекции женской одежды
+                    .women-desc__breadcrumbs
+                        include ../../../../components/breadcrumbs/index
+        //- docs
+        section.women__docs
+            .container
+                include ../../../../components/docs/index

@@ -1,0 +1,61 @@
+extends ./../../../../main
+
+block variables
+    - var title = 'История'
+    - var isWomen = true
+
+block content
+    main.women
+        section.women__fabrics.mb80
+            .container
+                .fabrics-top.fabrics-top--center
+                    .fabrics-top__left
+                        h2.fabrics-top__title.title.title--line
+                            |Дом Моды LEONIDGRIVKO:
+                            br
+                            |Наш путь к совершенству
+                        .fabrics-top__breadcrumbs
+                            include ../../../../components/breadcrumbs/index
+                        .fabrics-top__content.content
+                            p При разработке моделей для коллекций мы учли особенности всех типов фигур женщин, а также разработали уникальную корсетную технологию пошива, чтобы обеспечить идеальную посадку одежды на любую фигуру и рост. Также мы работаем с лучшими производителями и выбираем лучших людей, чтобы наша одежда радовала вас долго
+                    .fabrics-top__right
+                        include ../../../../components/video/index
+        //- tech
+        section.women__tech.mb120
+            .container
+                -
+                    var list = [
+                        {
+                            cls: "date",
+                            count:"2016",
+                        },
+                        {
+                            cls: "date",
+                            count:"2017",
+                            img:"/images/content/women/about/history/1.jpg"
+                        },
+                        {
+                            cls: "date",
+                            count:"2018",
+                            img:"/images/content/women/about/history/2.jpg"
+                        },
+                        {
+                            cls: "date",
+                            count:"2019",
+                            img:"/images/content/women/about/history/3.jpg"
+                        },
+                        {
+                            cls: "date",
+                            count:"2020",
+                            img:"/images/content/women/about/history/4.jpg"
+                        },
+                        {
+                            cls: "date",
+                            count:"2021",
+                            img:"/images/content/women/about/history/5.jpg"
+                        },
+
+                    ];
+                +stages(list)
+
+

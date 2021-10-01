@@ -1,0 +1,16 @@
+.delivery
+    .delivery__list
+        each i in list
+            .delivery__item
+                .delivery__top
+                    h3.delivery__title.title= i.title
+                    if i.logos
+                        .delivery__logos
+                            each logo in i.logos
+                                .delivery__logo
+                                    img(src=logo alt="lorem")
+                ol.delivery__ol
+                    each li in i.ol
+                        li.delivery__li
+                            .delivery__content!=li
+

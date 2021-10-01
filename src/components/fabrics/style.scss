@@ -2,9 +2,6 @@
   padding-top: 60px;
 
   &__top{
-    display: grid;
-    grid-template-columns: 754fr 787fr;
-    grid-gap: 60px;
     margin-bottom: 80px;
   }
 
@@ -80,3 +77,5 @@
     }
   }
 }
+
+ @import "top/style";

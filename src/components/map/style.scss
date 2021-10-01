@@ -1,6 +1,44 @@
-.map{
-&__right{
-  width: 1300px;
-  height: 900px;
+.map {
+  display: grid;
+  grid-template-columns: 495px 1fr;
+  align-items: center;
+
+  &__right {
+    height: 848px;
+  }
 }
+
+.map-contacts{
+  position: relative;
+  z-index: 1;
+  margin-right: -65px;
+  padding-bottom: 190px;
+
+  &__title{
+    margin-bottom: 50px;
+  }
+
+  &__list{
+    display: grid;
+    grid-gap: 30px;
+  }
+}
+
+.map-contact{
+  display: grid;
+  grid-template-columns: 65px 1fr;
+  align-items: center;
+  color: $txt;
+  @include tr;
+
+  &:hover{
+    color: $link;
+  }
+
+  svg{
+    path{
+      fill: currentColor;
+
+    }
+  }
 }

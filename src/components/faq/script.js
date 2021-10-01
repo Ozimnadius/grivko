@@ -1,7 +1,10 @@
 //faq.js
 window.addEventListener("load", function () {
-    if (document.querySelector('.jsFaq')){
-        let faq = new Faq();
+
+    let items = document.querySelectorAll('.jsFaq');
+
+    if (items.length>0){
+        items.forEach(i=>new Faq(i));
     }
 });
 
@@ -44,8 +47,8 @@ class FaqItem {
 }
 
 class Faq {
-    constructor() {
-        this.faq = document.querySelector('.jsFaq');
+    constructor(obj) {
+        this.faq = obj;
         this.elems = this.faq.querySelectorAll('.jsFaq__item');
         this.items = [];
         this.activeItem = undefined;

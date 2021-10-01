@@ -9,6 +9,14 @@
         padding-left: 0;
         padding-right: 175px;
 
+        &.date{
+          padding-right: 340px;
+
+          &:after{
+            right: 130px;
+          }
+        }
+
         &:before {
           left: initial;
           right: 0;
@@ -38,6 +46,23 @@
 .stage {
   padding-left: 175px;
   position: relative;
+
+  &.date{
+    padding-left: 340px;
+
+    &:before{
+      content: attr(data-count);
+      writing-mode: initial;
+      transform: none;
+      font-size: 112px;
+      font-weight: 900;
+    }
+
+    &:after{
+      top: 140px;
+      left: 130px;
+    }
+  }
 
   &:before {
     counter-increment: li;
