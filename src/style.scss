@@ -10,7 +10,7 @@
 @import "default/blocks/header/header";
 @import "default/blocks/nav/nav";
 @import "default/blocks/footer/footer";
-@import "blocks/banner";
+//@import "blocks/banner";
 @import "blocks/bordered";
 @import "blocks/catalog";
 @import "blocks/item";
@@ -25,6 +25,7 @@
 
 //COMPONENTS
 @import "components/lang/style";
+@import "components/banner/style";
 @import "components/revs/style";
 @import "components/subscribe/style";
 @import "components/breadcrumbs/style";
@@ -49,8 +50,9 @@
 
 
 //PAGES
+@import "pages/style";
 @import "pages/index/style";
-@import "pages/women/style";
+//@import "pages/women/style";
 
 
 .debug {

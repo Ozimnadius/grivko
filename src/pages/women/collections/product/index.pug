@@ -7,11 +7,11 @@ block variables
 block content
     main.women
         //- product
-        section.women__product.mb80
+        section.page__product.mb80
             .container
                 include ../../../../components/product/index
         //- similar
-        section.women__similar.mb80
+        section.page__similar.mb80
             -
                 var props = {
                     title: "Похожие костюмы",
@@ -49,6 +49,6 @@ block content
                 };
             +catalog(props)
         //- choose
-        section.women__choose
+        section.page__choose
             .container
                 include ../../../../components/choose/index

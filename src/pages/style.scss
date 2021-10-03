@@ -1,4 +1,4 @@
-.women {
+.page{
   flex-grow: 1;
 
   &__desc {
@@ -32,7 +32,7 @@
   }
 }
 
-.women-desc {
+.page-desc {
   &__title {
     margin-bottom: 10px;
   }
@@ -42,18 +42,17 @@
   }
 }
 
-.women-content {
+.page-content {
   position: relative;
   z-index: 2;
   max-width: 1630px;
   width: 100%;
-  margin: 0 auto;
   background: $bg url("/images/content/bordered/bg.png") 0 0;
   padding: 60px;
-  margin-top: -60px;
+  margin: -60px auto 0;
 }
 
-.women-faqs {
+.page-faqs {
   &__item {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
     margin-bottom: 80px;

@@ -5,9 +5,9 @@ block variables
     - var isWomen = true
 
 block content
-    main.women
+    main.page
         //- banner
-        section.women__banner
+        section.page__banner
             -
                 var props = {
                     imgPath: "/images/content/women/tailoring/banner/",
@@ -17,13 +17,13 @@ block content
                     dopCls: "banner--small",
                     form: true
                 };
-            +banner(props)
+            include ../../../../components/banner/index
         //- breadcrumbs
-        section.women__breadcrumbs
+        section.page__breadcrumbs
             .container
                 include ../../../../components/breadcrumbs/index
         //- suit
-        section.women__suit.mb120
+        section.page__suit.mb120
             .container
                 -
                     var props = {
@@ -31,7 +31,7 @@ block content
                     };
                 +suit(props)
         //- prices
-        section.women__prices.mb40
+        section.page__prices.mb40
             -
                 var props = {
                     title: "Цены",
@@ -64,23 +64,23 @@ block content
                 };
             +catalog(props)
         //- appointment
-        section.women__appointment.mb80
+        section.page__appointment.mb80
             .container
                 include ../../../../components/appointment/index
         //- tech
-        section.women__tech.mb80
+        section.page__tech.mb80
             .container
                 include ../../../../components/corsettech/index
         //- cloths
-        section.women__cloths.mb80
+        section.page__cloths.mb80
             .container
                 include ../../../../components/cloths/index
         //- principles
-        section.women__principles.mb80
+        section.page__principles.mb80
             .container
                 include ../../../../components/principles/index
         //- gallery
-        section.women__gallery.mb80
+        section.page__gallery.mb80
             .container
                 -
                     var props = {
@@ -98,14 +98,14 @@ block content
                     };
                 +gallery(props)
         //- revs
-        section.women__revs.mb80
+        section.page__revs.mb80
             .container
                 include ../../../../components/revs/index
         //- founder
-        section.women__founder.mb80
+        section.page__founder.mb80
             .container
                 include ../../../../components/founder/index
         //- signup
-        section.women__signup
+        section.page__signup
             .container
                 include ../../../../components/signup/index

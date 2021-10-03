@@ -5,18 +5,18 @@ block variables
     - var isWomen = true
 
 block content
-    main.women
+    main.page
         //- desc
-        section.women__desc
+        section.page__desc
             .container
-                .women-desc
-                    h2.women-desc__title.title.title--line Популярные вопросы клиентов
-                    .women-desc__breadcrumbs.mb0
+                .page-desc
+                    h2.page-desc__title.title.title--line Популярные вопросы клиентов
+                    .page-desc__breadcrumbs.mb0
                         include ../../../components/breadcrumbs/index
         //- list
-        section.women__faqs.mb80
+        section.page__faqs.mb80
             .container
-                .women-faqs
+                .page-faqs
                     -
                         var list = [
                             {
@@ -71,10 +71,10 @@ block content
                             },
                         ];
                     each faq in list
-                        .women-faqs__item
+                        .page-faqs__item
                             +faq(faq)
         //- subscribe
-        section.women__subscribe
+        section.page__subscribe
             .container
                 include ../../../components/subscribe/index
 

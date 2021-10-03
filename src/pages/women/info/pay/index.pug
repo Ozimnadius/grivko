@@ -5,16 +5,16 @@ block variables
     - var isWomen = true
 
 block content
-    main.women
+    main.page
         //- desc
-        section.women__desc
+        section.page__desc
             .container
-                .women-desc
-                    h2.women-desc__title.title.title--line Условия оплаты
-                    .women-desc__breadcrumbs
+                .page-desc
+                    h2.page-desc__title.title.title--line Условия оплаты
+                    .page-desc__breadcrumbs
                         include ../../../../components/breadcrumbs/index
         //- pay
-        section.women__pay.mb80
+        section.page__pay.mb80
             .container
                 .pay
                     each i,x in ["Оплатить заказ можно наличными или банковской картой в момент приобретения вещей непосредственно в бутике по адресу: г. Москва, Пушкарев переулок, 5.","Оплатить можно наличными или безналичным платежом онлайн (банковской картой) для жителей Москвы и МО курьеру в момент получения посылки.","Для покупателей других регионов России и зарубежных стран оплату заказа необходимо произвести по безналичному расчету онлайн (банковской картой)"]
@@ -24,7 +24,7 @@ block content
                             .pay__txt= i
 
         //- subscribe
-        section.women__subscribe
+        section.page__subscribe
             .container
                 include ../../../../components/subscribe/index
 

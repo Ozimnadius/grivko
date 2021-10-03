@@ -1,4 +1,40 @@
-<!DOCTYPE html>
+
+<!--mixin banner(props)-->
+<!--    div(class=props.dopCls).banner-->
+<!--        .banner__container-->
+<!--            .banner__img-->
+<!--                picture-->
+<!--                    source(srcset=props.imgPath + 'img375.jpg' media='(max-width: 767.98px)')-->
+<!--                    source(srcset=props.imgPath + 'img768.jpg' media='(max-width: 1279.98px)')-->
+<!--                    source(srcset=props.imgPath + 'img1280.jpg' media='(max-width: 1919.98px)')-->
+<!--                    img(src=props.imgPath + 'img.jpg' alt='')-->
+<!--            .banner__wrap-->
+<!--                if props.sub-->
+<!--                    .banner__sub!=props.sub-->
+<!--                if props.title-->
+<!--                    h2.banner__title!=props.title-->
+<!--                if props.txt-->
+<!--                    .banner__txt!=props.txt-->
+<!--                if props.big-->
+<!--                    .banner__big!=props.big-->
+<!--        if props.form-->
+<!--            .banner__form-->
+<!--                .banner-form-->
+<!--                    .banner-form__name Записаться на снятие мерок-->
+<!--                    .banner-form__wrap-->
+<!--                        form.banner-form__form-->
+<!--                            .banner-form__fields-->
+<!--                                .banner-form__field-->
+<!--                                    input(type="text" name="name" placeholder="Имя" required).input-->
+<!--                                .banner-form__field-->
+<!--                                    input(type="tel" name="tel" placeholder="Телефон" required).input-->
+<!--                                .banner-form__field.banner-form__field--double-->
+<!--                                    input(type="text" name="datetime" placeholder="Напишите удобный день и время").input-->
+<!--                            button(type='submit').btn.btn--black.banner-form__submit-->
+<!--                                span Отправить заявку-->
+<!--                                <svg width="26" height="9" viewBox="0 0 26 9" xmlns="http://www.w3.org/2000/svg">-->
+<!--                                <path d="M25.271 3.758L21.683 0.169998C21.5744 0.0613919 21.4271 0.000377652 21.2735 0.000377655C21.1199 0.000377658 20.9726 0.061392 20.864 0.169998C20.7554 0.278604 20.6944 0.425906 20.6944 0.579498C20.6944 0.73309 20.7554 0.880392 20.864 0.988998L23.464 3.589H0.579C0.425307 3.589 0.277909 3.65005 0.169232 3.75873C0.0605546 3.86741 -0.000499725 4.01481 -0.000499725 4.1685C-0.000499725 4.32219 0.0605546 4.46959 0.169232 4.57827C0.277909 4.68694 0.425307 4.748 0.579 4.748H23.463L20.863 7.348C20.7544 7.4566 20.6934 7.60391 20.6934 7.7575C20.6934 7.91109 20.7544 8.05839 20.863 8.167C20.9716 8.2756 21.1189 8.33662 21.2725 8.33662C21.4261 8.33662 21.5734 8.2756 21.682 8.167L25.27 4.579C25.3242 4.52526 25.3672 4.46135 25.3965 4.39094C25.4259 4.32052 25.4411 4.245 25.4412 4.16871C25.4413 4.09241 25.4263 4.01685 25.3971 3.94637C25.3679 3.87589 25.325 3.81187 25.271 3.758V3.758Z"/>-->
+<!--                                </svg>--><!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
@@ -57,15 +93,15 @@
         </header>
       </div>
       <div class="wrapper__content">
-        <main class="women">
-          <section class="women__banner">
+        <main class="page">
+          <section class="page__banner">
             <div class="banner--small banner">
               <div class="banner__container">
                 <div class="banner__img">
                   <picture>
-                    <source srcset="/images/content/women/bigsize/banner/img375.jpg" media="(max-width: 767.98px)"/>
-                    <source srcset="/images/content/women/bigsize/banner/img768.jpg" media="(max-width: 1279.98px)"/>
-                    <source srcset="/images/content/women/bigsize/banner/img1280.jpg" media="(max-width: 1919.98px)"/><img src="/images/content/women/bigsize/banner/img.jpg" alt=""/>
+                    <source srcset="/images/content/women/bigsize/banner/img375.jpg" media="(max-width: 767.98px)">
+                    <source srcset="/images/content/women/bigsize/banner/img768.jpg" media="(max-width: 1279.98px)">
+                    <source srcset="/images/content/women/bigsize/banner/img1280.jpg" media="(max-width: 1919.98px)"><img src="/images/content/women/bigsize/banner/img.jpg" alt="">
                   </picture>
                 </div>
                 <div class="banner__wrap">
@@ -81,13 +117,13 @@
                     <form class="banner-form__form">
                       <div class="banner-form__fields">
                         <div class="banner-form__field">
-                          <input class="input" type="text" name="name" placeholder="Имя" required="required"/>
+                          <input class="input" type="text" name="name" placeholder="Имя" required>
                         </div>
                         <div class="banner-form__field">
-                          <input class="input" type="tel" name="tel" placeholder="Телефон" required="required"/>
+                          <input class="input" type="tel" name="tel" placeholder="Телефон" required>
                         </div>
                         <div class="banner-form__field banner-form__field--double">
-                          <input class="input" type="text" name="datetime" placeholder="Напишите удобный день и время"/>
+                          <input class="input" type="text" name="datetime" placeholder="Напишите удобный день и время">
                         </div>
                       </div>
                       <button class="btn btn--black banner-form__submit" type="submit"><span>Отправить заявку</span><svg width="26" height="9" viewBox="0 0 26 9" xmlns="http://www.w3.org/2000/svg">
@@ -100,12 +136,12 @@
               </div>
             </div>
           </section>
-          <section class="women__breadcrumbs">
+          <section class="page__breadcrumbs">
             <div class="container">
               <div class="breadcrumbs"><a class="breadcrumbs__item" href="#">главная</a><span class="breadcrumbs__item breadcrumbs__item--sep">&nbsp;/&nbsp;</span><span class="breadcrumbs__item breadcrumbs__item--active">Не главная</span></div>
             </div>
           </section>
-          <section class="women__collections">
+          <section class="page__collections">
             <div class="catalog">
               <div class="container">
                 <div class="catalog__top">
@@ -168,7 +204,7 @@
               </div>
             </div>
           </section>
-          <section class="women__list mb80">
+          <section class="page__list mb80">
             <div class="container">
               <div class="list">
                 <div class="list__item">
@@ -189,7 +225,7 @@
               </div>
             </div>
           </section>
-          <section class="women__fitting mb80">
+          <section class="page__fitting mb80">
             <div class="container">
               <div class="fitting">
                 <div class="fitting__left">
@@ -230,7 +266,7 @@
               </div>
             </div>
           </section>
-          <section class="women__tech mb80">
+          <section class="page__tech mb80">
             <div class="container">
               <div class="corsettech">
                 <div class="corsettech__left">
@@ -245,7 +281,7 @@
               </div>
             </div>
           </section>
-          <section class="women__revs mb80">
+          <section class="page__revs mb80">
             <div class="container">
               <div class="revs">
                 <div class="container">
@@ -302,7 +338,7 @@
               </div>
             </div>
           </section>
-          <section class="women__signup">
+          <section class="page__signup">
             <div class="container">
               <div class="signup">
                 <div class="signup__wrap">

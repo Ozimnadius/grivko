@@ -5,9 +5,9 @@ block variables
     - var isWomen = true
 
 block content
-    main.women
+    main.page
         //- banner
-        section.women__banner
+        section.page__banner
             -
                 var props = {
                     imgPath: "/images/content/women/banner/",
@@ -16,13 +16,13 @@ block content
                     big: "«Мы используем собственные <br> разработки для идеальной посадки <br> на любую фигуру, лучшие ткани <br> и вдохновляющих людей».",
                     dopCls: "banner--small"
                 };
-            +banner(props)
+            include ../../components/banner/index
         //- breadcrumbs
-        section.women__breadcrumbs
+        section.page__breadcrumbs
             .container
                 include ../../components/breadcrumbs/index
         //- collections
-        section.women__collections.mb180
+        section.page__collections.mb80
             -
                 var props = {
                     title: "Коллекции",
@@ -84,7 +84,7 @@ block content
                 };
             +catalog(props)
         //- list
-        section.women__list.mb80
+        section.page__list.mb80
             .container
                 -
                     var list = {
@@ -118,7 +118,7 @@ block content
                     };
                 +list(list)
         //- fitting
-        section.women__fitting.mb80
+        section.page__fitting.mb80
             .container
                 -
                     var props = {
@@ -139,14 +139,14 @@ block content
                     };
                 +fitting(props)
         //- tech
-        section.women__tech.mb80
+        section.page__tech.mb80
             .container
                 include ../../components/corsettech/index
         //- revs
-        section.women__revs.mb80
+        section.page__revs.mb80
             .container
                 include ../../components/revs/index
         //- signup
-        section.women__signup
+        section.page__signup
             .container
                 include ../../components/signup/index
