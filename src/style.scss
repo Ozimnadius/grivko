@@ -12,7 +12,6 @@
 @import "default/blocks/footer/footer";
 @import "blocks/bordered";
 @import "blocks/fancybox";
-@import "blocks/suit";
 @import "blocks/call";
 @import "blocks/pay";
 @import "blocks/delivery";
@@ -21,12 +20,15 @@
 @import "components/lang/style";
 @import "components/banner/style";
 @import "components/catalog/style";
+@import "components/pagination/style";
 @import "components/item/style";
 @import "components/list/style";
 @import "components/fitting/style";
 @import "components/gallery/style";
 @import "components/suit/style";
 @import "components/revs/style";
+@import "components/rev/style";
+@import "components/reviews/style";
 @import "components/subscribe/style";
 @import "components/breadcrumbs/style";
 @import "components/corsettech/style";
@@ -47,6 +49,8 @@
 @import "components/map/style";
 @import "components/docs/style";
 @import "components/delivery/style";
+@import "components/team/style";
+@import "components/portfolio/style";
 
 
 //PAGES

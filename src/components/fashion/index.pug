@@ -17,7 +17,7 @@
                     "/images/content/fashion/9.jpg",
                 ];
             each i in items
-                a(href="#" data-id=99).fashion__item
+                a(href="#" data-id=99 data-action="fashion").fashion__item.jsAction
                     +image(i)
                     button(type='button').fashion__item-btn.btn
                         span Подробнее

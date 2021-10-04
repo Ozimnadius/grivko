@@ -1,24 +1,41 @@
 .subscribe
     .subscribe__left
         .subscribe__content.bordered
-            h2 Подпишитесь на рассылку, мы расскажем много интересного.
-            p
-                | Одежда для нас – особый атрибут, в каждой детали которого
-                br
-                | кроется история, труд и люди, влюбленные в то, что делают.
+            h2= props.title
+            if props.txt
+                p!=props.txt
             form.subscribe__form
-                .subscribe__field
-                    input(type="email" name="email" placeholder="E-mail" required).input
+                .subscribe__fields
+                    if props.fields.email
+                        .subscribe__field
+                            input(type="email" name="email" placeholder="E-mail" required).input
+                    if props.fields.name
+                        .subscribe__field
+                            input(type="text" name="name" placeholder="Имя").input
+                    if props.fields.tel
+                        .subscribe__field
+                            input(type="tel" name="tel" placeholder="Телефон").input
+                    if props.fields.msg
+                        .subscribe__field
+                            textarea( name="tel" placeholder="Коротко о себе").input.input--area
+                    if props.fields.resume
+                        .subscribe__field
+                            label.file
+                                input(type="file" name="resume")
+                                span.file__fake
+                                    span.file__name Загрузить резюме
+                                    <svg width="27" height="26" viewBox="0 0 27 26" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.10297 26C2.28772 26.0051 1.50335 25.6866 0.922302 25.1147C0.341251 24.5429 0.0112795 23.7644 0.00335693 22.9492V15.8799H2.06976V22.9492C2.07267 23.2212 2.18339 23.4808 2.37738 23.6714C2.57137 23.862 2.83296 23.9677 3.10492 23.9658H23.3754C23.6473 23.9677 23.9082 23.862 24.102 23.6714C24.2958 23.4807 24.406 23.2211 24.4086 22.9492V15.8799H26.477V22.9492C26.4693 23.7645 26.1392 24.5433 25.558 25.1152C24.9769 25.6872 24.1927 26.0053 23.3774 26H3.10297ZM12.2026 19.7451V3.89307L8.27289 7.75781L6.81097 6.31982L13.2377 0L19.6645 6.31982L18.2006 7.75781L14.2709 3.89307V19.7451H12.2026Z" />
+                                    </svg>
                 .subscribe__policy
                     | Нажимая на кнопку, вы принимаете
                     |
                     a(href="#") политику конфиденциальности
                 button(type='submit').subscribe__submit.btn.btn--black
-                    span Подписка на рассылку
+                    span= props.btnName
                     <svg width="26" height="9" viewBox="0 0 26 9" xmlns="http://www.w3.org/2000/svg">
                     <path d="M25.271 3.75799L21.683 0.169987C21.5744 0.0613805 21.4271 0.000366208 21.2735 0.000366211C21.1199 0.000366213 20.9726 0.0613805 20.864 0.169987C20.7554 0.278593 20.6944 0.425894 20.6944 0.579487C20.6944 0.733079 20.7554 0.880381 20.864 0.988987L23.464 3.58899H0.579012C0.425319 3.58899 0.277921 3.65004 0.169243 3.75872C0.060566 3.8674 -0.000488281 4.01479 -0.000488281 4.16849C-0.000488281 4.32218 0.060566 4.46958 0.169243 4.57826C0.277921 4.68693 0.425319 4.74799 0.579012 4.74799H23.463L20.863 7.34799C20.7544 7.45659 20.6934 7.60389 20.6934 7.75749C20.6934 7.91108 20.7544 8.05838 20.863 8.16699C20.9716 8.27559 21.1189 8.33661 21.2725 8.33661C21.4261 8.33661 21.5734 8.27559 21.682 8.16699L25.27 4.57899C25.3242 4.52525 25.3672 4.46134 25.3965 4.39092C25.4259 4.32051 25.4411 4.24499 25.4412 4.16869C25.4413 4.0924 25.4263 4.01684 25.3971 3.94636C25.3679 3.87587 25.325 3.81186 25.271 3.75799V3.75799Z"/>
                     </svg>
-
     .subscribe__right
         .subscribe__img
-            +image("/images/content/index/subscribe/img.jpg")
+            +image(props.img)

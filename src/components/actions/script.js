@@ -1,12 +1,24 @@
-//fashion.js
 window.addEventListener('load', function () {
+    new Actions('.jsAction');
+});
 
-    document.querySelectorAll('.fashion__item').forEach((i) => i.addEventListener('click', (e) => {
-        e.preventDefault();
-        sendAjax(e.target.dataset.id);
-    }));
+class Actions {
+    constructor(selector, props) {
 
-    function sendAjax(id) {
+        this.fashions = document.querySelectorAll(`${selector}[data-action="fashion"]`);
+
+        this.init();
+    }
+
+    init() {
+        this.fashions.forEach(i => i.addEventListener('click', (e) => {
+            e.preventDefault();
+            this.sendFashion(e.currentTarget.dataset.id);
+        }));
+    }
+
+    sendFashion(id) {
+
         $.ajax({
             dataType: "json",
             type: "POST",
@@ -41,4 +53,4 @@ window.addEventListener('load', function () {
         });
     }
 
-});
+}

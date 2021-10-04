@@ -25,6 +25,17 @@ block content
         //- subscribe
         section.page__subscribe
             .container
+                -
+                    var props = {
+                        title: "Подпишитесь на рассылку, мы расскажем много интересного.",
+                        txt: "Одежда для нас – особый атрибут, в каждой детали которого<br>" +
+                                "кроется история, труд и люди, влюбленные в то, что делают.",
+                        fields: {
+                            email: true
+                        },
+                        btnName: "Подписка на рассылку",
+                        img: "/images/content/index/subscribe/img.jpg"
+                    };
                 include ../../../../components/subscribe/index
 
 

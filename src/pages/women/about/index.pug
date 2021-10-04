@@ -1,15 +1,19 @@
 extends ./../../../main
 
 block variables
-    - var title = 'Для женщин'
+    - var title = 'О нас'
     - var isWomen = true
 
 block content
     main.page
-        //- breadcrumbs
-        section.page__breadcrumbs.page__breadcrumbs--mb20
+        //- desc
+        section.page__desc
             .container
-                include ../../../components/breadcrumbs/index
+                .page-desc
+                    h2.page-desc__title.title.title--line О нас
+                    .page-desc__breadcrumbs
+                        include ../../../components/breadcrumbs/index
+
         //- banner
         section.page__banner.page__banner--mb0
             -
@@ -58,4 +62,15 @@ block content
         //- subscribe
         section.page__subscribe
             .container
+                -
+                    var props = {
+                        title: "Подпишитесь на рассылку, мы расскажем много интересного.",
+                        txt: "Одежда для нас – особый атрибут, в каждой детали которого<br>" +
+                                "кроется история, труд и люди, влюбленные в то, что делают.",
+                        fields: {
+                            email: true
+                        },
+                        btnName: "Подписка на рассылку",
+                        img: "/images/content/index/subscribe/img.jpg"
+                    };
                 include ../../../components/subscribe/index

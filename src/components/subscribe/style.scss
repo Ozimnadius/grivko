@@ -1,10 +1,9 @@
 .subscribe{
-
   display: grid;
   grid-template-columns: repeat(2,1fr);
   align-items: center;
 
-  &:hover,&:focus,&:active{
+  &:hover{
     .subscribe{
 
       &__img{
@@ -36,11 +35,10 @@
     }
   }
 
-
   &__content{
     @extend .bordered;
     padding-top: 65px;
-    padding-bottom: 210px;
+    height: 900px;
 
     &:after{
       content: url("/images/content/index/subscribe/mail.png");
@@ -50,16 +48,26 @@
     }
 
     h2{
-      margin-bottom: 35px;
+      margin-bottom: 20px;
+    }
+
+    p{
+      margin-bottom: 65px;
     }
   }
 
   &__form{
-    margin-top: 65px;
+
+  }
+
+  &__fields{
+    display: grid;
+    grid-gap: 10px;
+    margin-bottom: 30px;
   }
 
   &__field{
-    margin-bottom: 30px;
+
   }
 
   &__policy{

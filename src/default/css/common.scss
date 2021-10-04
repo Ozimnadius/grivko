@@ -13,43 +13,46 @@
   &:hover {
     background: $bg;
     color: $txt;
+
+    svg {
+      transform: translateX(10px);
+    }
   }
 
-  &--black{
+  &--black {
     color: $txt;
     border-color: $txt;
 
-    &:hover{
+    &:hover {
       background: $txt;
       color: $bg;
     }
 
   }
 
-  &--gold{
+  &--gold {
     border-color: $gold;
     color: $txt;
 
-    &:hover{
+    &:hover {
       background: $txt;
       border-color: $txt;
       color: $bg;
     }
   }
 
-  &--revers{
-    svg{
+  &--revers {
+    svg {
       margin-right: 15px;
-      margin-left: 0!important;
+      margin-left: 0 !important;
     }
   }
 
-  svg{
+  svg {
     fill: currentColor;
     margin-left: 15px;
+    transition: transform 0.3s;
   }
-
-
 
 
 }
@@ -67,17 +70,17 @@
   font-weight: 300;
   @include tr;
 
-  &:hover{
+  &:hover {
     background: transparent;
     color: $txt;
   }
 
-  &--black{
+  &--black {
     background: $txt;
-    color: $bg ;
+    color: $bg;
     border-color: $txt;
 
-    &:hover{
+    &:hover {
       background: transparent;
       color: $txt;
     }
@@ -85,24 +88,24 @@
   }
 
 
-  svg{
+  svg {
     fill: currentColor;
     margin-left: 15px;
   }
 
 }
 
-.title{
+.title {
   color: $txt;
   font-size: 32px;
   font-weight: 500;
   text-transform: uppercase;
 
-  &--line{
+  &--line {
     padding-top: 30px;
     position: relative;
 
-    &:before{
+    &:before {
       content: '';
       display: block;
       width: 64px;
@@ -115,30 +118,32 @@
   }
 }
 
-.mb{
-  &0{
+.mb {
+  &0 {
     margin-bottom: 0 !important;
   }
-  &20{
-    margin-bottom: 20px!important;
+
+  &20 {
+    margin-bottom: 20px !important;
   }
 
-  &40{
-    margin-bottom: 40px!important;
+  &40 {
+    margin-bottom: 40px !important;
   }
 
-  &80{
-    margin-bottom: 80px!important;
+  &80 {
+    margin-bottom: 80px !important;
   }
 
-  &120{
-    margin-bottom: 120px!important;
+  &120 {
+    margin-bottom: 120px !important;
   }
 
 }
 
 //Form elements
-.input{
+.input {
+  display: block;
   width: 100%;
   height: 74px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -152,14 +157,36 @@
   resize: none;
   @include tr;
 
-  &--area{
+  &--area {
     height: 123px;
     padding-top: 20px;
   }
 
-  &:focus{
+  &:focus {
     border-color: $link;
   }
 
 
+}
+
+.file {
+  cursor: pointer;
+
+  input {
+    display: none;
+  }
+
+  &__fake {
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    width: 100%;
+    height: 68px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #707070;
+
+    svg {
+      margin-left: auto;
+    }
+  }
 }
