@@ -1,40 +1,4 @@
-
-<!--mixin banner(props)-->
-<!--    div(class=props.dopCls).banner-->
-<!--        .banner__container-->
-<!--            .banner__img-->
-<!--                picture-->
-<!--                    source(srcset=props.imgPath + 'img375.jpg' media='(max-width: 767.98px)')-->
-<!--                    source(srcset=props.imgPath + 'img768.jpg' media='(max-width: 1279.98px)')-->
-<!--                    source(srcset=props.imgPath + 'img1280.jpg' media='(max-width: 1919.98px)')-->
-<!--                    img(src=props.imgPath + 'img.jpg' alt='')-->
-<!--            .banner__wrap-->
-<!--                if props.sub-->
-<!--                    .banner__sub!=props.sub-->
-<!--                if props.title-->
-<!--                    h2.banner__title!=props.title-->
-<!--                if props.txt-->
-<!--                    .banner__txt!=props.txt-->
-<!--                if props.big-->
-<!--                    .banner__big!=props.big-->
-<!--        if props.form-->
-<!--            .banner__form-->
-<!--                .banner-form-->
-<!--                    .banner-form__name Записаться на снятие мерок-->
-<!--                    .banner-form__wrap-->
-<!--                        form.banner-form__form-->
-<!--                            .banner-form__fields-->
-<!--                                .banner-form__field-->
-<!--                                    input(type="text" name="name" placeholder="Имя" required).input-->
-<!--                                .banner-form__field-->
-<!--                                    input(type="tel" name="tel" placeholder="Телефон" required).input-->
-<!--                                .banner-form__field.banner-form__field--double-->
-<!--                                    input(type="text" name="datetime" placeholder="Напишите удобный день и время").input-->
-<!--                            button(type='submit').btn.btn--black.banner-form__submit-->
-<!--                                span Отправить заявку-->
-<!--                                <svg width="26" height="9" viewBox="0 0 26 9" xmlns="http://www.w3.org/2000/svg">-->
-<!--                                <path d="M25.271 3.758L21.683 0.169998C21.5744 0.0613919 21.4271 0.000377652 21.2735 0.000377655C21.1199 0.000377658 20.9726 0.061392 20.864 0.169998C20.7554 0.278604 20.6944 0.425906 20.6944 0.579498C20.6944 0.73309 20.7554 0.880392 20.864 0.988998L23.464 3.589H0.579C0.425307 3.589 0.277909 3.65005 0.169232 3.75873C0.0605546 3.86741 -0.000499725 4.01481 -0.000499725 4.1685C-0.000499725 4.32219 0.0605546 4.46959 0.169232 4.57827C0.277909 4.68694 0.425307 4.748 0.579 4.748H23.463L20.863 7.348C20.7544 7.4566 20.6934 7.60391 20.6934 7.7575C20.6934 7.91109 20.7544 8.05839 20.863 8.167C20.9716 8.2756 21.1189 8.33662 21.2725 8.33662C21.4261 8.33662 21.5734 8.2756 21.682 8.167L25.27 4.579C25.3242 4.52526 25.3672 4.46135 25.3965 4.39094C25.4259 4.32052 25.4411 4.245 25.4412 4.16871C25.4413 4.09241 25.4263 4.01685 25.3971 3.94637C25.3679 3.87589 25.325 3.81187 25.271 3.758V3.758Z"/>-->
-<!--                                </svg>--><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
@@ -128,16 +92,16 @@
                             <div class="filter-drop__vals">
                               <div class="filter-select jsFilter__vals">
                                 <label class="filter-select__option">
-                                  <input class="jsFilter__val" type="radio" name="section" value="Все"/><span>Все</span>
+                                  <input class="jsFilter__val" type="radio" name="section" value="Все"><span>Все</span>
                                 </label>
                                 <label class="filter-select__option">
-                                  <input class="jsFilter__val" type="radio" name="section" value="С брюками"/><span>С брюками</span>
+                                  <input class="jsFilter__val" type="radio" name="section" value="С брюками"><span>С брюками</span>
                                 </label>
                                 <label class="filter-select__option">
-                                  <input class="jsFilter__val" type="radio" name="section" value="С юбкой"/><span>С юбкой</span>
+                                  <input class="jsFilter__val" type="radio" name="section" value="С юбкой"><span>С юбкой</span>
                                 </label>
                                 <label class="filter-select__option">
-                                  <input class="jsFilter__val" type="radio" name="section" value="Костюмы с брюками" checked="checked"/><span>Костюмы с брюками</span>
+                                  <input class="jsFilter__val" type="radio" name="section" value="Костюмы с брюками" checked><span>Костюмы с брюками</span>
                                 </label>
                               </div>
                             </div>
@@ -169,49 +133,49 @@
                                 <div class="filter-colors__list jsFilter__vals">
                                   <div class="filter-colors__item">
                                     <label class="filter-color">
-                                      <input class="jsFilter__val" type="checkbox" name="colors[0]" value="#354F91" checked="checked"/>
+                                      <input class="jsFilter__val" type="checkbox" name="colors[0]" value="#354F91" checked>
                                       <div class="filter-color__wrap"><span class="filter-color__round" style="background-color:#354F91;"></span></div>
                                     </label>
                                   </div>
                                   <div class="filter-colors__item">
                                     <label class="filter-color">
-                                      <input class="jsFilter__val" type="checkbox" name="colors[1]" value="#FF923E" checked="checked"/>
+                                      <input class="jsFilter__val" type="checkbox" name="colors[1]" value="#FF923E" checked>
                                       <div class="filter-color__wrap"><span class="filter-color__round" style="background-color:#FF923E;"></span></div>
                                     </label>
                                   </div>
                                   <div class="filter-colors__item">
                                     <label class="filter-color">
-                                      <input class="jsFilter__val" type="checkbox" name="colors[2]" value="#FFC63E" checked="checked"/>
+                                      <input class="jsFilter__val" type="checkbox" name="colors[2]" value="#FFC63E" checked>
                                       <div class="filter-color__wrap"><span class="filter-color__round" style="background-color:#FFC63E;"></span></div>
                                     </label>
                                   </div>
                                   <div class="filter-colors__item">
                                     <label class="filter-color">
-                                      <input class="jsFilter__val" type="checkbox" name="colors[3]" value="#C20727" checked="checked"/>
+                                      <input class="jsFilter__val" type="checkbox" name="colors[3]" value="#C20727" checked>
                                       <div class="filter-color__wrap"><span class="filter-color__round" style="background-color:#C20727;"></span></div>
                                     </label>
                                   </div>
                                   <div class="filter-colors__item">
                                     <label class="filter-color">
-                                      <input class="jsFilter__val" type="checkbox" name="colors[4]" value="#000000"/>
+                                      <input class="jsFilter__val" type="checkbox" name="colors[4]" value="#000000">
                                       <div class="filter-color__wrap"><span class="filter-color__round" style="background-color:#000000;"></span></div>
                                     </label>
                                   </div>
                                   <div class="filter-colors__item">
                                     <label class="filter-color">
-                                      <input class="jsFilter__val" type="checkbox" name="colors[5]" value="#EFEFEF"/>
+                                      <input class="jsFilter__val" type="checkbox" name="colors[5]" value="#EFEFEF">
                                       <div class="filter-color__wrap"><span class="filter-color__round" style="background-color:#EFEFEF;"></span></div>
                                     </label>
                                   </div>
                                   <div class="filter-colors__item">
                                     <label class="filter-color">
-                                      <input class="jsFilter__val" type="checkbox" name="colors[6]" value="#04530E"/>
+                                      <input class="jsFilter__val" type="checkbox" name="colors[6]" value="#04530E">
                                       <div class="filter-color__wrap"><span class="filter-color__round" style="background-color:#04530E;"></span></div>
                                     </label>
                                   </div>
                                   <div class="filter-colors__item">
                                     <label class="filter-color">
-                                      <input class="jsFilter__val" type="checkbox" name="colors[7]" value="#07EEFF"/>
+                                      <input class="jsFilter__val" type="checkbox" name="colors[7]" value="#07EEFF">
                                       <div class="filter-color__wrap"><span class="filter-color__round" style="background-color:#07EEFF;"></span></div>
                                     </label>
                                   </div>
@@ -248,77 +212,77 @@
                               <div class="filter-sizes">
                                 <div class="filter-sizes__item">
                                   <label class="filter-size">
-                                    <input class="jsFilter__val" type="checkbox" name="size[0]" value="38"/><span class="filter-size__num">38</span>
+                                    <input class="jsFilter__val" type="checkbox" name="size[0]" value="38"><span class="filter-size__num">38</span>
                                   </label>
                                 </div>
                                 <div class="filter-sizes__item">
                                   <label class="filter-size">
-                                    <input class="jsFilter__val" type="checkbox" name="size[1]" value="39"/><span class="filter-size__num">39</span>
+                                    <input class="jsFilter__val" type="checkbox" name="size[1]" value="39"><span class="filter-size__num">39</span>
                                   </label>
                                 </div>
                                 <div class="filter-sizes__item">
                                   <label class="filter-size">
-                                    <input class="jsFilter__val" type="checkbox" name="size[2]" value="40"/><span class="filter-size__num">40</span>
+                                    <input class="jsFilter__val" type="checkbox" name="size[2]" value="40"><span class="filter-size__num">40</span>
                                   </label>
                                 </div>
                                 <div class="filter-sizes__item">
                                   <label class="filter-size">
-                                    <input class="jsFilter__val" type="checkbox" name="size[3]" value="41"/><span class="filter-size__num">41</span>
+                                    <input class="jsFilter__val" type="checkbox" name="size[3]" value="41"><span class="filter-size__num">41</span>
                                   </label>
                                 </div>
                                 <div class="filter-sizes__item">
                                   <label class="filter-size">
-                                    <input class="jsFilter__val" type="checkbox" name="size[4]" value="42"/><span class="filter-size__num">42</span>
+                                    <input class="jsFilter__val" type="checkbox" name="size[4]" value="42"><span class="filter-size__num">42</span>
                                   </label>
                                 </div>
                                 <div class="filter-sizes__item">
                                   <label class="filter-size">
-                                    <input class="jsFilter__val" type="checkbox" name="size[5]" value="43"/><span class="filter-size__num">43</span>
+                                    <input class="jsFilter__val" type="checkbox" name="size[5]" value="43"><span class="filter-size__num">43</span>
                                   </label>
                                 </div>
                                 <div class="filter-sizes__item">
                                   <label class="filter-size">
-                                    <input class="jsFilter__val" type="checkbox" name="size[6]" value="44"/><span class="filter-size__num">44</span>
+                                    <input class="jsFilter__val" type="checkbox" name="size[6]" value="44"><span class="filter-size__num">44</span>
                                   </label>
                                 </div>
                                 <div class="filter-sizes__item">
                                   <label class="filter-size">
-                                    <input class="jsFilter__val" type="checkbox" name="size[7]" value="45"/><span class="filter-size__num">45</span>
+                                    <input class="jsFilter__val" type="checkbox" name="size[7]" value="45"><span class="filter-size__num">45</span>
                                   </label>
                                 </div>
                                 <div class="filter-sizes__item">
                                   <label class="filter-size">
-                                    <input class="jsFilter__val" type="checkbox" name="size[8]" value="46"/><span class="filter-size__num">46</span>
+                                    <input class="jsFilter__val" type="checkbox" name="size[8]" value="46"><span class="filter-size__num">46</span>
                                   </label>
                                 </div>
                                 <div class="filter-sizes__item">
                                   <label class="filter-size">
-                                    <input class="jsFilter__val" type="checkbox" name="size[9]" value="47"/><span class="filter-size__num">47</span>
+                                    <input class="jsFilter__val" type="checkbox" name="size[9]" value="47"><span class="filter-size__num">47</span>
                                   </label>
                                 </div>
                                 <div class="filter-sizes__item">
                                   <label class="filter-size">
-                                    <input class="jsFilter__val" type="checkbox" name="size[10]" value="48" checked="checked"/><span class="filter-size__num">48</span>
+                                    <input class="jsFilter__val" type="checkbox" name="size[10]" value="48" checked><span class="filter-size__num">48</span>
                                   </label>
                                 </div>
                                 <div class="filter-sizes__item">
                                   <label class="filter-size">
-                                    <input class="jsFilter__val" type="checkbox" name="size[11]" value="49" checked="checked"/><span class="filter-size__num">49</span>
+                                    <input class="jsFilter__val" type="checkbox" name="size[11]" value="49" checked><span class="filter-size__num">49</span>
                                   </label>
                                 </div>
                                 <div class="filter-sizes__item">
                                   <label class="filter-size">
-                                    <input class="jsFilter__val" type="checkbox" name="size[12]" value="50" checked="checked"/><span class="filter-size__num">50</span>
+                                    <input class="jsFilter__val" type="checkbox" name="size[12]" value="50" checked><span class="filter-size__num">50</span>
                                   </label>
                                 </div>
                                 <div class="filter-sizes__item">
                                   <label class="filter-size">
-                                    <input class="jsFilter__val" type="checkbox" name="size[13]" value="51"/><span class="filter-size__num">51</span>
+                                    <input class="jsFilter__val" type="checkbox" name="size[13]" value="51"><span class="filter-size__num">51</span>
                                   </label>
                                 </div>
                                 <div class="filter-sizes__item">
                                   <label class="filter-size">
-                                    <input class="jsFilter__val" type="checkbox" name="size[14]" value="52"/><span class="filter-size__num">52</span>
+                                    <input class="jsFilter__val" type="checkbox" name="size[14]" value="52"><span class="filter-size__num">52</span>
                                   </label>
                                 </div>
                               </div>
@@ -352,10 +316,10 @@
                             <div class="filter-drop__vals">
                               <div class="filter-select jsFilter__vals">
                                 <label class="filter-select__option">
-                                  <input class="jsFilter__val" type="radio" name="price" value="По возрастанию" checked="checked"/><span>По возрастанию</span>
+                                  <input class="jsFilter__val" type="radio" name="price" value="По возрастанию" checked><span>По возрастанию</span>
                                 </label>
                                 <label class="filter-select__option">
-                                  <input class="jsFilter__val" type="radio" name="price" value="По убыванию"/><span>По убыванию</span>
+                                  <input class="jsFilter__val" type="radio" name="price" value="По убыванию"><span>По убыванию</span>
                                 </label>
                               </div>
                             </div>
@@ -374,74 +338,62 @@
                       <div class="item__wrap"><span class="item__img"><img class="lorem" src="/images/content/women/collections/9.jpg" alt="lorem"/></span><span class="title item__title">КОСТЮМ-ТРОЙКА</span><span class="item__price">от 75 000 руб.</span><span class="item__btn"><span>Перейти</span><svg width="26" height="9" viewBox="0 0 26 9" xmlns="http://www.w3.org/2000/svg">
 <path d="M25.271 3.75811L21.683 0.170109C21.5744 0.0615026 21.4271 0.000488279 21.2735 0.000488281C21.1199 0.000488284 20.9726 0.0615026 20.864 0.170109C20.7554 0.278715 20.6944 0.426016 20.6944 0.579609C20.6944 0.733201 20.7554 0.880503 20.864 0.989109L23.464 3.58911H0.579012C0.425319 3.58911 0.277921 3.65016 0.169243 3.75884C0.060566 3.86752 -0.000488281 4.01492 -0.000488281 4.16861C-0.000488281 4.3223 0.060566 4.4697 0.169243 4.57838C0.277921 4.68705 0.425319 4.74811 0.579012 4.74811H23.463L20.863 7.34811C20.7544 7.45671 20.6934 7.60402 20.6934 7.75761C20.6934 7.9112 20.7544 8.0585 20.863 8.16711C20.9716 8.27571 21.1189 8.33673 21.2725 8.33673C21.4261 8.33673 21.5734 8.27571 21.682 8.16711L25.27 4.57911C25.3242 4.52537 25.3672 4.46146 25.3965 4.39105C25.4259 4.32063 25.4411 4.24511 25.4412 4.16882C25.4413 4.09252 25.4263 4.01696 25.3971 3.94648C25.3679 3.876 25.325 3.81198 25.271 3.75811V3.75811Z"/>
 </svg></span>
-                      </div></a>
-                  </div>
+                      </div></a></div>
                   <div class="catalog__item"><a class="item" href="/">
                       <div class="item__wrap"><span class="item__img"><img class="lorem" src="/images/content/women/collections/10.jpg" alt="lorem"/></span><span class="title item__title">ОДНОБОРТНЫЙ КОСТЮМ</span><span class="item__price">от 75 000 руб.</span><span class="item__btn"><span>Перейти</span><svg width="26" height="9" viewBox="0 0 26 9" xmlns="http://www.w3.org/2000/svg">
 <path d="M25.271 3.75811L21.683 0.170109C21.5744 0.0615026 21.4271 0.000488279 21.2735 0.000488281C21.1199 0.000488284 20.9726 0.0615026 20.864 0.170109C20.7554 0.278715 20.6944 0.426016 20.6944 0.579609C20.6944 0.733201 20.7554 0.880503 20.864 0.989109L23.464 3.58911H0.579012C0.425319 3.58911 0.277921 3.65016 0.169243 3.75884C0.060566 3.86752 -0.000488281 4.01492 -0.000488281 4.16861C-0.000488281 4.3223 0.060566 4.4697 0.169243 4.57838C0.277921 4.68705 0.425319 4.74811 0.579012 4.74811H23.463L20.863 7.34811C20.7544 7.45671 20.6934 7.60402 20.6934 7.75761C20.6934 7.9112 20.7544 8.0585 20.863 8.16711C20.9716 8.27571 21.1189 8.33673 21.2725 8.33673C21.4261 8.33673 21.5734 8.27571 21.682 8.16711L25.27 4.57911C25.3242 4.52537 25.3672 4.46146 25.3965 4.39105C25.4259 4.32063 25.4411 4.24511 25.4412 4.16882C25.4413 4.09252 25.4263 4.01696 25.3971 3.94648C25.3679 3.876 25.325 3.81198 25.271 3.75811V3.75811Z"/>
 </svg></span>
-                      </div></a>
-                  </div>
+                      </div></a></div>
                   <div class="catalog__item"><a class="item" href="/">
                       <div class="item__wrap"><span class="item__img"><img class="lorem" src="/images/content/women/collections/11.jpg" alt="lorem"/></span><span class="title item__title">ОДНОБОРТНЫЙ КОСТЮМ</span><span class="item__price">от 75 000 руб.</span><span class="item__btn"><span>Перейти</span><svg width="26" height="9" viewBox="0 0 26 9" xmlns="http://www.w3.org/2000/svg">
 <path d="M25.271 3.75811L21.683 0.170109C21.5744 0.0615026 21.4271 0.000488279 21.2735 0.000488281C21.1199 0.000488284 20.9726 0.0615026 20.864 0.170109C20.7554 0.278715 20.6944 0.426016 20.6944 0.579609C20.6944 0.733201 20.7554 0.880503 20.864 0.989109L23.464 3.58911H0.579012C0.425319 3.58911 0.277921 3.65016 0.169243 3.75884C0.060566 3.86752 -0.000488281 4.01492 -0.000488281 4.16861C-0.000488281 4.3223 0.060566 4.4697 0.169243 4.57838C0.277921 4.68705 0.425319 4.74811 0.579012 4.74811H23.463L20.863 7.34811C20.7544 7.45671 20.6934 7.60402 20.6934 7.75761C20.6934 7.9112 20.7544 8.0585 20.863 8.16711C20.9716 8.27571 21.1189 8.33673 21.2725 8.33673C21.4261 8.33673 21.5734 8.27571 21.682 8.16711L25.27 4.57911C25.3242 4.52537 25.3672 4.46146 25.3965 4.39105C25.4259 4.32063 25.4411 4.24511 25.4412 4.16882C25.4413 4.09252 25.4263 4.01696 25.3971 3.94648C25.3679 3.876 25.325 3.81198 25.271 3.75811V3.75811Z"/>
 </svg></span>
-                      </div></a>
-                  </div>
+                      </div></a></div>
                   <div class="catalog__item"><a class="item" href="/">
                       <div class="item__wrap"><span class="item__img"><img class="lorem" src="/images/content/women/collections/12.jpg" alt="lorem"/></span><span class="title item__title">ОДНОБОРТНЫЙ КОСТЮМ</span><span class="item__price">от 75 000 руб.</span><span class="item__btn"><span>Перейти</span><svg width="26" height="9" viewBox="0 0 26 9" xmlns="http://www.w3.org/2000/svg">
 <path d="M25.271 3.75811L21.683 0.170109C21.5744 0.0615026 21.4271 0.000488279 21.2735 0.000488281C21.1199 0.000488284 20.9726 0.0615026 20.864 0.170109C20.7554 0.278715 20.6944 0.426016 20.6944 0.579609C20.6944 0.733201 20.7554 0.880503 20.864 0.989109L23.464 3.58911H0.579012C0.425319 3.58911 0.277921 3.65016 0.169243 3.75884C0.060566 3.86752 -0.000488281 4.01492 -0.000488281 4.16861C-0.000488281 4.3223 0.060566 4.4697 0.169243 4.57838C0.277921 4.68705 0.425319 4.74811 0.579012 4.74811H23.463L20.863 7.34811C20.7544 7.45671 20.6934 7.60402 20.6934 7.75761C20.6934 7.9112 20.7544 8.0585 20.863 8.16711C20.9716 8.27571 21.1189 8.33673 21.2725 8.33673C21.4261 8.33673 21.5734 8.27571 21.682 8.16711L25.27 4.57911C25.3242 4.52537 25.3672 4.46146 25.3965 4.39105C25.4259 4.32063 25.4411 4.24511 25.4412 4.16882C25.4413 4.09252 25.4263 4.01696 25.3971 3.94648C25.3679 3.876 25.325 3.81198 25.271 3.75811V3.75811Z"/>
 </svg></span>
-                      </div></a>
-                  </div>
+                      </div></a></div>
                   <div class="catalog__item"><a class="item" href="/">
                       <div class="item__wrap"><span class="item__img"><img class="lorem" src="/images/content/women/collections/21.jpg" alt="lorem"/></span><span class="title item__title">ОДНОБОРТНЫЙ КОСТЮМ</span><span class="item__price">от 75 000 руб.</span><span class="item__btn"><span>Перейти</span><svg width="26" height="9" viewBox="0 0 26 9" xmlns="http://www.w3.org/2000/svg">
 <path d="M25.271 3.75811L21.683 0.170109C21.5744 0.0615026 21.4271 0.000488279 21.2735 0.000488281C21.1199 0.000488284 20.9726 0.0615026 20.864 0.170109C20.7554 0.278715 20.6944 0.426016 20.6944 0.579609C20.6944 0.733201 20.7554 0.880503 20.864 0.989109L23.464 3.58911H0.579012C0.425319 3.58911 0.277921 3.65016 0.169243 3.75884C0.060566 3.86752 -0.000488281 4.01492 -0.000488281 4.16861C-0.000488281 4.3223 0.060566 4.4697 0.169243 4.57838C0.277921 4.68705 0.425319 4.74811 0.579012 4.74811H23.463L20.863 7.34811C20.7544 7.45671 20.6934 7.60402 20.6934 7.75761C20.6934 7.9112 20.7544 8.0585 20.863 8.16711C20.9716 8.27571 21.1189 8.33673 21.2725 8.33673C21.4261 8.33673 21.5734 8.27571 21.682 8.16711L25.27 4.57911C25.3242 4.52537 25.3672 4.46146 25.3965 4.39105C25.4259 4.32063 25.4411 4.24511 25.4412 4.16882C25.4413 4.09252 25.4263 4.01696 25.3971 3.94648C25.3679 3.876 25.325 3.81198 25.271 3.75811V3.75811Z"/>
 </svg></span>
-                      </div></a>
-                  </div>
+                      </div></a></div>
                   <div class="catalog__item"><a class="item" href="/">
                       <div class="item__wrap"><span class="item__img"><img class="lorem" src="/images/content/women/collections/29.jpg" alt="lorem"/></span><span class="title item__title">ОДНОБОРТНЫЙ КОСТЮМ</span><span class="item__price">от 75 000 руб.</span><span class="item__btn"><span>Перейти</span><svg width="26" height="9" viewBox="0 0 26 9" xmlns="http://www.w3.org/2000/svg">
 <path d="M25.271 3.75811L21.683 0.170109C21.5744 0.0615026 21.4271 0.000488279 21.2735 0.000488281C21.1199 0.000488284 20.9726 0.0615026 20.864 0.170109C20.7554 0.278715 20.6944 0.426016 20.6944 0.579609C20.6944 0.733201 20.7554 0.880503 20.864 0.989109L23.464 3.58911H0.579012C0.425319 3.58911 0.277921 3.65016 0.169243 3.75884C0.060566 3.86752 -0.000488281 4.01492 -0.000488281 4.16861C-0.000488281 4.3223 0.060566 4.4697 0.169243 4.57838C0.277921 4.68705 0.425319 4.74811 0.579012 4.74811H23.463L20.863 7.34811C20.7544 7.45671 20.6934 7.60402 20.6934 7.75761C20.6934 7.9112 20.7544 8.0585 20.863 8.16711C20.9716 8.27571 21.1189 8.33673 21.2725 8.33673C21.4261 8.33673 21.5734 8.27571 21.682 8.16711L25.27 4.57911C25.3242 4.52537 25.3672 4.46146 25.3965 4.39105C25.4259 4.32063 25.4411 4.24511 25.4412 4.16882C25.4413 4.09252 25.4263 4.01696 25.3971 3.94648C25.3679 3.876 25.325 3.81198 25.271 3.75811V3.75811Z"/>
 </svg></span>
-                      </div></a>
-                  </div>
+                      </div></a></div>
                   <div class="catalog__item"><a class="item" href="/">
                       <div class="item__wrap"><span class="item__img"><img class="lorem" src="/images/content/women/collections/30.jpg" alt="lorem"/></span><span class="title item__title">ОДНОБОРТНЫЙ КОСТЮМ</span><span class="item__price">от 75 000 руб.</span><span class="item__btn"><span>Перейти</span><svg width="26" height="9" viewBox="0 0 26 9" xmlns="http://www.w3.org/2000/svg">
 <path d="M25.271 3.75811L21.683 0.170109C21.5744 0.0615026 21.4271 0.000488279 21.2735 0.000488281C21.1199 0.000488284 20.9726 0.0615026 20.864 0.170109C20.7554 0.278715 20.6944 0.426016 20.6944 0.579609C20.6944 0.733201 20.7554 0.880503 20.864 0.989109L23.464 3.58911H0.579012C0.425319 3.58911 0.277921 3.65016 0.169243 3.75884C0.060566 3.86752 -0.000488281 4.01492 -0.000488281 4.16861C-0.000488281 4.3223 0.060566 4.4697 0.169243 4.57838C0.277921 4.68705 0.425319 4.74811 0.579012 4.74811H23.463L20.863 7.34811C20.7544 7.45671 20.6934 7.60402 20.6934 7.75761C20.6934 7.9112 20.7544 8.0585 20.863 8.16711C20.9716 8.27571 21.1189 8.33673 21.2725 8.33673C21.4261 8.33673 21.5734 8.27571 21.682 8.16711L25.27 4.57911C25.3242 4.52537 25.3672 4.46146 25.3965 4.39105C25.4259 4.32063 25.4411 4.24511 25.4412 4.16882C25.4413 4.09252 25.4263 4.01696 25.3971 3.94648C25.3679 3.876 25.325 3.81198 25.271 3.75811V3.75811Z"/>
 </svg></span>
-                      </div></a>
-                  </div>
+                      </div></a></div>
                   <div class="catalog__item"><a class="item" href="/">
                       <div class="item__wrap"><span class="item__img"><img class="lorem" src="/images/content/women/collections/31.jpg" alt="lorem"/></span><span class="title item__title">ОДНОБОРТНЫЙ КОСТЮМ</span><span class="item__price">от 75 000 руб.</span><span class="item__btn"><span>Перейти</span><svg width="26" height="9" viewBox="0 0 26 9" xmlns="http://www.w3.org/2000/svg">
 <path d="M25.271 3.75811L21.683 0.170109C21.5744 0.0615026 21.4271 0.000488279 21.2735 0.000488281C21.1199 0.000488284 20.9726 0.0615026 20.864 0.170109C20.7554 0.278715 20.6944 0.426016 20.6944 0.579609C20.6944 0.733201 20.7554 0.880503 20.864 0.989109L23.464 3.58911H0.579012C0.425319 3.58911 0.277921 3.65016 0.169243 3.75884C0.060566 3.86752 -0.000488281 4.01492 -0.000488281 4.16861C-0.000488281 4.3223 0.060566 4.4697 0.169243 4.57838C0.277921 4.68705 0.425319 4.74811 0.579012 4.74811H23.463L20.863 7.34811C20.7544 7.45671 20.6934 7.60402 20.6934 7.75761C20.6934 7.9112 20.7544 8.0585 20.863 8.16711C20.9716 8.27571 21.1189 8.33673 21.2725 8.33673C21.4261 8.33673 21.5734 8.27571 21.682 8.16711L25.27 4.57911C25.3242 4.52537 25.3672 4.46146 25.3965 4.39105C25.4259 4.32063 25.4411 4.24511 25.4412 4.16882C25.4413 4.09252 25.4263 4.01696 25.3971 3.94648C25.3679 3.876 25.325 3.81198 25.271 3.75811V3.75811Z"/>
 </svg></span>
-                      </div></a>
-                  </div>
+                      </div></a></div>
                   <div class="catalog__item"><a class="item" href="/">
                       <div class="item__wrap"><span class="item__img"><img class="lorem" src="/images/content/women/collections/32.jpg" alt="lorem"/></span><span class="title item__title">ОДНОБОРТНЫЙ КОСТЮМ</span><span class="item__price">от 75 000 руб.</span><span class="item__btn"><span>Перейти</span><svg width="26" height="9" viewBox="0 0 26 9" xmlns="http://www.w3.org/2000/svg">
 <path d="M25.271 3.75811L21.683 0.170109C21.5744 0.0615026 21.4271 0.000488279 21.2735 0.000488281C21.1199 0.000488284 20.9726 0.0615026 20.864 0.170109C20.7554 0.278715 20.6944 0.426016 20.6944 0.579609C20.6944 0.733201 20.7554 0.880503 20.864 0.989109L23.464 3.58911H0.579012C0.425319 3.58911 0.277921 3.65016 0.169243 3.75884C0.060566 3.86752 -0.000488281 4.01492 -0.000488281 4.16861C-0.000488281 4.3223 0.060566 4.4697 0.169243 4.57838C0.277921 4.68705 0.425319 4.74811 0.579012 4.74811H23.463L20.863 7.34811C20.7544 7.45671 20.6934 7.60402 20.6934 7.75761C20.6934 7.9112 20.7544 8.0585 20.863 8.16711C20.9716 8.27571 21.1189 8.33673 21.2725 8.33673C21.4261 8.33673 21.5734 8.27571 21.682 8.16711L25.27 4.57911C25.3242 4.52537 25.3672 4.46146 25.3965 4.39105C25.4259 4.32063 25.4411 4.24511 25.4412 4.16882C25.4413 4.09252 25.4263 4.01696 25.3971 3.94648C25.3679 3.876 25.325 3.81198 25.271 3.75811V3.75811Z"/>
 </svg></span>
-                      </div></a>
-                  </div>
+                      </div></a></div>
                   <div class="catalog__item"><a class="item" href="/">
                       <div class="item__wrap"><span class="item__img"><img class="lorem" src="/images/content/women/collections/33.jpg" alt="lorem"/></span><span class="title item__title">ОДНОБОРТНЫЙ КОСТЮМ</span><span class="item__price">от 75 000 руб.</span><span class="item__btn"><span>Перейти</span><svg width="26" height="9" viewBox="0 0 26 9" xmlns="http://www.w3.org/2000/svg">
 <path d="M25.271 3.75811L21.683 0.170109C21.5744 0.0615026 21.4271 0.000488279 21.2735 0.000488281C21.1199 0.000488284 20.9726 0.0615026 20.864 0.170109C20.7554 0.278715 20.6944 0.426016 20.6944 0.579609C20.6944 0.733201 20.7554 0.880503 20.864 0.989109L23.464 3.58911H0.579012C0.425319 3.58911 0.277921 3.65016 0.169243 3.75884C0.060566 3.86752 -0.000488281 4.01492 -0.000488281 4.16861C-0.000488281 4.3223 0.060566 4.4697 0.169243 4.57838C0.277921 4.68705 0.425319 4.74811 0.579012 4.74811H23.463L20.863 7.34811C20.7544 7.45671 20.6934 7.60402 20.6934 7.75761C20.6934 7.9112 20.7544 8.0585 20.863 8.16711C20.9716 8.27571 21.1189 8.33673 21.2725 8.33673C21.4261 8.33673 21.5734 8.27571 21.682 8.16711L25.27 4.57911C25.3242 4.52537 25.3672 4.46146 25.3965 4.39105C25.4259 4.32063 25.4411 4.24511 25.4412 4.16882C25.4413 4.09252 25.4263 4.01696 25.3971 3.94648C25.3679 3.876 25.325 3.81198 25.271 3.75811V3.75811Z"/>
 </svg></span>
-                      </div></a>
-                  </div>
+                      </div></a></div>
                   <div class="catalog__item"><a class="item" href="/">
                       <div class="item__wrap"><span class="item__img"><img class="lorem" src="/images/content/women/collections/34.jpg" alt="lorem"/></span><span class="title item__title">ОДНОБОРТНЫЙ КОСТЮМ</span><span class="item__price">от 75 000 руб.</span><span class="item__btn"><span>Перейти</span><svg width="26" height="9" viewBox="0 0 26 9" xmlns="http://www.w3.org/2000/svg">
 <path d="M25.271 3.75811L21.683 0.170109C21.5744 0.0615026 21.4271 0.000488279 21.2735 0.000488281C21.1199 0.000488284 20.9726 0.0615026 20.864 0.170109C20.7554 0.278715 20.6944 0.426016 20.6944 0.579609C20.6944 0.733201 20.7554 0.880503 20.864 0.989109L23.464 3.58911H0.579012C0.425319 3.58911 0.277921 3.65016 0.169243 3.75884C0.060566 3.86752 -0.000488281 4.01492 -0.000488281 4.16861C-0.000488281 4.3223 0.060566 4.4697 0.169243 4.57838C0.277921 4.68705 0.425319 4.74811 0.579012 4.74811H23.463L20.863 7.34811C20.7544 7.45671 20.6934 7.60402 20.6934 7.75761C20.6934 7.9112 20.7544 8.0585 20.863 8.16711C20.9716 8.27571 21.1189 8.33673 21.2725 8.33673C21.4261 8.33673 21.5734 8.27571 21.682 8.16711L25.27 4.57911C25.3242 4.52537 25.3672 4.46146 25.3965 4.39105C25.4259 4.32063 25.4411 4.24511 25.4412 4.16882C25.4413 4.09252 25.4263 4.01696 25.3971 3.94648C25.3679 3.876 25.325 3.81198 25.271 3.75811V3.75811Z"/>
 </svg></span>
-                      </div></a>
-                  </div>
+                      </div></a></div>
                   <div class="catalog__item"><a class="item" href="/">
                       <div class="item__wrap"><span class="item__img"><img class="lorem" src="/images/content/women/collections/35.jpg" alt="lorem"/></span><span class="title item__title">ОДНОБОРТНЫЙ КОСТЮМ</span><span class="item__price">от 75 000 руб.</span><span class="item__btn"><span>Перейти</span><svg width="26" height="9" viewBox="0 0 26 9" xmlns="http://www.w3.org/2000/svg">
 <path d="M25.271 3.75811L21.683 0.170109C21.5744 0.0615026 21.4271 0.000488279 21.2735 0.000488281C21.1199 0.000488284 20.9726 0.0615026 20.864 0.170109C20.7554 0.278715 20.6944 0.426016 20.6944 0.579609C20.6944 0.733201 20.7554 0.880503 20.864 0.989109L23.464 3.58911H0.579012C0.425319 3.58911 0.277921 3.65016 0.169243 3.75884C0.060566 3.86752 -0.000488281 4.01492 -0.000488281 4.16861C-0.000488281 4.3223 0.060566 4.4697 0.169243 4.57838C0.277921 4.68705 0.425319 4.74811 0.579012 4.74811H23.463L20.863 7.34811C20.7544 7.45671 20.6934 7.60402 20.6934 7.75761C20.6934 7.9112 20.7544 8.0585 20.863 8.16711C20.9716 8.27571 21.1189 8.33673 21.2725 8.33673C21.4261 8.33673 21.5734 8.27571 21.682 8.16711L25.27 4.57911C25.3242 4.52537 25.3672 4.46146 25.3965 4.39105C25.4259 4.32063 25.4411 4.24511 25.4412 4.16882C25.4413 4.09252 25.4263 4.01696 25.3971 3.94648C25.3679 3.876 25.325 3.81198 25.271 3.75811V3.75811Z"/>
 </svg></span>
-                      </div></a>
-                  </div>
+                      </div></a></div>
                 </div>
                 <div class="catalog__nav">
                   <div class="catalog-nav"><a class="catalog-nav__arr" href="#"><svg width="147" height="16" viewBox="0 0 147 16" xmlns="http://www.w3.org/2000/svg">
@@ -456,7 +408,6 @@
           <section class="page__faq mb80">
             <div class="container">
               <div class="faq jsFaq">
-                <h2 class="faq__title title">FAQ</h2>
                 <div class="faq__list">
                   <div class="faq__item">
                     <div class="faq-item jsFaq__item">

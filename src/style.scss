@@ -10,14 +10,8 @@
 @import "default/blocks/header/header";
 @import "default/blocks/nav/nav";
 @import "default/blocks/footer/footer";
-//@import "blocks/banner";
 @import "blocks/bordered";
-@import "blocks/catalog";
-@import "blocks/item";
-@import "blocks/list";
-@import "blocks/fitting";
 @import "blocks/fancybox";
-@import "blocks/gallery";
 @import "blocks/suit";
 @import "blocks/call";
 @import "blocks/pay";
@@ -26,6 +20,12 @@
 //COMPONENTS
 @import "components/lang/style";
 @import "components/banner/style";
+@import "components/catalog/style";
+@import "components/item/style";
+@import "components/list/style";
+@import "components/fitting/style";
+@import "components/gallery/style";
+@import "components/suit/style";
 @import "components/revs/style";
 @import "components/subscribe/style";
 @import "components/breadcrumbs/style";

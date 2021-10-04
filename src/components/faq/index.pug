@@ -1,16 +1,12 @@
 .faq.jsFaq
-    h2.faq__title.title FAQ
+    if props.title
+        h2.faq__title.title= props.title
     .faq__list
-        each i in ["Как заказать дистанционно?","Можно ли сделать возврат, если не понравится после примерки?","Как ухаживать за костюмом?","Если я поправлюсь /похудею , могу ли я к Вам обратиться за коррекцией?","Как вы осуществляете доставку?",]
+        each i in props.list
             .faq__item
                 .faq-item.jsFaq__item
                     .faq-item__btn
-                        .faq-item__title= i
+                        .faq-item__title= i.a
                         .faq-item__plus
                     .faq-item__wrap.jsFaq__wrap
-                        .faq-item__content.jsFaq__content
-                                | Наша цель — подарить миру идеальные костюмы, подчёркивающие образ и индивидуальность каждой женщины.
-                                br
-                                | Команда бренда провела колоссальную работу и создала коллекцию костюмов, сочетающую красоту, элегантность
-                                br
-                                | и неповторимый запоминающийся стиль
+                        .faq-item__content.jsFaq__content!=i.q

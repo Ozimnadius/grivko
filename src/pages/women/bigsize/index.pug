@@ -83,12 +83,12 @@ block content
                         name: "Открыть всю коллекцию"
                     }
                 };
-            +catalog(props)
+            include ../../../components/catalog/index
         //- list
         section.page__list.mb80
             .container
                 -
-                    var list = {
+                    var props = {
                         list: [
                             {
                                 img: "/images/content/women/list/1.jpg",
@@ -117,7 +117,7 @@ block content
 
                         ]
                     };
-                +list(list)
+                include ../../../components/list/index
         //- fitting
         section.page__fitting.mb80
             .container
@@ -138,7 +138,7 @@ block content
                             }
                         ]
                     };
-                +fitting(props)
+                include ../../../components/fitting/index
         //- tech
         section.page__tech.mb80
             .container

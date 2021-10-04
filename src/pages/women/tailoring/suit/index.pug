@@ -29,7 +29,7 @@ block content
                     var props = {
                       img: "/images/content/women/tailoring/suit/img.jpg"
                     };
-                +suit(props)
+                include ../../../../components/suit/index
         //- prices
         section.page__prices.mb40
             -
@@ -62,7 +62,7 @@ block content
                     ],
                     desc: "Костюм, который идеально выглядит и сидит — <br> не давит, не тянет, не висит и не полнит — это реальность."
                 };
-            +catalog(props)
+            include ../../../../components/catalog/index
         //- appointment
         section.page__appointment.mb80
             .container
@@ -96,7 +96,7 @@ block content
                             "/images/content/women/tailoring/gallery/8.jpg",
                         ]
                     };
-                +gallery(props)
+                include ../../../../components/gallery/index
         //- revs
         section.page__revs.mb80
             .container

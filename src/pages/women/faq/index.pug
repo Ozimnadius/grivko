@@ -70,9 +70,9 @@ block content
                                 ]
                             },
                         ];
-                    each faq in list
+                    each props in list
                         .page-faqs__item
-                            +faq(faq)
+                            include ../../../components/faq/index
         //- subscribe
         section.page__subscribe
             .container
