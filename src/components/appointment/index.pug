@@ -1,7 +1,10 @@
 .appointment.bordered
     .appointment__flex
         .appointment__left
-            img(src="/images/content/appointment/img.png" alt="lorem")
+            if img
+                img(src=img alt="lorem")
+            else
+                img(src="/images/content/appointment/img.png" alt="lorem")
         .appointment__center
             h3.appointment__title.title записаться на снятие мерок
             .appointment__txt

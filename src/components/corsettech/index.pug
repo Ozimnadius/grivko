@@ -1,7 +1,10 @@
 .corsettech
     .corsettech__left
         .corsettech__img
-            +image("/images/content/corsetttech/img.jpg")
+            if img
+                +image(img)
+            else
+                +image("/images/content/corsetttech/img.jpg")
         h2.corsettech__title.title Уникальная корсетная технология
         .corsettech__txt Собственная разработка LEONID GRIVKO гарантирует посадку без складок и заломов на любой фигуре.
     .corsettech__right

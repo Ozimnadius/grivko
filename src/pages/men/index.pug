@@ -1,0 +1,138 @@
+extends ./../../main
+
+block variables
+    - var title = 'Для мужчин'
+
+block content
+    main.page
+        //- banner
+        section.page__banner
+            -
+                var props = {
+                    imgPath: "/images/content/index/banner/",
+                    sub: "ДОМ МОДЫ LEONID GRIVKO",
+                    title: "Услуги по пошиву <br> мужской одежды <br> и изготовлению обуви",
+                    dopCls: "banner--small",
+                    form: true
+                };
+            include ../../components/banner/index
+        //- breadcrumbs
+        section.page__breadcrumbs
+            .container
+                include ../../components/breadcrumbs/index
+        //- collections
+        section.page__collections.mb80
+            -
+                var props = {
+                    title: "каталог",
+                    txt: "Модельный ряд доступный к пошиву",
+                    list: [
+                        {
+                            img: "/images/content/men/catalog/1.jpg",
+                            title: "Пальто",
+                            price: "от 75 000 руб.",
+                            href: "/"
+                        },
+                        {
+                            img: "/images/content/men/catalog/2.jpg",
+                            title: "Пиджаки",
+                            price: "от 75 000 руб.",
+                            href: "/"
+                        },
+                        {
+                            img: "/images/content/men/catalog/3.jpg",
+                            title: "Сорочки",
+                            price: "от 75 000 руб.",
+                            href: "/"
+                        },
+                        {
+                            img: "/images/content/men/catalog/4.jpg",
+                            title: "Жилеты",
+                            price: "от 75 000 руб.",
+                            href: "/"
+                        },
+                        {
+                            img: "/images/content/men/catalog/5.jpg",
+                            title: "Костюмы",
+                            price: "от 75 000 руб.",
+                            href: "/women/collections/suits/"
+                        },
+                        {
+                            img: "/images/content/men/catalog/6.jpg",
+                            title: "Смокинги",
+                            price: "от 75 000 руб.",
+                            href: "/"
+                        },
+                        {
+                            img: "/images/content/men/catalog/7.jpg",
+                            title: "Брюки",
+                            price: "от 75 000 руб.",
+                            href: "/"
+                        },
+                        {
+                            img: "/images/content/men/catalog/8.jpg",
+                            title: "Обувь",
+                            price: "от 75 000 руб.",
+                            href: "/"
+                        }
+                    ],
+                };
+            include ../../components/catalog/index
+        //- appointment
+        section.page__appointment.mb80
+            .container
+                include ../../components/appointment/index
+        //- tech
+        section.page__tech.mb80
+            .container
+                include ../../components/corsettech/index
+        //- cloths
+        section.page__cloths.mb80
+            .container
+                include ../../components/cloths/index
+        //- principles
+        section.page__principles.mb80
+            .container
+                include ../../components/principles/index
+        //- appointment
+        section.page__appointment.mb80
+            .container
+                include ../../components/appointment/index
+        //- gallery
+        section.page__gallery.mb80
+            .container
+                -
+                    var props = {
+                        title: "Работы LEONID GRIVKO",
+                        list: [
+                            "/images/content/women/tailoring/gallery/1.jpg",
+                            "/images/content/women/tailoring/gallery/2.jpg",
+                            "/images/content/women/tailoring/gallery/3.jpg",
+                            "/images/content/women/tailoring/gallery/4.jpg",
+                            "/images/content/women/tailoring/gallery/5.jpg",
+                            "/images/content/women/tailoring/gallery/6.jpg",
+                            "/images/content/women/tailoring/gallery/7.jpg",
+                            "/images/content/women/tailoring/gallery/8.jpg",
+                        ]
+                    };
+                include ../../components/gallery/index
+        //- revs
+        section.page__revs.mb80
+            .container
+                include ../../components/revs/index
+        //- gift
+        section.page__gift.mb80
+            .container
+                -
+                    var props = {
+                        list: true
+                    };
+                include ../../components/gift/index
+        //- compilation
+        section.page__compilation.mb80
+            .container
+                include ../../components/compilation/index
+        //- signup
+        section.page__signup
+            .container
+                include ../../components/signup/index

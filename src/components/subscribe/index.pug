@@ -4,7 +4,7 @@
             h2= props.title
             if props.txt
                 p!=props.txt
-            form.subscribe__form
+            form(action="" method="post" enctype="multipart/form-data").subscribe__form
                 .subscribe__fields
                     if props.fields.email
                         .subscribe__field

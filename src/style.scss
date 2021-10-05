@@ -17,50 +17,51 @@
 @import "blocks/delivery";
 
 //COMPONENTS
-@import "components/lang/style";
+@import "components/appointment/style";
 @import "components/banner/style";
+@import "components/breadcrumbs/style";
 @import "components/catalog/style";
-@import "components/pagination/style";
-@import "components/item/style";
-@import "components/list/style";
+@import "components/choose/style";
+@import "components/cloths/style";
+@import "components/compilation/style";
+@import "components/corsettech/style";
+@import "components/delivery/style";
+@import "components/docs/style";
+@import "components/fabrics/style";
+@import "components/fashion/style";
+@import "components/faq/style";
+@import "components/filters/style";
 @import "components/fitting/style";
+@import "components/founder/style";
 @import "components/gallery/style";
-@import "components/suit/style";
+@import "components/gift/style";
+@import "components/item/style";
+@import "components/lang/style";
+@import "components/list/style";
+@import "components/map/style";
+@import "components/pagination/style";
+@import "components/portfolio/style";
+@import "components/principles/style";
+@import "components/product/style";
 @import "components/revs/style";
 @import "components/rev/style";
 @import "components/reviews/style";
-@import "components/subscribe/style";
-@import "components/breadcrumbs/style";
-@import "components/corsettech/style";
-@import "components/video/style";
 @import "components/signup/style";
-@import "components/choose/style";
-@import "components/filters/style";
-@import "components/faq/style";
-@import "components/fashion/style";
-@import "components/cloths/style";
-@import "components/principles/style";
-@import "components/founder/style";
-@import "components/compilation/style";
-@import "components/appointment/style";
-@import "components/fabrics/style";
 @import "components/stages/style";
-@import "components/product/style";
-@import "components/map/style";
-@import "components/docs/style";
-@import "components/delivery/style";
+@import "components/subscribe/style";
+@import "components/suit/style";
 @import "components/team/style";
-@import "components/portfolio/style";
+@import "components/video/style";
 
 
 //PAGES
 @import "pages/style";
 @import "pages/index/style";
-//@import "pages/women/style";
 
 
 .debug {
-  //@include debug(rgba(0,0,0,0.3), 1px solid red);
-  //z-index: 100;
-  //top: 0;
+  @include debug(rgba(0,0,0,0.3), 1px solid red);
+  z-index: 100;
+  top: 0;
+  display: none;
 }

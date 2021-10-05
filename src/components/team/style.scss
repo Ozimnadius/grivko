@@ -76,3 +76,20 @@
     margin: 0 auto;
   }
 }
+
+.team-card{
+  max-width: 1696px;
+
+  &__grid{
+    display: grid;
+    grid-template-columns: 513fr 1000fr;
+    grid-gap: 60px;
+  }
+
+  &__content{
+    h1,h2,h3,h4,h5,h6{
+      text-transform: uppercase;
+    }
+  }
+
+}

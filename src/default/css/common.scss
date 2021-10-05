@@ -48,6 +48,14 @@
     }
   }
 
+  &--hover-black{
+    &:hover{
+      border-color: $txt;
+      background-color: $txt;
+      color: $bg;
+    }
+  }
+
   svg {
     fill: currentColor;
     margin-left: 15px;
@@ -129,6 +137,10 @@
 
   &40 {
     margin-bottom: 40px !important;
+  }
+
+  &60{
+    margin-bottom: 60px;
   }
 
   &80 {

@@ -16,7 +16,7 @@ block content
                     .page-desc__content.content
                         p Наша цель — подарить миру идеальные костюмы, подчёркивающие образ и индивидуальность каждой женщины. Команда бренда провела колоссальную работу и создала коллекцию костюмов, сочетающую красоту, элегантность и неповторимый запоминающийся стиль
         //- portfolio
-        section.page__portfolio
+        section.page__portfolio.mb80
             .container
                 -
                     var list = [
@@ -33,8 +33,26 @@ block content
                         "/images/content/potrfolio/women/11.jpg",
                         "/images/content/potrfolio/women/12.jpg",
                         "/images/content/potrfolio/women/13.jpg",
+                        "/images/content/potrfolio/women/3.jpg",
+                        "/images/content/potrfolio/women/4.jpg",
+                        "/images/content/potrfolio/women/5.jpg",
                         "/images/content/potrfolio/women/14.jpg",
                         "/images/content/potrfolio/women/15.jpg",
                     ];
-                include ../../../../components/portfolio/index 
-
+                include ../../../../components/portfolio/index
+        //- subscribe
+        section.page__subscribe
+            .container
+                -
+                    var props = {
+                        title: "Хотите Оставить обратную связь?",
+                        fields: {
+                            name: true,
+                            tel: true,
+                            msg: true,
+                            resume: true
+                        },
+                        btnName: "Отправить",
+                        img: "/images/content/index/about/img.jpg"
+                    };
+                include ../../../../components/subscribe/index

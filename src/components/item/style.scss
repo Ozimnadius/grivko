@@ -74,15 +74,13 @@
     width: 100%;
     min-height: 100%;
     padding: 0 65px 35px 65px;
+    overflow: hidden;
   }
 
   &__img {
     width: 100%;
     max-width: 264px;
-    display: block;
     margin-bottom: 4px;
-    overflow: hidden;
-
     position: relative;
 
     &:before{
@@ -90,17 +88,20 @@
       display: block;
       padding-top: calc(487/264*100%);
       width: 100%;
-
     }
 
-    img {
-      display: block;
+    &-wrap{
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      bottom: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    img {
       @include tr;
     }
   }
