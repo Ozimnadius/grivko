@@ -1,0 +1,107 @@
+.tutorial{
+
+  &__list{
+    display: grid;
+    grid-gap: 80px;
+    margin-bottom: 80px;
+  }
+
+  &__item{
+
+
+    &:nth-child(even){
+
+
+      .tutorial{
+
+        &__wrap{
+          grid-template-columns: 660fr 1045fr;
+        }
+
+        &__left{
+          order: 1;
+        }
+
+        &__form{
+          margin-left: 0;
+          margin-right: -65px;
+        }
+      }
+    }
+  }
+
+  &__wrap{
+    display: grid;
+    grid-template-columns: 1045fr 660fr;
+    align-items: center;
+  }
+
+  &__title{
+    margin-bottom: 65px;
+  }
+
+  &__video{
+    display: block;
+    position: relative;
+    z-index: 10;
+
+    &:hover{
+      .tutorial__btn{
+        &-btn{
+          fill: #f00;
+          fill-opacity: 1;
+        }
+      }
+    }
+
+    img{
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__btn{
+    width: 68px;
+    height: 48px;
+    display: block;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    svg{
+      display: block;
+    }
+    &-btn{
+      fill: #212121;
+      fill-opacity: .8;
+      @include tr;
+    }
+    &-arr{
+      fill: #fff;
+    }
+  }
+
+  &__form{
+    margin-left: -65px;
+    padding: 65px;
+    padding-bottom: 45px;
+  }
+
+  &__name{
+    margin-bottom: 5px;
+  }
+
+  &__txt{
+    margin-bottom: 15px;
+  }
+
+  &__fields{
+    display: grid;
+    grid-gap: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@import "banner/style";

@@ -1,0 +1,42 @@
+extends ../../../main
+
+block variables
+    - var title = 'Обучение'
+
+block content
+    main.page
+        //- desc
+        section.page__desc
+            .container
+                .page-desc
+                    h2.page-desc__title.title.title--line ОБУЧАЮЩАЯ ПРОГРАММА ПО ПРОДУКТОВОЙ ЛИНЕЙКЕ
+                    .page-desc__breadcrumbs
+                        include ../../../components/breadcrumbs/index
+        //- tutorial
+        section.page__tutorial.mb120
+            .container
+                -
+                    var props = {
+                        list: [
+                            "1. История компании",
+                            "2. Ткани для женских костюмов. Какие мы используем.",
+                            "3. Однобортный жакет",
+                            "4. Брюки",
+                            "5. Двубортный жакет",
+                            "6. Двубортный укороченный жакет",
+                            "7. Жакет-кутюр",
+                            "8. Платье-жакет",
+                            "9. Жилет",
+                            "10. Смокинги, фраки",
+                            "11. Блузы",
+                            "12. Ткани. Часть 2",
+                            "13. Пальто",
+                            "1. Клиенты",
+                            "2. Наши преимущества.",
+                        ]
+                    };
+                include ../../../components/tutorial/index
+
+
+
+

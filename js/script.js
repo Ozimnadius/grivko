@@ -38,8 +38,7 @@ const jsTools = {
 window.addEventListener("load", function (){
 
     $('.input[type="tel"]').inputmask("+7(999)999-99-99");
-
-
+    
     $(".file input").on("change", function (e){
         $(this).closest('.file').find('.file__name').text(this.files[0].name);
     });
@@ -518,6 +517,35 @@ class Revs {
         this.hiddens.btn.classList.remove('active');
         this.hiddens.btn.firstElementChild.innerText = "Все отзывы";
         this.hiddens.open = false;
+    }
+
+
+}
+//- content.js
+window.addEventListener('load', function () {
+    document.querySelectorAll('.content table').forEach(i => new Table(i));
+});
+
+class Table {
+    constructor(el) {
+        this.table = el;
+        this.names = Array.from(this.table.querySelectorAll('th')).map(i => i.innerText);
+        this.trs = this.table.querySelectorAll('tbody tr');
+
+        this.init();
+        // console.log(this);
+    }
+
+    init() {
+        this.trs.forEach((i => this.getCols(i)));
+    }
+
+    getCols = (i) => {
+        i.querySelectorAll('td').forEach((i, x) => this.setName(i, x));
+    }
+
+    setName = (td, x) => {
+        td.dataset.name = this.names[x];
     }
 
 

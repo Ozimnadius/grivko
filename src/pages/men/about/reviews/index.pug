@@ -1,0 +1,36 @@
+extends ../../../../main
+
+block variables
+    - var title = 'Отзывы'
+
+block content
+    main.page
+        //- desc
+        section.page__desc
+            .container
+                .page-desc
+                    h2.page-desc__title.title.title--line Отзывы
+                    .page-desc__breadcrumbs
+                        include ../../../../components/breadcrumbs/index
+                    .page-desc__content.content
+                        p Наша цель — подарить миру идеальные костюмы, подчёркивающие образ и индивидуальность каждой женщины. Команда бренда провела колоссальную работу и создала коллекцию костюмов, сочетающую красоту, элегантность и неповторимый запоминающийся стиль
+        //- reviews
+        section.page__reviews.mb80
+            .container
+                include ../../../../components/reviews/index
+        //- subscribe
+        section.page__subscribe
+            .container
+                -
+                    var props = {
+                        title: "Хотите Оставить обратную связь?",
+                        fields: {
+                            name: true,
+                            tel: true,
+                            msg: true,
+                            resume: true
+                        },
+                        btnName: "Отправить",
+                        img: "/images/content/index/about/img.jpg"
+                    };
+                include ../../../../components/subscribe/index

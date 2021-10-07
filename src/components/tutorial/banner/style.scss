@@ -1,0 +1,20 @@
+.tutorial-banner{
+  display: grid;
+  grid-template-columns: 1fr 362px;
+  grid-gap: 20px;
+  border-left-width: 240px;
+  border-right-width: 240px;
+  padding: 0;
+
+  &__left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 150px;
+  }
+
+  &__title{
+    margin-bottom: 45px;
+  }
+
+}

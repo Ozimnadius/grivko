@@ -1,0 +1,45 @@
+extends ../../../../main
+
+block variables
+    - var title = 'Технология пошива'
+
+block content
+    main.page
+        //- desc
+        section.page__desc.mb80
+            .container
+                .page-desc
+                    h2.page-desc__title.title.title--line= title
+                    .page-desc__breadcrumbs
+                        include ../../../../components/breadcrumbs/index
+        //- tech
+        section.page__tech.mb120
+            .container
+                -
+                    var list = [
+                        {
+                            img: "/images/content/stages/1.jpg"
+                        },
+                        {
+                            img: "/images/content/stages/2.jpg"
+                        },
+                        {
+                            img: "/images/content/stages/3.jpg"
+                        },
+                        {
+                            img: "/images/content/stages/4.jpg"
+                        },
+                        {
+                            img: "/images/content/stages/5.jpg"
+                        },
+                        {
+                            img: "/images/content/stages/6.jpg"
+                        }
+                    ];
+                include ../../../../components/stages/index
+        //- signup
+        section.page__signup
+            .container
+                include ../../../../components/signup/index
+
+

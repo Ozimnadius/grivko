@@ -1,0 +1,117 @@
+extends ./../../../../main
+
+block variables
+    - var title = 'Наша команда'
+
+block content
+    main.page
+        //- desc
+        section.page__desc
+            .container
+                .page-desc
+                    h2.page-desc__title.title.title--line Наша команда:
+                    .page-desc__breadcrumbs
+                        include ../../../../components/breadcrumbs/index
+        //- team
+        section.page__team.mb120
+            .container
+                -
+                    var list = [
+                        {
+                            img:"/images/content/team/1.jpg",
+                            name:"Леонид гривко",
+                            prof: "Основатель бренда"
+                        },
+                        {
+                            img:"/images/content/team/2.jpg",
+                            name:"Татьяна Аверкова",
+                            prof: "Дизайнер"
+                        },
+                        {
+                            img:"/images/content/team/3.jpg",
+                            name:"Денис Авраамов",
+                            prof: "Дизайнер"
+                        },
+                        {
+                            img:"/images/content/team/4.jpg",
+                            name:"Максим Авраменко",
+                            prof: "Дизайнер"
+                        },
+                        {
+                            img:"/images/content/team/5.jpg",
+                            name:"Сабина Агаева",
+                            prof: "закройщик"
+                        },
+                        {
+                            img:"/images/content/team/6.jpg",
+                            name:"Наталья Агафонова",
+                            prof: "закройщик"
+                        },
+                        {
+                            img:"/images/content/team/7.jpg",
+                            name:"Анастасия Агеева",
+                            prof: "закройщик"
+                        },
+                        {
+                            img:"/images/content/team/8.jpg",
+                            name:"Иракли Агладзе",
+                            prof: "закройщик"
+                        },
+                        {
+                            img:"/images/content/team/9.jpg",
+                            name:"Леонид гривко",
+                            prof: "Основатель бренда"
+                        },
+                        {
+                            img:"/images/content/team/10.jpg",
+                            name:"Татьяна Аверкова",
+                            prof: "Дизайнер"
+                        },
+                        {
+                            img:"/images/content/team/11.jpg",
+                            name:"Денис Авраамов",
+                            prof: "Дизайнер"
+                        },
+                        {
+                            img:"/images/content/team/12.jpg",
+                            name:"Максим Авраменко",
+                            prof: "Дизайнер"
+                        },
+                        {
+                            img:"/images/content/team/13.jpg",
+                            name:"Сабина Агаева",
+                            prof: "закройщик"
+                        },
+                        {
+                            img:"/images/content/team/14.jpg",
+                            name:"Наталья Агафонова",
+                            prof: "закройщик"
+                        },
+                        {
+                            img:"/images/content/team/15.jpg",
+                            name:"Анастасия Агеева",
+                            prof: "закройщик"
+                        },
+                        {
+                            img:"/images/content/team/16.jpg",
+                            name:"Иракли Агладзе",
+                            prof: "закройщик"
+                        }
+                    ];
+                include ../../../../components/team/index
+        //- subscribe
+        section.page__subscribe
+            .container
+                -
+                    var props = {
+                        title: "Хотите в нашу команду?",
+                        fields: {
+                            name: true,
+                            tel: true,
+                            msg: true,
+                            resume: true
+                        },
+                        btnName: "Отправить",
+                        img: "/images/content/index/subscribe/img.jpg"
+                    };
+                include ../../../../components/subscribe/index

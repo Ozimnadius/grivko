@@ -8,4 +8,5 @@
 // @prepros-append components/filters/script.js
 // @prepros-append components/faq/script.js
 // @prepros-append components/product/script.js
+// @prepros-append components/content/script.js
 
