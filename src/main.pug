@@ -22,8 +22,8 @@ html(lang="ru")
         meta(name="theme-color" content="#ffffff")
     body
         .wrapper
-            .wrapper__header
-                include default/blocks/header/header
+            //.wrapper__header
+            include default/blocks/header/header
 
             .wrapper__content
                 block content
@@ -31,6 +31,8 @@ html(lang="ru")
             .wrapper__footer
                 include default/blocks/footer/footer
 
+        template#templates
+            include components/forms/index
 
 
 

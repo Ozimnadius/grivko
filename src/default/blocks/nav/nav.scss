@@ -1,19 +1,61 @@
-.nav{
+.nav {
   display: flex;
   gap: 30px;
 
-  &__item{
+  &__item {
+    position: relative;
 
+    &:hover {
+      .nav__link{
+        color: $link;
+      }
+      .nav__drop {
+        display: block;
+      }
+    }
+
+    &.full{
+      position: static;
+    }
   }
 
-  &__link{
-    padding: 10px 0;
+  &__link {
+    padding: 25px 0;
     display: block;
     @include tr;
+  }
 
-    &:hover,&:focus,&:active{
-      color: $link;
+  &__drop {
+    position: absolute;
+    z-index: 100;
+    top: 100%;
+    left: -30px;
+    display: none;
+
+    &:before{
+      content: '';
+      display: block;
+      height: 15px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 100%;
+    }
+
+    &.full {
+      width: 100%;
+      left: 0;
+
+      .nav-drop{
+        width: 100%;
+        padding: 60px 100px 100px 100px;
+        display: grid;
+        grid-template-columns: 440fr 1120fr;
+        grid-gap: 20px;
+      }
     }
   }
 
 }
+
+@import "drop/style";

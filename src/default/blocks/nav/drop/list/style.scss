@@ -1,0 +1,26 @@
+.nav-list {
+
+  &__title {
+    color: rgba($txt, .5);
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 45px;
+  }
+
+  &__cols {
+    display: grid;
+    grid-template-columns: repeat(2, 155px);
+    grid-gap: 10px;
+  }
+
+  &__item {
+    padding: 15px 0;
+    display: block;
+    font-weight: 400;
+    @include tr;
+
+    &:hover{
+      color: $link;
+    }
+  }
+}

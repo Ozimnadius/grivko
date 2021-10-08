@@ -54,7 +54,9 @@ function getHtml()
                         <a href="" class="item item--hover">
                             <span class="item__wrap">
                                 <span class="item__img">
-                                    <img src="/images/content/women/collections/9.jpg" alt="lorem">
+                                    <span class="item__img-wrap">
+                                        <img src="/images/content/women/collections/9.jpg" alt="lorem">
+                                    </span>
                                 </span>
                                 <span class="title item__title">Пиджак</span>
                                 <span class="item__price">от 75 000 руб.</span>
@@ -71,7 +73,9 @@ function getHtml()
                         <a href="" class="item item--hover">
                             <span class="item__wrap">
                                 <span class="item__img">
-                                    <img src="/images/content/women/collections/10.jpg" alt="lorem">
+                                    <span class="item__img-wrap">
+                                        <img src="/images/content/women/collections/10.jpg" alt="lorem">
+                                    </span>
                                 </span>
                                 <span class="title item__title">Брюки</span>
                                 <span class="item__price">от 75 000 руб.</span>

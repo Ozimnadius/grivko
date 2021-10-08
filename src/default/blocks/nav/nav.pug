@@ -2,5 +2,8 @@
 
 nav.nav
     each i in nav
-        .nav__item
+        div(class=(i.drop)?i.drop.cls:"").nav__item
             a(href=i.href).nav__link= i.name
+            if i.drop
+                div(class=i.drop.cls).nav__drop
+                    include drop/index

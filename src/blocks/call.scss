@@ -1,21 +1,43 @@
-.call{
+.call {
   max-width: 618px;
   width: 100%;
+  border: 30px solid $bg;
+  background: $bg url("/images/content/bordered/bg.png");
 
-  &__photos{
+  &__photos {
     margin-bottom: 15px;
   }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__txt {
+    margin-bottom: 30px;
+  }
+
+  &__fields{
+    display: grid;
+    grid-gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__submit{
+    width: 320px;
+    height: 74px;
+  }
+
 }
 
-.call-photos{
-  &__list{
+.call-photos {
+  &__list {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-gap: 10px;
   }
 
-  &__plus{
+  &__plus {
     pointer-events: none;
     width: 70px;
     height: 70px;
@@ -27,20 +49,24 @@
   }
 }
 
-.dz-preview{
-  .dz-details{
+.dz-preview {
+  .dz-details {
     display: none;
   }
-  .dz-progress{
+
+  .dz-progress {
     display: none;
   }
-  .dz-success-mark{
+
+  .dz-success-mark {
     display: none;
   }
-  .dz-error-mark{
+
+  .dz-error-mark {
     display: none;
   }
-  .dz-error-message{
+
+  .dz-error-message {
     display: none;
   }
 }

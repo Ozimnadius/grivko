@@ -1,0 +1,8 @@
+- var cols = drop.cols.left;
+.nav-list
+    .nav-list__title= i.name
+    .nav-list__cols
+        each col in cols
+            .nav-list__col
+                each item in col
+                    a(href="/").nav-list__item= item

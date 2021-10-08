@@ -1,6 +1,11 @@
 .header{
-  background-color: $bg;
-  padding: 15px 0;
+
+  &__sticky{
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    left: 0;
+  }
 
   &--second{
     padding: 0;
@@ -11,6 +16,14 @@
   }
 
   &__top{
+    background-color: $bg;
+    padding: 15px 0;
+
+    &--second{
+      background-color: #e1e1e1;
+      padding: 8px 0;
+    }
+
     .container{
       display: flex;
       justify-content: space-between;
@@ -31,8 +44,10 @@
   }
 
   &__bottom{
-    padding: 15px 0;
-    .container{
+    background-color: $bg;
+
+    &-container{
+      position: relative;
       display: flex;
       align-items: center;
     }

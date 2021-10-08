@@ -46,6 +46,12 @@
       margin-right: 15px;
       margin-left: 0 !important;
     }
+
+    &:hover{
+      svg{
+        transform: translateX(-10px);
+      }
+    }
   }
 
   &--hover-black{

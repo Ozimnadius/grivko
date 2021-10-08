@@ -1,0 +1,52 @@
+.nav-drop{
+  background: #F2F2F2;
+  width: 345px;
+
+  &__items{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 70px;
+  }
+
+  &__item{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &:hover{
+      .nav-drop__item-title{
+        color: $link;
+      }
+    }
+
+
+    &-title{
+      color: rgba($txt,.5);
+      @include tr;
+    }
+
+    &-name{
+      max-width: 350px;
+      font-size: 16px;
+    }
+  }
+
+  &__link{
+    display: block;
+    padding: 15px 30px;
+    border-bottom: 1px solid #E3E3E3;
+    @include tr;
+
+    &:hover{
+      color: $link;
+    }
+
+    &:last-child{
+      border-bottom: none;
+    }
+  }
+
+}
+
+@import "list/style";
+@import "fashions/style";

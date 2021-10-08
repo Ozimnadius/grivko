@@ -32,13 +32,13 @@ body {
 
 .wrapper {
   min-height: 100vh;
-  overflow: hidden;
+
   display: flex;
   flex-direction: column;
 
   &__content{
     flex-grow: 1;
-
+    overflow: hidden;
     display: flex;
     flex-direction: column;
   }

@@ -1,0 +1,117 @@
+.nav-fashions{
+
+  &__top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  &__sws{
+    display: flex;
+    gap: 45px;
+  }
+
+  &__sw{
+    color: rgba($txt,.5);
+    font-size: 20px;
+    font-weight: 400;
+    @include tr;
+
+    &.active{
+      color: $txt;
+    }
+
+    &:hover{
+      color: $link;
+    }
+  }
+
+  &__section{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba($txt,.5);
+    font-size: 16px;
+    font-weight: 400;
+    @include tr;
+
+    &:hover{
+      color: $link;
+    }
+
+    svg{
+      fill: currentColor;
+    }
+  }
+
+  &__tab{
+    display: none;
+
+    &.active{
+      display: block;
+    }
+  }
+
+  &__list{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+  }
+}
+
+.nav-fashion{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 400;
+
+  &:hover{
+    .nav-fashion{
+      &__img{
+        img{
+          transform: scale(1.05);
+        }
+      }
+
+      &__name{
+        color: $link;
+      }
+    }
+  }
+
+
+  &__img{
+    display: block;
+    position: relative;
+    overflow: hidden;
+
+    &:before{
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+
+    img{
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include tr;
+    }
+  }
+
+  &__txt{
+    color: rgba($txt,.5);
+  }
+
+  &__name{
+    @include tr;
+  }
+}
