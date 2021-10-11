@@ -1,0 +1,32 @@
+.call {
+  max-width: 618px;
+  width: 100%;
+  border: 30px solid $bg;
+  background: $bg url("/images/content/bordered/bg.png");
+
+  &__photos {
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__txt {
+    margin-bottom: 30px;
+  }
+
+  &__fields{
+    display: grid;
+    grid-gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__submit{
+    width: 320px;
+    height: 74px;
+  }
+
+}
+
+@import "files/style";

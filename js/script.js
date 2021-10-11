@@ -38,13 +38,10 @@ const jsTools = {
 window.addEventListener("load", function (){
 
     $('.input[type="tel"]').inputmask("+7(999)999-99-99");
-    
-    $(".file input").on("change", function (e){
-        $(this).closest('.file').find('.file__name').text(this.files[0].name);
-    });
 
 });
 
+//- nav-fashions.js
 window.addEventListener('load', function () {
     document.querySelectorAll('.nav-fashions').forEach(i => new Fashion(i));
 
@@ -85,6 +82,7 @@ class Fashion {
     }
 
 }
+//- components/actions
 window.addEventListener('load', function () {
     new Actions('.jsAction');
 });
@@ -94,7 +92,8 @@ class Actions {
 
         this.fashions = document.querySelectorAll(`${selector}[data-action="fashion"]`);
         this.teams = document.querySelectorAll(`${selector}[data-action="team"]`);
-
+        this.calls = document.querySelectorAll(`${selector}[data-action="call"]`);
+        this.addReview = document.querySelectorAll(`${selector}[data-action="addReview"]`);
         this.init();
     }
 
@@ -108,6 +107,100 @@ class Actions {
             e.preventDefault();
             this.sendTeam(e.currentTarget.dataset.id);
         }));
+
+        this.calls.forEach(i => i.addEventListener('click', (e) => {
+            e.preventDefault();
+            this.openForm("formCall");
+            this.current.validate(
+                {
+                    rules: {
+                        tel: "required",
+                    },
+                    messages: {
+                        tel: "Введите ваш  Телефон",
+                    },
+                    submitHandler: function (form) {
+                        let formData = new FormData(form);
+                        $.ajax({
+                            type: 'POST',
+                            url: $(form).attr('action'),
+                            data: formData,
+                            dataType: 'json',
+                            success: function (result) {
+                                debugger;
+                                if (result.status) {
+                                    template.close();
+                                    template.open("formThanks");
+                                } else {
+                                    alert('Что-то пошло не так, попробуйте еще раз!!!');
+                                }
+                            },
+                            error: function (result) {
+                                alert('Что-то пошло не так, попробуйте еще раз!!!');
+                            }
+                        });
+                    },
+                    invalidHandler: function (event, validator) {
+                        // debugger;
+                    },
+                    errorPlacement: function (error, element) {
+                        element[0].placeholder = error[0].innerText;
+                    }
+                }
+            );
+        }));
+
+        this.addReview.forEach(i => i.addEventListener('click', (e) => {
+            e.preventDefault();
+            this.openForm("formReview");
+            const files = new Files();
+            this.current.validate(
+                {
+                    rules: {
+                        msg: "required",
+                    },
+                    messages: {
+                        msg: "Напишите ваш отзыв",
+                    },
+
+                    submitHandler: function (form) {
+                        let formData = new FormData(form);
+
+                        $.ajax({
+                            type: 'POST',
+                            url: $(form).attr('action'),
+                            data: formData,
+                            dataType: 'json',
+                            cache: false,
+                            contentType: false,
+                            processData: false,
+                            success: function (result) {
+                                if (result.status) {
+                                    template.close();
+                                    template.open("formReviewThanks");
+                                } else {
+                                    alert('Что-то пошло не так, попробуйте еще раз!!!');
+                                }
+                            },
+                            error: function (result) {
+                                alert('Что-то пошло не так, попробуйте еще раз!!!');
+                            }
+                        });
+                    },
+                    invalidHandler: function (event, validator) {
+                        // debugger;
+                    },
+                    errorPlacement: function (error, element) {
+                        element[0].placeholder = error[0].innerText;
+                        // debugger;
+                    }
+                }
+            );
+        }));
+    }
+
+    get current(){
+        return template.current;
     }
 
     sendFashion(id) {
@@ -166,6 +259,10 @@ class Actions {
                 alert('Что-то пошло не так, попробуйте еще раз!!!');
             }
         });
+    }
+
+    openForm(name) {
+        template.open(name);
     }
 
 }
@@ -507,19 +604,10 @@ class Tabs{
 }
 // product-revs.js
 window.addEventListener('load', function () {
-    if(document.querySelector('.jsRevs')) {
+    if (document.querySelector('.jsRevs')) {
         const revs = new Revs();
     }
 
-    // $.fancybox.open(formReview.content);
-    //
-    // let myDropzone = new Dropzone(".call-photos__list", {
-    //     url: "/php/review.php",
-    //     paramName: "file",
-    //     thumbnailWidth: 70,
-    //     thumbnailHeight: 70,
-    //     thumbnailMethod: "contain"
-    // });
 });
 
 class Revs {
@@ -590,6 +678,10 @@ class Table {
 
 
 }
+window.addEventListener('load', function () {
+
+});
+
 class Template {
     constructor() {
         this.content = document.querySelector('#templates').content;
@@ -599,10 +691,86 @@ class Template {
         return this.content.querySelector(`#${name}`).innerHTML;
     }
 
+    close(){
+        $.fancybox.close();
+    }
+
     open(name) {
         $.fancybox.open(this.html(name));
+        $('.input[type="tel"]').inputmask("+7(999)999-99-99");
+    }
+
+    get current(){
+        return $.fancybox.getInstance().current.$content;
     }
 }
 
-const forms = new Template();
+const template = new Template();
+
+class Files {
+    constructor() {
+        this.files = document.querySelector('.files');
+        this.btn = this.files.querySelector('.files__plus');
+        this.input = undefined;
+        this.list = this.files.querySelector('.files__list');
+        this.fileList = undefined;
+        this.index = 0;
+        this.init();
+    }
+
+    init() {
+        this.addInput();
+
+        this.input.addEventListener('change', (e) => {
+            this.fileList = e.currentTarget.files;
+            this.addFiles();
+        })
+
+        this.btn.addEventListener('click', (e) => {
+            this.input.click();
+        });
+    }
+
+    addInput() {
+        this.input = document.createElement('input');
+        this.input.setAttribute('type', 'file');
+        this.input.setAttribute('multiple', true);
+        this.input.setAttribute('accept', 'image/*');
+    }
+
+    html() {
+        const tmp = document.querySelector('#file').content;
+        return tmp.querySelector('.file__item').cloneNode(true);
+    }
+
+    createImg(file) {
+        const img = document.createElement("img");
+        img.src = window.URL.createObjectURL(file);
+        img.onload = function () {
+            window.URL.revokeObjectURL(this.src);
+        }
+        return img;
+    }
+
+    addFiles() {
+
+        this.fileList.forEach((i) => {
+            let item = this.html();
+            let img = this.createImg(i);
+            item.querySelector('.file__img').appendChild(img);
+            let input = item.querySelector('.file__input');
+            input.name = `file[${this.index}]`;
+            let dt = new DataTransfer();
+            dt.items.add(new File([i], i.name, {type: i.type}));
+            let file_list = dt.files;
+            input.files = file_list;
+            this.list.appendChild(item);
+            this.index++;
+
+            item.addEventListener('click', function (e){
+               this.remove();
+            });
+        });
+    }
+}
 //# sourceMappingURL=script.js.map

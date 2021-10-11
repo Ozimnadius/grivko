@@ -1,0 +1,19 @@
+.files
+    .files__txt Вложить фотографии
+    .files__wrap
+        .files__list
+            .files__item
+                button(type='button').files__plus.files__add
+                    <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M70 0H0V70H70V0Z" fill="white"/>
+                    <path d="M69.5 0.5H0.5V69.5H69.5V0.5Z"/>
+                    <path d="M35 54C45.4934 54 54 45.4934 54 35C54 24.5066 45.4934 16 35 16C24.5066 16 16 24.5066 16 35C16 45.4934 24.5066 54 35 54Z" fill="#E6E6E6"/>
+                    <path d="M36.7939 31.8472H40.8481V34.7783H36.7939V39.3604H33.7056V34.7783H29.6401V31.8472H33.7056V27.4561H36.7939V31.8472Z" fill="#262626"/>
+                    </svg>
+template#file
+    .file__item
+        .file
+            input(type="file" name="file").file__input
+            button(type='button').file__delete
+                <svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path></svg>
+            .file__img

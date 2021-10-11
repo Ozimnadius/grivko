@@ -419,6 +419,12 @@ input, textarea {
 .input:focus {
   border-color: #e7511c;
 }
+.input.error {
+  border-color: red;
+}
+.input.error::placeholder {
+  color: red;
+}
 
 .file {
   cursor: pointer;
@@ -813,64 +819,6 @@ input, textarea {
 .fancybox-webcomp .fancybox-close-small svg {
   width: 50px;
   height: 50px;
-}
-
-.call {
-  max-width: 618px;
-  width: 100%;
-  border: 30px solid #ffffff;
-  background: #ffffff url("/images/content/bordered/bg.png");
-}
-.call__photos {
-  margin-bottom: 15px;
-}
-.call__title {
-  margin-bottom: 15px;
-}
-.call__txt {
-  margin-bottom: 30px;
-}
-.call__fields {
-  display: grid;
-  grid-gap: 30px;
-  margin-bottom: 30px;
-}
-.call__submit {
-  width: 320px;
-  height: 74px;
-}
-
-.call-photos__list {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: 10px;
-}
-.call-photos__plus {
-  pointer-events: none;
-  width: 70px;
-  height: 70px;
-  border: 1px solid rgba(112, 112, 112, 0.2);
-  background-color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.dz-preview .dz-details {
-  display: none;
-}
-.dz-preview .dz-progress {
-  display: none;
-}
-.dz-preview .dz-success-mark {
-  display: none;
-}
-.dz-preview .dz-error-mark {
-  display: none;
-}
-.dz-preview .dz-error-message {
-  display: none;
 }
 
 .appointment {
@@ -1959,6 +1907,89 @@ input, textarea {
   display: flex;
   flex-direction: column;
   gap: 25px;
+}
+
+.call {
+  max-width: 618px;
+  width: 100%;
+  border: 30px solid #ffffff;
+  background: #ffffff url("/images/content/bordered/bg.png");
+}
+.call__photos {
+  margin-bottom: 15px;
+}
+.call__title {
+  margin-bottom: 15px;
+}
+.call__txt {
+  margin-bottom: 30px;
+}
+.call__fields {
+  display: grid;
+  grid-gap: 30px;
+  margin-bottom: 30px;
+}
+.call__submit {
+  width: 320px;
+  height: 74px;
+}
+
+.files__add input {
+  display: none;
+}
+.files__list {
+  display: grid;
+  grid-template-columns: repeat(6, 70px);
+  grid-gap: 10px;
+}
+.files__plus {
+  width: 70px;
+  height: 70px;
+  border: 1px solid rgba(112, 112, 112, 0.2);
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.file {
+  position: relative;
+  width: 100%;
+  background: #ffffff;
+}
+.file:hover .file__delete {
+  display: block;
+}
+.file:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.file__img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.file__img img {
+  display: block;
+  max-height: 100%;
+}
+.file__delete {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  display: none;
+}
+.file__delete svg {
+  display: block;
 }
 
 .filters {

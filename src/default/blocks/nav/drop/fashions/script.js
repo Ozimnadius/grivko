@@ -1,3 +1,4 @@
+//- nav-fashions.js
 window.addEventListener('load', function () {
     document.querySelectorAll('.nav-fashions').forEach(i => new Fashion(i));
 

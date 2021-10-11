@@ -1,0 +1,75 @@
+.files {
+
+  &__wrap{
+
+  }
+
+  &__add{
+    input{
+      display: none;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 70px);
+    grid-gap: 10px;
+  }
+
+  &__plus {
+    width: 70px;
+    height: 70px;
+    border: 1px solid rgba(112, 112, 112, 0.2);
+    background-color: $bg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.file{
+  position: relative;
+  width: 100%;
+  background: $bg;
+
+  &:hover{
+    .file__delete{
+      display: block;
+    }
+  }
+
+  &:before{
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+
+  &__img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img{
+      display: block;
+      max-height: 100%;
+    }
+  }
+
+  &__delete{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    display: none;
+    svg{
+      display: block;
+    }
+  }
+}

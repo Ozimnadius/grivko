@@ -184,6 +184,13 @@
     border-color: $link;
   }
 
+  &.error{
+    border-color: red;
+
+    &::placeholder{
+      color: red;
+    }
+  }
 
 }
 

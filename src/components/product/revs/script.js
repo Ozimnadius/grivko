@@ -1,18 +1,9 @@
 // product-revs.js
 window.addEventListener('load', function () {
-    if(document.querySelector('.jsRevs')) {
+    if (document.querySelector('.jsRevs')) {
         const revs = new Revs();
     }
 
-    // $.fancybox.open(formReview.content);
-    //
-    // let myDropzone = new Dropzone(".call-photos__list", {
-    //     url: "/php/review.php",
-    //     paramName: "file",
-    //     thumbnailWidth: 70,
-    //     thumbnailHeight: 70,
-    //     thumbnailMethod: "contain"
-    // });
 });
 
 class Revs {

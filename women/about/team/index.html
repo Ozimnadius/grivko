@@ -384,7 +384,47 @@
       </div>
     </div>
     <template id="templates">
-      <div id="formReview"></div>
+      <div id="formReview">
+        <form class="call" action="/php/review.php" method="post" enctype="multipart/form-data">
+          <h3 class="call__title title title--line">Оставить отзыв</h3>
+          <div class="call__photos">
+            <div class="files">
+              <div class="files__txt">Вложить фотографии</div>
+              <div class="files__wrap">
+                <div class="files__list">
+                  <div class="files__item">
+                    <button class="files__plus files__add" type="button"><svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M70 0H0V70H70V0Z" fill="white"/>
+<path d="M69.5 0.5H0.5V69.5H69.5V0.5Z"/>
+<path d="M35 54C45.4934 54 54 45.4934 54 35C54 24.5066 45.4934 16 35 16C24.5066 16 16 24.5066 16 35C16 45.4934 24.5066 54 35 54Z" fill="#E6E6E6"/>
+<path d="M36.7939 31.8472H40.8481V34.7783H36.7939V39.3604H33.7056V34.7783H29.6401V31.8472H33.7056V27.4561H36.7939V31.8472Z" fill="#262626"/>
+</svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <template id="file">
+              <div class="file__item">
+                <div class="file">
+                  <input class="file__input" type="file" name="file">
+                  <button class="file__delete" type="button"><svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path></svg></button>
+                  <div class="file__img"></div>
+                </div>
+              </div>
+            </template>
+          </div>
+          <div class="call__fields">
+            <div class="call__field">
+              <textarea class="input input--area" name="msg" placeholder="Напишите текст отзыва"></textarea>
+            </div>
+          </div>
+          <button class="call__submit btn btn--black jsAction" type="submit" data-action="addReviewSubmit"><span>Оставить отзыв</span><svg width="26" height="9" viewBox="0 0 26 9" xmlns="http://www.w3.org/2000/svg">
+<path d="M25.271 3.758L21.683 0.17C21.5744 0.0613939 21.4271 0.00037956 21.2735 0.000379562C21.1199 0.000379565 20.9726 0.0613939 20.864 0.17C20.7554 0.278606 20.6944 0.425908 20.6944 0.5795C20.6944 0.733092 20.7554 0.880394 20.864 0.989L23.464 3.589H0.579C0.425307 3.589 0.277909 3.65005 0.169232 3.75873C0.0605546 3.86741 -0.000499725 4.01481 -0.000499725 4.1685C-0.000499725 4.32219 0.0605546 4.46959 0.169232 4.57827C0.277909 4.68695 0.425307 4.748 0.579 4.748H23.463L20.863 7.348C20.7544 7.45661 20.6934 7.60391 20.6934 7.7575C20.6934 7.91109 20.7544 8.05839 20.863 8.167C20.9716 8.27561 21.1189 8.33662 21.2725 8.33662C21.4261 8.33662 21.5734 8.27561 21.682 8.167L25.27 4.579C25.3242 4.52526 25.3672 4.46135 25.3965 4.39094C25.4259 4.32053 25.4411 4.245 25.4412 4.16871C25.4413 4.09241 25.4263 4.01685 25.3971 3.94637C25.3679 3.87589 25.325 3.81187 25.271 3.758V3.758Z"/>
+</svg>
+          </button>
+        </form>
+      </div>
       <div id="formCall">
         <form class="call" action="/php/call.php" method="post">
           <h3 class="call__title title title--line">записаться<br>на снятие мерок</h3>
@@ -405,10 +445,16 @@
           </button>
         </form>
       </div>
-      <div id="formThancks">
+      <div id="formThanks">
         <div class="call">
           <h3 class="call__title title title--line">Спасибо что выбрали нас<br>Ваша заявка принята!</h3>
           <div class="call__txt">Скоро с вами свяжется менеджер</div>
+        </div>
+      </div>
+      <div id="formReviewThanks">
+        <div class="call">
+          <h3 class="call__title title title--line">Спасибо за Ваш отзыв</h3>
+          <div class="call__txt">Скоро отзыв появится</div>
         </div>
       </div>
     </template>
