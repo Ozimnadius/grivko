@@ -222,16 +222,16 @@
                 </div>
               </div>
               <div class="banner__form">
-                <div class="banner-form">
+                <form class="banner-form jsAction" action="/php/call.php" method="POST" data-action="sign">
                   <div class="banner-form__name">Записаться на снятие мерок</div>
                   <div class="banner-form__wrap">
                     <form class="banner-form__form">
                       <div class="banner-form__fields">
                         <div class="banner-form__field">
-                          <input class="input" type="text" name="name" placeholder="Имя" required>
+                          <input class="input" type="text" name="name" placeholder="Имя" data-rule-required="true" data-msg-required="Заполните Имя">
                         </div>
                         <div class="banner-form__field">
-                          <input class="input" type="tel" name="tel" placeholder="Телефон" required>
+                          <input class="input" type="tel" name="tel" placeholder="Телефон" data-rule-required="true" data-msg-required="Введите телефон" data-msg-tel="Введите ваш телефон">
                         </div>
                         <div class="banner-form__field banner-form__field--double">
                           <input class="input" type="text" name="datetime" placeholder="Напишите удобный день и время">
@@ -243,7 +243,7 @@
                       </button>
                     </form>
                   </div>
-                </div>
+                </form>
               </div>
             </div>
           </section>
@@ -341,7 +341,7 @@
                 </div>
                 <div class="fitting__right">
                   <div class="fitting__content bordered">
-                    <form class="fitting__form fitting-form">
+                    <form class="fitting__form fitting-form jsAction" action="/php/call.php" method="POST" data-action="sign">
                       <div class="fitting-form__title title">записаться<br>в бутик на примерку</div>
                       <div class="fitting-form__txt">
                         На ней мы узнаем о ваших предпочтениях
@@ -350,10 +350,10 @@
                       </div>
                       <div class="fitting-form__fields">
                         <div class="fitting-form__field">
-                          <input class="input" type="text" name="name" placeholder="Имя" required>
+                          <input class="input" type="text" name="name" placeholder="Имя" data-rule-required="true" data-msg-required="Заполните Имя">
                         </div>
                         <div class="fitting-form__field">
-                          <input class="input" type="tel" name="tel" placeholder="Телефон" required>
+                          <input class="input" type="tel" name="tel" placeholder="Телефон" data-rule-required="true" data-msg-required="Введите телефон" data-msg-tel="Введите ваш телефон">
                         </div>
                         <div class="fitting-form__field">
                           <textarea class="input input--area" name="message" placeholder="Напишите удобный день и время"></textarea>
@@ -447,13 +447,13 @@
                 <div class="signup__wrap">
                   <h2 class="signup__title title">записаться в бутик на примерку</h2>
                   <div class="signup__txt">На ней мы узнаем о ваших предпочтениях и пожеланиях,<br>снимем мерки и после этого приступим к исполнению.</div>
-                  <form class="signup__form">
+                  <form class="signup__form jsAction" action="/php/call.php" method="POST" data-action="sign">
                     <div class="signup__fields">
                       <div class="signup__field">
-                        <input class="input" type="text" name="name" placeholder="Имя" required>
+                        <input class="input" type="text" name="name" placeholder="Имя" data-rule-required="true" data-msg-required="Заполните Имя">
                       </div>
                       <div class="signup__field">
-                        <input class="input" type="tel" name="tel" placeholder="Телефон" required>
+                        <input class="input" type="tel" name="tel" placeholder="Телефон" data-rule-required="true" data-msg-required="Введите телефон" data-msg-tel="Введите ваш телефон">
                       </div>
                       <div class="signup__field signup__field--big">
                         <input class="input" type="text" name="datetime" placeholder="Напишите удобный день и время">
@@ -536,7 +536,7 @@
           </div>
           <div class="call__fields">
             <div class="call__field">
-              <textarea class="input input--area" name="msg" placeholder="Напишите текст отзыва"></textarea>
+              <textarea class="input input--area" name="msg" placeholder="Напишите текст отзыва" data-rule-required="true" data-msg-required="Напишите текст отзыва"></textarea>
             </div>
           </div>
           <button class="call__submit btn btn--black jsAction" type="submit" data-action="addReviewSubmit"><span>Оставить отзыв</span><svg width="26" height="9" viewBox="0 0 26 9" xmlns="http://www.w3.org/2000/svg">
@@ -553,8 +553,8 @@
             и пожеланиях, снимем мерки и после этого приступим к исполнению.
           </div>
           <div class="call__fields">
-            <input class="input" type="text" name="name" placeholder="Имя">
-            <input class="input" type="tel" name="tel" placeholder="Телефон">
+            <input class="input" type="text" name="name" placeholder="Имя" data-rule-required="true" data-msg-required="Заполните Имя">
+            <input class="input" type="tel" name="tel" placeholder="Телефон" data-rule-required="true" data-msg-required="Заполните телефон" data-msg-tel="Заполните телефон">
             <div class="call__field">
               <textarea class="input input--area" name="msg" placeholder="Напишите текст отзыва"></textarea>
             </div>
@@ -575,6 +575,18 @@
         <div class="call">
           <h3 class="call__title title title--line">Спасибо за Ваш отзыв</h3>
           <div class="call__txt">Скоро отзыв появится</div>
+        </div>
+      </div>
+      <div id="formOrderThanks">
+        <div class="call">
+          <h3 class="call__title title title--line">Спасибо что выбрали нас<br>Ваша заявка принята!</h3>
+          <div class="call__txt">Скоро с вами свяжется менеджер</div>
+        </div>
+      </div>
+      <div id="formSubscribeThanks">
+        <div class="call">
+          <h3 class="call__title title title--line">Спасибо что Подписались<br>на рассылку</h3>
+          <div class="call__txt">Теперь вы будете получать много<br>интересных новостей</div>
         </div>
       </div>
     </template>

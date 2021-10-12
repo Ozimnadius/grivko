@@ -195,23 +195,5 @@
 }
 
 .file {
-  cursor: pointer;
 
-  input {
-    display: none;
-  }
-
-  &__fake {
-    display: flex;
-    align-items: center;
-    padding: 10px 30px;
-    width: 100%;
-    height: 68px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    border: 1px solid #707070;
-
-    svg {
-      margin-left: auto;
-    }
-  }
 }

@@ -91,7 +91,7 @@
                 <div class="index-cats__section">
                   <h2 class="index-cats__title">Для женщин</h2>
                   <div class="index-cats__list index-cats__list--women">
-                    <div class="index-cats__item"><a class="index-cat" href="#">
+                    <div class="index-cats__item"><a class="index-cat" href="/women/collections/">
                         <div class="index-cat__img"><img class="lorem" src="images/content/index/cats/w1.jpg" alt="lorem"/>
                         </div>
                         <div class="index-cat__wrap">
@@ -100,7 +100,7 @@
 </svg></span>
                         </div></a>
                     </div>
-                    <div class="index-cats__item"><a class="index-cat" href="#">
+                    <div class="index-cats__item"><a class="index-cat" href="/women/tailoring/">
                         <div class="index-cat__img"><img class="lorem" src="images/content/index/cats/w2.jpg" alt="lorem"/>
                         </div>
                         <div class="index-cat__wrap">
@@ -109,7 +109,7 @@
 </svg></span>
                         </div></a>
                     </div>
-                    <div class="index-cats__item"><a class="index-cat" href="#">
+                    <div class="index-cats__item"><a class="index-cat" href="/women/bigsize/">
                         <div class="index-cat__img"><img class="lorem" src="images/content/index/cats/w3.jpg" alt="lorem"/>
                         </div>
                         <div class="index-cat__wrap">
@@ -123,7 +123,7 @@
                 <div class="index-cats__section">
                   <h2 class="index-cats__title">Для мужчин</h2>
                   <div class="index-cats__list index-cats__list">
-                    <div class="index-cats__item"><a class="index-cat" href="#">
+                    <div class="index-cats__item"><a class="index-cat" href="/men/">
                         <div class="index-cat__img"><img class="lorem" src="images/content/index/cats/m1.jpg" alt="lorem"/>
                         </div>
                         <div class="index-cat__wrap">
@@ -132,7 +132,7 @@
 </svg></span>
                         </div></a>
                     </div>
-                    <div class="index-cats__item"><a class="index-cat" href="#">
+                    <div class="index-cats__item"><a class="index-cat" href="/men/services/shoes/">
                         <div class="index-cat__img"><img class="lorem" src="images/content/index/cats/m2.jpg" alt="lorem"/>
                         </div>
                         <div class="index-cat__wrap">
@@ -230,10 +230,10 @@
                   <div class="subscribe__content bordered">
                     <h2>Подпишитесь на рассылку, мы расскажем много интересного.</h2>
                     <p>Одежда для нас – особый атрибут, в каждой детали которого<br>кроется история, труд и люди, влюбленные в то, что делают.</p>
-                    <form class="subscribe__form" action="" method="post" enctype="multipart/form-data">
+                    <form class="subscribe__form jsAction" action="/php/subscribe.php" method="post" enctype="multipart/form-data" data-action="subscribe">
                       <div class="subscribe__fields">
                         <div class="subscribe__field">
-                          <input class="input" type="email" name="email" placeholder="E-mail" required>
+                          <input class="input" type="email" name="email" placeholder="E-mail" data-rule-required="true" data-msg-required="Заполните Email">
                         </div>
                       </div>
                       <div class="subscribe__policy">
@@ -322,7 +322,7 @@
           </div>
           <div class="call__fields">
             <div class="call__field">
-              <textarea class="input input--area" name="msg" placeholder="Напишите текст отзыва"></textarea>
+              <textarea class="input input--area" name="msg" placeholder="Напишите текст отзыва" data-rule-required="true" data-msg-required="Напишите текст отзыва"></textarea>
             </div>
           </div>
           <button class="call__submit btn btn--black jsAction" type="submit" data-action="addReviewSubmit"><span>Оставить отзыв</span><svg width="26" height="9" viewBox="0 0 26 9" xmlns="http://www.w3.org/2000/svg">
@@ -339,8 +339,8 @@
             и пожеланиях, снимем мерки и после этого приступим к исполнению.
           </div>
           <div class="call__fields">
-            <input class="input" type="text" name="name" placeholder="Имя">
-            <input class="input" type="tel" name="tel" placeholder="Телефон">
+            <input class="input" type="text" name="name" placeholder="Имя" data-rule-required="true" data-msg-required="Заполните Имя">
+            <input class="input" type="tel" name="tel" placeholder="Телефон" data-rule-required="true" data-msg-required="Заполните телефон" data-msg-tel="Заполните телефон">
             <div class="call__field">
               <textarea class="input input--area" name="msg" placeholder="Напишите текст отзыва"></textarea>
             </div>
@@ -361,6 +361,18 @@
         <div class="call">
           <h3 class="call__title title title--line">Спасибо за Ваш отзыв</h3>
           <div class="call__txt">Скоро отзыв появится</div>
+        </div>
+      </div>
+      <div id="formOrderThanks">
+        <div class="call">
+          <h3 class="call__title title title--line">Спасибо что выбрали нас<br>Ваша заявка принята!</h3>
+          <div class="call__txt">Скоро с вами свяжется менеджер</div>
+        </div>
+      </div>
+      <div id="formSubscribeThanks">
+        <div class="call">
+          <h3 class="call__title title title--line">Спасибо что Подписались<br>на рассылку</h3>
+          <div class="call__txt">Теперь вы будете получать много<br>интересных новостей</div>
         </div>
       </div>
     </template>

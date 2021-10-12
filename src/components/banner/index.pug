@@ -24,15 +24,15 @@ div(class=props.dopCls).banner
 
     if props.form
         .banner__form
-            .banner-form
+            form(action="/php/call.php" method="POST" data-action="sign").banner-form.jsAction
                 .banner-form__name Записаться на снятие мерок
                 .banner-form__wrap
                     form.banner-form__form
                         .banner-form__fields
                             .banner-form__field
-                                input(type="text" name="name" placeholder="Имя" required).input
+                                input(type="text" name="name" placeholder="Имя" data-rule-required="true" data-msg-required="Заполните Имя").input
                             .banner-form__field
-                                input(type="tel" name="tel" placeholder="Телефон" required).input
+                                input(type="tel" name="tel" placeholder="Телефон" data-rule-required="true" data-msg-required="Введите телефон" data-msg-tel="Введите ваш телефон").input
                             .banner-form__field.banner-form__field--double
                                 input(type="text" name="datetime" placeholder="Напишите удобный день и время").input
                         button(type='submit').btn.btn--black.banner-form__submit

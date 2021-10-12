@@ -57,7 +57,7 @@
                 <div class="nav__item"><a class="nav__link" href="/men/info/">Информация</a>
                   <div class="nav__drop">
                     <div class="nav-drop">
-                      <div class="nav-drop__links"><a class="nav-drop__link" href="/men/info/delivery/">Доставка</a><a class="nav-drop__link" href="/men/info/return/">Возврат</a><a class="nav-drop__link" href="/men/faq/">FAQ</a>
+                      <div class="nav-drop__links"><a class="nav-drop__link" href="/men/info/delivery/">Доставка</a><a class="nav-drop__link" href="/men/info/return/">Возврат</a><a class="nav-drop__link" href="/women/faq/">FAQ</a>
                       </div>
                     </div>
                   </div>
@@ -165,20 +165,20 @@
                 <div class="subscribe__left">
                   <div class="subscribe__content bordered">
                     <h2>Хотите Оставить обратную связь?</h2>
-                    <form class="subscribe__form" action="" method="post" enctype="multipart/form-data">
+                    <form class="subscribe__form jsAction" action="/php/subscribe.php" method="post" enctype="multipart/form-data" data-action="subscribe">
                       <div class="subscribe__fields">
                         <div class="subscribe__field">
-                          <input class="input" type="text" name="name" placeholder="Имя">
+                          <input class="input" type="text" name="name" placeholder="Имя" data-rule-required="true" data-msg-required="Заполните Имя">
                         </div>
                         <div class="subscribe__field">
-                          <input class="input" type="tel" name="tel" placeholder="Телефон">
+                          <input class="input" type="tel" name="tel" placeholder="Телефон" data-rule-required="true" data-msg-required="Заполните Телефон">
                         </div>
                         <div class="subscribe__field">
-                          <textarea class="input input--area" name="tel" placeholder="Коротко о себе"></textarea>
+                          <textarea class="input input--area" name="tel" placeholder="Коротко о себе" data-rule-required="true" data-msg-required="Заполните о себе"></textarea>
                         </div>
                         <div class="subscribe__field">
-                          <label class="file">
-                            <input type="file" name="resume"><span class="file__fake"><span class="file__name">Загрузить резюме</span><svg width="27" height="26" viewBox="0 0 27 26" xmlns="http://www.w3.org/2000/svg">
+                          <label class="subscribe-file">
+                            <input type="file" name="resume"><span class="subscribe-file__fake"><span class="subscribe-file__name">Загрузить резюме</span><svg width="27" height="26" viewBox="0 0 27 26" xmlns="http://www.w3.org/2000/svg">
 <path d="M3.10297 26C2.28772 26.0051 1.50335 25.6866 0.922302 25.1147C0.341251 24.5429 0.0112795 23.7644 0.00335693 22.9492V15.8799H2.06976V22.9492C2.07267 23.2212 2.18339 23.4808 2.37738 23.6714C2.57137 23.862 2.83296 23.9677 3.10492 23.9658H23.3754C23.6473 23.9677 23.9082 23.862 24.102 23.6714C24.2958 23.4807 24.406 23.2211 24.4086 22.9492V15.8799H26.477V22.9492C26.4693 23.7645 26.1392 24.5433 25.558 25.1152C24.9769 25.6872 24.1927 26.0053 23.3774 26H3.10297ZM12.2026 19.7451V3.89307L8.27289 7.75781L6.81097 6.31982L13.2377 0L19.6645 6.31982L18.2006 7.75781L14.2709 3.89307V19.7451H12.2026Z" />
 </svg></span>
                           </label>
@@ -270,7 +270,7 @@
           </div>
           <div class="call__fields">
             <div class="call__field">
-              <textarea class="input input--area" name="msg" placeholder="Напишите текст отзыва"></textarea>
+              <textarea class="input input--area" name="msg" placeholder="Напишите текст отзыва" data-rule-required="true" data-msg-required="Напишите текст отзыва"></textarea>
             </div>
           </div>
           <button class="call__submit btn btn--black jsAction" type="submit" data-action="addReviewSubmit"><span>Оставить отзыв</span><svg width="26" height="9" viewBox="0 0 26 9" xmlns="http://www.w3.org/2000/svg">
@@ -287,8 +287,8 @@
             и пожеланиях, снимем мерки и после этого приступим к исполнению.
           </div>
           <div class="call__fields">
-            <input class="input" type="text" name="name" placeholder="Имя">
-            <input class="input" type="tel" name="tel" placeholder="Телефон">
+            <input class="input" type="text" name="name" placeholder="Имя" data-rule-required="true" data-msg-required="Заполните Имя">
+            <input class="input" type="tel" name="tel" placeholder="Телефон" data-rule-required="true" data-msg-required="Заполните телефон" data-msg-tel="Заполните телефон">
             <div class="call__field">
               <textarea class="input input--area" name="msg" placeholder="Напишите текст отзыва"></textarea>
             </div>
@@ -309,6 +309,18 @@
         <div class="call">
           <h3 class="call__title title title--line">Спасибо за Ваш отзыв</h3>
           <div class="call__txt">Скоро отзыв появится</div>
+        </div>
+      </div>
+      <div id="formOrderThanks">
+        <div class="call">
+          <h3 class="call__title title title--line">Спасибо что выбрали нас<br>Ваша заявка принята!</h3>
+          <div class="call__txt">Скоро с вами свяжется менеджер</div>
+        </div>
+      </div>
+      <div id="formSubscribeThanks">
+        <div class="call">
+          <h3 class="call__title title title--line">Спасибо что Подписались<br>на рассылку</h3>
+          <div class="call__txt">Теперь вы будете получать много<br>интересных новостей</div>
         </div>
       </div>
     </template>

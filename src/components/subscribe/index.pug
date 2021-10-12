@@ -4,26 +4,26 @@
             h2= props.title
             if props.txt
                 p!=props.txt
-            form(action="" method="post" enctype="multipart/form-data").subscribe__form
+            form(action="/php/subscribe.php" method="post" enctype="multipart/form-data" data-action="subscribe").subscribe__form.jsAction
                 .subscribe__fields
                     if props.fields.email
                         .subscribe__field
-                            input(type="email" name="email" placeholder="E-mail" required).input
+                            input(type="email" name="email" placeholder="E-mail" data-rule-required="true" data-msg-required="Заполните Email").input
                     if props.fields.name
                         .subscribe__field
-                            input(type="text" name="name" placeholder="Имя").input
+                            input(type="text" name="name" placeholder="Имя" data-rule-required="true" data-msg-required="Заполните Имя").input
                     if props.fields.tel
                         .subscribe__field
-                            input(type="tel" name="tel" placeholder="Телефон").input
+                            input(type="tel" name="tel" placeholder="Телефон" data-rule-required="true" data-msg-required="Заполните Телефон").input
                     if props.fields.msg
                         .subscribe__field
-                            textarea( name="tel" placeholder="Коротко о себе").input.input--area
+                            textarea( name="tel" placeholder="Коротко о себе" data-rule-required="true" data-msg-required="Заполните о себе").input.input--area
                     if props.fields.resume
                         .subscribe__field
-                            label.file
+                            label.subscribe-file
                                 input(type="file" name="resume")
-                                span.file__fake
-                                    span.file__name Загрузить резюме
+                                span.subscribe-file__fake
+                                    span.subscribe-file__name Загрузить резюме
                                     <svg width="27" height="26" viewBox="0 0 27 26" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M3.10297 26C2.28772 26.0051 1.50335 25.6866 0.922302 25.1147C0.341251 24.5429 0.0112795 23.7644 0.00335693 22.9492V15.8799H2.06976V22.9492C2.07267 23.2212 2.18339 23.4808 2.37738 23.6714C2.57137 23.862 2.83296 23.9677 3.10492 23.9658H23.3754C23.6473 23.9677 23.9082 23.862 24.102 23.6714C24.2958 23.4807 24.406 23.2211 24.4086 22.9492V15.8799H26.477V22.9492C26.4693 23.7645 26.1392 24.5433 25.558 25.1152C24.9769 25.6872 24.1927 26.0053 23.3774 26H3.10297ZM12.2026 19.7451V3.89307L8.27289 7.75781L6.81097 6.31982L13.2377 0L19.6645 6.31982L18.2006 7.75781L14.2709 3.89307V19.7451H12.2026Z" />
                                     </svg>

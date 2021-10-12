@@ -15,7 +15,7 @@
                             </svg>
     .fitting__right
         .fitting__content.bordered
-            form.fitting__form.fitting-form
+            form(action="/php/call.php" method="POST" data-action="sign").fitting__form.fitting-form.jsAction
                 .fitting-form__title.title
                     | записаться
                     br
@@ -26,9 +26,9 @@
                     | и после этого приступим к исполнению.
                 .fitting-form__fields
                     .fitting-form__field
-                        input(type="text" name="name" placeholder="Имя" required).input
+                        input(type="text" name="name" placeholder="Имя" data-rule-required="true" data-msg-required="Заполните Имя").input
                     .fitting-form__field
-                        input(type="tel" name="tel" placeholder="Телефон" required).input
+                        input(type="tel" name="tel" placeholder="Телефон" data-rule-required="true" data-msg-required="Введите телефон" data-msg-tel="Введите ваш телефон").input
                     .fitting-form__field
                         textarea(name="message" placeholder="Напишите удобный день и время").input.input--area
                 button(type='submit').fitting-form__submit.btn2.btn2--black

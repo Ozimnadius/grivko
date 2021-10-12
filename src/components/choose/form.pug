@@ -7,7 +7,7 @@
     .choose-form__right
         .choose-form__fields
             .choose-form__field
-                input(type="text" name="name" placeholder="Имя" required).input
+                input(type="text" name="name" placeholder="Имя" data-rule-required="true" data-msg-required="Заполните Имя").input
             .choose-form__field
-                input(type="tel" name="tel" placeholder="Телефон" required).input
+                input(type="tel" name="tel" placeholder="Телефон" data-rule-required="true" data-msg-required="Введите телефон" data-msg-tel="Введите ваш телефон").input
         button(type='submit').choose-form__submit Получить подборку костюмов от LEONID GRIVKO

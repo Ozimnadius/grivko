@@ -1,9 +1,9 @@
 if field == "name"
-    input(type="text" name="name" placeholder="Имя").input
+    input(type="text" name="name" placeholder="Имя" data-rule-required="true" data-msg-required="Заполните Имя").input
 if field == "tel"
-    input(type="tel" name="tel" placeholder="Телефон").input
+    input(type="tel" name="tel" placeholder="Телефон" data-rule-required="true" data-msg-required="Заполните телефон" data-msg-tel="Заполните телефон").input
 if field == "email"
-    input(type="email" name="email" placeholder="Email").input
+    input(type="email" name="email" placeholder="Email" data-rule-required="true" data-msg-required="Заполните Email").input
 if field == "msg"
     .call__field
         textarea(name="msg" placeholder="Напишите текст отзыва").input.input--area

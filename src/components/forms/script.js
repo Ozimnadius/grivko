@@ -1,5 +1,6 @@
 window.addEventListener('load', function () {
 
+
 });
 
 class Template {
@@ -11,7 +12,7 @@ class Template {
         return this.content.querySelector(`#${name}`).innerHTML;
     }
 
-    close(){
+    close() {
         $.fancybox.close();
     }
 
@@ -20,7 +21,7 @@ class Template {
         $('.input[type="tel"]').inputmask("+7(999)999-99-99");
     }
 
-    get current(){
+    get current() {
         return $.fancybox.getInstance().current.$content;
     }
 }
@@ -74,7 +75,7 @@ class Files {
 
     addFiles() {
 
-        this.fileList.forEach((i) => {
+        Array.from(this.fileList).forEach((i) => {
             let item = this.html();
             let img = this.createImg(i);
             item.querySelector('.file__img').appendChild(img);
@@ -87,8 +88,8 @@ class Files {
             this.list.appendChild(item);
             this.index++;
 
-            item.addEventListener('click', function (e){
-               this.remove();
+            item.addEventListener('click', function (e) {
+                this.remove();
             });
         });
     }
