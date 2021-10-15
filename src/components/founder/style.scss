@@ -1,11 +1,6 @@
-.founder{
-
-}
-
 .founder {
-  &:hover,
-  &:focus,
-  &:active {
+
+  &:hover {
     .founder {
       &__img {
         img {
@@ -25,6 +20,9 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
+    @include lg-block{
+        grid-template-columns: 1fr;
+    }
   }
 
   &__img {
@@ -38,16 +36,39 @@
 
   &__right {
     margin-left: -80px;
+    @include xlg-block{
+      margin-left: -35px;
+    }
+    @include lg-block{
+      margin-left: 0;
+    }
   }
 
   &__content {
     &:after {
-      content: url("/images/content/index/about/dummy.png");
+      content: '';
       display: block;
+      width: 357px;
+      height: 356px;
       position: absolute;
       bottom: -85px;
+      background: url("/images/content/index/about/dummy.png") 0 0 no-repeat;
+      background-size: cover;
+
+
       left: calc(100% - 45px);
       @include tr;
+      @include xlg-block{
+        width: 249px;
+        height: 248px;
+        left: 100%;
+        bottom: -65px;
+      }
+      @include lg-block{
+        display: none;
+      }
     }
+
+    line-height: lh(16,26);
   }
 }

@@ -3,6 +3,10 @@
   display: grid;
   grid-template-columns: 8fr 4fr;
   align-items: center;
+  @include xlg-block {
+    grid-template-columns: 1fr;
+    grid-gap: 50px;
+  }
 
   &__list {
     display: grid;
@@ -47,7 +51,7 @@
           }
         }
 
-        &__btn{
+        &__btn {
           background: $bg;
           color: $txt;
         }
@@ -96,16 +100,24 @@
     margin-bottom: 30px;
   }
 
-  &__right{
+  &__right {
     margin-left: -65px;
+    @include xlg-block {
+      margin: 0;
+      display: none;
+    }
   }
 
-  &__content{
+  &__content {
     padding: 70px 60px 240px;
     margin-bottom: 15px;
     position: relative;
+    @include xlg-block {
+      padding: 65px 170px 65px 50px;
+    }
 
-    &:before{
+    &:before {
+      font-size: 20px;
       content: 'Бесплатно';
       position: absolute;
       top: 65px;
@@ -118,11 +130,16 @@
       justify-content: center;
       color: $bg;
       font-weight: 700;
-      writing-mode:vertical-rl;
+      writing-mode: vertical-rl;
       transform: rotate(180deg);
+      @include xlg-block {
+        right: 0;
+        height: 100%;
+        top: 0;
+      }
     }
 
-    &:after{
+    &:after {
       content: '';
       display: block;
       width: 392px;
@@ -132,6 +149,12 @@
       position: absolute;
       bottom: -105px;
       right: -65px;
+      @include xlg-block {
+        width: 300px;
+        height: 131px;
+        top: 50px;
+        right: 110px;
+      }
     }
   }
 
@@ -139,17 +162,65 @@
 
 .fitting-form {
 
-  &__title{
+  &__title {
     margin-bottom: 15px;
+    @include xlg-block {
+      max-width: 600px;
+    }
   }
 
-  &__txt{
+  &__txt {
+    font-size: 20px;
     margin-bottom: 15px;
+    @include xlg-block {
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
   }
 
-  &__fields{
+  &__fields {
     display: grid;
     grid-gap: 10px;
-    margin-bottom: 50px;
+    @include xlg-block {
+      grid-template-columns: repeat(24,1fr);
+      grid-gap: 20px;
+    }
   }
+
+  &__field{
+    @include xlg-block{
+        grid-column: span 12;
+    }
+    &:nth-child(3){
+      @include xlg-block{
+          grid-column: span 14;
+      }
+    }
+
+    &:nth-child(4){
+      @include xlg-block{
+          grid-column: span 10;
+      }
+    }
+  }
+
+  &__submit {
+    font-size: 20px;
+    margin-top: 40px;
+    @include xlg-block {
+      margin: 0;
+      height: 74px;
+      width: 100%;
+    }
+  }
+
+
+  .input{
+    &--area{
+      @include xlg-block{
+        height: 74px;
+      }
+    }
+  }
+
 }

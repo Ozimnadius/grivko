@@ -1,5 +1,6 @@
 .langs{
   position: relative;
+  font-size: 20px;
 
   &:hover,&:focus,&:active{
     .langs__drop{
@@ -31,6 +32,11 @@
     left: 50%;
     transform: translateX(-50%);
     background-color: #bfa058;
+    @include sm-block{
+      left: initial;
+      transform: none;
+      right: -10px;
+    }
 
     &:before{
       content: '';

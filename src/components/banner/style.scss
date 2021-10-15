@@ -1,25 +1,40 @@
-.banner{
+.banner {
   position: relative;
 
-  &--small{
-    .banner{
-      &__img{
-        padding-top: calc(588/1760*100%);
+  &--small {
+    .banner {
+      &__img {
+        padding-top: calc(588 / 1760 * 100%);
+        @include xlg-block{
+          padding-top: calc(840 / 1760 * 100%);
+        }
       }
     }
   }
 
-  &__container{
-    max-width: 1760px;
+  &__container {
+    @include wrapper;
     width: 100%;
-    margin: 0 auto;
     position: relative;
+
+    @include xlg-block {
+      max-width: 1160px;
+    }
+    @include sm-block {
+      padding: 0;
+    }
+
   }
 
-  &__img{
-    padding-top: calc(840/1760*100%);
+  &__img {
+    position: relative;
+    padding-top: calc(840 / 1760 * 100%);
+    @include sm-block{
+      padding-top: 0;
+      height: calc(100vh - 58px);
+    }
 
-    &:before{
+    &:before {
       content: '';
       display: block;
       position: absolute;
@@ -31,7 +46,7 @@
       background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
     }
 
-    img{
+    img {
       display: block;
       position: absolute;
       z-index: 0;
@@ -44,10 +59,10 @@
     }
   }
 
-  &__wrap{
+  &__wrap {
     position: absolute;
     z-index: 2;
-    left: 80px;
+    left: 100px;
     top: 0;
     bottom: 0;
     display: flex;
@@ -56,83 +71,108 @@
 
     color: $bg;
     line-height: 1.29;
+    @include lg-block {
+      left: 50px;
+    }
+    @include sm-block{
+      left: 15px;
+      right: 15px;
+      bottom: 50px;
+      top: initial;
+    }
   }
 
-  &__sub{
+  &__sub {
+    font-size: 20px;
     margin-bottom: 14px;
+    @include lg-block {
+      font-size: 16px;
+    }
   }
 
-  &__title{
+  &__title {
     font-size: 48px;
     font-weight: 500;
     text-transform: uppercase;
     margin-bottom: 35px;
+    @include lg-block {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
   }
 
-  &__big{
+  &__big {
     font-size: 32px;
   }
 
-  &__form{
+  &__txt {
+    font-size: 20px;
+    @include lg-block {
+      font-size: 16px;
+    }
+  }
+
+  &__form {
     position: absolute;
     top: 50%;
     right: 0;
     transform: translateY(-50%);
   }
 
-  &__btn{
+  &__btn {
     margin-top: 35px;
   }
 
+
 }
 
-.banner-form{
+.banner-form {
   display: flex;
   align-items: center;
   border: 32px solid $bg;
   background: url("/images/content/index/banner/bg-sharp.jpg") 0 0;
   padding: 45px 10px 45px 30px;
 
-  &:hover{
-    .banner-form__wrap{
+  &:hover {
+    .banner-form__wrap {
       width: 857px;
     }
   }
 
-  &__name{
+  &__name {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     font-weight: 500;
     padding-left: 20px;
   }
 
-  &__wrap{
+  &__wrap {
     width: 0px;
     overflow: hidden;
     @include tr;
   }
 
-  &__form{
+  &__form {
     display: block;
     padding-right: 35px;
     width: 822px+35px;
   }
 
-  &__fields{
+  &__fields {
     display: grid;
-    grid-template-columns: repeat(2,405px);
+    grid-template-columns: repeat(2, 405px);
     grid-gap: 10px;
     margin-bottom: 40px;
   }
 
-  &__field{
+  &__field {
 
-    &--double{
+    &--double {
       grid-column: span 2;
     }
   }
 
-  &__submit{
+  &__submit {
     height: 74px;
     width: 319px;
   }

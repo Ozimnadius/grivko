@@ -1,90 +1,168 @@
-.subscribe{
+.subscribe {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
+  padding-bottom: 70px;
 
-  &:hover{
-    .subscribe{
+  @include lg-block {
+    grid-template-columns: 100%;
+    justify-items: center;
+  }
+  @include sm-block{
+    justify-items: initial;
+    gap:15px;
+    padding-bottom: 0;
+  }
 
-      &__img{
-        img{
+  &:hover {
+    .subscribe {
+
+      &__img {
+        img {
           transform: scale(1.05);
         }
       }
 
-      &__content{
-        &:after{
+      &__content {
+        &:after {
           transform: scale(1.05);
         }
       }
     }
   }
 
-  &__left{
+  &__left {
     position: relative;
     z-index: 1;
     margin-right: -80px;
+    @include xlg-block {
+      margin-right: -35px;
+    }
+    @include lg-block{
+      order: 1;
+      max-width: 592px;
+      margin-right: 0;
+      margin-top: -140px;
+    }
+    @include sm-block{
+      max-width: 100%;
+      margin-top: 0;
+    }
   }
 
-  &__img{
+  &__img {
     overflow: hidden;
-    img{
+
+    img {
       display: block;
       width: 100%;
       @include tr;
     }
   }
 
-  &__content{
+  &__content {
     @extend .bordered;
     padding-top: 65px;
     height: 900px;
+    @include xlg-block {
+      height: 751px;
+      padding-top: 35px;
+    }
+    @include lg-block{
+      height: 664px;
+    }
+    @include sm-block{
+      height: auto;
+      padding: 15px;
+      padding-bottom: 30px;
+    }
 
-    &:after{
-      content: url("/images/content/index/subscribe/mail.png");
+    &:after {
+      content: '';
       position: absolute;
       left: -82px;
       bottom: -150px;
+      width: 286px;
+      height: 290px;
+      background: url("/images/content/index/subscribe/mail.png") 0 0 no-repeat;
+      background-size: cover;
+      @include tr;
+
+      @include xlg-block {
+        width: 200px;
+        height: 203px;
+        left: -95px;
+        bottom: -85px;
+      }
+      @include lg-block{
+        left: -50px;
+        bottom: -120px;
+      }
+      @include sm-block{
+        width: 135px;
+        height: 137px;
+        top: 0;
+        right: -30px;
+        bottom: initial;
+        left: initial;
+      }
     }
 
-    h2{
+    h2 {
       margin-bottom: 20px;
+      @include sm-block{
+        margin-right: 120px;
+      }
     }
 
-    p{
+    p {
       margin-bottom: 65px;
+      @include xlg-block {
+        margin-bottom: 35px;
+      }
     }
   }
 
-  &__form{
+  &__form {
 
   }
 
-  &__fields{
+  &__fields {
     display: grid;
     grid-gap: 10px;
     margin-bottom: 30px;
   }
 
-  &__field{
+  &__field {
 
   }
 
-  &__policy{
+  &__policy {
     font-size: 16px;
     margin-bottom: 30px;
-    a{
+
+    a {
       color: $link;
+      text-decoration: underline;
     }
   }
 
-  &__submit{
+  &__submit {
+    font-size: 20px;
     width: 317px;
+    @include sm-block{
+      height: 50px;
+      width: 100%;
+      font-size: 16px;
+    }
+
   }
+
+
 
 }
 
-.subscribe-file{
+.subscribe-file {
   cursor: pointer;
 
   input {

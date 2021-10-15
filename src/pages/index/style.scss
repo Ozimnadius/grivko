@@ -1,10 +1,23 @@
 .index {
   flex-grow: 1;
   padding-bottom: 80px;
+  @include xlg-block{
+    padding-bottom: 50px;
+  }
+  @include sm-block{
+    padding-bottom: 30px;
+  }
 
   &__better {
     margin-bottom: 65px;
+    @include xlg-block{
+      margin-bottom: 45px;
+    }
+    @include sm-block{
+      margin-bottom: 30px;
+    }
   }
+
 }
 
 @import "blocks/better";

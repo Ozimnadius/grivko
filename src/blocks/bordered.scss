@@ -1,19 +1,42 @@
-.bordered{
+.bordered {
   background: $bg url("/images/content/bordered/bg.png") 0 0;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
   border: 65px solid $bg;
   padding: 70px 65px 110px 65px;
   position: relative;
+  @include xlg-block {
+    border-width: 30px;
+    padding: 35px;
+  }
+  @include lg-block{
+    border-width: 25px;
+  }
+  @include sm-block{
+    border-width: 0;
+    padding: 20px;
+    padding-bottom: 30px;
+  }
 
   h2 {
     font-size: 32px;
     text-transform: uppercase;
     margin-bottom: 15px;
     line-height: 1.2;
+    @include lg-block{
+      font-size: 26px;
+    }
+    @include sm-block{
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
   }
 
   p {
     margin-bottom: 25px;
+    @include sm-block{
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
 
     &:last-child {
       margin-bottom: 0;

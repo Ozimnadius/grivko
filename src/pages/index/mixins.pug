@@ -1,7 +1,13 @@
 mixin cat(i)
     a(href=i.href).index-cat
         .index-cat__img
-            +image(i.img)
+            picture
+                if i.imgMobile
+                    source(srcset=i.imgMobile media='(max-width: 767.98px)')
+                else
+                    source(srcset=i.img media='(max-width: 767.98px)')
+                img(src=i.img alt='')
+
         .index-cat__wrap
             h3.index-cat__title= i.title
             span.index-cat__txt!=i.txt

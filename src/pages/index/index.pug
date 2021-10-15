@@ -12,8 +12,8 @@ block content
             -
                 var props = {
                     imgPath: "images/content/index/banner/",
-                    sub: "Костюмы ручной работы <br> для женщин и мужчин.",
-                    title: "ДОМ МОДЫ LEONID GRIVKO",
+                    sub: "ДОМ МОДЫ LEONID GRIVKO",
+                    title: "Костюмы ручной работы <br> для женщин и мужчин.",
                     txt: "по индивидуальным меркам <br> с гарантией идеальной посадки"
                 };
             include ../../components/banner/index
@@ -32,7 +32,11 @@ block content
                         each i,x in list
                             .index-better__item
                                 .index-better__pic
-                                    +image("images/content/index/better/" + (x + 1) + ".svg")
+                                    picture
+                                        source(srcset="/images/content/index/better/" + (x + 1) + "-375.svg" media='(max-width: 767.98px)')
+                                        source(srcset="/images/content/index/better/" + (x + 1) + "-768.svg" media='(max-width: 1279.98px)')
+                                        source(srcset="/images/content/index/better/" + (x + 1) + "-1280.svg" media='(max-width: 1919.98px)')
+                                        img(src="/images/content/index/better/" + (x + 1) + ".svg" alt='')
                                 .index-better__name= i
         //- cats
         section.index__cats.mb80
@@ -59,7 +63,8 @@ block content
                                         href: "/women/bigsize/",
                                         title: "Большой размерный ряд",
                                         txt: "от 38 до 54",
-                                        img: "images/content/index/cats/w3.jpg"
+                                        img: "images/content/index/cats/w3.jpg",
+                                        imgMobile: "images/content/index/cats/w3-375.jpg"
                                     },
 
                                 ];
@@ -106,7 +111,7 @@ block content
                             email: true
                         },
                         btnName: "Подписка на рассылку",
-                        img: "/images/content/index/subscribe/img.jpg"
+                        img: "/images/content/index/subscribe/img"
                     };
                 include ../../components/subscribe/index
 

@@ -19,7 +19,7 @@
     @include tr;
   }
 
-  &:hover,&:focus,&:active{
+  &:hover{
     &:before{
       height: 72.6%;
       opacity: 1;
@@ -69,6 +69,10 @@
     svg{
       fill: $bg;
       @include tr;
+      @include xlg-block{
+        width: 37px;
+        height: 37px;
+      }
     }
   }
 
@@ -78,16 +82,29 @@
     bottom: 80px;
     left: 80px;
     right: 80px;
+    @include xlg-block{
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+    }
   }
 
   &__name{
+    font-size: 20px;
     display: block;
     margin-bottom: 15px;
+    @include xlg-block{
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
   }
 
   &__txt{
     font-size: 16px;
     display: block;
+    @include xlg-block{
+      font-size: 12px;
+    }
   }
 
 }

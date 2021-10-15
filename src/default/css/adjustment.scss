@@ -13,7 +13,12 @@ html {
   font-weight: 300;
   line-height: 1.42;
   box-sizing: border-box;
-;
+  @include xlg-block {
+    font-size: 16px;
+  }
+  @include lg-block{
+    font-size: 14px;
+  }
 }
 
 *, *:before, *:after {
@@ -36,7 +41,7 @@ body {
   display: flex;
   flex-direction: column;
 
-  &__content{
+  &__content {
     flex-grow: 1;
     overflow: hidden;
     display: flex;
@@ -52,6 +57,9 @@ body {
 
 .container {
   @include wrapper;
+  @include xlg-block {
+    max-width: 1160px;
+  }
 }
 
 .row {
@@ -68,7 +76,7 @@ a {
   outline: none;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 
@@ -89,13 +97,13 @@ button {
   font: inherit;
 }
 
-ul,ol {
+ul, ol {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-input,textarea{
+input, textarea {
   border: none;
   background: none;
   outline: none;
