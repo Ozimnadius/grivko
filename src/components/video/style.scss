@@ -65,5 +65,9 @@
     z-index: 2;
     bottom: 60px;
     left: 70px;
+    @include sm-block{
+      left: 30px;
+      bottom: 25px;
+    }
   }
 }

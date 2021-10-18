@@ -1,66 +1,128 @@
-.catalog{
+.catalog {
   background-color: #f2f2f2;
   padding-top: 65px;
   padding-bottom: 40px;
 
-  &--small-title{
-    .item__title{
-      font-size: 24px;
-    }
-    .item__wrap{
-      padding-left: 35px;
-      padding-right: 35px;
-    }
+  @include lg-block {
+    padding-top: 50px;
+  }
+  @include sm-block {
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
-  &__filters{
+  &--small-title {
+    @include xlg-block {
+      padding-top: 40px;
+    }
+
+    .item__wrap {
+      padding-left: 35px;
+      padding-right: 35px;
+      @include xlg-block {
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+    }
+
+    .item__title {
+      font-size: 24px;
+      @include xlg-block {
+        font-size: 18px;
+      }
+    }
+
+  }
+
+  &__filters {
     margin-bottom: 40px;
   }
 
-  &__top{
+  &__top {
     display: flex;
     align-items: baseline;
     gap: 30px;
     margin-bottom: 65px;
+    @include xlg-block {
+      margin-bottom: 30px;
+    }
+    @include lg-block {
+      gap: 80px;
+    }
+    @include sm-block {
+      flex-direction: column;
+      align-items: initial;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
   }
 
-  &__list{
+  &__title {
+    @include xlg-block {
+      font-size: 28px;
+    }
+    @include lg-block {
+      font-size: 20px;
+    }
+  }
+
+  &__txt {
+    font-size: 20px;
+    @include lg-block {
+      font-size: 16px;
+    }
+  }
+
+  &__list {
     display: grid;
-    grid-template-columns: repeat(4,calc(25% - 7.5px));
+    grid-template-columns: repeat(4, calc(25% - 7.5px));
     grid-gap: 10px;
+    @include sm-block {
+      grid-template-columns: 100%;
+    }
 
-    &--3{
-      grid-template-columns: repeat(3,1fr);
+    &--3 {
+      grid-template-columns: repeat(3, 1fr);
 
-      .item{
-        &__img{
+      .item {
+        &__img {
           max-width: 421px;
 
-          &:before{
-            padding-top: calc(593/421*100%);
+          &:before {
+            padding-top: calc(593 / 421 * 100%);
           }
         }
       }
     }
   }
 
-  &__bottom{
+  &__bottom {
     margin-top: 50px;
     display: flex;
     justify-content: center;
+    @include lg-block {
+      margin-top: 20px;
+    }
+    @include sm-block {
+      margin-top: 30px;
+    }
   }
 
-  &__link{
+  &__link {
     font-size: 20px;
     max-width: 876px;
     width: 100%;
+    @include sm-block {
+      height: 50px;
+      font-size: 16px;
+    }
   }
 
-  &__nav{
+  &__nav {
     margin-top: 70px;
   }
 
-  &__desc{
+  &__desc {
     background-color: $gold;
     padding: 40px;
     text-align: center;

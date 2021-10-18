@@ -11,4 +11,5 @@
 // @prepros-append components/product/script.js
 // @prepros-append components/content/script.js
 // @prepros-append components/forms/script.js
+// @prepros-append components/mmenu/script.js
 

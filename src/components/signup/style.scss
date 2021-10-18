@@ -2,6 +2,15 @@
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
   background-color: $bg;
   padding: 32px;
+  @include lg-block{
+    margin: 0 -20px;
+    padding: 20px;
+  }
+  @include sm-block{
+    padding: 0;
+    margin: 0 -10px;
+  }
+
 
   &__wrap {
     padding: 80px;
@@ -10,6 +19,12 @@
     position: relative;
     @include xlg-block {
       padding: 65px 170px 65px 50px;
+    }
+    @include lg-block{
+      padding: 55px 115px 40px 35px;
+    }
+    @include sm-block{
+      padding: 30px 10px;
     }
 
     &:before {
@@ -28,6 +43,13 @@
       font-weight: 700;
       writing-mode: vertical-rl;
       transform: rotate(180deg);
+      @include lg-block{
+        font-size: 13px;
+        width: 44px;
+      }
+      @include sm-block{
+        display: none;
+      }
     }
 
     &:after {
@@ -46,6 +68,18 @@
         top: 50px;
         right: 110px;
       }
+      @include lg-block{
+        width: 202px;
+        height: 90px;
+        top: 30px;
+        right: 80px;
+      }
+      @include sm-block{
+        width: 184px;
+        height: 82px;
+        top: 10px;
+        right: -20px;
+      }
     }
 
   }
@@ -55,12 +89,28 @@
     @include xlg-block{
       margin-right: 170px;
     }
+    @include lg-block{
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+    @include sm-block{
+      margin-right: 110px;
+    }
   }
 
   &__txt {
     margin-bottom: 30px;
     @include xlg-block{
       margin-right: 170px;
+    }
+    @include lg-block{
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+    @include sm-block{
+      margin-right: 0;
+      font-size: 16px;
+      margin-bottom: 30px;
     }
   }
 
@@ -73,21 +123,43 @@
       grid-template-columns: repeat(24,1fr);
       grid-gap: 20px;
     }
+    @include sm-block{
+        grid-template-columns: 1fr;
+    }
   }
 
   &__field{
     @include xlg-block{
       grid-column: span 12;
     }
+    @include sm-block{
+      grid-column: span 1;
+    }
     &:nth-child(3){
       @include xlg-block{
         grid-column: span 14;
+      }
+      @include sm-block{
+        grid-column: span 1;
       }
     }
 
     &:nth-child(4){
       @include xlg-block{
         grid-column: span 10;
+      }
+      @include sm-block{
+        grid-column: span 1;
+      }
+    }
+
+    .input{
+      @include lg-block{
+        height: 51px;
+        font-size: 13px;
+      }
+      @include sm-block{
+        font-size: 16px;
       }
     }
   }
@@ -99,6 +171,13 @@
       margin: 0;
       height: 74px;
       width: 100%;
+    }
+    @include lg-block{
+      height: 51px;
+      font-size: 13px;
+    }
+    @include sm-block{
+      font-size: 20px;
     }
   }
 }

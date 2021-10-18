@@ -67,6 +67,13 @@
       @include lg-block{
         display: none;
       }
+      @include sm-block{
+        display: block;
+        width: 161px;
+        height: 161px;
+        top: -35px;
+        left: calc(100% - 50px);
+      }
     }
 
     line-height: lh(16,26);

@@ -1,0 +1,173 @@
+.mmenu {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  max-width: 375px;
+  width: 100%;
+  left: 0;
+  transform: translateX(-200%);
+  @include tr;
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+  }
+
+  &__top {
+    width: 100%;
+    background-color: $bg;
+    display: flex;
+    align-items: center;
+    padding: 15px 15px 15px 10px;
+    border-bottom: 1px solid #e3e3e3;
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+
+  &__left {
+    margin-right: 5px;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    color: #191919;
+    font-size: 18px;
+    font-weight: 600;
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+
+  &__logo {
+    width: 71px;
+    margin-right: auto;
+  }
+
+  &__tel {
+    margin-right: 20px;
+    font-size: 20px;
+  }
+
+  &__right {
+    margin-left: auto;
+  }
+
+  &__close {
+    svg {
+      display: block;
+    }
+  }
+
+  &__section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: $link;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 15px;
+    border-bottom: 1px solid #e3e3e3;
+  }
+
+  &__nav {
+    color: $txt;
+    font-size: 16px;
+    font-weight: 400;
+
+    &_sub {
+    }
+  }
+
+  &__item {
+    border-bottom: 1px solid #e3e3e3;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+    &-name {
+      flex-grow: 1;
+      padding: 10px 15px;
+      min-height: 60px;
+      display: flex;
+      align-items: center;
+    }
+
+    &-btn {
+      width: 40px;
+      min-height: 60px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+
+  &__bottom {
+    padding: 15px 15px 30px;
+  }
+
+  &__menu{
+    margin-bottom: 50px;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__contact {
+    font-size: 20px;
+    display: flex;
+    gap: 15px;
+    @include tr;
+
+    svg {
+      flex-shrink: 0;
+      fill: currentColor;
+      height: 28px;
+    }
+  }
+
+}
+
+.submmenu {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $bg;
+
+  &.active {
+    display: flex;
+  }
+}
+
+.mmenu-menu{
+  &__item{
+    display: block;
+    color: rgba($txt,.6);
+    font-size: 16px;
+    font-weight: 400;
+    padding: 15px 0;
+  }
+}

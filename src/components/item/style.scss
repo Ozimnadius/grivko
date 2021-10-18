@@ -23,7 +23,7 @@
         }
       }
 
-      &__txt{
+      &__txt {
         display: block;
       }
 
@@ -33,10 +33,10 @@
     }
   }
 
-  &--hover{
+  &--hover {
 
-    &:hover{
-      .item{
+    &:hover {
+      .item {
         &__wrap {
           box-shadow: none;
           position: static;
@@ -52,13 +52,14 @@
 
     .item {
 
-      &__wrap{
+      &__wrap {
         border: 1px solid #f2f2f2;
       }
 
       &__btn {
         display: flex;
-        &:hover{
+
+        &:hover {
           background: $txt;
           color: $bg;
         }
@@ -75,8 +76,19 @@
     min-height: 100%;
     padding: 0 65px 35px 65px;
     overflow: hidden;
-    @include xlg-block{
+    @include xlg-block {
       padding: 0 40px 20px 40px;
+    }
+    @include lg-block {
+      padding: 0 20px 20px 20px;
+    }
+    @include sm-block {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 101px 1fr;
+      grid-gap: 10px 30px;
+      align-items: initial;
+      grid-template-areas: 'img title' 'img price';
     }
   }
 
@@ -85,18 +97,24 @@
     max-width: 264px;
     margin-bottom: 4px;
     position: relative;
-    @include xlg-block{
+    @include xlg-block {
       max-width: 168px;
     }
+    @include lg-block {
+      max-width: 109px;
+    }
+    @include sm-block {
+      grid-area: img;
+    }
 
-    &:before{
+    &:before {
       content: "";
       display: block;
-      padding-top: calc(487/264*100%);
+      padding-top: calc(487 / 264 * 100%);
       width: 100%;
     }
 
-    &-wrap{
+    &-wrap {
       position: absolute;
       top: 0;
       left: 0;
@@ -115,21 +133,39 @@
   &__title {
     width: 100%;
     margin-bottom: 15px;
-    @include xlg-block{
+    @include xlg-block {
       font-size: 18px;
       margin-bottom: 7px;
+    }
+    @include lg-block {
+      font-size: 14px;
+      margin-bottom: 2px;
+    }
+    @include sm-block {
+      grid-area: title;
+      display: flex;
+      align-items: flex-end;
+      font-size: 20px;
     }
   }
 
   &__price {
     width: 100%;
     margin-bottom: 30px;
-    @include xlg-block{
+    @include xlg-block {
       font-size: 14px;
+    }
+    @include lg-block {
+      font-size: 12px;
+      margin-bottom: 15px;
+    }
+    @include sm-block {
+      grid-area: price;
+      font-size: 16px;
     }
   }
 
-  &__txt{
+  &__txt {
     display: none;
     margin-bottom: 25px;
   }
@@ -145,6 +181,16 @@
     color: $txt;
     margin-top: auto;
     @include tr;
+    @include lg-block {
+      display: flex;
+      width: 100%;
+      max-width: 135px;
+      height: 35px;
+      font-size: 12px;
+    }
+    @include sm-block {
+      display: none;
+    }
 
     svg {
       fill: currentColor;

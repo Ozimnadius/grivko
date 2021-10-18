@@ -16,10 +16,23 @@
   &__list {
     display: grid;
     grid-gap: 10px;
+
+    .container{
+
+      @include sm-block{
+        padding-right: 0;
+        overflow-x: auto;
+        max-width: 100%;
+      }
+
+    }
   }
 
   &__banner {
     margin-bottom: 25px;
+    @include lg-block{
+      margin-bottom: 20px;
+    }
 
     &--mb0 {
       margin-bottom: 0;
@@ -28,6 +41,9 @@
 
   &__breadcrumbs {
     margin-bottom: 30px;
+    @include lg-block{
+      margin-bottom: 20px;
+    }
 
     &--mb20 {
       margin-bottom: 20px;

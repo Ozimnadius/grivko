@@ -3,9 +3,21 @@
   grid-template-columns: calc(50%) calc(50% - 60px);
   grid-gap: 60px;
 
+  @include xlg-block{
+    grid-template-columns: 540fr 410fr;
+    padding-bottom: 520px;
+  }
+
   &__img {
     img {
       display: block;
+    }
+  }
+
+  &__right{
+    position: relative;
+    @include xlg-block{
+      padding-top: 185px;
     }
   }
 
@@ -18,11 +30,19 @@
   }
 
   &__quiz {
-    margin-left: -165px;
+    width: 984px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
     background-color: $bg;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
     padding-top: 75px;
     padding-bottom: 75px;
+    @include xlg-block{
+      right: 50px;
+      bottom: initial;
+      top: calc(100% - 267px);
+    }
   }
 
   &__swiper {

@@ -116,6 +116,9 @@
   font-size: 32px;
   font-weight: 500;
   text-transform: uppercase;
+  @include sm-block{
+    font-size: 20px;
+  }
 
 
   &--line {
@@ -188,6 +191,10 @@
     height: 60px;
     padding: 0 25px;
   }
+  @include sm-block{
+    font-size: 16px;
+    height: 51px;
+  }
 
   &--area {
     height: 123px;
@@ -210,4 +217,8 @@
 
 .file {
 
+}
+
+.ovh{
+  overflow: hidden;
 }
