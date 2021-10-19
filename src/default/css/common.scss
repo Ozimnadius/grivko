@@ -14,9 +14,16 @@
   &:hover {
     background: $bg;
     color: $txt;
+    @include lg-block{
+      background: transparent;
+      color: $bg;
+    }
 
     svg {
       transform: translateX(10px);
+      @include lg-block{
+          transform: none;
+      }
     }
   }
 
@@ -27,6 +34,10 @@
     &:hover {
       background: $txt;
       color: $bg;
+      @include lg-block{
+        color: $txt;
+        background: transparent;
+      }
     }
 
   }
@@ -124,6 +135,9 @@
   &--line {
     padding-top: 30px;
     position: relative;
+    @include sm-block{
+      padding-top: 20px;
+    }
 
     &:before {
       content: '';
@@ -134,6 +148,9 @@
       position: absolute;
       top: 0;
       left: 0;
+      @include sm-block{
+        height: 4px;
+      }
     }
   }
 }

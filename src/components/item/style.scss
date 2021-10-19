@@ -195,6 +195,11 @@
     svg {
       fill: currentColor;
       margin-left: 15px;
+      @include lg-block{
+        width: 18px;
+        height: 7px;
+        margin-left: 8px;
+      }
     }
   }
 }

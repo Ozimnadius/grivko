@@ -13,9 +13,16 @@
     margin-bottom: 30px;
   }
 
-  &__list {
+  &__collections{
     display: grid;
     grid-gap: 10px;
+    @include sm-block{
+        grid-gap: 30px;
+    }
+  }
+
+  &__list {
+
 
     .container{
 
@@ -58,6 +65,9 @@
 .page-desc {
   &__title {
     margin-bottom: 10px;
+    @include lg-block{
+      font-size: 20px;
+    }
   }
 
   &__breadcrumbs {

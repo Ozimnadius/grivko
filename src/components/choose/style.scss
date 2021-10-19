@@ -1,32 +1,89 @@
 .choose {
   display: grid;
   grid-template-columns: calc(50%) calc(50% - 60px);
+  grid-template-areas: 'left right' 'left form';
   grid-gap: 60px;
-
-  @include xlg-block{
+  @include xlg-block {
     grid-template-columns: 540fr 410fr;
     padding-bottom: 520px;
   }
+  @include lg-block {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 20px;
+    grid-template-areas: 'left right' 'form form';
+    padding-bottom: 0;
+  }
+  @include sm-block {
+    grid-template-columns: 100%;
+    grid-gap: 40px;
+    grid-template-areas: 'left' 'right' 'form';
+  }
 
-  &__img {
-    img {
-      display: block;
+  &__left {
+    grid-area: left;
+    position: relative;
+    @include sm-block {
+      padding-top: calc(265 / 343 * 100%);
     }
   }
 
-  &__right{
+  &__img {
+    @include sm-block {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    img {
+      display: block;
+      @include sm-block {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+      }
+    }
+  }
+
+  &__right {
     position: relative;
-    @include xlg-block{
+    grid-area: right;
+    @include xlg-block {
       padding-top: 185px;
+    }
+    @include lg-block {
+      padding-top: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
   }
 
   &__title {
     margin-bottom: 25px;
+    @include lg-block {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    @include sm-block {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
   }
 
   &__txt {
     margin-bottom: 55px;
+    @include lg-block {
+      margin: 0;
+      font-size: 16px;
+    }
+  }
+
+  &__form {
+    grid-area: form;
+    position: relative;
   }
 
   &__quiz {
@@ -38,10 +95,30 @@
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
     padding-top: 75px;
     padding-bottom: 75px;
-    @include xlg-block{
+    @include xlg-block {
       right: 50px;
       bottom: initial;
       top: calc(100% - 267px);
+    }
+    @include lg-block {
+      position: static;
+      width: 100%;
+      padding-top: 60px;
+      padding-bottom: 35px;
+    }
+    @include sm-block {
+      box-shadow: none;
+      padding-top: 0;
+    }
+  }
+
+  &__slider {
+    padding: 0 60px;
+    @include lg-block {
+      padding: 0 30px;
+    }
+    @include sm-block {
+      padding: 0;
     }
   }
 
@@ -51,14 +128,18 @@
 
   &__slide {
     box-sizing: border-box;
-    padding: 0 60px;
   }
 
   &__pag {
     display: flex;
     gap: 13px;
-    padding: 0 60px;
     margin-bottom: 45px;
+    @include lg-block {
+      gap: 10px;
+    }
+    @include sm-block {
+      gap: 5px;
+    }
 
     .swiper-pagination-bullet {
       border-radius: 0;
@@ -66,7 +147,11 @@
       flex-grow: 1;
       height: 17px;
       background-color: #dfdfdf;
+      margin: 0!important;
       @include tr;
+      @include lg-block {
+        height: 12px;
+      }
 
       &.swiper-pagination-bullet-active {
         background-color: $gold;
@@ -77,10 +162,9 @@
   &__nav {
     display: flex;
     justify-content: space-between;
-    padding: 0 60px;
 
-    &.disabled{
-      .choose__arr{
+    &.disabled {
+      .choose__arr {
         pointer-events: none;
         opacity: .5;
       }
@@ -90,6 +174,7 @@
   &__arr {
     width: 163px;
     height: 59px;
+    font-size: 20px;
 
     &.swiper-button-disabled {
       pointer-events: none;
@@ -118,10 +203,16 @@
   &__top {
     display: flex;
     margin-bottom: 45px;
+    @include lg-block {
+      margin-bottom: 30px;
+    }
   }
 
-  &__wrap{
+  &__wrap {
     margin-bottom: 45px;
+    @include lg-block {
+      margin-bottom: 35px;
+    }
   }
 
   &__count {
@@ -130,10 +221,23 @@
     font-weight: 900;
     text-transform: uppercase;
     margin-right: 25px;
+    @include lg-block {
+      font-size: 22px;
+    }
+    @include sm-block {
+      font-size: 20px;
+      margin-right: 15px;
+      font-weight: 500;
+    }
   }
 
   &__title {
-
+    @include lg-block {
+      font-size: 22px;
+    }
+    @include sm-block {
+      font-size: 20px;
+    }
   }
 }
 
@@ -185,6 +289,11 @@
     z-index: 2;
     top: 12px;
     left: 12px;
+    @include lg-block {
+      width: 24px;
+      height: 24px;
+      padding: 4px;
+    }
 
     &:before {
       content: '';
@@ -201,6 +310,9 @@
     display: block;
     margin-bottom: 25px;
     position: relative;
+    @include lg-block {
+      margin-bottom: 5px;
+    }
 
     &:before {
       content: '';
@@ -223,26 +335,32 @@
     font-size: 14px;
     line-height: 1.28;
     padding: 0 15px 25px 15px;
+    @include lg-block {
+      padding: 0 12px 12px 12px;
+    }
   }
 }
 
 .choose-radios {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
 }
 
 .choose-radio {
   cursor: pointer;
 
-  input{
+  input {
     display: none;
-    &:checked+.choose-radio__wrap{
+
+    &:checked + .choose-radio__wrap {
       border-color: $gold;
-      .choose-radio{
-        &__round{
+
+      .choose-radio {
+        &__round {
           border-color: $gold;
-          &:before{
+
+          &:before {
             width: 13px;
             height: 13px;
             background-color: $gold;
@@ -252,7 +370,7 @@
     }
   }
 
-  &__wrap{
+  &__wrap {
     display: flex;
     align-items: center;
     width: 100%;
@@ -262,7 +380,7 @@
     padding: 15px 25px;
   }
 
-  &__round{
+  &__round {
     margin-right: 23px;
     width: 29px;
     height: 29px;
@@ -273,7 +391,7 @@
     align-items: center;
     flex-shrink: 0;
 
-    &:before{
+    &:before {
       content: '';
       display: block;
       width: 23px;
@@ -283,14 +401,14 @@
     }
   }
 
-  &__title{
+  &__title {
     font-size: 18px;
   }
 }
 
 .choose-colors {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px 20px;
 
 }
@@ -298,29 +416,31 @@
 .choose-color {
   cursor: pointer;
 
-  input{
+  input {
     display: none;
-    &:checked+.choose-color__wrap{
+
+    &:checked + .choose-color__wrap {
       border-color: $gold;
     }
   }
 
-  &__wrap{
+  &__wrap {
     border: 1px solid transparent;
     display: block;
     width: 100%;
   }
 
-  &__img{
+  &__img {
     display: block;
     margin-bottom: 10px;
-    img{
+
+    img {
       width: 100%;
       display: block;
     }
   }
 
-  &__name{
+  &__name {
     font-size: 14px;
   }
 
@@ -328,20 +448,20 @@
 
 .choose-form {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 90px;
 
-  &__li{
+  &__li {
     padding-left: 55px;
     position: relative;
     font-size: 18px;
     margin-bottom: 15px;
 
-    &:last-child{
+    &:last-child {
       margin-bottom: 0;
     }
 
-    &:before{
+    &:before {
       content: '';
       display: block;
       width: 30px;
@@ -353,13 +473,13 @@
     }
   }
 
-  &__fields{
+  &__fields {
     display: grid;
     grid-gap: 30px;
     margin-bottom: 30px;
   }
 
-  &__submit{
+  &__submit {
     width: 100%;
     height: 79px;
     display: flex;

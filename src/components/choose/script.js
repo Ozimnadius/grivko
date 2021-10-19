@@ -35,6 +35,7 @@ window.addEventListener("load", function () {
         // initialSlide: 5,
         spaceBetween: 10,
         effect: 'fade',
+        autoHeight: true,
         fadeEffect: {
             crossFade: true
         },
