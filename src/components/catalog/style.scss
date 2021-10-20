@@ -143,8 +143,9 @@
       margin-top: 50px;
     }
     @include sm-block{
-      display: none;
+      margin-top: 40px;
     }
+
   }
 
   &__desc {

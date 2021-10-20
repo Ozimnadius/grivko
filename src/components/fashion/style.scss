@@ -2,17 +2,44 @@
   background-color: #f2f2f2;
   padding-top: 65px;
   padding-bottom: 80px;
+  @include xlg-block {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  @include lg-block {
+    padding: 40px 0;
+  }
+  @include sm-block {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 
   &__links {
-    display: flex;
-    gap: 70px;
     margin-bottom: 60px;
+    @include xlg-block {
+      margin-bottom: 35px;
+    }
   }
 
   &__link {
     font-size: 32px;
     font-weight: 500;
     text-transform: uppercase;
+    @include xlg-block {
+      font-size: 20px;
+    }
+    @include lg-block {
+      font-size: 16px;
+    }
+    @include sm-block {
+      font-size: 20px;
+      padding: 10px;
+      border-top: 1px solid #E3E3E3;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid #E3E3E3;
+    }
 
 
     &.active {
@@ -25,6 +52,16 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
     margin-bottom: 40px;
+    @include lg-block {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 5px;
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+      grid-gap: 10px;
+      margin: 0 -10px;
+      margin-bottom: 30px;
+    }
   }
 
   &__item {
@@ -42,6 +79,13 @@
 
       .fashion__item-btn {
         opacity: 1;
+      }
+    }
+
+    &:nth-child(10n+10) {
+      display: none;
+      @include lg-block {
+        display: block;
       }
     }
 
@@ -63,6 +107,9 @@
       background-image: linear-gradient(1deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
       opacity: 0;
       @include tr;
+      @include lg-block {
+        opacity: .5;
+      }
     }
 
     img {
@@ -86,24 +133,75 @@
       pointer-events: none;
       opacity: 0;
       @include tr;
+      @include xlg-block {
+        bottom: 20px;
+      }
+      @include lg-block {
+        opacity: 1;
+        width: 219px;
+        height: 48px;
+        bottom: 30px;
+        font-size: 16px;
+      }
+      @include sm-block {
+        bottom: 20px;
+        width: 343px;
+      }
     }
   }
 
-  &__more{
+  &__more {
     width: 100%;
     max-width: 896px;
     margin: 0 auto;
+    @include xlg-block {
+      width: 598px;
+      height: 49px;
+      font-size: 14px;
+    }
+    @include sm-block {
+      width: 343px;
+      height: 58px;
+      font-size: 20px;
+    }
+
+    &:hover {
+      svg {
+        transform: translateX(10px) rotate(-90deg);
+      }
+    }
   }
 }
 
 .fashion-card {
   overflow: visible;
   max-width: 1696px;
+  @include xlg-block {
+    max-width: 1120px;
+  }
+  @include lg-block {
+    max-width: 670px;
+  }
+  @include sm-block {
+    max-width: 343px;
+    padding: 0;
+  }
 
   &__grid {
     display: grid;
     grid-template-columns: calc(34.5% - 25px) calc(65.5% - 25px);
     grid-gap: 50px;
+    @include xlg-block {
+      grid-gap: 30px;
+    }
+    @include lg-block {
+      grid-template-columns: calc(45% - 10px) calc(55% - 10px);;
+      grid-gap: 20px;
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+      grid-gap: 0;
+    }
   }
 
   &__slider {
@@ -115,14 +213,16 @@
     overflow: hidden;
   }
 
-  &__slide{
+  &__slide {
     box-sizing: border-box;
     position: relative;
-    &:before{
+
+    &:before {
       content: '';
       display: block;
-      padding-top: calc(728/513*100%);
+      padding-top: calc(728 / 513 * 100%);
     }
+
     img {
       display: block;
       position: absolute;
@@ -145,6 +245,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include xlg-block {
+      left: -21px;
+      right: -21px;
+    }
+    @include sm-block {
+      left: 0;
+      right: 0;
+
+    }
   }
 
   &__arr {
@@ -156,66 +265,245 @@
     align-items: center;
     justify-content: center;
     @include tr;
+    @include xlg-block {
+      width: 42px;
+      height: 42px;
+    }
+    @include sm-block {
+      width: 64px;
+      height: 64px;
+    }
 
     &:hover {
       box-shadow: 0 0 30px rgb(0 0 0 / 10%);
     }
   }
 
-  &__pag{
+  &__pag {
     position: absolute;
     width: auto !important;
     z-index: 99;
-    left: 30px!important;
-    right: 30px!important;
-    bottom: 30px!important;
+    left: 30px !important;
+    right: 30px !important;
+    bottom: 30px !important;
     display: flex;
     justify-content: center;
-    gap:10px;
+    gap: 10px;
+    @include xlg-block {
+      left: 20px !important;
+      right: 20px !important;
+      bottom: 20px !important;
+      gap: 5px;
+    }
+    @include lg-block {
+      left: 15px !important;
+      right: 15px !important;
+      bottom: 15px !important;
+    }
 
-    .swiper-pagination-bullet{
-      margin: 0;
+    .swiper-pagination-bullet {
+      margin: 0 !important;
       opacity: 1;
       border-radius: 0;
       background-color: #dfdfdf;
       height: 4px;
       flex-grow: 1;
 
+      @include xlg-block {
+        height: 2px;
+      }
+      @include lg-block {
+        height: 1px;
+      }
+      @include sm-block {
+        height: 4px;
+      }
 
-      &.swiper-pagination-bullet-active{
+      &.swiper-pagination-bullet-active {
         background-color: $gold;
       }
     }
   }
 
-  &__title{
-    margin-bottom: 10px;
+  &__right {
+    @include sm-block {
+      padding: 30px 15px;
+    }
   }
 
-  &__txt{
+  &__title {
+    margin-bottom: 10px;
+    @include xlg-block {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    @include lg-block {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    @include sm-block {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__txt {
     margin-bottom: 20px;
+    @include lg-block {
+      font-size: 16px;
+    }
   }
 
   &__list {
-    grid-template-columns: repeat(3,minmax(max-content, 313px));
+    grid-template-columns: repeat(3, minmax(max-content, 313px));
     margin-bottom: 20px;
+    @include xlg-block {
+      grid-gap: 5px;
+      grid-template-columns: repeat(3, minmax(max-content, 207px));
+    }
+    @include lg-block {
+      grid-template-columns: repeat(2, minmax(max-content, 156px));
+      grid-gap: 20px;
+      margin-bottom: 10px;
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+      grid-gap: 15px;
 
-    .item__title{
-      font-size: 24px;
     }
-    .item__img{
-      max-width: 191px;
-    }
-    .item__wrap{
+
+    .item__wrap {
       padding-left: 35px;
       padding-right: 35px;
+      @include xlg-block {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      @include lg-block {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+
+    .item__img {
+      max-width: 191px;
+      @include xlg-block {
+        max-width: 130px;
+      }
+    }
+
+    .item__title {
+      font-size: 24px;
+      @include xlg-block {
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+    }
+
+    .item__price {
+      @include xlg-block {
+        margin-bottom: 10px;
+      }
+      @include lg-block {
+        font-size: 14px;
+      }
+    }
+
+    .item__btn {
+      @include xlg-block {
+        height: 38px;
+        font-size: 14px;
+      }
+      @include lg-block {
+        height: 29px;
+        font-size: 10px;
+      }
+
+      svg {
+        @include xlg-block {
+          width: 17px;
+        }
+        @include lg-block {
+          width: 13px;
+        }
+      }
+    }
+
+
+  }
+
+  &__arts {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(max-content, 313px));
+    grid-gap: 10px;
+
+    @include xlg-block {
+      grid-gap: 5px;
+      grid-template-columns: repeat(3, minmax(max-content, 207px));
+    }
+    @include lg-block {
+      grid-template-columns: repeat(2, minmax(max-content, 156px));
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+      grid-gap: 10px;
     }
   }
 
-  &__arts{
-    display: grid;
-    grid-template-columns: repeat(3,minmax(max-content, 313px));
-    grid-gap: 10px;
+  &__art {
+    @include xlg-block {
+      font-size: 14px;
+    }
+    @include lg-block {
+      font-size: 10px;
+    }
+    @include sm-block{
+      font-size: 20px;
+    }
   }
 
+}
+
+.fashion-drop {
+  position: relative;
+
+  &__btn {
+    display: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 20px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    @include sm-block {
+      display: flex;
+    }
+  }
+
+  &__drop {
+    @include sm-block {
+      position: absolute;
+      z-index: 10;
+      top: calc(100%);
+      left: -10px;
+      right: -10px;
+      display: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 70px;
+    @include xlg-block {
+      gap: 55px;
+    }
+    @include lg-block {
+      grid-gap: 40px;
+    }
+    @include sm-block {
+      flex-direction: column;
+      gap: 0;
+      background: #F3F3F3;
+    }
+  }
 }

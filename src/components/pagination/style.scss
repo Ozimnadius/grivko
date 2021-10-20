@@ -3,12 +3,20 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
+  @include sm-block{
+      gap: 5px;
+  }
 
   &__arr{
     padding: 10px 0;
 
     svg{
       fill: $txt;
+      display: block;
+      @include sm-block{
+        width: 56px;
+        //height: 15px;
+      }
     }
 
     &:hover{
@@ -33,6 +41,11 @@
       width: 51px;
       height: 51px;
       font-size: 27px;
+    }
+    @include sm-block{
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
     }
 
     &:hover{

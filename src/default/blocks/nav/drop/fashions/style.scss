@@ -1,6 +1,6 @@
-.nav-fashions{
+.nav-fashions {
 
-  &__top{
+  &__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -8,94 +8,110 @@
     margin-bottom: 30px;
   }
 
-  &__sws{
+  &__sws {
     display: flex;
     gap: 45px;
+    @include xlg-block {
+      gap: 25px;
+    }
   }
 
-  &__sw{
-    color: rgba($txt,.5);
+  &__sw {
+    color: rgba($txt, .5);
     font-size: 20px;
     font-weight: 400;
     @include tr;
 
-    &.active{
+    @include xlg-block {
+      font-size: 16px;
+    }
+
+    &.active {
       color: $txt;
     }
 
-    &:hover{
+    &:hover {
       color: $link;
     }
   }
 
-  &__section{
+  &__section {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: rgba($txt,.5);
+    color: rgba($txt, .5);
     font-size: 16px;
     font-weight: 400;
     @include tr;
 
-    &:hover{
+    @include xlg-block{
+      font-size: 14px;
+    }
+
+    &:hover {
       color: $link;
     }
 
-    svg{
+    svg {
       fill: currentColor;
     }
   }
 
-  &__tab{
+  &__tab {
     display: none;
 
-    &.active{
+    &.active {
       display: block;
     }
   }
 
-  &__list{
+  &__list {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
+    @include xlg-block{
+        grid-gap: 15px;
+    }
   }
 }
 
-.nav-fashion{
+.nav-fashion {
   height: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
   font-size: 16px;
   font-weight: 400;
+  @include xlg-block{
+      gap:5px;
+  }
 
-  &:hover{
-    .nav-fashion{
-      &__img{
-        img{
+  &:hover {
+    .nav-fashion {
+      &__img {
+        img {
           transform: scale(1.05);
         }
       }
 
-      &__name{
+      &__name {
         color: $link;
       }
     }
   }
 
-
-  &__img{
+  &__img {
     display: block;
     position: relative;
     overflow: hidden;
 
-    &:before{
+    &:before {
       content: '';
       display: block;
       padding-top: 100%;
     }
 
-    img{
+    img {
       display: block;
       position: absolute;
       top: 0;
@@ -107,11 +123,17 @@
     }
   }
 
-  &__txt{
-    color: rgba($txt,.5);
+  &__txt {
+    color: rgba($txt, .5);
+    @include xlg-block{
+      font-size: 14px;
+    }
   }
 
-  &__name{
+  &__name {
     @include tr;
+    @include xlg-block{
+      font-size: 14px;
+    }
   }
 }

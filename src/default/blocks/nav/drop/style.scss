@@ -6,12 +6,18 @@
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-gap: 70px;
+    @include xlg-block{
+        grid-gap: 50px;
+    }
   }
 
   &__item{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    @include xlg-block{
+        gap: 15px;
+    }
 
     &:hover{
       .nav-drop__item-title{
@@ -23,11 +29,18 @@
     &-title{
       color: rgba($txt,.5);
       @include tr;
+      @include xlg-block{
+        font-size: 14px;
+      }
     }
 
     &-name{
       max-width: 350px;
       font-size: 16px;
+      @include xlg-block{
+        font-size: 14px;
+        max-width: 100%;
+      }
     }
   }
 

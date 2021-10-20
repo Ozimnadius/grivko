@@ -52,6 +52,10 @@
         display: grid;
         grid-template-columns: 440fr 1120fr;
         grid-gap: 20px;
+        @include xlg-block{
+          padding: 50px 40px;
+          grid-template-columns: calc(27% - 10px) calc(73% - 10px);
+        }
       }
     }
   }

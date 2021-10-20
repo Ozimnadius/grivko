@@ -2,6 +2,9 @@
   display: grid;
   grid-template-columns:173fr 695fr ;
   grid-gap: 10px;
+  @include xlg-block{
+      grid-gap: 0;
+  }
 
   &__thumbs{
     display: grid;
@@ -43,6 +46,10 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
+      @include xlg-block{
+        width: 52px;
+        height: 52px;
+      }
     }
   }
 

@@ -10,6 +10,10 @@
     grid-template-columns: 900fr 860fr;
     grid-gap: 60px;
     margin-bottom: 70px;
+    @include xlg-block{
+        grid-gap: 40px;
+      grid-template-columns: 105fr 135fr;
+    }
   }
 
   &__top{
