@@ -30,11 +30,15 @@ const jsTools = {
     }
 };
 
-window.addEventListener("load", function (){
+const media = {
+    mobile: window.matchMedia("(max-width: 767.99px)"),
+}
+
+window.addEventListener("load", function () {
 
     $('.input[type="tel"]').inputmask("+7(999)999-99-99");
 
-    $(".subscribe-file input").on("change", function (e){
+    $(".subscribe-file input").on("change", function (e) {
         $(this).closest('.subscribe-file').find('.subscribe-file__name').text(this.files[0].name);
     });
 

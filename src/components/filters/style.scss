@@ -1,7 +1,87 @@
 .filters {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
+  --size: 20px;
+  @include xlg-block {
+    --size: 16px;
+  }
+  @include sm-block {
+    --size: 18px;
+    border-bottom: none;
+    position: relative;
+
+  }
+
+  &__btn {
+    display: none;
+    background: $bg;
+    height: 93px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 10px 25px;
+    @include sm-block {
+      width: 100%;
+      display: flex;
+      border: 1px solid #dfdfdf;
+    }
+  }
+
+  &__drop{
+    @include sm-block{
+      display: none;
+      position: absolute;
+      z-index: 10;
+      top: calc(100% - 1px);
+      left: 0;
+      right: 0;
+      background: $bg;
+      border: 1px solid #dfdfdf;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+
+    @include lg-block {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+      grid-gap: 0;
+    }
+  }
+
+  &__item {
+    @include sm-block {
+      border-bottom: 1px solid #dfdfdf;
+      background-color: $bg;
+    }
+
+    &:nth-child(odd) {
+      @include sm-block {
+        background-color: #f6f6f6;
+      }
+    }
+  }
+
+  &__bottom {
+    background: $bg;
+    padding: 30px;
+    display: none;
+    justify-content: center;
+    border-bottom: 1px solid #dfdfdf;
+    @include sm-block{
+      display: flex;
+    }
+  }
+
+  &__submit {
+    width: 224px;
+    height: 56px;
+    font-size: 18px;
+  }
+
 }
 
 .filter {
@@ -9,9 +89,13 @@
   z-index: 1;
   user-select: none;
   cursor: pointer;
+  @include sm-block{
+      cursor: initial;
+  }
 
   &:hover {
     z-index: 10;
+
     .filter-view {
       &__arr {
         transform: translateY(-50%) rotate(-180deg);
@@ -22,6 +106,13 @@
   &__btn {
     height: 90px;
     border: 1px solid #dfdfdf;
+    @include xlg-block {
+      height: 70px;
+    }
+    @include sm-block {
+      height: 60px;
+      border: none;
+    }
   }
 
   &__drop {
@@ -33,11 +124,14 @@
     height: 0;
     overflow: hidden;
     @include tr;
+    @include sm-block {
+      position: static;
+      height: initial;
+    }
   }
 }
 
 .filter-view {
-
   position: relative;
   padding: 10px 30px;
   padding-right: 45px;
@@ -46,19 +140,28 @@
   align-items: center;
   width: 100%;
   height: 100%;
+  @include xlg-block {
+    padding: 10px 20px;
+    padding-right: 35px;
+  }
+  @include sm-block {
+    padding: 10px 25px;
+  }
 
   &__name {
+    font-size: var(--size);
     position: relative;
     z-index: 10;
     margin-right: 20px;
   }
 
   &__vals {
+    font-size: var(--size);
     position: relative;
     z-index: 10;
     margin-right: 15px;
 
-    &--right{
+    &--right {
       margin-left: auto;
     }
   }
@@ -70,6 +173,12 @@
     right: 30px;
     transform: translateY(-50%);
     @include tr;
+    @include xlg-block {
+      right: 20px;
+    }
+    @include sm-block {
+      display: none;
+    }
 
     svg {
       display: block;
@@ -81,10 +190,26 @@
   background: $bg;
   border: 1px solid #dfdfdf;
   padding-top: 90px;
+  @include xlg-block {
+    padding-top: 70px;
+  }
+  @include sm-block {
+    padding-top: 20px;
+    border: none;
+    background-color: transparent;
+  }
+  @include sm-block {
+    padding-top: 10px;
+  }
 
   &__vals {
-    padding: 0 30px;
-    padding-bottom: 35px;
+    padding: 0 30px 35px;
+    @include xlg-block {
+      padding: 0 20px 20px;
+    }
+    @include sm-block {
+      padding: 0 25px 25px;
+    }
   }
 }
 
@@ -96,9 +221,11 @@
   &__option {
     cursor: pointer;
     padding: 5px 0;
+    font-size: var(--size);
 
     input {
       display: none;
+
       &:checked + span {
         text-decoration: underline;
       }
@@ -112,13 +239,12 @@
   gap: 25px;
 
 
-
   &__list {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
 
-    &--view{
+    &--view {
       gap: 10px;
     }
   }
@@ -132,22 +258,23 @@
   display: block;
   cursor: pointer;
 
-  &--view{
-    .filter-color__wrap{
+  &--view {
+    .filter-color__wrap {
       width: auto;
       height: auto;
     }
   }
 
-  input{
+  input {
     display: none;
-    &:checked+.filter-color__wrap{
+
+    &:checked + .filter-color__wrap {
       border-color: #707070;
     }
   }
 
 
-  &__wrap{
+  &__wrap {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -165,37 +292,40 @@
   }
 }
 
-.filter-sizes{
+.filter-sizes {
   display: flex;
   flex-wrap: wrap;
   gap: 15px 35px;
+  @include sm-block {
+    gap: 25px;
+  }
 
-  &--view{
+  &--view {
     gap: 10px;
   }
 }
 
-.filter-size{
+.filter-size {
   cursor: pointer;
 
-  &--view{
-    .filter-size__num{
+  &--view {
+    .filter-size__num {
       width: auto;
       height: auto;
     }
   }
 
-  input{
+  input {
     display: none;
 
 
-    &:checked+.filter-size__num{
-        background-color: #202020;
-        color: $bg;
+    &:checked + .filter-size__num {
+      background-color: #202020;
+      color: $bg;
     }
   }
 
-  &__num{
+  &__num {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -203,5 +333,6 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    font-size: var(--size);
   }
 }

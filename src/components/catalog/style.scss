@@ -49,6 +49,9 @@
 
   &__filters {
     margin-bottom: 40px;
+    @include xlg-block{
+      margin-bottom: 30px;
+    }
   }
 
   &__top {
@@ -133,6 +136,15 @@
 
   &__nav {
     margin-top: 70px;
+    @include xlg-block{
+      margin-top: 60px;
+    }
+    @include lg-block{
+      margin-top: 50px;
+    }
+    @include sm-block{
+      display: none;
+    }
   }
 
   &__desc {

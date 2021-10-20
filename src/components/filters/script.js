@@ -5,6 +5,10 @@ window.addEventListener("load", function () {
         new Filter(i);
     });
 
+    $('.filters__btn').on("click", function (e){
+        $(this).next().slideToggle();
+    });
+
 });
 
 class Filter {
@@ -23,24 +27,29 @@ class Filter {
     }
 
     init() {
-        $(this.filter).hover(this.slideDown, this.slideUp);
+        if (!media.mobile.matches) {
+            $(this.filter).hover(this.slideDown, this.slideUp);
+        }
+
         this.renderView();
+
 
         this.items.forEach((i) => {
             i.addEventListener('change', this.renderView);
         });
+
 
         if (this.btnAll) {
             this.btnAll.addEventListener('click', this.selectAll);
         }
     }
 
-    selectAll=()=>{
-        this.items.forEach((i)=>this.setChecked(i));
+    selectAll = () => {
+        this.items.forEach((i) => this.setChecked(i));
         this.renderView();
     }
 
-    setChecked=(el)=>{
+    setChecked = (el) => {
         el.checked = true;
     }
 
