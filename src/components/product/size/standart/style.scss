@@ -1,23 +1,31 @@
 .product-standart {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  @include sm-block {
+    grid-template-columns: 100%;
+    grid-gap: 30px;
+    font-size: 20px;
+  }
 
   &__title {
     font-weight: 500;
   }
 
-  &__list{
+  &__list {
     display: flex;
     gap: 20px;
   }
 
-  &__item{
+  &__item {
     cursor: pointer;
-    input{
+
+    input {
       display: none;
-      &:checked+.product-standart__wrap{
-        .product-standart__round{
-          &:before{
+
+      &:checked + .product-standart__wrap {
+        .product-standart__round {
+          &:before {
             background-color: $gold;
           }
         }
@@ -25,13 +33,13 @@
     }
   }
 
-  &__wrap{
+  &__wrap {
     display: flex;
     align-items: center;
     gap: 5px;
   }
 
-  &__round{
+  &__round {
     width: 16px;
     height: 16px;
     border: 1px solid #707070;
@@ -42,7 +50,7 @@
     justify-content: center;
 
 
-    &:before{
+    &:before {
       content: '';
       display: block;
       width: 8px;
@@ -52,7 +60,7 @@
     }
   }
 
-  &__name{
+  &__name {
     font-weight: 500;
     text-transform: uppercase;
   }

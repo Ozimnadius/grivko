@@ -1,30 +1,37 @@
-.product{
+.product {
   padding-top: 20px;
+  font-size: 20px;
+  @include sm-block {
+    font-size: 14px;
+  }
 
-  &__breadcrumbs{
+  &__breadcrumbs {
     margin-bottom: 25px;
   }
 
-  &__grid{
+  &__grid {
     display: grid;
     grid-template-columns: 900fr 860fr;
     grid-gap: 60px;
     margin-bottom: 70px;
-    @include xlg-block{
-        grid-gap: 40px;
+    @include xlg-block {
+      grid-gap: 40px;
       grid-template-columns: 105fr 135fr;
+    }
+    @include lg-block {
+      grid-template-columns: 100%;
     }
   }
 
-  &__top{
+  &__top {
     margin-bottom: 27px;
   }
 
-  &__title{
+  &__title {
     margin-bottom: 15px;
   }
 
-  &__price{
+  &__price {
     display: flex;
     align-items: center;
 
@@ -32,32 +39,82 @@
     font-weight: 500;
     text-transform: uppercase;
 
-    svg{
+    svg {
       margin-left: 15px;
     }
   }
 
-  &__composition{
+  &__composition {
     margin-bottom: 25px;
+    @include xlg-block {
+      margin-bottom: 35px;
+    }
   }
 
-  &__size{
+  &__size {
     margin-bottom: 35px;
   }
 
-  &__delivery{
+  &__delivery {
     margin-bottom: 35px;
   }
 
-  &__tabs{
+  &__tabs {
     margin-bottom: 95px;
+    @include sm-block {
+      margin-bottom: 35px;
+    }
   }
 
 }
 
-.product-top{
+.product-top {
   display: flex;
   justify-content: space-between;
+  @include sm-block {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__left {
+    @include sm-block {
+      order: 1;
+    }
+  }
+}
+
+.convert {
+  position: relative;
+  display: inline-flex;
+
+  &:hover {
+    .convert__drop {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  &__drop {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border: 1px solid #707070;
+    padding: 12px 20px;
+    background: $bg;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__item {
+    white-space: nowrap;
+  }
 }
 
 @import "avaible/style";

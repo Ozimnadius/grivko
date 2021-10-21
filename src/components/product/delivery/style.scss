@@ -1,10 +1,21 @@
 .product-delivery {
   border: 1px dashed $gold;
   padding: 23px 40px;
-
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
+  grid-gap: 10px;
+  font-size: 20px;
+
+  @include xlg-block {
+    padding: 20px 30px;
+    font-size: 16px;
+  }
+  @include sm-block {
+    grid-template-columns: 100%;
+    grid-gap: 20px;
+    font-size: 20px;
+    padding: 30px 23px;
+  }
 
   &__title {
     font-weight: 400;
@@ -43,6 +54,7 @@
   }
 
   &__round {
+    flex-shrink: 0;
     width: 16px;
     height: 16px;
     border: 1px solid #707070;
@@ -64,7 +76,7 @@
 
   &__name {
     color: #707070;
-    font-size: 20px;
+
     font-weight: 400;
   }
 }

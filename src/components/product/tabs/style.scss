@@ -2,6 +2,9 @@
 
   &__btns{
     display: flex;
+    @include sm-block{
+      display: none;
+    }
   }
 
   &__btn{
@@ -13,8 +16,21 @@
     font-weight: 500;
     text-transform: uppercase;
 
+    @include xlg-block{
+      font-size: 18px;
+    }
+
     &.active{
       background: url("/images/content/bordered/bg.png") 0 0;
+    }
+  }
+
+  &__tabs{
+    @include sm-block{
+      display: grid;
+      grid-template-columns: 100%;
+      grid-gap: 10px;
+      margin: 0 -10px;
     }
   }
 
@@ -22,12 +38,50 @@
     background: url("/images/content/bordered/bg.png") 0 0;
     display: none;
     padding: 65px;
+    @include xlg-block{
+      padding: 60px 40px;
+    }
+    @include lg-block{
+      padding: 60px 30px;
+    }
+    @include sm-block{
+      display: block;
+      padding: 0;
+    }
 
     &.active{
       display: block;
     }
+
+    &-btn{
+      display: none;
+      font-size: 20px;
+      font-weight: 500;
+      text-transform: uppercase;
+      text-align: center;
+      width: 100%;
+      padding: 25px 10px;
+      @include sm-block{
+        display: block;
+      }
+    }
+
+    &-drop{
+      @include sm-block{
+        height: 0;
+        overflow: hidden;
+        @include tr;
+      }
+    }
+    &-content{
+      @include sm-block{
+        padding: 10px 30px;
+      }
+    }
   }
 
 }
+
+
 
 @import "about/style";

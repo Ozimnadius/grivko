@@ -1,14 +1,21 @@
-.avaible{
-  font-size: 20px;
+.avaible {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-
-  &__status{
-    margin-bottom: 10px;
+  @include sm-block {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 10px;
   }
 
-  &__count{
+  &__status {
+    margin-bottom: 10px;
+    @include sm-block{
+      margin: 0;
+    }
+  }
+
+  &__count {
     color: $gold;
   }
 }

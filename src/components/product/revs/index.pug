@@ -1,15 +1,11 @@
 .product-revs.jsRevs
     .product-revs__left
         h2.product-revs__title.title
-            | Отзывы
-            br
-            | клиентов
+            | Отзывы клиентов
         .product-revs__txt
-            | Каждый клиент ценит
+            | Каждый клиент ценит качество сшитых
             br
-            | качествосшитых костюмов
-            br
-            | и мастерство портных.
+            |костюмов и мастерство портных.
     .product-revs__right
         .product-revs__wrap
             .product-revs__list
@@ -128,7 +124,7 @@
                 each i,x in list
                     div(data-more=i.dataMore hidden=i.hidden).product-revs__item.jsRev
                         .product-rev
-                            .product-rev__top
+                            .product-rev__grid
                                 .product-rev__left
                                     .product-rev__photo
                                         if i.photo
@@ -136,15 +132,14 @@
                                     .product-rev__desc
                                         .product-rev__name= i.name
                                         .product-rev__date= i.date
-                                .product-rev__left
+                                .product-rev__right
+                                    if i.imgs
+                                        .product-rev__imgs
+                                            each j in i.imgs
+                                                a(href=j data-fancybox="rev" + x).product-rev__img
+                                                    span.product-rev__img-img
+                                                        img(src=j alt="lorem")
                                     .product-rev__text= i.txt
-                            if i.imgs
-                                .product-rev__bottom
-                                    .product-rev__imgs
-                                        each j in i.imgs
-                                            a(href=j data-fancybox="rev"+x).product-rev__img
-                                                span.product-rev__img-img
-                                                    img(src=j alt="lorem")
 
             button(type='button').product-revs__more.jsRevs__more
                 span Все отзывы

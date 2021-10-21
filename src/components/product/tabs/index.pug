@@ -3,10 +3,19 @@
         button(type='button').product-tabs__btn.jsTabs__btn Подробнее о модели
         button(type='button').product-tabs__btn.jsTabs__btn Доставка
         button(type='button').product-tabs__btn.jsTabs__btn Костюм на заказ
-    .product-tabs__tabs
-        .product-tabs__tab.jsTabs__tab
-            include about/index
-        .product-tabs__tab.jsTabs__tab
-            include delivery/index
-        .product-tabs__tab.jsTabs__tab
-            include custom/index
+    .product-tabs__tabs.jsFaq
+        .product-tabs__tab.jsTabs__tab.jsFaq__item
+            button(type='button').product-tabs__tab-btn Подробнее о модели
+            .product-tabs__tab-drop.jsFaq__wrap
+                .product-tabs__tab-content.jsFaq__content
+                    include about/index
+        .product-tabs__tab.jsTabs__tab.jsFaq__item
+            button(type='button').product-tabs__tab-btn Доставка
+            .product-tabs__tab-drop.jsFaq__wrap
+                .product-tabs__tab-content.jsFaq__content
+                    include delivery/index
+        .product-tabs__tab.jsTabs__tab.jsFaq__item
+            button(type='button').product-tabs__tab-btn Костюм на заказ
+            .product-tabs__tab-drop.jsFaq__wrap
+                .product-tabs__tab-content.jsFaq__content
+                    include custom/index

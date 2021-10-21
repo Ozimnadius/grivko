@@ -3,11 +3,23 @@
   display: grid;
   grid-template-columns: repeat(2,1fr);
   grid-gap: 20px;
+  @include sm-block{
+      grid-template-columns: 100%;
+  }
+
+  &__left{
+    @include sm-block{
+      order: 1;
+    }
+  }
 
   &__content{
     p{
       font-size: 16px;
       margin-bottom: 10px;
+      @include sm-block{
+        font-size: 14px;
+      }
       &:last-child{
         margin-bottom: 0;
       }
@@ -23,4 +35,5 @@
       text-decoration: underline;
     }
   }
+
 }

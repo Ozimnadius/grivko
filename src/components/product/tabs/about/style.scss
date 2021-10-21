@@ -1,5 +1,45 @@
-.product-about{
+.product-about {
   display: grid;
   grid-template-columns: 62fr 38fr;
   grid-gap: 60px;
+  @include xlg-block {
+    grid-template-columns: 13fr 11fr;
+  }
+  @include lg-block {
+    grid-template-columns: 485px;
+    grid-gap: 20px;
+  }
+  @include sm-block{
+      grid-template-columns: 100%;
+  }
+
+  &__content {
+    @include xlg-block {
+      p {
+        font-size: 16px;
+      }
+    }
+    @include sm-block{
+        p{
+          font-size: 20px;
+        }
+    }
+  }
+
+  .video {
+    &__btn {
+      svg {
+        @include xlg-block {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+
+    &__txt {
+      font-size: 13px;
+      bottom: 40px;
+      left: 40px;
+    }
+  }
 }

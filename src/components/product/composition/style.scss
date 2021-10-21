@@ -1,31 +1,54 @@
-.composition{
+.composition {
   border: 1px solid #f2f2f2;
 
-  &__name{
+  &__name {
     padding: 20px 30px;
     font-weight: 500;
     border-bottom: 1px solid #f2f2f2;
+    @include sm-block {
+      font-size: 20px;
+    }
   }
 
-  &__list{
+  &__list {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
+    @include sm-block {
+      grid-template-columns: 100%;
+    }
   }
 
-  &__item{
-    &:first-child{
+  &__item {
+    &:first-child {
       border-right: 1px solid #f2f2f2;
+      @include sm-block {
+        border: none;
+        border-bottom: 1px solid #f2f2f2;
+      }
     }
   }
 }
 
-.composition-item{
+.composition-item {
   padding: 20px 30px;
   display: flex;
   gap: 45px;
+  @include xlg-block {
+    gap: 20px;
+  }
+  @include sm-block{
+    display: grid;
+    grid-template-columns: 10fr 14fr;
+    grid-gap: 20px;
+  }
 
-  &__name{
+  &__name {
     font-size: 16px;
+  }
 
+  &__item{
+    @include sm-block{
+      font-size: 20px;
+    }
   }
 }

@@ -1,8 +1,17 @@
 //photo.js
 window.addEventListener('load', function () {
-    if(document.querySelector('.jsPhotos')) {
+    if (document.querySelector('.jsPhotos')) {
         let photos = new Photo();
     }
+
+    if (media.mobile.matches) {
+        const photoSwiper = new Swiper('.photo__swiper', {
+            slidesPerView: "auto",
+            loop: true,
+            spaceBetween: 10,
+        });
+    }
+
 });
 
 class Photo {
