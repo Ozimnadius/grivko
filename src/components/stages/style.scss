@@ -1,19 +1,42 @@
+:root {
+  --stage-pos: 130px;
+  --stage-padding: 175px;
+  --stage-padding--date: 340px;
+  --stage-width: 369px;
+  @include xlg-block {
+    --stage-padding--date: 190px;
+    --stage-width: 317px;
+    --stage-pos: 80px;
+  }
+  @include lg-block {
+    --stage-padding--date: 105px;
+    --stage-pos: 47px;
+  }
+  @include sm-block{
+      --stage-padding--date: 0;
+  }
+}
+
 .stages {
   display: grid;
   grid-gap: 80px;
   counter-reset: li;
+  @include sm-block{
+      grid-gap: 40px;
+  }
 
-  &__item{
-    &:nth-child(even){
-      .stage{
+  &__item {
+    &:nth-child(even) {
+      .stage {
         padding-left: 0;
-        padding-right: 175px;
+        padding-right: var(--stage-padding);
 
-        &.date{
-          padding-right: 340px;
+        &.date {
+          padding-right: var(--stage-padding--date);
 
-          &:after{
-            right: 130px;
+
+          &:after {
+            right: var(--stage-pos);
           }
         }
 
@@ -22,20 +45,31 @@
           right: 0;
         }
 
-        &:after{
+        &:after {
           left: initial;
           right: 31px;
         }
 
         &__wrap {
           display: grid;
-          grid-template-columns:369px 1fr;
+          grid-template-columns:var(--stage-width) 1fr;
           padding: 0;
           align-items: center;
+          @include lg-block {
+            grid-template-columns: 100%;
+            padding: 40px 30px;
+          }
+          @include sm-block{
+            border-width: 0;
+            padding: 30px 15px;
+          }
         }
 
-        &__left{
+        &__left {
           order: 1;
+          @include lg-block{
+            order: initial;
+          }
         }
 
       }
@@ -44,29 +78,52 @@
 }
 
 .stage {
-  padding-left: 175px;
+  padding-left: var(--stage-padding);
   position: relative;
+  @include xlg-block {
 
-  &.date{
-    padding-left: 340px;
+  }
+  @include sm-block{
+    display: grid;
+    grid-gap: 20px;
+  }
 
-    &:before{
+  &.date {
+    padding-left: var(--stage-padding--date);
+
+    &:before {
       content: attr(data-count);
       writing-mode: initial;
       transform: none;
       font-size: 112px;
       font-weight: 900;
+      @include xlg-block {
+        font-size: 70px;
+      }
+      @include lg-block {
+        font-size: 40px;
+      }
+      @include sm-block{
+        font-size: 80px;
+        text-align: center;
+      }
     }
 
-    &:after{
+    &:after {
       top: 140px;
-      left: 130px;
+      left: var(--stage-pos);
+      @include xlg-block {
+        top: 101px;
+      }
+      @include lg-block {
+        top: 64px;
+      }
     }
   }
 
   &:before {
     counter-increment: li;
-    content: "Этап "counter(li);
+    content: "Этап " counter(li);
     display: block;
     writing-mode: vertical-rl;
     position: absolute;
@@ -77,9 +134,12 @@
     font-size: 48px;
     font-weight: 500;
     text-transform: uppercase;
+    @include sm-block{
+      position: static;
+    }
   }
 
-  &:after{
+  &:after {
     content: '';
     display: block;
     position: absolute;
@@ -88,31 +148,68 @@
     bottom: 0;
     width: 1px;
     background: $gold;
+    @include sm-block{
+      display: none;
+    }
   }
 
   &__wrap {
     display: grid;
-    grid-template-columns: 1fr 369px;
+    grid-template-columns: 1fr var(--stage-width);
     padding: 0;
     align-items: center;
+    @include xlg-block {
+      border-width: 40px;
+    }
+    @include lg-block {
+      grid-template-columns: 100%;
+      grid-gap: 30px;
+      border-width: 25px;
+      padding: 40px 30px;
+    }
+    @include sm-block{
+      border-width: 0;
+      padding: 30px 15px;
+    }
   }
 
   &__desc {
     padding: 60px;
+    @include xlg-block {
+      padding: 40px;
+    }
+    @include lg-block {
+      padding: 0;
+    }
   }
 
   &__title {
     margin-bottom: 15px;
+    @include xlg-block {
+      font-size: 18px !important;
+    }
   }
 
   &__sub {
     font-weight: 500;
     margin-bottom: 40px;
+    @include xlg-block {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
   }
 
   &__img {
     img {
       display: block;
+    }
+  }
+
+  &__content {
+    p {
+      @include xlg-block {
+        font-size: 16px;
+      }
     }
   }
 

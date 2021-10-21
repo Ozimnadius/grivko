@@ -1,17 +1,57 @@
-.fabrics-top{
+.fabrics-top {
   display: grid;
   grid-template-columns: 754fr 787fr;
   grid-gap: 60px;
+  @include lg-block {
+    grid-template-columns: 100%;
+    grid-gap: 30px;
+  }
 
-  &--center{
+  &--center {
     align-items: center;
   }
 
-  &__title{
+  &__title {
     margin-bottom: 10px;
+    @include lg-block{
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
   }
 
-  &__breadcrumbs{
+  &__breadcrumbs {
     margin-bottom: 20px;
+    @include lg-block{
+      margin-bottom: 30px;
+    }
+  }
+
+  &__content{
+    p{
+      @include lg-block{
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__right {
+    @include lg-block {
+      display: flex;
+      justify-content: center;
+    }
+
+    .video {
+      @include lg-block {
+        width: 100%;
+        max-width: 548px;
+      }
+
+      &__txt{
+        @include lg-block{
+          bottom: 20px;
+          left: 20px;
+        }
+      }
+    }
   }
 }
