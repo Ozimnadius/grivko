@@ -90,6 +90,14 @@
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
     margin-bottom: 80px;
     padding: 60px;
+    @include lg-block{
+      padding: 35px 30px;
+      margin-bottom: 30px;
+    }
+    @include sm-block{
+      padding: 0;
+      box-shadow: none;
+    }
 
     &:last-child {
       margin-bottom: 0;
