@@ -2521,10 +2521,40 @@ input, textarea {
   font-size: 20px;
 }
 
+.delivery {
+  font-size: 20px;
+}
+@media screen and (max-width: 1279.98px) {
+  .delivery {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .delivery {
+    font-size: 16px;
+  }
+}
 .delivery__item {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
   padding: 30px 60px 60px;
   margin-bottom: 80px;
+}
+@media screen and (max-width: 1919.98px) {
+  .delivery__item {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .delivery__item {
+    padding: 30px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .delivery__item {
+    background: url("/images/content/bordered/bg.png") 0 0;
+    padding: 30px 15px;
+    margin-bottom: 30px;
+  }
 }
 .delivery__item:last-child {
   margin-bottom: 0;
@@ -2535,8 +2565,27 @@ input, textarea {
   align-items: center;
   gap: 40px;
 }
+@media screen and (max-width: 1279.98px) {
+  .delivery__top {
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .delivery__top {
+    flex-direction: column;
+    gap: 30px;
+    align-items: initial;
+    margin-bottom: 30px;
+  }
+}
 .delivery__title {
   font-size: 24px;
+}
+@media screen and (max-width: 1279.98px) {
+  .delivery__title {
+    font-size: 18px;
+  }
 }
 .delivery__logos {
   display: flex;
@@ -2550,10 +2599,33 @@ input, textarea {
   display: grid;
   gap: 30px;
 }
+@media screen and (max-width: 1919.98px) {
+  .delivery__ol {
+    padding: 40px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .delivery__ol {
+    padding: 20px 20px 40px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .delivery__ol {
+    background: none;
+    padding: 0;
+  }
+}
 .delivery__li {
   display: flex;
   align-items: center;
   gap: 30px;
+}
+@media screen and (max-width: 767.98px) {
+  .delivery__li {
+    flex-direction: column;
+    align-items: initial;
+    gap: 15px;
+  }
 }
 .delivery__li a {
   color: #bfa058;
@@ -2572,6 +2644,13 @@ input, textarea {
   color: #ffffff;
   font-size: 24px;
   font-weight: 500;
+}
+@media screen and (max-width: 767.98px) {
+  .delivery__li:before {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
 }
 
 .docs {

@@ -1,50 +1,96 @@
-.delivery{
+.delivery {
+  font-size: 20px;
+  @include lg-block {
+    font-size: 18px;
+  }
+  @include sm-block {
+    font-size: 16px;
+  }
 
-  &__item{
+  &__item {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
     padding: 30px 60px 60px;
     margin-bottom: 80px;
+    @include xlg-block {
+      margin-bottom: 60px;
+    }
+    @include lg-block {
+      padding: 30px;
+    }
+    @include sm-block {
+      background: url("/images/content/bordered/bg.png") 0 0;
+      padding: 30px 15px;
+      margin-bottom: 30px;
+    }
 
-    &:last-child{
+    &:last-child {
       margin-bottom: 0;
     }
   }
 
-  &__top{
+  &__top {
     margin-bottom: 30px;
     display: flex;
     align-items: center;
     gap: 40px;
+    @include lg-block {
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    @include sm-block {
+      flex-direction: column;
+      gap: 30px;
+      align-items: initial;
+      margin-bottom: 30px;
+    }
   }
 
-  &__title{
+  &__title {
     font-size: 24px;
+    @include lg-block {
+      font-size: 18px;
+    }
   }
 
-  &__logos{
+  &__logos {
     display: flex;
     align-items: center;
     gap: 25px;
   }
 
-  &__ol{
+  &__ol {
     background: url("/images/content/bordered/bg.png") 0 0;
     padding: 60px;
     counter-reset: li;
     display: grid;
     gap: 30px;
+    @include xlg-block {
+      padding: 40px;
+    }
+    @include lg-block {
+      padding: 20px 20px 40px;
+    }
+    @include sm-block {
+      background: none;
+      padding: 0;
+    }
   }
 
-  &__li{
+  &__li {
     display: flex;
     align-items: center;
     gap: 30px;
+    @include sm-block {
+      flex-direction: column;
+      align-items: initial;
+      gap: 15px;
+    }
 
-    a{
+    a {
       color: $gold;
     }
 
-    &:before{
+    &:before {
       counter-increment: li;
       content: counter(li);
       display: flex;
@@ -58,6 +104,11 @@
       color: $bg;
       font-size: 24px;
       font-weight: 500;
+      @include sm-block {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+      }
     }
   }
 }
