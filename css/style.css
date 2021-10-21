@@ -5317,10 +5317,40 @@ input, textarea {
   grid-gap: 10px;
   padding: 60px;
 }
+@media screen and (max-width: 1919.98px) {
+  .pay {
+    padding: 35px;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .pay {
+    padding: 25px 15px;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .pay {
+    grid-template-columns: 100%;
+    grid-gap: 50px;
+    padding: 30px 0 0;
+    box-shadow: none;
+  }
+}
 .pay__item {
   position: relative;
   background: url("/images/content/bordered/bg.png") 0 0;
   padding: 60px 30px;
+}
+@media screen and (max-width: 1279.98px) {
+  .pay__item {
+    padding: 40px 15px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .pay__item {
+    padding: 60px 30px 30px;
+  }
 }
 .pay__icon {
   width: 64px;
@@ -5332,6 +5362,23 @@ input, textarea {
   position: absolute;
   left: 32px;
   top: -32px;
+  padding: 7px;
+}
+@media screen and (max-width: 1279.98px) {
+  .pay__icon {
+    width: 41px;
+    height: 41px;
+    left: 20px;
+    top: -21px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .pay__icon {
+    width: 64px;
+    height: 64px;
+    left: 32px;
+    top: -32px;
+  }
 }
 
 .portfolio__list {

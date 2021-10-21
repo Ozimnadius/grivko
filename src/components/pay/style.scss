@@ -1,17 +1,38 @@
-.pay{
+.pay {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   padding: 60px;
+  @include xlg-block {
+    padding: 35px;
+    font-size: 18px;
+  }
+  @include lg-block {
+    padding: 25px 15px;
+    font-size: 16px;
+  }
+  @include sm-block {
+    grid-template-columns: 100%;
+    grid-gap: 50px;
+    padding: 30px 0 0;
+    box-shadow: none;
+  }
 
-  &__item{
+
+  &__item {
     position: relative;
     background: url("/images/content/bordered/bg.png") 0 0;
     padding: 60px 30px;
+    @include lg-block {
+      padding: 40px 15px;
+    }
+    @include sm-block{
+      padding: 60px 30px 30px;
+    }
   }
 
-  &__icon{
+  &__icon {
     width: 64px;
     height: 64px;
     background-color: $gold;
@@ -21,5 +42,18 @@
     position: absolute;
     left: 32px;
     top: -32px;
+    padding: 7px;
+    @include lg-block {
+      width: 41px;
+      height: 41px;
+      left: 20px;
+      top: -21px;
+    }
+    @include sm-block{
+      width: 64px;
+      height: 64px;
+      left: 32px;
+      top: -32px;
+    }
   }
 }
