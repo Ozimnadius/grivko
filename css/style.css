@@ -2576,7 +2576,18 @@ input, textarea {
 
 .docs {
   display: grid;
+  grid-template-columns: 100%;
   grid-gap: 80px;
+}
+@media screen and (max-width: 1919.98px) {
+  .docs {
+    grid-gap: 55px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .docs {
+    grid-gap: 80px;
+  }
 }
 .docs__item:nth-child(even) .doc__left {
   order: 1;
@@ -2585,11 +2596,26 @@ input, textarea {
   margin-left: 0;
   margin-right: -80px;
 }
+@media screen and (max-width: 1279.98px) {
+  .docs__item:nth-child(even) .doc__wrap {
+    margin: 0;
+  }
+}
 
 .doc {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
+}
+@media screen and (max-width: 1279.98px) {
+  .doc {
+    grid-template-columns: 100%;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .doc__left {
+    order: 1;
+  }
 }
 .doc__img {
   position: relative;
@@ -2597,7 +2623,12 @@ input, textarea {
 .doc__img:before {
   content: "";
   display: block;
-  padding-top: calc(1008/880*100%);
+  padding-top: calc(1008 / 880 * 100%);
+}
+@media screen and (max-width: 1279.98px) {
+  .doc__img:before {
+    padding-top: calc(424 / 725 * 100%);
+  }
 }
 .doc__img img {
   display: block;
@@ -2612,10 +2643,55 @@ input, textarea {
   position: relative;
   margin-left: -80px;
 }
+@media screen and (max-width: 1919.98px) {
+  .doc__wrap {
+    border-width: 40px;
+    padding: 40px 30px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .doc__wrap {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .doc__wrap {
+    border-width: 0;
+    padding: 30px 15px;
+  }
+}
+@media screen and (max-width: 1919.98px) {
+  .doc__content h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 1919.98px) {
+  .doc__content p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .doc__content p {
+    font-size: 16px;
+  }
+}
 .doc__pic {
   position: absolute;
   bottom: -145px;
   right: -145px;
+}
+@media screen and (max-width: 1919.98px) {
+  .doc__pic {
+    width: 252px;
+    bottom: -75px;
+    right: -65px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .doc__pic {
+    display: none;
+  }
 }
 
 .fabrics {

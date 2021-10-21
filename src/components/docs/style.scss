@@ -1,38 +1,61 @@
-.docs{
+.docs {
   display: grid;
+  grid-template-columns: 100%;
   grid-gap: 80px;
+  @include xlg-block {
+    grid-gap: 55px;
+  }
+  @include lg-block{
+      grid-gap: 80px;
+  }
 
-  &__item{
-    &:nth-child(even){
+  &__item {
+    &:nth-child(even) {
 
-      .doc{
-        &__left{
+      .doc {
+        &__left {
           order: 1;
         }
 
-        &__wrap{
+        &__wrap {
           margin-left: 0;
           margin-right: -80px;
+          @include lg-block{
+            margin: 0;
+          }
         }
       }
     }
   }
 }
 
-.doc{
+.doc {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
+  @include lg-block{
+      grid-template-columns: 100%;
+  }
 
-  &__img{
+  &__left{
+    @include lg-block{
+      order: 1;
+    }
+  }
+
+  &__img {
     position: relative;
-    &:before{
+
+    &:before {
       content: '';
       display: block;
-      padding-top: calc(1008/880*100%);
+      padding-top: calc(1008 / 880 * 100%);
+      @include lg-block{
+        padding-top: calc(424 / 725 * 100%);
+      }
     }
 
-    img{
+    img {
       display: block;
       position: absolute;
       top: 0;
@@ -43,15 +66,58 @@
     }
   }
 
-  &__wrap{
-    position: relative;
-    margin-left: -80px;
+  &__right{
+
   }
 
-  &__pic{
+  &__wrap {
+    position: relative;
+    margin-left: -80px;
+    @include xlg-block {
+      border-width: 40px;
+      padding: 40px 30px;
+    }
+    @include lg-block{
+      margin: 0;
+    }
+    @include sm-block{
+      border-width: 0;
+      padding: 30px 15px;
+    }
+
+  }
+
+  &__content{
+    h2{
+      @include xlg-block{
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+    }
+
+    p{
+      @include xlg-block{
+        font-size: 20px;
+      }
+      @include sm-block{
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__pic {
     position: absolute;
     bottom: -145px;
     right: -145px;
+    @include xlg-block{
+      width: 252px;
+      bottom: -75px;
+      right: -65px;
+    }
+    @include lg-block{
+      display: none;
+    }
   }
+
 
 }
