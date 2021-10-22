@@ -7,8 +7,8 @@
       flex-wrap: wrap;
       gap: 30px;
     }
-    @include sm-block{
-        gap: 15px;
+    @include sm-block {
+      gap: 15px;
     }
   }
 
@@ -49,7 +49,7 @@
       font-size: 28px;
       margin-bottom: 0;
     }
-    @include sm-block{
+    @include sm-block {
       font-size: 20px;
     }
   }
@@ -61,7 +61,7 @@
       max-width: 480px;
       margin-bottom: 0;
     }
-    @include sm-block{
+    @include sm-block {
       font-size: 16px;
     }
   }
@@ -75,7 +75,7 @@
       max-width: 100%;
       margin-top: 50px;
     }
-    @include sm-block{
+    @include sm-block {
       margin-top: 15px;
     }
 
@@ -149,6 +149,36 @@
     }
     @include lg-block {
       width: 214px;
+    }
+
+    .rev {
+
+      &__btn {
+        top: 58%;
+
+        svg {
+          @include xlg-block {
+            width: 37px;
+            height: 37px;
+          }
+        }
+      }
+
+      &__wrap {
+
+      }
+
+      &__name {
+        @include xlg-block {
+          font-size: 14px;
+        }
+      }
+
+      &__txt {
+        @include xlg-block {
+          font-size: 12px;
+        }
+      }
     }
   }
 

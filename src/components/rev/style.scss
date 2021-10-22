@@ -42,7 +42,7 @@
 
   &__img{
     display: block;
-    padding-top: calc(663/380*100%);
+    padding-top: calc(663/432*100%);
     position: relative;
     overflow: hidden;
 
@@ -62,27 +62,23 @@
   &__btn{
     position: absolute;
     z-index: 3;
-    top: 58%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
 
     svg{
       fill: $bg;
       @include tr;
-      @include xlg-block{
-        width: 37px;
-        height: 37px;
-      }
     }
   }
 
   &__wrap{
     position: absolute;
     z-index: 3;
-    bottom: 80px;
-    left: 80px;
-    right: 80px;
-    @include xlg-block{
+    bottom: 60px;
+    left: 60px;
+    right: 60px;
+    @include xlg-block {
       left: 20px;
       right: 20px;
       bottom: 20px;
@@ -94,16 +90,25 @@
     display: block;
     margin-bottom: 15px;
     @include xlg-block{
-      font-size: 14px;
       margin-bottom: 10px;
+      font-size: 16px;
     }
+    @include sm-block{
+      font-size: 20px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
   }
 
   &__txt{
     font-size: 16px;
     display: block;
     @include xlg-block{
-      font-size: 12px;
+      font-size: 14px;
+    }
+    @include sm-block{
+      font-size: 16px;
     }
   }
 

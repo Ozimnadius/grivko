@@ -6939,6 +6939,25 @@ input, textarea {
     width: 214px;
   }
 }
+.revs__item .rev__btn {
+  top: 58%;
+}
+@media screen and (max-width: 1919.98px) {
+  .revs__item .rev__btn svg {
+    width: 37px;
+    height: 37px;
+  }
+}
+@media screen and (max-width: 1919.98px) {
+  .revs__item .rev__name {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1919.98px) {
+  .revs__item .rev__txt {
+    font-size: 12px;
+  }
+}
 
 .rev {
   display: block;
@@ -6972,7 +6991,7 @@ input, textarea {
 }
 .rev__img {
   display: block;
-  padding-top: calc(663/380*100%);
+  padding-top: calc(663/432*100%);
   position: relative;
   overflow: hidden;
 }
@@ -6990,7 +7009,7 @@ input, textarea {
 .rev__btn {
   position: absolute;
   z-index: 3;
-  top: 58%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -6998,18 +7017,12 @@ input, textarea {
   fill: #ffffff;
   transition: 0.3s;
 }
-@media screen and (max-width: 1919.98px) {
-  .rev__btn svg {
-    width: 37px;
-    height: 37px;
-  }
-}
 .rev__wrap {
   position: absolute;
   z-index: 3;
-  bottom: 80px;
-  left: 80px;
-  right: 80px;
+  bottom: 60px;
+  left: 60px;
+  right: 60px;
 }
 @media screen and (max-width: 1919.98px) {
   .rev__wrap {
@@ -7025,8 +7038,15 @@ input, textarea {
 }
 @media screen and (max-width: 1919.98px) {
   .rev__name {
-    font-size: 14px;
     margin-bottom: 10px;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .rev__name {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
   }
 }
 .rev__txt {
@@ -7035,7 +7055,12 @@ input, textarea {
 }
 @media screen and (max-width: 1919.98px) {
   .rev__txt {
-    font-size: 12px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .rev__txt {
+    font-size: 16px;
   }
 }
 
@@ -7044,6 +7069,18 @@ input, textarea {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
   margin-bottom: 60px;
+}
+@media screen and (max-width: 1279.98px) {
+  .reviews__list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .reviews__list {
+    grid-template-columns: 100%;
+    grid-gap: 10px;
+  }
 }
 
 .signup {
@@ -7570,12 +7607,11 @@ input, textarea {
 }
 @media screen and (max-width: 1279.98px) {
   .subscribe__content {
-    height: 664px;
+    height: auto;
   }
 }
 @media screen and (max-width: 767.98px) {
   .subscribe__content {
-    height: auto;
     padding: 15px;
     padding-bottom: 30px;
   }
@@ -7601,18 +7637,7 @@ input, textarea {
 }
 @media screen and (max-width: 1279.98px) {
   .subscribe__content:after {
-    left: -50px;
-    bottom: -120px;
-  }
-}
-@media screen and (max-width: 767.98px) {
-  .subscribe__content:after {
-    width: 135px;
-    height: 137px;
-    top: 0;
-    right: -30px;
-    bottom: initial;
-    left: initial;
+    display: none;
   }
 }
 .subscribe__content h2 {

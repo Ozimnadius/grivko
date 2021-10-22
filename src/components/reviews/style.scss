@@ -1,8 +1,16 @@
-.reviews{
-  &__list{
+.reviews {
+  &__list {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
     margin-bottom: 60px;
+    @include lg-block {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+      grid-gap: 10px;
+    }
   }
 }

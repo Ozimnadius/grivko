@@ -75,10 +75,9 @@
       padding-top: 35px;
     }
     @include lg-block{
-      height: 664px;
+      height: auto;
     }
     @include sm-block{
-      height: auto;
       padding: 15px;
       padding-bottom: 30px;
     }
@@ -101,16 +100,7 @@
         bottom: -85px;
       }
       @include lg-block{
-        left: -50px;
-        bottom: -120px;
-      }
-      @include sm-block{
-        width: 135px;
-        height: 137px;
-        top: 0;
-        right: -30px;
-        bottom: initial;
-        left: initial;
+        display: none;
       }
     }
 
