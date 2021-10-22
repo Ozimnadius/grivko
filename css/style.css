@@ -3011,6 +3011,11 @@ input, textarea {
 .fabrics {
   padding-top: 60px;
 }
+@media screen and (max-width: 1919.98px) {
+  .fabrics {
+    padding-top: 0;
+  }
+}
 .fabrics__top {
   margin-bottom: 80px;
 }
@@ -3020,6 +3025,17 @@ input, textarea {
   grid-gap: 10px;
   margin-bottom: 40px;
 }
+@media screen and (max-width: 1279.98px) {
+  .fabrics__brands {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .fabrics__brands {
+    grid-template-columns: 100%;
+    grid-gap: 5px;
+  }
+}
 .fabrics__brand {
   background-color: #f9f9f9;
   position: relative;
@@ -3027,7 +3043,7 @@ input, textarea {
 .fabrics__brand:before {
   content: "";
   display: block;
-  padding-top: calc(164/432*100%);
+  padding-top: calc(164 / 432 * 100%);
 }
 .fabrics__brand:first-child {
   background-color: #bfa058;
@@ -3042,16 +3058,36 @@ input, textarea {
   align-items: center;
   justify-content: center;
 }
+@media screen and (max-width: 1919.98px) {
+  .fabrics__brand-img {
+    left: 20px;
+    right: 20px;
+    top: 10px;
+    bottom: 10px;
+  }
+}
 .fabrics__brand-img img {
   display: block;
+  max-height: 100%;
 }
 .fabrics__desc {
   margin-bottom: 65px;
+}
+@media screen and (max-width: 767.98px) {
+  .fabrics__desc {
+    margin-bottom: 30px;
+  }
 }
 .fabrics__list {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-gap: 10px;
+}
+@media screen and (max-width: 767.98px) {
+  .fabrics__list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+  }
 }
 .fabrics__item {
   position: relative;
@@ -3095,7 +3131,6 @@ input, textarea {
 }
 @media screen and (max-width: 1279.98px) {
   .fabrics-top__title {
-    font-size: 20px;
     margin-bottom: 15px;
   }
 }
@@ -8420,6 +8455,21 @@ input, textarea {
   margin-top: 60px;
 }
 @media screen and (max-width: 1919.98px) {
+  .page__fabrics {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .page__fabrics {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .page__fabrics {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 1919.98px) {
   .page__appointment {
     display: none;
   }
@@ -8427,6 +8477,19 @@ input, textarea {
 @media screen and (max-width: 767.98px) {
   .page__appointment {
     display: block;
+  }
+}
+.page__signup--xlg {
+  display: none;
+}
+@media screen and (max-width: 1919.98px) {
+  .page__signup--xlg {
+    display: block;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .page__signup--xlg {
+    display: none;
   }
 }
 

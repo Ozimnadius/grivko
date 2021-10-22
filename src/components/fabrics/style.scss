@@ -1,32 +1,42 @@
-.fabrics{
+.fabrics {
   padding-top: 60px;
+  @include xlg-block {
+    padding-top: 0;
+  }
 
-  &__top{
+  &__top {
     margin-bottom: 80px;
   }
 
-  &__brands{
+  &__brands {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
     margin-bottom: 40px;
+    @include lg-block {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+      grid-gap: 5px;
+    }
   }
 
-  &__brand{
+  &__brand {
     background-color: #f9f9f9;
     position: relative;
 
-    &:before{
+    &:before {
       content: '';
       display: block;
-      padding-top: calc(164/432*100%);
+      padding-top: calc(164 / 432 * 100%);
     }
 
-    &:first-child{
+    &:first-child {
       background-color: $gold;
     }
 
-    &-img{
+    &-img {
       position: absolute;
       top: 0;
       bottom: 0;
@@ -35,32 +45,47 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      @include xlg-block {
+        left: 20px;
+        right: 20px;
+        top: 10px;
+        bottom: 10px;
+      }
 
-      img{
+      img {
         display: block;
+        max-height: 100%;
       }
     }
   }
 
-  &__desc{
+  &__desc {
     margin-bottom: 65px;
+    @include sm-block {
+      margin-bottom: 30px;
+    }
   }
 
-  &__list{
+  &__list {
     display: grid;
-    grid-template-columns: repeat(10,1fr);
+    grid-template-columns: repeat(10, 1fr);
     grid-gap: 10px;
+    @include sm-block {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 5px;
+    }
   }
 
-  &__item{
+  &__item {
     position: relative;
-    &:before{
+
+    &:before {
       content: '';
       display: block;
       padding-top: 100%;
     }
 
-    &-img{
+    &-img {
       position: absolute;
       top: 0;
       bottom: 0;
@@ -71,11 +96,11 @@
       justify-content: center;
       overflow: hidden;
 
-      img{
+      img {
         display: block;
       }
     }
   }
 }
 
- @import "top/style";
+@import "top/style";

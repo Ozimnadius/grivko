@@ -62,6 +62,15 @@
 
   &__fabrics {
     margin-top: 60px;
+    @include xlg-block{
+      margin-top: 40px;
+    }
+    @include lg-block{
+      margin-top: 30px;
+    }
+    @include sm-block{
+      margin-top: 20px;
+    }
   }
 
   &__appointment{
@@ -70,6 +79,18 @@
     }
     @include sm-block{
       display: block;
+    }
+  }
+
+  &__signup{
+    &--xlg{
+      display: none;
+      @include xlg-block{
+        display: block;
+      }
+      @include sm-block{
+        display: none;
+      }
     }
   }
 }
