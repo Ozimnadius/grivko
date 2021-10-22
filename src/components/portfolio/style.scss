@@ -1,40 +1,53 @@
-.portfolio{
+.portfolio {
 
-  &__list{
+  &__list {
     display: grid;
-    grid-template-columns: repeat(12,1fr);
+    grid-template-columns: repeat(12, 1fr);
     grid-gap: 10px;
     margin-bottom: 80px;
+    @include lg-block {
+      grid-gap: 5px;
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+      grid-gap: 10px;
+    }
   }
 
-  &__item{
+  &__item {
     grid-column: span 4;
     display: block;
     position: relative;
     color: $bg;
+    @include sm-block{
+        grid-column: initial;
+    }
 
-    &:hover{
+    &:hover {
 
-      &:after{
+      &:after {
         opacity: .5;
       }
 
-      .portfolio{
-        &__img{
-          img{
+      .portfolio {
+        &__img {
+          img {
             transform: scale(1.05);
           }
         }
       }
     }
 
-    &:before{
+    &:before {
       content: '';
       display: block;
-      padding-top: calc(887/581*100%);
+      padding-top: calc(887 / 581 * 100%);
+      @include sm-block{
+        padding-top: calc(500 / 343 * 100%);
+      }
     }
 
-    &:after{
+    &:after {
       content: '';
       display: block;
       position: absolute;
@@ -46,23 +59,32 @@
       background-image: linear-gradient(1deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
       opacity: 0;
       @include tr;
+      @include sm-block{
+        opacity: .5;
+      }
     }
 
-    &:nth-child(8n+1),&:nth-child(8n+2),{
+    &:nth-child(8n+1), &:nth-child(8n+2), {
       grid-column: span 6;
-
-      &:before{
-        padding-top: calc(667/876*100%);
+      @include sm-block{
+          grid-column: initial;
       }
 
-      &:after{
+      &:before {
+        padding-top: calc(667 / 876 * 100%);
+        @include sm-block{
+          padding-top: calc(500 / 343 * 100%);
+        }
+      }
+
+      &:after {
         height: 68.21%;
       }
     }
 
   }
 
-  &__img{
+  &__img {
     position: absolute;
     z-index: 1;
     top: 0;
@@ -71,7 +93,7 @@
     right: 0;
     overflow: hidden;
 
-    img{
+    img {
       display: block;
       width: 100%;
       height: 100%;
@@ -80,26 +102,61 @@
     }
   }
 
-  &__wrap{
+  &__wrap {
     display: block;
     position: absolute;
     z-index: 3;
     bottom: 60px;
     left: 60px;
     right: 60px;
+    @include lg-block {
+      left: 25px;
+      right: 25px;
+      bottom: 25px;
+    }
+    @include sm-block{
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+    }
   }
 
-  &__name{
+  &__name {
     display: block;
     font-weight: 500;
     margin-bottom: 10px;
+    @include sm-block{
+      text-transform: uppercase;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
   }
 
-  &__desc{
+  &__desc {
     display: flex;
     align-items: center;
     font-weight: 500;
     gap: 50px;
     margin-bottom: 30px;
+    @include lg-block {
+      margin-bottom: 10px;
+    }
+    @include sm-block{
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__btn {
+    @include lg-block {
+      width: 216px;
+      height: 37px;
+      font-size: 14px;
+    }
+    @include sm-block{
+      width: 100%;
+      height: 58px;
+      font-size: 20px;
+    }
   }
 }

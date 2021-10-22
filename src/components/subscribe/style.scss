@@ -71,15 +71,11 @@
     padding-top: 65px;
     height: 900px;
     @include xlg-block {
-      height: 751px;
+      height: auto;
       padding-top: 35px;
     }
-    @include lg-block{
-      height: auto;
-    }
     @include sm-block{
-      padding: 15px;
-      padding-bottom: 30px;
+      padding: 15px 15px 30px;
     }
 
     &:after {
@@ -94,14 +90,9 @@
       @include tr;
 
       @include xlg-block {
-        width: 200px;
-        height: 203px;
-        left: -95px;
-        bottom: -85px;
-      }
-      @include lg-block{
         display: none;
       }
+
     }
 
     h2 {
