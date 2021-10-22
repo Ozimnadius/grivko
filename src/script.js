@@ -13,4 +13,5 @@
 // @prepros-append components/forms/script.js
 // @prepros-append components/mmenu/script.js
 // @prepros-append components/fashion/script.js
+// @prepros-append components/gallery/script.js
 

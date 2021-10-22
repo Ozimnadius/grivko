@@ -12,6 +12,28 @@
     }
   }
 
+  &--tablet-wide{
+    .banner__container{
+      @include xlg-block{
+        max-width: 1205px;
+        padding: 0;
+      }
+    }
+
+    .banner__img{
+      @include xlg-block{
+        padding-top: calc(441 / 1205 * 100%);
+      }
+      @include lg-block{
+        padding-top: calc(609 / 768  * 100%);
+      }
+      @include sm-block{
+        padding-top: calc(481 / 375  * 100%);
+        height: initial;
+      }
+    }
+  }
+
   &__container {
     @include wrapper;
     width: 100%;

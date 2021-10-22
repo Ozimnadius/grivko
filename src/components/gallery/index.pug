@@ -1,6 +1,7 @@
 .gallery
     h2.gallery__title.title= props.title
-    .gallery__grid
-        each i in props.list
-            div(data-src=i data-fancybox="gallery" data-caption="My caption").gallery__item
-                +image(i)
+    .gallery__swiper.swiper-container
+        .swiper-wrapper.gallery__grid
+            each i in props.list
+                div(data-src=i data-fancybox="gallery" data-caption="My caption").gallery__item.swiper-slide
+                    +image(i)

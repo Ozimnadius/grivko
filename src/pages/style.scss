@@ -11,6 +11,9 @@
   &__desc {
     margin-top: 25px;
     margin-bottom: 30px;
+    @include sm-block{
+      margin: 15px 0;
+    }
   }
 
   &__collections{
@@ -72,6 +75,9 @@
 
   &__breadcrumbs {
     margin-bottom: 25px;
+    @include sm-block{
+      margin-bottom: 15px;
+    }
   }
 }
 
@@ -83,6 +89,34 @@
   background: $bg url("/images/content/bordered/bg.png") 0 0;
   padding: 60px;
   margin: -60px auto 0;
+  @include xlg-block{
+    margin: -35px auto 0;
+  }
+  @include lg-block{
+    margin: -60px auto 0;
+    padding: 35px;
+  }
+  @include sm-block{
+    margin: 0;
+    background: none;
+    padding: 35px 0;
+  }
+
+  .content{
+    @include lg-block{
+        h2{
+          font-size: 20px;
+        }
+        p{
+          font-size: 20px;
+        }
+    }
+    @include sm-block{
+        p{
+          font-size: 16px;
+        }
+    }
+  }
 }
 
 .page-faqs {

@@ -1,34 +1,43 @@
-.gallery{
+.gallery {
 
 
-  &__title{
+  &__title {
     margin-bottom: 35px;
   }
 
-  &__grid{
+  &__grid {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
+    @include sm-block {
+      grid-template-columns: initial;
+      grid-gap: initial;
+      display: flex;
+    }
   }
 
-  &__item{
+  &__item {
     position: relative;
     cursor: pointer;
     overflow: hidden;
+    box-sizing: border-box;
+    @include sm-block{
+      width: 295px;
+    }
 
-    &:hover{
-      img{
+    &:hover {
+      img {
         transform: scale(1.05);
       }
     }
 
-    &:before{
+    &:before {
       content: '';
       display: block;
-      padding-top: calc(667/433*100%);
+      padding-top: calc(667 / 433 * 100%);
     }
 
-    img{
+    img {
       display: block;
       position: absolute;
       top: 0;
@@ -39,10 +48,17 @@
       @include tr;
     }
 
-    &:nth-child(3),&:nth-child(5),&:nth-child(7),&:nth-child(8){
+    &:nth-child(3), &:nth-child(5), &:nth-child(7), &:nth-child(8) {
       grid-column: span 2;
-      &:before{
-        padding-top: calc(667/876*100%);
+      @include sm-block{
+          grid-column: initial;
+      }
+
+      &:before {
+        padding-top: calc(667 / 876 * 100%);
+        @include sm-block{
+          padding-top: calc(667 / 433 * 100%);
+        }
       }
     }
   }
