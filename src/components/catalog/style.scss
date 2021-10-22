@@ -15,7 +15,7 @@
     @include xlg-block {
       padding-top: 40px;
     }
-    @include lg-block{
+    @include lg-block {
       padding-top: 30px;
     }
 
@@ -26,7 +26,7 @@
         padding-left: 25px;
         padding-right: 25px;
       }
-      @include lg-block{
+      @include lg-block {
         padding-left: 20px;
         padding-right: 20px;
       }
@@ -37,10 +37,10 @@
       @include xlg-block {
         font-size: 18px;
       }
-      @include lg-block{
+      @include lg-block {
         font-size: 12px;
       }
-      @include sm-block{
+      @include sm-block {
         font-size: 20px;
       }
     }
@@ -49,7 +49,7 @@
 
   &__filters {
     margin-bottom: 40px;
-    @include xlg-block{
+    @include xlg-block {
       margin-bottom: 30px;
     }
   }
@@ -99,8 +99,20 @@
 
     &--3 {
       grid-template-columns: repeat(3, 1fr);
+      @include sm-block {
+        grid-template-columns: 100%;
+      }
 
       .item {
+
+        &__wrap {
+          @include sm-block {
+            grid-template-columns: 145px 1fr;
+            grid-gap: 10px;
+            padding: 10px 0;
+          }
+        }
+
         &__img {
           max-width: 421px;
 
@@ -108,6 +120,7 @@
             padding-top: calc(593 / 421 * 100%);
           }
         }
+
       }
     }
   }
@@ -136,13 +149,13 @@
 
   &__nav {
     margin-top: 70px;
-    @include xlg-block{
+    @include xlg-block {
       margin-top: 60px;
     }
-    @include lg-block{
+    @include lg-block {
       margin-top: 50px;
     }
-    @include sm-block{
+    @include sm-block {
       margin-top: 40px;
     }
 
@@ -158,5 +171,15 @@
     text-transform: uppercase;
     margin-top: 40px;
     margin-bottom: 40px;
+    @include xlg-block {
+      font-size: 20px;
+    }
+    @include lg-block {
+      font-size: 16px;
+      padding: 25px;
+    }
+    @include sm-block{
+      font-size: 20px;
+    }
   }
 }

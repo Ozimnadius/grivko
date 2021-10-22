@@ -63,6 +63,15 @@
   &__fabrics {
     margin-top: 60px;
   }
+
+  &__appointment{
+    @include xlg-block{
+      display: none;
+    }
+    @include sm-block{
+      display: block;
+    }
+  }
 }
 
 .page-desc {

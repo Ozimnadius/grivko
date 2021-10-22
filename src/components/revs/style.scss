@@ -136,6 +136,9 @@
     @include lg-block {
       position: relative;
     }
+    @include sm-block{
+      margin-right: -10px;
+    }
   }
 
   &__swiper {

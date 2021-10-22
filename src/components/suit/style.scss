@@ -1,34 +1,90 @@
 .suit {
+  @include lg-block {
+    padding-bottom: 60px;
+  }
+  @include sm-block{
+    padding-bottom: 0;
+  }
+
   &__title {
     margin-bottom: 35px;
-  }
-
-  &__grid{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-gap: 20px;
-
-  }
-
-  &__left{
-    display: flex;
-    //align-items: center;
-    justify-content: center;
-  }
-
-  &__bottom{
-    margin-top: 80px;
-    padding-bottom: 280px;
-    position: relative;
-  }
-
-  &__content{
-    h1,h2,h3,h4,h5,h6{
-      margin-bottom: 35px;
+    @include lg-block {
+      font-size: 20px;
     }
   }
 
-  &__desc{
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    @include xlg-block {
+      grid-template-columns: 10fr 14fr;
+    }
+    @include lg-block {
+      grid-template-columns: 8fr 16fr;
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+      grid-gap: 30px;
+    }
+  }
+
+  &__left {
+    display: flex;
+    //align-items: center;
+    justify-content: center;
+    @include xlg-block {
+      padding: 0 40px;
+    }
+    @include lg-block {
+      padding: 0;
+    }
+  }
+
+  &__bottom {
+    margin-top: 80px;
+    padding-bottom: 280px;
+    position: relative;
+    @include xlg-block {
+      margin-top: 60px;
+    }
+    @include lg-block {
+      padding-bottom: 150px;
+    }
+    @include sm-block {
+      margin-top: 30px;
+      background: none;
+      box-shadow: none;
+      padding: 0;
+    }
+  }
+
+  &__content {
+    @include sm-block {
+      margin-bottom: 30px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: 35px;
+      @include lg-block {
+        font-size: 20px;
+      }
+      @include sm-block {
+        margin-bottom: 15px;
+      }
+    }
+
+    p {
+      @include lg-block {
+        font-size: 18px;
+      }
+      @include sm-block {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__desc {
     padding: 60px;
     position: absolute;
     bottom: -65px;
@@ -36,11 +92,38 @@
     right: 70px;
     background-color: $gold;
     color: $bg;
+    @include xlg-block {
+      bottom: -35px;
+    }
+    @include lg-block {
+      padding: 40px 35px;
+      left: 40px;
+      right: 40px;
+      bottom: initial;
+      top: calc(100% - 125px);
+    }
+    @include sm-block {
+      padding: 30px 15px;
+      position: static;
+    }
 
-    h3{
+    h3 {
       font-size: 24px;
       margin-bottom: 30px;
       text-transform: uppercase;
+      @include lg-block {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+    }
+
+    p {
+      @include lg-block {
+        font-size: 18px;
+      }
+      @include sm-block {
+        font-size: 16px;
+      }
     }
   }
 }

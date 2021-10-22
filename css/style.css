@@ -1280,7 +1280,21 @@ input, textarea {
 .appointment {
   position: relative;
   border-width: 30px;
-  padding: 0px 160px 0px 0px;
+  padding: 0 160px 0 0;
+}
+@media screen and (max-width: 1919.98px) {
+  .appointment {
+    display: none;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .appointment {
+    display: block;
+    border: none;
+    margin: 0 -10px;
+    padding: 30px 10px;
+    position: relative;
+  }
 }
 .appointment:before {
   content: "Бесплатно";
@@ -1298,15 +1312,33 @@ input, textarea {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
 }
+@media screen and (max-width: 767.98px) {
+  .appointment:before {
+    display: none;
+  }
+}
 .appointment__flex {
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 767.98px) {
+  .appointment__flex {
+    flex-direction: column;
+    gap: 30px;
+    align-items: initial;
+  }
+}
 .appointment__left {
-  margin-top: -25px;
-  margin-bottom: -20px;
-  margin-left: -10px;
-  margin-right: 90px;
+  margin: -25px 90px -20px -10px;
+}
+@media screen and (max-width: 767.98px) {
+  .appointment__left {
+    margin: 0;
+    position: absolute;
+    top: 10px;
+    right: -20px;
+    width: 125px;
+  }
 }
 .appointment__center {
   margin-right: auto;
@@ -1314,9 +1346,26 @@ input, textarea {
 .appointment__title {
   margin-bottom: 15px;
 }
+@media screen and (max-width: 767.98px) {
+  .appointment__title {
+    margin-right: 160px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .appointment__txt {
+    font-size: 16px;
+  }
+}
 .appointment__btn {
   width: 319px;
   height: 74px;
+}
+@media screen and (max-width: 767.98px) {
+  .appointment__btn {
+    width: 100%;
+    height: 58px;
+    font-size: 20px;
+  }
 }
 
 .banner {
@@ -1700,6 +1749,18 @@ input, textarea {
 .catalog__list--3 {
   grid-template-columns: repeat(3, 1fr);
 }
+@media screen and (max-width: 767.98px) {
+  .catalog__list--3 {
+    grid-template-columns: 100%;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .catalog__list--3 .item__wrap {
+    grid-template-columns: 145px 1fr;
+    grid-gap: 10px;
+    padding: 10px 0;
+  }
+}
 .catalog__list--3 .item__img {
   max-width: 421px;
 }
@@ -1760,6 +1821,22 @@ input, textarea {
   text-transform: uppercase;
   margin-top: 40px;
   margin-bottom: 40px;
+}
+@media screen and (max-width: 1919.98px) {
+  .catalog__desc {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .catalog__desc {
+    font-size: 16px;
+    padding: 25px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .catalog__desc {
+    font-size: 20px;
+  }
 }
 
 .choose {
@@ -7110,6 +7187,11 @@ input, textarea {
     position: relative;
   }
 }
+@media screen and (max-width: 767.98px) {
+  .revs__slider {
+    margin-right: -10px;
+  }
+}
 .revs__swiper {
   overflow: hidden;
 }
@@ -7887,25 +7969,109 @@ input, textarea {
   margin-left: auto;
 }
 
+@media screen and (max-width: 1279.98px) {
+  .suit {
+    padding-bottom: 60px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .suit {
+    padding-bottom: 0;
+  }
+}
 .suit__title {
   margin-bottom: 35px;
+}
+@media screen and (max-width: 1279.98px) {
+  .suit__title {
+    font-size: 20px;
+  }
 }
 .suit__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
 }
+@media screen and (max-width: 1919.98px) {
+  .suit__grid {
+    grid-template-columns: 10fr 14fr;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .suit__grid {
+    grid-template-columns: 8fr 16fr;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .suit__grid {
+    grid-template-columns: 100%;
+    grid-gap: 30px;
+  }
+}
 .suit__left {
   display: flex;
   justify-content: center;
+}
+@media screen and (max-width: 1919.98px) {
+  .suit__left {
+    padding: 0 40px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .suit__left {
+    padding: 0;
+  }
 }
 .suit__bottom {
   margin-top: 80px;
   padding-bottom: 280px;
   position: relative;
 }
+@media screen and (max-width: 1919.98px) {
+  .suit__bottom {
+    margin-top: 60px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .suit__bottom {
+    padding-bottom: 150px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .suit__bottom {
+    margin-top: 30px;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .suit__content {
+    margin-bottom: 30px;
+  }
+}
 .suit__content h1, .suit__content h2, .suit__content h3, .suit__content h4, .suit__content h5, .suit__content h6 {
   margin-bottom: 35px;
+}
+@media screen and (max-width: 1279.98px) {
+  .suit__content h1, .suit__content h2, .suit__content h3, .suit__content h4, .suit__content h5, .suit__content h6 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .suit__content h1, .suit__content h2, .suit__content h3, .suit__content h4, .suit__content h5, .suit__content h6 {
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .suit__content p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .suit__content p {
+    font-size: 16px;
+  }
 }
 .suit__desc {
   padding: 60px;
@@ -7916,10 +8082,46 @@ input, textarea {
   background-color: #bfa058;
   color: #ffffff;
 }
+@media screen and (max-width: 1919.98px) {
+  .suit__desc {
+    bottom: -35px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .suit__desc {
+    padding: 40px 35px;
+    left: 40px;
+    right: 40px;
+    bottom: initial;
+    top: calc(100% - 125px);
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .suit__desc {
+    padding: 30px 15px;
+    position: static;
+  }
+}
 .suit__desc h3 {
   font-size: 24px;
   margin-bottom: 30px;
   text-transform: uppercase;
+}
+@media screen and (max-width: 1279.98px) {
+  .suit__desc h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .suit__desc p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .suit__desc p {
+    font-size: 16px;
+  }
 }
 
 .team__list {
@@ -8216,6 +8418,16 @@ input, textarea {
 }
 .page__fabrics {
   margin-top: 60px;
+}
+@media screen and (max-width: 1919.98px) {
+  .page__appointment {
+    display: none;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .page__appointment {
+    display: block;
+  }
 }
 
 .page-desc__title {
