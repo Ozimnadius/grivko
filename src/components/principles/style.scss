@@ -1,6 +1,15 @@
 .principles {
+  @include sm-block {
+    overflow-x: auto;
+    margin-right: -10px;
+  }
+
   &__title {
     margin-bottom: 60px;
+    @include lg-block {
+      font-size: 20px;
+      margin-bottom: 40px;
+    }
   }
 
   &__list {
@@ -8,22 +17,38 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 100px;
     padding: 0 40px;
+    @include xlg-block {
+      padding: 0;
+      grid-gap: 20px;
+    }
+    @include sm-block {
+      display: flex;
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    @include sm-block {
+      width: 220px;
+      flex-shrink: 0;
+    }
   }
 }
 
 .principle {
 
-  &__top{
+  &__top {
     position: relative;
     margin-bottom: 45px;
-    &:before{
+
+    &:before {
       content: '';
       display: block;
-      padding-top: calc(495/357*100%);
+      padding-top: calc(495 / 357 * 100%);
     }
   }
 
-  &__img{
+  &__img {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -34,13 +59,13 @@
     justify-content: center;
   }
 
-  &__bottom{
+  &__bottom {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
 
-  &__name{
+  &__name {
     background-color: $gold;
     color: $bg;
     font-size: 24px;
@@ -49,5 +74,23 @@
     padding: 17px 25px;
     text-align: center;
     margin-bottom: 15px;
+    @include xlg-block {
+      font-size: 18px;
+    }
+    @include lg-block {
+      font-size: 10px;
+    }
+    @include sm-block {
+      font-size: 20px;
+      padding: 15px;
+    }
   }
+
+  &__txt{
+    @include sm-block{
+      font-size: 16px;
+    }
+  }
+
+
 }

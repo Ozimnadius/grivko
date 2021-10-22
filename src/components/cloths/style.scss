@@ -1,45 +1,81 @@
-.cloths{
+.cloths {
 
-  &__title{
+  &__title {
     margin-bottom: 20px;
+    @include lg-block {
+      font-size: 20px;
+    }
+
   }
 
-  &__txt{
+  &__txt {
+    font-size: 20px;
     margin-bottom: 30px;
+    @include sm-block {
+      font-size: 16px;
+    }
   }
 
-  &__grid{
+  &__grid {
     display: grid;
     grid-template-columns: 9fr 3fr;
     grid-gap: 10px;
+    @include xlg-block {
+      grid-template-columns: 18fr 6fr;
+    }
+    @include lg-block {
+      grid-template-columns: 100%;
+    }
+    @include sm-block {
+      grid-gap: 30px;
+    }
   }
 
-  &__list{
+  &__list {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
+    @include sm-block {
+      grid-template-columns: 100%;
+    }
   }
 
-  &__item{
+  &__item {
     display: flex;
     justify-content: center;
     padding: 20px;
     background-color: #f9f9f9;
+    @include lg-block {
+      padding: 15px;
+    }
+    @include sm-block {
+      padding: 0;
+    }
+
   }
 
-  &__wrap{
+  &__wrap {
     position: relative;
     max-width: 200px;
     width: 100%;
+    @include xlg-block {
+      max-width: 127px;
+    }
+    @include lg-block {
+      max-width: 109px;
+    }
+    @include sm-block {
+      max-width: 187px;
+    }
 
-    &:before{
+    &:before {
       content: '';
       display: block;
-      padding-top: calc(120/200*100%);
+      padding-top: calc(120 / 200 * 100%);
     }
   }
 
-  &__img{
+  &__img {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -49,16 +85,16 @@
     align-items: center;
     justify-content: center;
 
-    img{
+    img {
       display: block;
       max-height: 100%;
     }
   }
 
-  &__banner{
+  &__banner {
     background-color: $gold;
     background-image: url(/images/content/cloths/img.png);
-    background-position: 0 bottom;
+    background-position: center bottom;
     background-repeat: no-repeat;
     background-size: contain;
     display: flex;
@@ -71,5 +107,26 @@
     text-transform: uppercase;
     padding: 20px;
     position: relative;
+    @include xlg-block {
+      font-size: 20px;
+    }
+    @include lg-block {
+      background-size: 240px auto;
+      font-size: 16px;
+      padding: 40px;
+    }
+    @include sm-block{
+      font-size: 20px;
+      background-size: auto auto;
+      padding: 40px 20px;
+    }
+
+    &-txt {
+      br {
+        @include lg-block {
+          display: none;
+        }
+      }
+    }
   }
 }
