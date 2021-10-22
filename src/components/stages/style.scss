@@ -4,6 +4,7 @@
   --stage-padding--date: 340px;
   --stage-width: 369px;
   @include xlg-block {
+    --stage-padding: 105px;
     --stage-padding--date: 190px;
     --stage-width: 317px;
     --stage-pos: 80px;
@@ -12,8 +13,9 @@
     --stage-padding--date: 105px;
     --stage-pos: 47px;
   }
-  @include sm-block{
-      --stage-padding--date: 0;
+  @include sm-block {
+    --stage-padding: 0;
+    --stage-padding--date: 0;
   }
 }
 
@@ -21,8 +23,8 @@
   display: grid;
   grid-gap: 80px;
   counter-reset: li;
-  @include sm-block{
-      grid-gap: 40px;
+  @include sm-block {
+    grid-gap: 40px;
   }
 
   &__item {
@@ -59,7 +61,7 @@
             grid-template-columns: 100%;
             padding: 40px 30px;
           }
-          @include sm-block{
+          @include sm-block {
             border-width: 0;
             padding: 30px 15px;
           }
@@ -67,7 +69,7 @@
 
         &__left {
           order: 1;
-          @include lg-block{
+          @include lg-block {
             order: initial;
           }
         }
@@ -83,7 +85,7 @@
   @include xlg-block {
 
   }
-  @include sm-block{
+  @include sm-block {
     display: grid;
     grid-gap: 20px;
   }
@@ -103,7 +105,7 @@
       @include lg-block {
         font-size: 40px;
       }
-      @include sm-block{
+      @include sm-block {
         font-size: 80px;
         text-align: center;
       }
@@ -134,8 +136,12 @@
     font-size: 48px;
     font-weight: 500;
     text-transform: uppercase;
-    @include sm-block{
+    @include sm-block {
       position: static;
+      transform: none;
+      writing-mode: initial;
+      font-size: 32px;
+      text-align: center;
     }
   }
 
@@ -148,7 +154,7 @@
     bottom: 0;
     width: 1px;
     background: $gold;
-    @include sm-block{
+    @include sm-block {
       display: none;
     }
   }
@@ -167,7 +173,7 @@
       border-width: 25px;
       padding: 40px 30px;
     }
-    @include sm-block{
+    @include sm-block {
       border-width: 0;
       padding: 30px 15px;
     }

@@ -7616,6 +7616,7 @@ input, textarea {
 }
 @media screen and (max-width: 1919.98px) {
   :root {
+    --stage-padding: 105px;
     --stage-padding--date: 190px;
     --stage-width: 317px;
     --stage-pos: 80px;
@@ -7629,6 +7630,7 @@ input, textarea {
 }
 @media screen and (max-width: 767.98px) {
   :root {
+    --stage-padding: 0;
     --stage-padding--date: 0;
   }
 }
@@ -7755,6 +7757,10 @@ input, textarea {
 @media screen and (max-width: 767.98px) {
   .stage:before {
     position: static;
+    transform: none;
+    writing-mode: initial;
+    font-size: 32px;
+    text-align: center;
   }
 }
 .stage:after {
