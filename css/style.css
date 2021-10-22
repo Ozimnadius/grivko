@@ -1501,9 +1501,15 @@ input, textarea {
 }
 .banner__form {
   position: absolute;
+  z-index: 10;
   top: 50%;
   right: 0;
   transform: translateY(-50%);
+}
+@media screen and (max-width: 1279.98px) {
+  .banner__form {
+    display: none;
+  }
 }
 .banner__btn {
   margin-top: 35px;
@@ -1524,6 +1530,7 @@ input, textarea {
   transform: rotate(180deg);
   font-weight: 500;
   padding-left: 20px;
+  font-size: 20px;
 }
 .banner-form__wrap {
   width: 0px;
