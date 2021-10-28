@@ -8544,26 +8544,104 @@ input, textarea {
 
 .tutorial__list {
   display: grid;
+  grid-template-columns: 100%;
   grid-gap: 80px;
   margin-bottom: 80px;
+}
+@media screen and (max-width: 1919.98px) {
+  .tutorial__list {
+    grid-gap: 45px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .tutorial__list {
+    grid-gap: 100px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .tutorial__list {
+    grid-gap: 30px;
+    margin-bottom: 30px;
+  }
 }
 .tutorial__item:nth-child(even) .tutorial__wrap {
   grid-template-columns: 660fr 1045fr;
 }
+@media screen and (max-width: 1919.98px) {
+  .tutorial__item:nth-child(even) .tutorial__wrap {
+    grid-template-columns: 9fr 15fr;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .tutorial__item:nth-child(even) .tutorial__wrap {
+    grid-template-columns: 100%;
+  }
+}
 .tutorial__item:nth-child(even) .tutorial__left {
   order: 1;
+}
+@media screen and (max-width: 1279.98px) {
+  .tutorial__item:nth-child(even) .tutorial__left {
+    order: initial;
+  }
 }
 .tutorial__item:nth-child(even) .tutorial__form {
   margin-left: 0;
   margin-right: -65px;
+}
+@media screen and (max-width: 1919.98px) {
+  .tutorial__item:nth-child(even) .tutorial__form {
+    margin-right: 0;
+  }
 }
 .tutorial__wrap {
   display: grid;
   grid-template-columns: 1045fr 660fr;
   align-items: center;
 }
+@media screen and (max-width: 1919.98px) {
+  .tutorial__wrap {
+    border: 45px solid #ffffff;
+    background: #ffffff url("/images/content/bordered/bg.png") 0 0;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+    padding: 45px;
+    grid-template-columns: 15fr 9fr;
+    grid-gap: 45px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .tutorial__wrap {
+    max-width: 570px;
+    width: 100%;
+    margin: 0 auto;
+    background: none;
+    border: none;
+    padding: 0;
+    grid-gap: 0;
+    grid-template-columns: 100%;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .tutorial__wrap {
+    max-width: 100%;
+    margin: 0;
+    grid-gap: 30px;
+    box-shadow: none;
+  }
+}
 .tutorial__title {
   margin-bottom: 65px;
+}
+@media screen and (max-width: 1279.98px) {
+  .tutorial__title {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .tutorial__title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
 }
 .tutorial__video {
   display: block;
@@ -8603,16 +8681,71 @@ input, textarea {
   padding: 65px;
   padding-bottom: 45px;
 }
+@media screen and (max-width: 1919.98px) {
+  .tutorial__form {
+    border: none;
+    background: none;
+    padding: 0;
+    margin-left: 0;
+    box-shadow: none;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .tutorial__form {
+    border: 45px solid #ffffff;
+    background: #ffffff url("/images/content/bordered/bg.png") 0 0;
+    padding: 40px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .tutorial__form {
+    border: none;
+    margin: 0 -10px;
+    padding: 30px 15px;
+  }
+}
 .tutorial__name {
   margin-bottom: 5px;
+  font-size: 24px;
+}
+@media screen and (max-width: 1279.98px) {
+  .tutorial__name {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .tutorial__name {
+    font-size: 20px;
+  }
 }
 .tutorial__txt {
   margin-bottom: 15px;
+  font-size: 20px;
+}
+@media screen and (max-width: 1919.98px) {
+  .tutorial__txt {
+    font-size: 18px;
+  }
 }
 .tutorial__fields {
   display: grid;
   grid-gap: 10px;
   margin-bottom: 10px;
+}
+@media screen and (max-width: 767.98px) {
+  .tutorial__fields {
+    margin-bottom: 30px;
+  }
+}
+.tutorial__submit {
+  width: 205px;
+  height: 58px;
+  font-size: 20px;
+}
+@media screen and (max-width: 767.98px) {
+  .tutorial__submit {
+    width: 100%;
+  }
 }
 
 .tutorial-banner {
@@ -8623,14 +8756,82 @@ input, textarea {
   border-right-width: 240px;
   padding: 0;
 }
+@media screen and (max-width: 1919.98px) {
+  .tutorial-banner {
+    margin: 0 -80px;
+    border-width: 60px;
+    border-left-width: 80px;
+    border-right-width: 80px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .tutorial-banner {
+    margin: 0;
+    border-width: 60px;
+    grid-template-columns: 100%;
+    grid-gap: 30px;
+    justify-items: center;
+    padding: 60px 90px 90px 90px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .tutorial-banner {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    background: none;
+  }
+}
 .tutorial-banner__left {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-left: 150px;
 }
+@media screen and (max-width: 1919.98px) {
+  .tutorial-banner__left {
+    padding-left: 75px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .tutorial-banner__left {
+    padding: 0;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .tutorial-banner__left {
+    order: 1;
+    margin: 0 -10px;
+    padding: 30px 15px;
+    background: #ffffff url(/images/content/bordered/bg.png) 0 0;
+    text-align: left;
+  }
+}
 .tutorial-banner__title {
   margin-bottom: 45px;
+}
+@media screen and (max-width: 1279.98px) {
+  .tutorial-banner__title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .tutorial-banner__title {
+    margin-bottom: 15px;
+  }
+}
+.tutorial-banner__txt {
+  font-size: 20px;
+}
+@media screen and (max-width: 767.98px) {
+  .tutorial-banner__txt {
+    font-size: 16px;
+  }
+}
+.tutorial-banner img {
+  display: block;
 }
 
 .video {

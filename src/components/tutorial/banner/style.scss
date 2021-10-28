@@ -1,20 +1,71 @@
-.tutorial-banner{
+.tutorial-banner {
   display: grid;
   grid-template-columns: 1fr 362px;
   grid-gap: 20px;
   border-left-width: 240px;
   border-right-width: 240px;
   padding: 0;
+  @include xlg-block {
+    margin: 0 -80px;
+    border-width: 60px;
+    border-left-width: 80px;
+    border-right-width: 80px;
+  }
+  @include lg-block {
+    margin: 0;
+    border-width: 60px;
+    grid-template-columns: 100%;
+    grid-gap: 30px;
+    justify-items: center;
+    padding: 60px 90px 90px 90px;
+  }
+  @include sm-block {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    background: none;
+  }
 
-  &__left{
+  &__left {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 150px;
+    @include xlg-block {
+      padding-left: 75px;
+    }
+    @include lg-block {
+      padding: 0;
+      text-align: center;
+    }
+    @include sm-block {
+      order: 1;
+      margin: 0 -10px;
+      padding: 30px 15px;
+      background: #ffffff url(/images/content/bordered/bg.png) 0 0;
+      text-align: left;
+    }
   }
 
-  &__title{
+  &__title {
     margin-bottom: 45px;
+    @include lg-block {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    @include sm-block {
+      margin-bottom: 15px;
+    }
   }
 
+  &__txt {
+    font-size: 20px;
+    @include sm-block {
+      font-size: 16px;
+    }
+  }
+
+  img {
+    display: block;
+  }
 }

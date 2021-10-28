@@ -1,66 +1,116 @@
-.tutorial{
+.tutorial {
 
-  &__list{
+  &__list {
     display: grid;
+    grid-template-columns: 100%;
     grid-gap: 80px;
     margin-bottom: 80px;
+    @include xlg-block {
+      grid-gap: 45px;
+    }
+    @include lg-block {
+      grid-gap: 100px;
+    }
+    @include sm-block {
+      grid-gap: 30px;
+      margin-bottom: 30px;
+    }
   }
 
-  &__item{
+  &__item {
+    &:nth-child(even) {
+      .tutorial {
 
-
-    &:nth-child(even){
-
-
-      .tutorial{
-
-        &__wrap{
+        &__wrap {
           grid-template-columns: 660fr 1045fr;
+          @include xlg-block {
+            grid-template-columns: 9fr 15fr;
+          }
+          @include lg-block {
+            grid-template-columns: 100%;
+          }
         }
 
-        &__left{
+        &__left {
           order: 1;
+          @include lg-block {
+            order: initial;
+          }
         }
 
-        &__form{
+        &__form {
           margin-left: 0;
           margin-right: -65px;
+          @include xlg-block {
+            margin-right: 0;
+          }
         }
       }
     }
   }
 
-  &__wrap{
+  &__wrap {
     display: grid;
     grid-template-columns: 1045fr 660fr;
     align-items: center;
+    @include xlg-block {
+      border: 45px solid $bg;
+      background: $bg url("/images/content/bordered/bg.png") 0 0;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+      padding: 45px;
+      grid-template-columns: 15fr 9fr;
+      grid-gap: 45px;
+    }
+    @include lg-block {
+      max-width: 570px;
+      width: 100%;
+      margin: 0 auto;
+      background: none;
+      border: none;
+      padding: 0;
+      grid-gap: 0;
+      grid-template-columns: 100%;
+    }
+    @include sm-block {
+      max-width: 100%;
+      margin: 0;
+      grid-gap: 30px;
+      box-shadow: none;
+    }
   }
 
-  &__title{
+  &__title {
     margin-bottom: 65px;
+    @include lg-block {
+      font-size: 24px;
+    }
+    @include sm-block {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
   }
 
-  &__video{
+  &__video {
     display: block;
     position: relative;
     z-index: 10;
 
-    &:hover{
-      .tutorial__btn{
-        &-btn{
+    &:hover {
+      .tutorial__btn {
+        &-btn {
           fill: #f00;
           fill-opacity: 1;
         }
       }
     }
 
-    img{
+    img {
       display: block;
       width: 100%;
     }
   }
 
-  &__btn{
+  &__btn {
     width: 68px;
     height: 48px;
     display: block;
@@ -68,39 +118,81 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 
-    svg{
+    svg {
       display: block;
     }
-    &-btn{
+
+    &-btn {
       fill: #212121;
       fill-opacity: .8;
       @include tr;
     }
-    &-arr{
+
+    &-arr {
       fill: #fff;
     }
   }
 
-  &__form{
+  &__form {
     margin-left: -65px;
     padding: 65px;
     padding-bottom: 45px;
+    @include xlg-block {
+      border: none;
+      background: none;
+      padding: 0;
+      margin-left: 0;
+      box-shadow: none;
+    }
+    @include lg-block {
+      border: 45px solid $bg;
+      background: $bg url("/images/content/bordered/bg.png") 0 0;
+      padding: 40px;
+    }
+    @include sm-block {
+      border: none;
+      margin: 0 -10px;
+      padding: 30px 15px;
+    }
   }
 
-  &__name{
+  &__name {
     margin-bottom: 5px;
+    font-size: 24px;
+    @include lg-block {
+      margin-bottom: 10px;
+    }
+    @include sm-block {
+      font-size: 20px;
+    }
   }
 
-  &__txt{
+  &__txt {
     margin-bottom: 15px;
+    font-size: 20px;
+    @include xlg-block {
+      font-size: 18px;
+    }
   }
 
-  &__fields{
+  &__fields {
     display: grid;
     grid-gap: 10px;
     margin-bottom: 10px;
+    @include sm-block {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__submit {
+    width: 205px;
+    height: 58px;
+    font-size: 20px;
+    @include sm-block {
+      width: 100%;
+    }
   }
 }
 
