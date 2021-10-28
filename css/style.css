@@ -1562,6 +1562,14 @@ input, textarea {
 }
 .banner__btn {
   margin-top: 35px;
+  font-size: 20px;
+}
+@media screen and (max-width: 1919.98px) {
+  .banner__btn {
+    width: 212px;
+    height: 40px;
+    font-size: 13px;
+  }
 }
 
 .banner-form {
@@ -8239,6 +8247,22 @@ input, textarea {
   grid-gap: 10px;
   margin-bottom: 55px;
 }
+@media screen and (max-width: 1919.98px) {
+  .team__list {
+    grid-gap: 5px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .team__list {
+    margin-bottom: 45px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .team__list {
+    grid-template-columns: 100%;
+    grid-gap: 10px;
+  }
+}
 .team__item {
   position: relative;
   color: #ffffff;
@@ -8263,7 +8287,7 @@ input, textarea {
   transition: 0.3s;
 }
 .team__img {
-  padding-top: calc(636/433*100%);
+  padding-top: calc(636 / 433 * 100%);
   position: relative;
   overflow: hidden;
 }
@@ -8284,16 +8308,72 @@ input, textarea {
   left: 60px;
   right: 60px;
 }
+@media screen and (max-width: 1919.98px) {
+  .team__wrap {
+    bottom: 30px;
+    left: 40px;
+    right: 40px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .team__wrap {
+    bottom: 10px;
+    left: 15px;
+    right: 15px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .team__wrap {
+    bottom: 15px;
+  }
+}
 .team__name {
   font-size: 24px;
   font-weight: 500;
   text-transform: uppercase;
   margin-bottom: 15px;
 }
+@media screen and (max-width: 1919.98px) {
+  .team__name {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .team__name {
+    font-size: 13px;
+    margin-bottom: 0px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .team__name {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+}
+.team__prof {
+  font-size: 20px;
+}
+@media screen and (max-width: 1919.98px) {
+  .team__prof {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .team__prof {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .team__prof {
+    font-size: 16px;
+  }
+}
 .team__link {
   max-width: 876px;
   width: 100%;
   margin: 0 auto;
+  font-size: 20px;
 }
 
 .team-card {

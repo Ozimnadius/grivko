@@ -153,6 +153,12 @@
 
   &__btn {
     margin-top: 35px;
+    font-size: 20px;
+    @include xlg-block{
+      width: 212px;
+      height: 40px;
+      font-size: 13px;
+    }
   }
 
 
