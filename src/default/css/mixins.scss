@@ -102,7 +102,7 @@ $vh: 1080;
   p {
     margin-bottom: 20px;
     font-size: 20px;
-    @include lg-block{
+    @include lg-block {
       font-size: 16px;
     }
 
@@ -120,11 +120,63 @@ $vh: 1080;
     margin-bottom: 60px;
     border-collapse: collapse;
     font-size: 16px;
+    @include lg-block {
+      font-size: 12px;
+    }
+    @include sm-block {
+      margin: 0 -10px;
+      margin-bottom: 60px;
+      width: calc(100% + 20px);
+      display: block;
+      font-size: 16px;
+    }
 
     thead {
+      @include sm-block {
+        display: block;
+      }
+
       tr {
         background-color: $gold !important;
         color: $bg;
+        @include sm-block {
+          display: grid;
+          grid-template-columns: auto 1fr;
+        }
+
+        th {
+          @include sm-block {
+            display: none;
+          }
+
+          &:nth-child(1) {
+            @include sm-block {
+              display: block;
+            }
+          }
+
+          &:nth-child(2) {
+            @include sm-block {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    tbody{
+      @include sm-block{
+        display: block;
+      }
+
+      tr{
+        @include sm-block{
+          position: relative;
+          display: grid;
+          grid-template-columns: 100%;
+          padding-top: 10px;
+          padding-bottom: 20px;
+        }
       }
     }
 
@@ -137,16 +189,83 @@ $vh: 1080;
     th, td {
       &:last-child {
         padding-left: 40px;
+        @include xlg-block {
+          padding-left: 20px;
+        }
+        @include sm-block{
+          padding-left: 65px;
+        }
       }
 
       padding: 20px;
       font-weight: 400;
       text-align: left;
+      @include lg-block {
+        padding: 20px 10px;
+      }
+      @include sm-block{
+        padding: 20px 15px;
+      }
     }
 
     td {
+      @include sm-block{
+        padding: 10px 65px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &:before{
+        @include sm-block{
+          content: attr(data-name);
+          order: -1;
+        }
+      }
+
+      &:after{
+        @include sm-block{
+          content: '';
+          order: -1;
+          flex-grow: 1;
+          border-bottom: 1px dashed #D8D8D8;
+        }
+      }
+
+      &:first-child{
+        @include sm-block{
+          position: absolute;
+          top: 12px;
+          left: 0;
+          padding-left: 15px;
+        }
+
+        &:before,&:after{
+          @include sm-block{
+            display: none;
+          }
+        }
+
+      }
+
+      &:nth-child(2){
+        @include sm-block{
+          font-size: 18px;
+          font-weight: 500;
+          padding-bottom: 25px;
+        }
+
+        &:before,&:after{
+          @include sm-block{
+            display: none;
+          }
+        }
+      }
+
       &:last-child {
         background-color: rgba(#dfdfdf, .27);
+        @include xlg-block {
+          background: none;
+        }
       }
     }
   }

@@ -265,9 +265,63 @@ body {
   border-collapse: collapse;
   font-size: 16px;
 }
+@media screen and (max-width: 1279.98px) {
+  .content table {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .content table {
+    margin: 0 -10px;
+    margin-bottom: 60px;
+    width: calc(100% + 20px);
+    display: block;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .content table thead {
+    display: block;
+  }
+}
 .content table thead tr {
   background-color: #bfa058 !important;
   color: #ffffff;
+}
+@media screen and (max-width: 767.98px) {
+  .content table thead tr {
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .content table thead tr th {
+    display: none;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .content table thead tr th:nth-child(1) {
+    display: block;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .content table thead tr th:nth-child(2) {
+    display: block;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .content table tbody {
+    display: block;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .content table tbody tr {
+    position: relative;
+    display: grid;
+    grid-template-columns: 100%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
 }
 .content table tr:nth-child(odd) {
   background-color: #f2f2f2;
@@ -280,8 +334,79 @@ body {
 .content table th:last-child, .content table td:last-child {
   padding-left: 40px;
 }
+@media screen and (max-width: 1919.98px) {
+  .content table th:last-child, .content table td:last-child {
+    padding-left: 20px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .content table th:last-child, .content table td:last-child {
+    padding-left: 65px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .content table th, .content table td {
+    padding: 20px 10px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .content table th, .content table td {
+    padding: 20px 15px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .content table td {
+    padding: 10px 65px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .content table td:before {
+    content: attr(data-name);
+    order: -1;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .content table td:after {
+    content: "";
+    order: -1;
+    flex-grow: 1;
+    border-bottom: 1px dashed #D8D8D8;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .content table td:first-child {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    padding-left: 15px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .content table td:first-child:before, .content table td:first-child:after {
+    display: none;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .content table td:nth-child(2) {
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 25px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .content table td:nth-child(2):before, .content table td:nth-child(2):after {
+    display: none;
+  }
+}
 .content table td:last-child {
   background-color: rgba(223, 223, 223, 0.27);
+}
+@media screen and (max-width: 1919.98px) {
+  .content table td:last-child {
+    background: none;
+  }
 }
 
 a {
@@ -491,6 +616,11 @@ input, textarea {
 }
 .mb120 {
   margin-bottom: 120px !important;
+}
+@media screen and (max-width: 1919.98px) {
+  .mb120 {
+    margin-bottom: 80px !important;
+  }
 }
 @media screen and (max-width: 767.98px) {
   .mb120 {
@@ -1274,6 +1404,11 @@ input, textarea {
   .fancybox-webcomp .fancybox-close-small svg {
     width: 40px;
     height: 40px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .fancybox-webcomp .fancybox-close-small svg path {
+    fill: #ffffff;
   }
 }
 
@@ -8379,10 +8514,29 @@ input, textarea {
 .team-card {
   max-width: 1696px;
 }
+@media screen and (max-width: 767.98px) {
+  .team-card {
+    padding: 0;
+  }
+}
 .team-card__grid {
   display: grid;
   grid-template-columns: 513fr 1000fr;
   grid-gap: 60px;
+}
+@media screen and (max-width: 1919.98px) {
+  .team-card__grid {
+    grid-gap: 20px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .team-card__grid {
+    grid-template-columns: 100%;
+    grid-gap: 0;
+  }
+}
+.team-card__right {
+  padding: 30px 15px;
 }
 .team-card__content h1, .team-card__content h2, .team-card__content h3, .team-card__content h4, .team-card__content h5, .team-card__content h6 {
   text-transform: uppercase;
@@ -8730,6 +8884,13 @@ input, textarea {
   padding: 80px 100px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
   background-color: #ffffff;
+}
+@media screen and (max-width: 1919.98px) {
+  .page-prices {
+    padding: 0;
+    box-shadow: none;
+    background: none;
+  }
 }
 
 .index {

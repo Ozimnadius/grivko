@@ -81,7 +81,7 @@
       left: 15px;
       right: 15px;
     }
-    @include sm-block{
+    @include sm-block {
       bottom: 15px;
     }
   }
@@ -99,7 +99,7 @@
       font-size: 13px;
       margin-bottom: 0px;
     }
-    @include sm-block{
+    @include sm-block {
       font-size: 20px;
       margin-bottom: 5px;
     }
@@ -113,7 +113,7 @@
     @include lg-block {
       font-size: 13px;
     }
-    @include sm-block{
+    @include sm-block {
       font-size: 16px;
     }
   }
@@ -128,11 +128,25 @@
 
 .team-card {
   max-width: 1696px;
+  @include sm-block {
+    padding: 0;
+  }
 
   &__grid {
     display: grid;
     grid-template-columns: 513fr 1000fr;
     grid-gap: 60px;
+    @include xlg-block {
+      grid-gap: 20px;
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+      grid-gap: 0;
+    }
+  }
+
+  &__right{
+    padding: 30px 15px;
   }
 
   &__content {

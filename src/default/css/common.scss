@@ -184,6 +184,9 @@
 
   &120 {
     margin-bottom: 120px !important;
+    @include xlg-block{
+      margin-bottom: 80px !important;
+    }
     @include sm-block{
       margin-bottom: 30px !important;
     }
