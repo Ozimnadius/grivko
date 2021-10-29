@@ -45,8 +45,11 @@
     justify-content: center;
     padding: 20px;
     background-color: #f9f9f9;
-    @include lg-block {
+    @include xlg-block{
       padding: 15px;
+    }
+    @include lg-block {
+      padding: 10px;
     }
     @include sm-block {
       padding: 0;

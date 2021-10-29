@@ -1,9 +1,10 @@
 .list {
   padding: 0 100px;
+  padding-top: 80px;
   display: flex;
   justify-content: space-between;
   @include xlg-block{
-    padding: 0;
+    padding: 20px 0 0;
   }
   @include lg-block {
     gap: 40px;

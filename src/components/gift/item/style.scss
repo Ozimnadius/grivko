@@ -1,20 +1,57 @@
-.gift-item{
+.gift-item {
   background-image: linear-gradient(180deg, #c8a85c 0%, #a68a4c 100%);
   height: 100%;
   display: flex;
   align-items: center;
   padding: 30px 60px 30px 40px;
   gap: 60px;
+  @include xlg-block {
+    gap: 30px;
+    padding: 30px;
+  }
+  @include lg-block {
+    flex-direction: column;
+    text-align: center;
+  }
+  @include sm-block {
+    flex-direction: row;
+    text-align: left;
+    padding: 55px 35px;
+    gap: 40px;
+    max-width: 343px;
+    width: 100%;
+  }
 
-  &__img{
+  &__img {
     width: 206px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &:before {
+      content: "";
+      display: block;
+      padding-top: calc(237 / 164 * 100%);
+    }
+
+    @include xlg-block {
+      width: 130px;
+    }
+    @include sm-block {
+      width: 80px;
+    }
   }
 
-  &__name{
+  &__name {
+    font-size: 20px;
     font-weight: 500;
     text-transform: uppercase;
+    @include lg-block {
+      margin-top: auto;
+    }
+    @include sm-block {
+      margin-top: initial;
+    }
+
   }
 }

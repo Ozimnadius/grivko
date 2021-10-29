@@ -15,6 +15,8 @@ class Filter {
 
     constructor(elem) {
         this.filter = elem;
+        this.form = this.filter.closest('.jsFilters');
+        this.content = document.querySelector('.jsFiltersContent');
         this.drop = this.filter.querySelector('.filter__drop');
         this.view = this.filter.querySelector('.jsFilter__view');
         this.items = this.drop.querySelectorAll('.jsFilter__val');
@@ -35,7 +37,10 @@ class Filter {
 
 
         this.items.forEach((i) => {
-            i.addEventListener('change', this.renderView);
+            i.addEventListener('change', ()=>{
+                this.renderView();
+                this.sendAjax();
+            });
         });
 
 
@@ -83,6 +88,28 @@ class Filter {
 
     slideUp = () => {
         this.drop.style.height = "0px";
+    }
+
+    sendAjax(){
+        let data = $(this.form).serialize();
+        let content = this.content;
+
+        $.ajax({
+            dataType: "json",
+            type: "POST",
+            url: this.form.action,
+            data: data,
+            success: function (result) {
+                if (result.status) {
+                    content.innerHTML = result.html;
+                } else {
+                    alert('Что-то пошло не так, попробуйте еще раз!!!');
+                }
+            },
+            error: function (result) {
+                alert('Что-то пошло не так, попробуйте еще раз!!!');
+            }
+        });
     }
 
 }

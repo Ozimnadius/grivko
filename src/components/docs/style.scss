@@ -8,6 +8,9 @@
   @include lg-block{
       grid-gap: 80px;
   }
+  @include sm-block{
+      grid-gap: 60px;
+  }
 
   &__item {
     &:nth-child(even) {

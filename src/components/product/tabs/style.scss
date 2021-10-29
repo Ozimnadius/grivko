@@ -73,15 +73,14 @@
         @include tr;
       }
     }
+
     &-content{
       @include sm-block{
-        padding: 10px 30px;
+        padding: 10px 15px;
       }
     }
   }
 
 }
-
-
 
 @import "about/style";

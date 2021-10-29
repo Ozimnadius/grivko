@@ -1,4 +1,4 @@
-.founder {
+.founder  {
 
   &:hover {
     .founder {
@@ -23,6 +23,9 @@
     @include lg-block{
         grid-template-columns: 1fr;
     }
+    @include sm-block{
+        grid-gap: 10px;
+    }
   }
 
   &__img {
@@ -45,6 +48,7 @@
   }
 
   &__content {
+    line-height: lh(16,26);
     &:after {
       content: '';
       display: block;
@@ -76,6 +80,5 @@
       }
     }
 
-    line-height: lh(16,26);
   }
 }

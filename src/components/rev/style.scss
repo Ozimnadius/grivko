@@ -23,18 +23,27 @@
     &:before{
       height: 72.6%;
       opacity: 1;
+      @include lg-block{
+        opacity: 0;
+      }
     }
 
     .rev{
       &__img{
         img{
           transform: scale(1.05);
+          @include lg-block{
+              transform: none;
+          }
         }
       }
 
       &__btn{
         svg{
           fill: $link;
+          @include lg-block{
+              fill: $bg;
+          }
         }
       }
     }
@@ -81,7 +90,16 @@
     @include xlg-block {
       left: 20px;
       right: 20px;
-      bottom: 20px;
+      bottom: 30px;
+    }
+    @include lg-block{
+      left: 30px;
+      right: 30px;
+    }
+    @include sm-block{
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
     }
   }
 

@@ -4,14 +4,27 @@
   margin-top: 160px;
   color: $bg;
 
-  &--nowrap{
-    background: none;
+  @include xlg-block {
     padding: 0;
-    margin-top: 0;
+    background: none;
+    margin: 0;
+  }
 
-    .gift{
-      &__grid{
+
+  &--nowrap {
+    background: none;
+    padding: 0 0 0 120px;
+    margin-top: 0;
+    @include xlg-block {
+      padding: 0;
+    }
+
+    .gift {
+      &__grid {
         margin: 0;
+        @include lg-block {
+          margin: 0 auto;
+        }
       }
     }
   }
@@ -22,12 +35,37 @@
     align-items: center;
     margin-top: -140px;
     margin-bottom: 60px;
+    position: relative;
+    @include xlg-block {
+      grid-template-columns: 600px 1fr;
+      margin-top: 0;
+    }
+    @include lg-block {
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 40px;
+      grid-template-columns: 100%;
+    }
   }
 
   &__left {
     background-image: linear-gradient(226deg, #c8a85c 0%, #a68a4c 100%);
     padding: 60px 90px 100px 60px;
-    position: relative;
+    @include xlg-block {
+      padding-right: 190px;
+    }
+    @include lg-block {
+      padding: 60px;
+      padding-right: 145px;
+    }
+    @include sm-block {
+      padding: 30px 15px 170px;
+      margin: 0 -10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
     &:after {
       content: url("/images/content/gift/pic.png");
@@ -35,16 +73,29 @@
       position: absolute;
       bottom: -195px;
       left: -110px;
+      @include xlg-block {
+        display: none;
+      }
     }
   }
 
   &__title {
     color: $bg;
     margin-bottom: 25px;
+    @include sm-block{
+      max-width: 343px;
+      width: 100%;
+    }
   }
 
   &__txt {
+    font-size: 20px;
     margin-bottom: 35px;
+    @include sm-block {
+      font-size: 16px;
+      max-width: 343px;
+      width: 100%;
+    }
   }
 
   &__btn {
@@ -53,12 +104,63 @@
     width: 100%;
     height: auto;
     padding: 15px 0;
+    font-size: 20px;
+    @include lg-block {
+      max-width: 340px;
+    }
+    @include sm-block{
+      max-width: 343px;
+    }
+  }
+
+  &__right {
+    @include xlg-block {
+      position: relative;
+      z-index: 2;
+    }
+    @include lg-block {
+      order: -1;
+    }
+    @include sm-block {
+      order: initial;
+      display: flex;
+      justify-content: center;
+      margin-bottom: -140px;
+    }
+  }
+
+  &__img {
+    @include xlg-block {
+      margin-left: -100px;
+      margin-right: -20px;
+    }
+    @include lg-block {
+      margin: 0;
+    }
+    @include sm-block{
+      transform: translateY(-50%);
+      width: 343px;
+    }
+
+    img {
+      display: block;
+    }
   }
 
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
+    @include sm-block {
+      grid-template-columns: 100%;
+    }
+  }
+
+  &__item {
+    @include sm-block{
+      display: flex;
+      justify-content: center;
+    }
   }
 }
 

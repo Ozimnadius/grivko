@@ -108,10 +108,12 @@
 
     &:first-child {
       .order__field:last-child {
-        position: absolute;
-        bottom: 70px;
-        left: 0;
-        right: 0;
+        @include sm-block{
+          position: absolute;
+          bottom: 70px;
+          left: 0;
+          right: 0;
+        }
       }
     }
   }

@@ -31,6 +31,9 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
+    @include lg-block{
+        grid-gap: 5px;
+    }
     @include sm-block {
       grid-template-columns: 1fr;
       grid-template-rows: auto;
@@ -52,7 +55,8 @@
 
           .index-cat {
             &__img {
-              padding-top: calc(678 / 876 * 100%);
+              padding-top: initial;
+              height: 100%;
               @include sm-block {
                 padding-top: calc(500 / 343 * 100%);
               }
@@ -69,7 +73,8 @@
 
           .index-cat {
             &__img {
-              padding-top: calc(293 / 876 * 100%);
+              padding-top: initial;
+              height: 100%;
               @include sm-block {
                 padding-top: calc(500 / 343 * 100%);
               }

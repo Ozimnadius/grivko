@@ -215,7 +215,7 @@
                                     .mmenu__nav.mmenu__nav_sub
                                         each j in i.list
                                             .mmenu__item
-                                                a.mmenu__link(href=j.href).jsSubmenuOpen
+                                                a.mmenu__link(href=j.href class=(j.list)?"jsSubmenuOpen":"")
                                                     span.mmenu__link-name= j.name
                                                     if j.list
                                                         span.mmenu__link-btn

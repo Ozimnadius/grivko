@@ -1,6 +1,6 @@
 .suit {
   @include lg-block {
-    padding-bottom: 60px;
+    padding-bottom: 120px;
   }
   @include sm-block{
     padding-bottom: 0;
@@ -47,8 +47,10 @@
     position: relative;
     @include xlg-block {
       margin-top: 60px;
+      border-width: 60px;
     }
     @include lg-block {
+      border-width: 40px;
       padding-bottom: 150px;
     }
     @include sm-block {
@@ -56,6 +58,7 @@
       background: none;
       box-shadow: none;
       padding: 0;
+      border-width: 0;
     }
   }
 
@@ -93,7 +96,7 @@
     background-color: $gold;
     color: $bg;
     @include xlg-block {
-      bottom: -35px;
+      bottom: -60px;
     }
     @include lg-block {
       padding: 40px 35px;

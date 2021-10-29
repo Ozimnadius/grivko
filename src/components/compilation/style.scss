@@ -21,6 +21,7 @@
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-gap: 10px;
+    box-sizing: border-box;
     @include lg-block{
       padding: 0 80px;
       grid-template-columns: repeat(2,1fr);
@@ -36,6 +37,7 @@
   }
 
   &__item{
+
     display: flex;
     flex-direction: column;
     @include sm-block{

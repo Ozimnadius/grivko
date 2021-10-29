@@ -70,9 +70,11 @@
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-gap: 10px;
+    @include lg-block{
+        grid-gap: 5px;
+    }
     @include sm-block {
       grid-template-columns: repeat(3, 1fr);
-      grid-gap: 5px;
     }
   }
 

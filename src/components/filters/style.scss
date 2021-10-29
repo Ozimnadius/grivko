@@ -89,7 +89,7 @@
   z-index: 1;
   user-select: none;
   cursor: pointer;
-  @include sm-block{
+  @include lg-block{
       cursor: initial;
   }
 
@@ -126,7 +126,7 @@
     @include tr;
     @include sm-block {
       position: static;
-      height: initial;
+      height: initial!important;
     }
   }
 }

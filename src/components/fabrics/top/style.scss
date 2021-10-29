@@ -1,7 +1,10 @@
 .fabrics-top {
   display: grid;
-  grid-template-columns: 754fr 787fr;
-  grid-gap: 60px;
+  grid-template-columns: 12fr 12fr;
+  grid-gap: 100px;
+  @include xlg-block{
+      grid-gap: 20px;
+  }
   @include lg-block {
     grid-template-columns: 100%;
     grid-gap: 30px;

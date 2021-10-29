@@ -1,4 +1,11 @@
 .team {
+  @include sm-block{
+    padding-bottom: 20px;
+  }
+
+  &__title{
+    margin-bottom: 30px;
+  }
 
   &__list {
     display: grid;
@@ -9,11 +16,12 @@
       grid-gap: 5px;
     }
     @include lg-block {
-      margin-bottom: 45px;
+      margin-bottom: 30px;
     }
     @include sm-block {
       grid-template-columns: 100%;
       grid-gap: 10px;
+      margin-bottom: 20px;
     }
   }
 
@@ -181,6 +189,9 @@
   }
 
   &__content {
+    @include sm-block{
+      padding: 30px 10px;
+    }
     h1, h2, h3, h4, h5, h6 {
       text-transform: uppercase;
     }

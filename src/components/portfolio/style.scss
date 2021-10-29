@@ -1,4 +1,7 @@
 .portfolio {
+  @include lg-block{
+    padding-bottom: 30px;
+  }
 
   &__list {
     display: grid;
@@ -7,6 +10,7 @@
     margin-bottom: 80px;
     @include lg-block {
       grid-gap: 5px;
+      margin-bottom: 30px;
     }
     @include sm-block {
       grid-template-columns: 100%;
@@ -109,6 +113,11 @@
     bottom: 60px;
     left: 60px;
     right: 60px;
+    @include xlg-block{
+      left: 40px;
+      right: 40px;
+      bottom: 40px;
+    }
     @include lg-block {
       left: 25px;
       right: 25px;
@@ -138,6 +147,9 @@
     font-weight: 500;
     gap: 50px;
     margin-bottom: 30px;
+    @include xlg-block{
+      margin-bottom: 10px;
+    }
     @include lg-block {
       margin-bottom: 10px;
     }

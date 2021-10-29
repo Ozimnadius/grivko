@@ -122,6 +122,7 @@ $vh: 1080;
     font-size: 16px;
     @include lg-block {
       font-size: 12px;
+      margin-bottom: 50px;
     }
     @include sm-block {
       margin: 0 -10px;
@@ -212,6 +213,7 @@ $vh: 1080;
       @include sm-block{
         padding: 10px 65px;
         display: flex;
+        align-items: baseline;
         justify-content: space-between;
       }
 
@@ -228,6 +230,7 @@ $vh: 1080;
           order: -1;
           flex-grow: 1;
           border-bottom: 1px dashed #D8D8D8;
+          margin: 0 5px;
         }
       }
 
