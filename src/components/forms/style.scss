@@ -3,6 +3,29 @@
   width: 100%;
   border: 30px solid $bg;
   background: $bg url("/images/content/bordered/bg.png");
+  @include sm-block {
+    border: none;
+    background: $bg;
+    padding: 20px;
+  }
+
+  .fancybox-button {
+    top: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+
+    svg {
+      display: block;
+      width: 50px;
+      height: 50px;
+      @include xlg-block {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+  }
 
   &__photos {
     margin-bottom: 15px;
@@ -10,24 +33,38 @@
 
   &__title {
     margin-bottom: 15px;
+    @include sm-block {
+      margin-bottom: 10px;
+    }
   }
 
   &__txt {
+    font-size: 20px;
     margin-bottom: 30px;
+    @include sm-block {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
   }
 
-  &__fields{
+  &__fields {
     display: grid;
     grid-gap: 30px;
     margin-bottom: 30px;
+    @include sm-block {
+      grid-gap: 10px;
+      margin-bottom: 20px;
+    }
   }
 
-  &__submit{
-    width: 320px;
+  &__submit {
+    width: 100%;
     height: 74px;
+    font-size: 20px;
   }
 
 }
 
 @import "files/style";
 @import "order/style";
+@import "sizes/style";

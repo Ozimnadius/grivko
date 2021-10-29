@@ -49,6 +49,12 @@ window.addEventListener("load", function () {
         pagination: {
             el: '.choose__pag',
         },
+        breakpoints: {
+            // when window width is >= 320px
+            767.99: {
+                autoHeight: false,
+            },
+        },
         // onAny(eventName,...args){
         //     console.log(eventName);
         // },

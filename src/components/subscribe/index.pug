@@ -4,7 +4,7 @@
             h2= props.title
             if props.txt
                 p!=props.txt
-            form(action="/php/subscribe.php" method="post" enctype="multipart/form-data" data-action="subscribe").subscribe__form.jsAction
+            form(action="/php/subscribe.php" method="post" enctype="multipart/form-data" data-action="validate" data-reset="true" data-success-form="formSubscribeThanks").subscribe__form.jsAction
                 .subscribe__fields
                     if props.fields.email
                         .subscribe__field
@@ -39,7 +39,7 @@
     .subscribe__right
         .subscribe__img
             picture
-                source(srcset=props.img+"375.jpg" media='(max-width: 767.98px)')
-                source(srcset=props.img+"768.jpg" media='(max-width: 1279.98px)')
-                source(srcset=props.img+"1280.jpg" media='(max-width: 1919.98px)')
-                img(src=props.img+".jpg" alt='')
+                source(srcset=props.img + "375.jpg" media='(max-width: 767.98px)')
+                source(srcset=props.img + "768.jpg" media='(max-width: 1279.98px)')
+                source(srcset=props.img + "1280.jpg" media='(max-width: 1919.98px)')
+                img(src=props.img + ".jpg" alt='')

@@ -1,138 +1,259 @@
-.order{
+.order {
   max-width: 1364px;
   width: 100%;
   padding: 65px 80px;
+  position: relative;
 
-  &__grid{
+  @include xlg-block {
+    max-width: 1120px;
+    padding: 45px 30px;
+  }
+  @include lg-block {
+    max-width: 670px;
+    padding: 35px 65px 100px 65px;
+  }
+  @include sm-block {
+    padding: 50px 20px 70px;
+  }
+
+  &__grid {
     display: grid;
     grid-template-columns: 4.2fr 5.8fr;
     grid-gap: 100px;
+
+    @include xlg-block {
+      grid-gap: 20px;
+    }
+    @include lg-block {
+      grid-template-columns: 100%;
+      grid-gap: 40px;
+
+    }
   }
 
-  &__title{
+  &__title {
     margin-bottom: 50px;
+    @include lg-block {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+    @include sm-block {
+      text-align: left;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
   }
 
-  &__info{
+  &__info {
     margin-bottom: 40px;
+    @include lg-block {
+      margin-bottom: 20px;
+    }
+    @include sm-block {
+      margin-bottom: 30px;
+    }
   }
 
-  &__sections{
+  &__sections {
     display: grid;
     grid-gap: 40px;
+    @include sm-block {
+      grid-gap: 20px;
+    }
   }
 
-  &__right{
+  &__right {
     display: flex;
     flex-direction: column;
   }
 
-  &__conditions{
+  &__conditions {
     align-self: flex-end;
     color: #707070;
     font-size: 18px;
     text-decoration: underline;
     margin-bottom: 55px;
+    @include lg-block {
+      position: absolute;
+      bottom: 30px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    @include sm-block {
+      bottom: 10px;
+      font-size: 16px;
+    }
   }
 
-  &__cols{
+  &__cols {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 45px;
     margin-bottom: 20px;
+    position: relative;
+    @include lg-block {
+      grid-gap: 20px;
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+      grid-gap: 10px;
+    }
   }
 
-  &__col{
+  &__col {
     display: flex;
     flex-direction: column;
+
+    &:first-child {
+      .order__field:last-child {
+        position: absolute;
+        bottom: 70px;
+        left: 0;
+        right: 0;
+      }
+    }
   }
 
-  &__fields{
+  &__fields {
     display: grid;
     grid-gap: 20px;
     margin-bottom: 20px;
-    &:last-child{
+    @include sm-block {
+      grid-gap: 10px;
+    }
+
+    &:last-child {
       margin-bottom: 0;
     }
   }
 
-  &__field{
+  &__field {
     display: flex;
     flex-direction: column;
   }
 
-  &__pin{
+  &__pin {
     font-size: 16px;
+    @include lg-block {
+      font-size: 11px;
+    }
+    @include sm-block {
+      font-size: 15px;
+    }
   }
 
-  &__input{
+  &__input {
     width: 100%;
     border-bottom: 1px solid #c7c7c7;
     font-size: 16px;
     resize: none;
     padding: 5px 10px;
+    @include lg-block {
+      font-size: 14px;
+      padding: 5px;
+    }
+    @include sm-block {
+      font-size: 16px;
+    }
 
-    &.error{
+    &.error {
       border-color: red;
-      &::placeholder{
+
+      &::placeholder {
         color: red;
       }
     }
 
-    &--area{
+    &--area {
       height: 192px;
       border: 1px solid #c7c7c7;
       border-radius: 7px;
       margin-top: 10px;
+      @include lg-block {
+        height: 135px;
+      }
     }
   }
 
-  &__policy{
+  &__policy {
     font-size: 16px;
     margin-top: auto;
-    a{
+    @include lg-block {
+      font-size: 11px;
+    }
+    @include sm-block {
+      margin-top: 190px;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    a {
       color: $link;
       text-decoration: underline;
     }
   }
 
-  &__bottom{
+  &__bottom {
     margin-top: auto;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 45px;
     align-items: center;
+    @include lg-block {
+      grid-gap: 20px;
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+      grid-gap: 30px;
+      justify-items: center;
+    }
   }
 
-  &__submit{
+  &__submit {
     width: 100%;
     height: 74px;
+    font-size: 20px;
+    @include lg-block {
+      height: 52px;
+      font-size: 16px;
+    }
   }
 
 }
 
-.order-section{
+.order-section {
 
-  &__name{
+  &__name {
     font-size: 16px;
     font-weight: 500;
     margin-bottom: 10px;
   }
 
-  &__fields{
+  &__fields {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 15px;
+    @include xlg-block {
+      grid-gap: 10px;
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+    }
   }
 
-  &__field{
-    &--2{
+  &__field {
+    &--2 {
       grid-column: span 2;
+      @include sm-block {
+        grid-column: initial;
+      }
     }
   }
 }
 
-.order-radio{
+.order-radio {
 
   display: block;
   width: 100%;
@@ -140,17 +261,17 @@
 
   cursor: pointer;
 
-  &__input{
+  &__input {
     display: none;
 
-    &:checked+.order-radio__fake{
+    &:checked + .order-radio__fake {
       border-color: $link;
 
-      .order-radio{
-        &__round{
+      .order-radio {
+        &__round {
           border-color: $link;
 
-          &:before{
+          &:before {
             background-color: $link;
           }
         }
@@ -158,7 +279,7 @@
     }
   }
 
-  &__fake{
+  &__fake {
     border: 1px solid #d5d5d5;
     border-radius: 9px;
     padding: 15px;
@@ -167,13 +288,16 @@
 
     display: flex;
     gap: 15px;
+    @include xlg-block {
+      grid-gap: 10px;
+    }
   }
 
-  &__left{
+  &__left {
     flex-shrink: 0;
   }
 
-  &__round{
+  &__round {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -182,7 +306,7 @@
     border: 1px solid #707070;
     border-radius: 50%;
 
-    &:before{
+    &:before {
       content: '';
       display: block;
       width: 10px;
@@ -192,17 +316,17 @@
     }
   }
 
-  &__right{
+  &__right {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
 
-  &__name{
+  &__name {
     font-size: 14px;
   }
 
-  &__imgs{
+  &__imgs {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -210,26 +334,32 @@
 
 }
 
-.order-pays{
+.order-pays {
   border-radius: 9px;
   border: 1px solid #d5d5d5;
   padding: 15px;
 
   display: grid;
-  grid-template-columns: repeat(2,auto);
+  grid-template-columns: repeat(2, auto);
   grid-gap: 15px;
+  @include sm-block {
+    grid-template-columns: 100%;
+    padding: 20px 15px;
+  }
 }
 
-.order-pay{
+.order-pay {
   cursor: pointer;
-  
-  &__input{
+
+  &__input {
     display: none;
-    &:checked+.order-pay__fake{
-      .order-pay{
-        &__round{
+
+    &:checked + .order-pay__fake {
+      .order-pay {
+        &__round {
           border-color: $link;
-          &:before{
+
+          &:before {
             background-color: $link;
           }
         }
@@ -237,13 +367,13 @@
     }
   }
 
-  &__fake{
+  &__fake {
     display: flex;
     align-items: center;
     gap: 10px;
   }
 
-  &__round{
+  &__round {
     flex-shrink: 0;
     width: 20px;
     height: 20px;
@@ -253,7 +383,7 @@
     align-items: center;
     justify-content: center;
 
-    &:before{
+    &:before {
       content: '';
       display: block;
       width: 10px;
@@ -264,26 +394,43 @@
     }
   }
 
-  &__name{
+  &__name {
     font-size: 14px;
   }
 }
 
-.order-price{
+.order-price {
   display: flex;
   align-items: baseline;
   gap: 10px;
+  @include sm-block {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
 
-  &__name{
+  &__name {
     color: #848484;
     font-size: 26px;
     font-weight: 400;
+    @include lg-block {
+      font-size: 18px;
+    }
+    @include sm-block {
+      font-size: 26px;
+    }
   }
 
-  &__val{
+  &__val {
     font-size: 32px;
     font-weight: 500;
     text-transform: uppercase;
+    @include lg-block {
+      font-size: 22px;
+    }
+    @include sm-block {
+      font-size: 32px;
+    }
   }
 }
 

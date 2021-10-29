@@ -1,9 +1,5 @@
 .files {
 
-  &__wrap{
-
-  }
-
   &__add{
     input{
       display: none;
@@ -12,8 +8,9 @@
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(6, 70px);
+    grid-template-columns: repeat(auto-fill, 70px);
     grid-gap: 10px;
+    justify-content: center;
   }
 
   &__plus {
@@ -31,6 +28,8 @@
   position: relative;
   width: 100%;
   background: $bg;
+  height: 70px;
+
 
   &:hover{
     .file__delete{
@@ -42,6 +41,10 @@
     content: '';
     display: block;
     padding-top: 100%;
+  }
+
+  &__input{
+    display: none;
   }
 
   &__img{

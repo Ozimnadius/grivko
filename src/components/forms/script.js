@@ -16,8 +16,8 @@ class Template {
         $.fancybox.close();
     }
 
-    open(name) {
-        $.fancybox.open(this.html(name));
+    open(name,opt={}) {
+        $.fancybox.open(this.html(name),opt);
         $('.input[type="tel"]').inputmask("+7(999)999-99-99");
     }
 
@@ -25,6 +25,8 @@ class Template {
         return $.fancybox.getInstance().current.$content;
     }
 }
+
+
 
 const template = new Template();
 
@@ -41,7 +43,6 @@ class Files {
 
     init() {
         this.addInput();
-
         this.input.addEventListener('change', (e) => {
             this.fileList = e.currentTarget.files;
             this.addFiles();

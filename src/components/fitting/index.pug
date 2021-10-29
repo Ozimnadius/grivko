@@ -15,7 +15,7 @@
                             </svg>
     .fitting__right
         .fitting__content.bordered
-            form(action="/php/call.php" method="POST" data-action="sign").fitting__form.fitting-form.jsAction
+            form(action="/php/call.php" method="POST" data-action="validate" data-reset="true" data-success-form="formThanks").fitting__form.fitting-form.jsAction
                 .fitting-form__title.title
                     | записаться
                     br

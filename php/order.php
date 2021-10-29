@@ -11,7 +11,7 @@ function getHtml()
 {
     ob_start();
     ?>
-    <form class="order" action="/php/call.php" method="post">
+    <form class="order fancybox-webcomp" action="/php/call.php" method="post">
         <input type="hidden" name="id" value="99">
         <div class="order__grid">
             <div class="order__left">
@@ -183,6 +183,7 @@ function getHtml()
         </div>
     </form>
     <script>
+        $('.input[type="tel"]').inputmask("+7(999)999-99-99");
         $(".order").validate(
             {
                 submitHandler: function (form) {

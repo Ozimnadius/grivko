@@ -1,7 +1,7 @@
 .team
     .team__list
         each i in list
-            a(href="#" data-action="team" data-id=99).team__item.jsAction
+            a(href="#" data-id=99 data-action="openAjaxForm" data-ajax="/php/team.php").team__item.jsAction
                 .team__img
                     img(src=i.img alt="lorem")
                 .team__wrap

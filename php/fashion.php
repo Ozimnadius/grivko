@@ -96,6 +96,20 @@ function getHtml()
             </div>
         </div>
     </div>
+    <script>
+        const slider = new Swiper('.fashion-card__swiper', {
+            loop: true,
+            spaceBetween: 10,
+            // Navigation arrows
+            navigation: {
+                nextEl: '.fashion-card__next',
+                prevEl: '.fashion-card__prev',
+            },
+            pagination: {
+                el: '.fashion-card__pag',
+            },
+        });
+    </script>
     <?
     $html = ob_get_contents();
     ob_end_clean();

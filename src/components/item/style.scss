@@ -15,6 +15,9 @@
         top: 0;
         left: 0;
         right: 0;
+        @include sm-block{
+          position: static;
+        }
       }
 
       &__img {
@@ -29,6 +32,9 @@
 
       &__btn {
         display: flex;
+        @include sm-block{
+          display: none;
+        }
       }
     }
   }

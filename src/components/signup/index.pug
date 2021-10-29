@@ -5,7 +5,7 @@
             | На ней мы узнаем о ваших предпочтениях и пожеланиях,
             br
             | снимем мерки и после этого приступим к исполнению.
-        form(action="/php/call.php" method="POST" data-action="sign").signup__form.jsAction
+        form(action="/php/call.php" method="POST" data-action="validate" data-reset="true" data-success-form="formThanks").signup__form.jsAction
             .signup__fields
                 .signup__field
                     input(type="text" name="name" placeholder="Имя" data-rule-required="true" data-msg-required="Заполните Имя").input

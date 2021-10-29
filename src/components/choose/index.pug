@@ -14,7 +14,7 @@ include mixins
             br
             | подходящие вам модели в мессенджер или на почту.
     .choose__form
-        form(action="/php/call.php" method="POST" data-action="choose").choose__quiz.jsAction
+        form(action="/php/call.php" method="POST" data-action="validate" data-reset=false data-success-form="formThanks").choose__quiz.jsAction
             .choose__slider
                 .choose__swiper.swiper-container
                     .swiper-wrapper

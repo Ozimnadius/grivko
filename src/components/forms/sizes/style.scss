@@ -1,0 +1,75 @@
+.sizes {
+  max-width: 1365px;
+  width: 100%;
+  @include xlg-block {
+    max-width: 1170px;
+  }
+  @include lg-block {
+    max-width: 710px;
+    padding: 30px;
+  }
+  @include sm-block {
+    max-width: 342px;
+    padding: 50px 20px 20px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    @include xlg-block {
+      font-size: 27px;
+    }
+    @include sm-block {
+      display: none;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 18px;
+    @include xlg-block {
+      font-size: 16px;
+    }
+    @include lg-block {
+      margin: 0 -30px;
+      width: calc(100% + 60px);
+    }
+    @include sm-block {
+      margin: 0 -20px;
+      width: calc(100% + 40px);
+      font-size: 15px;
+    }
+
+    th {
+      padding: 15px;
+      text-align: center;
+      background: #F8F8F8;
+      font-weight: 500;
+      text-transform: uppercase;
+      @include lg-block {
+        padding: 10px;
+      }
+      @include sm-block {
+        padding: 10px 5px;
+        font-size: 10px;
+      }
+    }
+
+    td {
+      font-weight: 500;
+      text-align: center;
+      padding: 10px;
+      border-right: 1px solid #D5D5D5;
+      @include lg-block {
+        padding: 8px 10px;
+      }
+      @include sm-block{
+        padding: 8px 5px;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+}

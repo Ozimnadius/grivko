@@ -26,7 +26,7 @@
                     "/images/content/fashion/10.jpg",
                 ];
             each i in items
-                a(href="#" data-id=99 data-action="fashion").fashion__item.jsAction
+                a(href="#" data-id=99 data-action="openAjaxForm" data-ajax="/php/fashion.php").fashion__item.jsAction
                     +image(i)
                     button(type='button').fashion__item-btn.btn
                         span Подробнее
