@@ -762,11 +762,13 @@ input, textarea {
 }
 .header__bottom-mmenu {
   display: none;
+  padding: 20px;
 }
 @media screen and (max-width: 1279.98px) {
   .header__bottom-mmenu {
     display: block;
     margin-right: 20px;
+    margin-left: -20px;
   }
 }
 .header__bottom-container {
@@ -778,6 +780,7 @@ input, textarea {
   .header__bottom-container {
     padding: 15px 0;
     justify-content: space-between;
+    padding: 0;
   }
 }
 @media screen and (max-width: 767.98px) {
@@ -1246,6 +1249,7 @@ input, textarea {
     grid-template-columns: 100%;
     grid-template-areas: "contacts" "logo" "policy";
     grid-gap: 30px;
+    justify-items: flex-start;
   }
 }
 .footer__left {
@@ -1284,6 +1288,7 @@ input, textarea {
 @media screen and (max-width: 1279.98px) {
   .footer__right {
     grid-area: contacts;
+    margin-left: initial;
   }
 }
 @media screen and (max-width: 1279.98px){
@@ -2356,6 +2361,10 @@ input, textarea {
   pointer-events: none;
   opacity: 0.5;
 }
+.choose__nav.disabled .choose__prev {
+  pointer-events: all;
+  opacity: 1;
+}
 .choose__arr {
   width: 163px;
   height: 59px;
@@ -2441,7 +2450,8 @@ input, textarea {
 }
 @media screen and (max-width: 767.98px) {
   .choose-models {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 140px);
+    justify-content: center;
   }
 }
 
@@ -4223,6 +4233,7 @@ input, textarea {
 }
 @media screen and (max-width: 767.98px) {
   .call {
+    max-width: 340px;
     border: none;
     background: #ffffff;
     padding: 20px;
@@ -4290,7 +4301,6 @@ input, textarea {
   display: grid;
   grid-template-columns: repeat(auto-fill, 70px);
   grid-gap: 10px;
-  justify-content: center;
 }
 .files__plus {
   width: 70px;
@@ -4870,7 +4880,6 @@ input, textarea {
 }
 @media screen and (max-width: 767.98px) {
   .sizes {
-    max-width: 342px;
     padding: 50px 20px 20px;
   }
 }
@@ -9425,6 +9434,11 @@ input, textarea {
     justify-content: center;
   }
 }
+@media screen and (max-width: 767.98px) {
+  .team-card__left {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 1279.98px) {
   .team-card__img {
     max-width: 315px;
@@ -9432,7 +9446,13 @@ input, textarea {
 }
 @media screen and (max-width: 767.98px) {
   .team-card__img {
+    width: 100%;
     max-width: 100%;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .team-card__img img {
+    width: 100%;
   }
 }
 .team-card__right {

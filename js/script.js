@@ -36,7 +36,7 @@ const jsTools = {
 };
 
 const media = {
-    mobile: window.matchMedia("(max-width: 767.99px)"),
+    mobile: window.matchMedia("(max-width: 767.98px)"),
 }
 
 window.addEventListener("load", function () {
@@ -320,6 +320,9 @@ window.addEventListener("load", function () {
             this.inputus = $(".choose-slide__input");
 
             this.inputus.on("change", () => {
+                setTimeout(function (){
+                    chooseSwiper.slideNext();
+                }, 500);
                 this.activateNav();
             });
         }
@@ -335,6 +338,7 @@ window.addEventListener("load", function () {
 
         activateNav() {
             this.nav.removeClass("disabled");
+
         }
 
         deactivateNav() {
@@ -394,22 +398,26 @@ window.addEventListener("load", function () {
 //filters.js
 window.addEventListener("load", function () {
 
+    if (document.querySelector('.jsFilters')) {
+        const filters = new Filters('.jsFilters');
+    }
+
     document.querySelectorAll('.jsFilter').forEach(function (i) {
-        new Filter(i);
+        new Filter(i,filters);
     });
 
-    $('.filters__btn').on("click", function (e){
+    $('.filters__btn').on("click", function (e) {
         $(this).next().slideToggle();
     });
+
 
 });
 
 class Filter {
 
-    constructor(elem) {
+    constructor(elem, filters) {
         this.filter = elem;
-        this.form = this.filter.closest('.jsFilters');
-        this.content = document.querySelector('.jsFiltersContent');
+        this.form = filters;
         this.drop = this.filter.querySelector('.filter__drop');
         this.view = this.filter.querySelector('.jsFilter__view');
         this.items = this.drop.querySelectorAll('.jsFilter__val');
@@ -430,9 +438,11 @@ class Filter {
 
 
         this.items.forEach((i) => {
-            i.addEventListener('change', ()=>{
+            i.addEventListener('change', () => {
                 this.renderView();
-                this.sendAjax();
+                if (!media.mobile.matches) {
+                    this.form.sendAjax();
+                }
             });
         });
 
@@ -483,7 +493,24 @@ class Filter {
         this.drop.style.height = "0px";
     }
 
-    sendAjax(){
+}
+
+class Filters {
+    constructor(selector) {
+        this.form = document.querySelector(selector);
+        this.content = document.querySelector('.jsFiltersContent');
+        this.init();
+    }
+
+    init() {
+        this.form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            $('.filters__drop').slideToggle();
+            this.sendAjax();
+        });
+    }
+
+    sendAjax() {
         let data = $(this.form).serialize();
         let content = this.content;
 
@@ -504,7 +531,6 @@ class Filter {
             }
         });
     }
-
 }
 //faq.js
 window.addEventListener("load", function () {

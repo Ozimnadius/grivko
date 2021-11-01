@@ -170,6 +170,9 @@
       display: flex;
       justify-content: center;
     }
+    @include sm-block{
+      width: 100%;
+    }
   }
 
   &__img{
@@ -177,7 +180,13 @@
       max-width: 315px;
     }
     @include sm-block{
+      width: 100%;
       max-width: 100%;
+    }
+    img{
+      @include sm-block{
+        width: 100%;
+      }
     }
   }
 

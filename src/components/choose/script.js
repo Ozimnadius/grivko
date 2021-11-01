@@ -7,6 +7,9 @@ window.addEventListener("load", function () {
             this.inputus = $(".choose-slide__input");
 
             this.inputus.on("change", () => {
+                setTimeout(function (){
+                    chooseSwiper.slideNext();
+                }, 500);
                 this.activateNav();
             });
         }
@@ -22,6 +25,7 @@ window.addEventListener("load", function () {
 
         activateNav() {
             this.nav.removeClass("disabled");
+
         }
 
         deactivateNav() {

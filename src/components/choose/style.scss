@@ -182,6 +182,11 @@
         pointer-events: none;
         opacity: .5;
       }
+
+      .choose__prev{
+        pointer-events: all;
+        opacity: 1;
+      }
     }
   }
 
@@ -266,7 +271,8 @@
     grid-gap: 10px;
   }
   @include sm-block {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 140px);
+    justify-content: center;
   }
 
 }

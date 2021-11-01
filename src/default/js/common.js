@@ -31,7 +31,7 @@ const jsTools = {
 };
 
 const media = {
-    mobile: window.matchMedia("(max-width: 767.99px)"),
+    mobile: window.matchMedia("(max-width: 767.98px)"),
 }
 
 window.addEventListener("load", function () {

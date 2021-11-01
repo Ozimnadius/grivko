@@ -77,9 +77,11 @@
 
     &-mmenu {
       display: none;
+      padding: 20px;
       @include lg-block {
         display: block;
         margin-right: 20px;
+        margin-left: -20px;
       }
     }
 
@@ -90,6 +92,7 @@
       @include lg-block {
         padding: 15px 0;
         justify-content: space-between;
+        padding: 0;
       }
       @include sm-block {
         padding: 10px 0;

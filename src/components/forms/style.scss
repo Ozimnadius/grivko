@@ -4,6 +4,7 @@
   border: 30px solid $bg;
   background: $bg url("/images/content/bordered/bg.png");
   @include sm-block {
+    max-width: 340px;
     border: none;
     background: $bg;
     padding: 20px;
