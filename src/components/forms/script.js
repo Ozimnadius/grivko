@@ -26,8 +26,6 @@ class Template {
     }
 }
 
-
-
 const template = new Template();
 
 class Files {

@@ -385,7 +385,7 @@ window.addEventListener("load", function () {
             slideChange: function () {
                 let $slide = $(this.slides[this.activeIndex]),
                     $checked = $slide.find('.choose-slide__input:checked');
-
+                this.slides[this.activeIndex].scrollIntoView({block: "center", behavior: "smooth"});
                 test.check($slide);
 
 
@@ -788,8 +788,6 @@ class Template {
         return $.fancybox.getInstance().current.$content;
     }
 }
-
-
 
 const template = new Template();
 
