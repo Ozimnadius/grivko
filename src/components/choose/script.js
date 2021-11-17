@@ -72,7 +72,9 @@ window.addEventListener("load", function () {
             slideChange: function () {
                 let $slide = $(this.slides[this.activeIndex]),
                     $checked = $slide.find('.choose-slide__input:checked');
-                this.slides[this.activeIndex].scrollIntoView({block: "center", behavior: "smooth"});
+                if (media.mobile.matches) {
+                    this.slides[this.activeIndex].scrollIntoView({block: "center", behavior: "smooth"});
+                }
                 test.check($slide);
 
 
