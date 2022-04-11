@@ -90,6 +90,11 @@ class Fashion {
     }
 
 }
+window.addEventListener('load',function () {
+    let acc = new OzimnadAccordion({
+        selector: '.footer__acc'
+    });
+});
 //- components/actions
 window.addEventListener('load', function () {
     new Actions('.jsAction');
@@ -271,45 +276,63 @@ class Actions {
     }
 
 }
-//revs.js
-window.addEventListener("load", function (){
-
-    const revsSwiper = new Swiper('.revs__swiper', {
-        slidesPerView: "auto",
-        // loop: true,
-        spaceBetween: 8,
+window.addEventListener('load',function (){
+    const swiper = new Swiper('.banner__swiper', {
+        speed: 500,
+        effect: "creative",
+        loop: true,
+        creativeEffect: {
+            prev: {
+                shadow: true,
+                translate: ["-20%", 0, -1],
+            },
+            next: {
+                translate: ["100%", 0, 0],
+            },
+        },
+        // If we need pagination
+        pagination: {
+            el: '.banner__pag',
+            clickable: true
+        },
         // Navigation arrows
         navigation: {
-            nextEl: '.revs__next',
-            prevEl: '.revs__prev',
+            nextEl: '.banner__next',
+            prevEl: '.banner__prev',
+        },
+        autoplay: {
+            delay: 5000,
         },
     });
+});
+//revs.js
+window.addEventListener("load", function (){
+    const elem = document.querySelector('.revs__swiper');
+    if (elem){
+        const revsSwiper = new Swiper(elem, {
+            slidesPerView: 2,
+            // loop: true,
+            spaceBetween: 5,
+            // Navigation arrows
+            navigation: {
+                nextEl: '.revs__next',
+                prevEl: '.revs__prev',
+            },
+            breakpoints: {
+                // when window width is >= 768px
+                768: {
+                    slidesPerView: "auto",
+                    spaceBetween: 8,
+                },
+                // when window width is >= 1280px
+                1280: {
+                    spaceBetween: 8,
+                }
+            }
+        });
 
 
-    // document.querySelectorAll('.rev').forEach(i=>i.addEventListener('click', sendAjax));
-    //
-    // function sendAjax(){
-    //     $.ajax({
-    //         dataType: "json",
-    //         type: "POST",
-    //         url: '/php/rev.php',
-    //         data: {
-    //             id: this.dataset.id
-    //         },
-    //         success: function (result) {
-    //             if (result.status) {
-    //                 console.log(result);
-    //                 $.fancybox.open(result.html);
-    //             } else {
-    //                 alert('Что-то пошло не так, попробуйте еще раз!!!');
-    //             }
-    //         },
-    //         error: function (result) {
-    //             alert('Что-то пошло не так, попробуйте еще раз!!!');
-    //         }
-    //     });
-    // }
-
+    }
 });
 //choose.js
 window.addEventListener("load", function () {

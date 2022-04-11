@@ -136,12 +136,10 @@
     }
 
     &-item {
+      color: #202020;
       font-size: 20px;
       padding: 10px 0;
       @include tr;
-      @include xlg-block{
-        font-size: 18px;
-      }
       @include lg-block {
         font-size: 16px;
       }

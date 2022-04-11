@@ -20,6 +20,37 @@ footer.footer
                 .footer__left
                     a(href="#").footer__logo
                         +image("/images/content/logo.png")
+                    .footer__acc
+                        div(data-accordion="item").footer__acc-item
+                            div(data-accordion="btn").footer__acc-btn
+                                .footer__acc-name Сервис
+                                .footer__acc-plus +
+                            div(data-accordion="collapse").footer__acc-collapse
+                                div(data-accordion="content").footer__nav
+                                    -
+                                        var list = [
+                                            "Доставка",
+                                            "Возврат товара",
+                                            "Наши магазины",
+                                        ]
+                                    each i in list
+                                        a(href = "#").footer__item= i
+                        div(data-accordion="item").footer__acc-item
+                            div(data-accordion="btn").footer__acc-btn
+                                .footer__acc-name О магазине
+                                .footer__acc-plus +
+                            div(data-accordion="collapse").footer__acc-collapse
+                                div(data-accordion="content").footer__nav
+                                    -
+                                        var list = [
+                                            "Обратная связь",
+                                            "Оплата",
+                                            "Договор оферты",
+                                            "О бренде"
+                                        ]
+                                    each i in list
+                                        a(href = "#").footer__item= i
+
                 .footer__center
                     .footer__copy © Дом Моды "LEONID GRIVKO"
                     .footer__policy

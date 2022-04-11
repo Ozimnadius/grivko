@@ -1,57 +1,21 @@
 .revs {
 
-  &__grid {
-    display: flex;
-    gap: 20px;
-    @include lg-block {
-      flex-wrap: wrap;
-      gap: 30px;
-    }
-    @include sm-block {
-      gap: 15px;
-    }
-  }
-
-  &__left {
-    width: 300px;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    padding-top: 18px;
-    @include lg-block {
-      padding-top: 0;
-      width: 100%;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-    @include sm-block {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 15px;
-    }
-  }
-
-  &__right {
-    width: calc(100% - 320px);
-    position: relative;
-    @include lg-block {
-      width: 100%;
-    }
-  }
-
   &__title {
     font-size: 32px;
     font-weight: 500;
     text-transform: uppercase;
-    margin-bottom: 8px;
+    margin-bottom: 30px;
     @include lg-block {
-      font-size: 28px;
-      margin-bottom: 0;
+      font-size: 32px;
+      margin-bottom: 15px;
     }
     @include sm-block {
       font-size: 20px;
     }
+  }
+
+  &__slider{
+    position: relative;
   }
 
   &__sub {
@@ -100,12 +64,13 @@
     align-items: center;
     pointer-events: none;
 
-    @include xlg-block {
-      left: -20px;
-      right: -20px;
+    @include lg-block{
+      left: -19px;
+      right: -19px;
     }
-    @include sm-block {
-      display: none;
+    @include sm-block{
+      left: -15px;
+      right: -15px;
     }
   }
 
@@ -120,24 +85,37 @@
     align-items: center;
     justify-content: center;
     @include tr;
-    @include xlg-block {
-      width: 40px;
-      height: 40px;
-      padding: 10px;
+    @include lg-block{
+      width: 38px;
+      height: 38px;
+    }
+    @include sm-block{
+      width: 35px;
+      height: 35px;
     }
 
     &:hover {
       transform: scale(1.125);
       box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     }
+
+    &.swiper-button-disabled{
+      opacity: .5;
+      pointer-events: none;
+    }
+
+    svg{
+      display: block;
+      @include lg-block{
+        width: 15px;
+        height: 10px;
+      }
+    }
   }
 
   &__slider {
     @include lg-block {
       position: relative;
-    }
-    @include sm-block{
-      margin-right: -10px;
     }
   }
 
@@ -146,42 +124,12 @@
   }
 
   &__item {
-    width: 380px;
-    @include xlg-block {
-      width: 222px;
-    }
+    width: 345px;
     @include lg-block {
-      width: 214px;
+      width: 180px;
     }
-
-    .rev {
-
-      &__btn {
-        top: 58%;
-
-        svg {
-          @include xlg-block {
-            width: 37px;
-            height: 37px;
-          }
-        }
-      }
-
-      &__wrap {
-
-      }
-
-      &__name {
-        @include xlg-block {
-          font-size: 14px;
-        }
-      }
-
-      &__txt {
-        @include xlg-block {
-          font-size: 12px;
-        }
-      }
+    @include sm-block{
+      width: auto;
     }
   }
 

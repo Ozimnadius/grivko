@@ -1,9 +1,11 @@
 //USER
 // @prepros-append default/js/common.js
 // @prepros-append default/blocks/nav/drop/fashions/script.js
+// @prepros-append default/blocks/footer/script.js
 
 //COMPONENTS
 // @prepros-append components/actions/script.js
+// @prepros-append components/banner/script.js
 // @prepros-append components/revs/script.js
 // @prepros-append components/choose/script.js
 // @prepros-append components/filters/script.js

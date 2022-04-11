@@ -24,12 +24,12 @@ smartgrid('./src/default/css', {
         },
         sm: {
             width: "767.98px",
-            fields: "10px",
+            fields: "15px",
             offset: "10px",
         },
         xs: {
             width: "575.98px",
-            fields: "10px",
+            fields: "15px",
             offset: "10px",
         }
     },

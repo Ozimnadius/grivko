@@ -97,16 +97,47 @@
 
     h2 {
       margin-bottom: 20px;
+      font-weight: 500;
+      position: relative;
+
+      @include xlg-block{
+        margin-bottom: 40px;
+      }
+      @include lg-block{
+        font-size: 32px;
+      }
       @include sm-block{
-        margin-right: 120px;
+        font-size: 20px;
+        padding-right: 125px;
+        margin-bottom: 20px;
+        line-height: lh(20,28);
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        right: -10px;
+        bottom: -10px;
+        width: 135px;
+        height: 137px;
+        background: url("/images/content/index/subscribe/mail.png") 0 0 no-repeat;
+        background-size: cover;
+        display: none;
+        @include sm-block{
+          display: block;
+        }
+
       }
     }
 
     p {
-      margin-bottom: 65px;
+      font-size: 22px;
+      margin-bottom: 55px;
       @include xlg-block {
+        font-size: 16px;
         margin-bottom: 35px;
       }
+
     }
   }
 
@@ -136,8 +167,6 @@
     }
 
   }
-
-
 
 }
 

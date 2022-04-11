@@ -1,11 +1,11 @@
-.rev{
+.rev {
   display: block;
   position: relative;
   width: 100%;
   color: $bg;
   overflow: hidden;
 
-  &:before{
+  &:before {
     content: '';
     display: block;
     position: absolute;
@@ -19,43 +19,45 @@
     @include tr;
   }
 
-  &:hover{
-    &:before{
+  &:hover {
+    &:before {
       height: 72.6%;
       opacity: 1;
-      @include lg-block{
+      @include lg-block {
         opacity: 0;
       }
     }
 
-    .rev{
-      &__img{
-        img{
+    .rev {
+      &__img {
+        img {
           transform: scale(1.05);
-          @include lg-block{
-              transform: none;
+          @include lg-block {
+            transform: none;
           }
         }
       }
 
-      &__btn{
-        svg{
-          fill: $link;
-          @include lg-block{
+      &__btn {
+        svg {
+          path {
+            fill: $link;
+            @include lg-block {
               fill: $bg;
+            }
           }
         }
       }
     }
   }
 
-  &__img{
+  &__img {
     display: block;
-    padding-top: calc(663/432*100%);
+    padding-top: calc(601 / 345 * 100%);
     position: relative;
     overflow: hidden;
 
-    img{
+    img {
       display: block;
       position: absolute;
       top: 0;
@@ -68,65 +70,70 @@
     }
   }
 
-  &__btn{
+  &__wrap {
     position: absolute;
     z-index: 3;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-
-    svg{
-      fill: $bg;
-      @include tr;
-    }
-  }
-
-  &__wrap{
-    position: absolute;
-    z-index: 3;
-    bottom: 60px;
-    left: 60px;
-    right: 60px;
-    @include xlg-block {
-      left: 20px;
-      right: 20px;
-      bottom: 30px;
-    }
-    @include lg-block{
-      left: 30px;
-      right: 30px;
+    bottom: 30px;
+    left: 30px;
+    right: 40px;
+    padding-right: 70px;
+    @include lg-block {
+      left: 13px;
+      right: 13px;
+      bottom: 13px;
+      padding-right: 35px;
     }
     @include sm-block{
-      left: 15px;
-      right: 15px;
-      bottom: 15px;
+      bottom: 20px;
+      padding-right: 0;
     }
   }
 
-  &__name{
+  &__name {
     font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
     display: block;
-    margin-bottom: 15px;
-    @include xlg-block{
-      margin-bottom: 10px;
-      font-size: 16px;
+    @include lg-block {
+      font-size: 14px;
+      margin-bottom: 15px;
     }
     @include sm-block{
-      font-size: 20px;
-      font-weight: 500;
-      text-transform: uppercase;
+      margin-bottom: 10px;
     }
 
   }
 
-  &__txt{
-    font-size: 16px;
+  &__txt {
+    font-size: 18px;
+    font-weight: 500;
     display: block;
-    @include xlg-block{
-      font-size: 14px;
+    @include lg-block {
+      font-size: 12px;
     }
+  }
+
+  &__btn {
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    right: 0;
     @include sm-block{
-      font-size: 16px;
+      display: none;
+    }
+
+    svg {
+      display: block;
+      @include lg-block{
+        width: 31px;
+        height: 31px;
+      }
+
+      path {
+        fill: $bg;
+        @include tr;
+      }
+
     }
   }
 

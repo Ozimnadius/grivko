@@ -6,22 +6,17 @@
     .langs__drop{
       display: block;
     }
-    .langs__btn{
-      color: $link;
-    }
   }
 
   &__btn{
     display: flex;
     align-items: center;
-
-    svg{
-      margin-left: 7px;
-      path {
-        fill: currentColor;
-
-      }
-    }
+    color: #ffffff;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    background-color: $gold;
+    line-height: 1;
   }
 
   &__drop{

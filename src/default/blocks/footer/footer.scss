@@ -3,6 +3,9 @@
   @include lg-block {
     padding-bottom: 40px;
   }
+  @include sm-block{
+    padding-bottom: 25px;
+  }
 
   &__top {
     border-top: 1px solid #E1E1E1;
@@ -13,9 +16,7 @@
       margin-bottom: 40px;
     }
     @include sm-block {
-      border: none;
-      padding-top: 0;
-      margin-bottom: 20px;
+      display: none;
     }
   }
 
@@ -26,22 +27,38 @@
     justify-content: space-between;
 
     @include lg-block {
-      justify-content: flex-start;
+      justify-content: center;
       gap: 10px 45px;
     }
     @include sm-block {
       flex-direction: column;
       align-items: flex-start;
+      padding-bottom: 10px;
+      gap: 0;
     }
   }
 
   &__item {
-    font-size: 20px;
+    font-size: 22px;
     padding: 10px 0;
     @include tr;
+    @include xlg-block {
+      font-size: 20px;
+    }
+    @include sm-block {
+      font-size: 16px;
+      padding: 5px 0;
+    }
 
     &:hover, &:focus, &:active {
       color: $link;
+    }
+  }
+
+  &__bottom {
+    @include sm-block {
+      padding-top: 30px;
+      border-top: 1px solid #E1E1E1;
     }
   }
 
@@ -56,8 +73,8 @@
     }
     @include sm-block {
       grid-template-columns: 100%;
-      grid-template-areas: 'contacts' 'logo' 'policy';
-      grid-gap: 30px;
+      grid-template-areas: 'logo' 'contacts'  'policy';
+      grid-gap: 40px;
       justify-items: flex-start;
     }
   }
@@ -69,11 +86,58 @@
       grid-area: logo;
       margin-right: 0;
     }
+    @include sm-block {
+      width: 100%;
+    }
   }
 
   &__logo {
     width: 124px;
     display: block;
+    @include sm-block {
+      margin-bottom: 30px;
+      width: 107px;
+    }
+  }
+
+  &__acc {
+    display: none;
+    width: 100%;
+
+    @include sm-block {
+      display: block;
+    }
+
+    &-item {
+      border-top: 1px solid #e6e6e6;
+
+      &:last-child {
+        border-bottom: 1px solid #e6e6e6;
+      }
+
+      &.active {
+        .footer__acc-plus {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    &-btn {
+      padding: 6px 0;
+      padding-right: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-name {
+      font-size: 18px;
+    }
+
+    &-plus {
+      font-size: 20px;
+      @include tr;
+    }
   }
 
   &__center {
@@ -85,11 +149,18 @@
     @include lg-block {
       grid-area: policy;
       margin-right: 0;
+      justify-content: center;
+    }
+    @include sm-block{
+        gap: 5px;
     }
   }
 
   &__copy {
     font-size: 20px;
+    @include sm-block{
+      font-size: 16px;
+    }
   }
 
   &__right {
@@ -102,8 +173,11 @@
 
   &__policy {
     font-size: 20px;
-    color: $link;
+    color: $gold;
     text-decoration: underline;
+    @include sm-block{
+      font-size: 16px;
+    }
   }
 
   &__contacts {
@@ -111,9 +185,10 @@
     flex-wrap: wrap;
     align-items: center;
     gap: 15px;
-    @include sm-block{
-        flex-direction: column;
+    @include sm-block {
+      flex-direction: column;
       align-items: flex-start;
+      gap: 10px;
     }
   }
 
@@ -122,13 +197,17 @@
     display: flex;
     gap: 8px;
     @include tr;
+    @include sm-block {
+      font-size: 16px;
+      gap: 15px;
+    }
 
-    &:hover{
+    &:hover {
       color: $link;
     }
 
     svg {
-     flex-shrink: 0;
+      flex-shrink: 0;
       fill: currentColor;
       height: 28px;
     }
