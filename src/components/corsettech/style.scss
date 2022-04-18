@@ -6,28 +6,29 @@
   grid-gap: 60px;
 
   @include xlg-block {
-    padding: 60px;
-    grid-gap: 20px;
+    padding: 50px;
+    grid-gap: 40px;
     grid-template-columns: repeat(2,1fr);
   }
   @include lg-block{
+    grid-gap: 20px;
     padding: 30px;
   }
   @include sm-block{
-    padding: 30px 10px;
-    margin: 0 -10px;
+    padding: 15px;
+    padding-bottom: 25px;
+    margin: 0 -15px;
     grid-template-columns: 1fr;
-    grid-gap: 30px;
+    grid-gap: 20px;
+  }
+
+  &__left{
+    display: flex;
+    flex-direction: column;
   }
 
   &__img {
-    margin-bottom: 70px;
-    @include xlg-block{
-      margin-bottom: 48px;
-    }
-    @include lg-block{
-      margin-bottom: 35px;
-    }
+    margin-bottom: 20px;
 
     img {
       width: 100%;
@@ -36,33 +37,36 @@
   }
 
   &__title {
-    width: 100%;
-    height: 107px;
-    background-color: $gold;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    color: $bg;
+    color: #000000;
     text-transform: uppercase;
-    text-align: center;
-
-    margin-bottom: 35px;
+    margin-top: auto;
+    margin-bottom: 15px;
 
     @include xlg-block{
-      font-size: 20px;
-      height: 87px;
+      font-size: 23px;
     }
     @include lg-block{
-      font-size: 12px;
-      height: 56px;
-      margin-bottom: 25px;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    @include sm-block{
+      font-size: 16px;
+      margin-bottom: 15px;
     }
 
   }
 
   &__txt{
     font-size: 20px;
+    @include xlg-block{
+      font-size: 16px;
+    }
+    @include lg-block{
+      font-size: 14px;
+    }
+    @include sm-block{
+      font-size: 16px;
+      line-height: lh(16,20);
+    }
   }
 }

@@ -4,43 +4,32 @@
 
   &__items{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-gap: 70px;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
     @include xlg-block{
-        grid-gap: 50px;
+        grid-gap: 10px;
     }
   }
 
   &__item{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    @include xlg-block{
-        gap: 15px;
-    }
+    display: block;
+    position: relative;
 
-    &:hover{
-      .nav-drop__item-title{
-        color: $link;
-      }
+    &:before{
+      content: '';
+      display: block;
+      padding-top: 100%;
     }
 
 
-    &-title{
-      color: rgba($txt,.5);
-      @include tr;
-      @include xlg-block{
-        font-size: 14px;
-      }
-    }
-
-    &-name{
-      max-width: 350px;
-      font-size: 16px;
-      @include xlg-block{
-        font-size: 14px;
-        max-width: 100%;
-      }
+    img{
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 

@@ -19,6 +19,7 @@ window.addEventListener("load", function (){
                 },
                 // when window width is >= 1280px
                 1280: {
+                    slidesPerView: "auto",
                     spaceBetween: 8,
                 }
             }

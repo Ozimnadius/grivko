@@ -1,13 +1,10 @@
 .catalog {
-  background-color: #f2f2f2;
-  padding-top: 65px;
   padding-bottom: 40px;
 
-  @include lg-block {
-    padding-top: 50px;
+  @include xlg-block{
+    padding-bottom: 0;
   }
   @include sm-block {
-    padding-top: 30px;
     padding-bottom: 30px;
   }
 
@@ -79,9 +76,9 @@
     display: flex;
     align-items: baseline;
     gap: 30px;
-    margin-bottom: 65px;
+    margin-bottom: 55px;
     @include xlg-block {
-      margin-bottom: 60px;
+      margin-bottom: 30px;
     }
     @include lg-block {
       margin-bottom: 35px;
@@ -102,6 +99,9 @@
     @include lg-block {
       font-size: 20px;
     }
+    @include sm-block{
+      text-align: center;
+    }
   }
 
   &__txt {
@@ -116,7 +116,7 @@
     grid-template-columns: repeat(4, calc(25% - 7.5px));
     grid-gap: 10px;
     @include sm-block {
-      grid-template-columns: 100%;
+      grid-template-columns: repeat(2, calc(50% - 5px));
     }
 
     &--3 {

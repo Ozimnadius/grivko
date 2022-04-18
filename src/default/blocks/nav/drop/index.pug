@@ -5,16 +5,10 @@
             .nav-drop__list
                 include list/index
         .nav-drop__right
-            if drop.cols.right.fashions
-                include fashions/index
-            else
-                .nav-drop__items
-                    each section in drop.cols.right.sections
-                        a(href="/").nav-drop__item
-                            span.nav-drop__item-title= section.title
-                            span.nav-drop__item-img
-                                img(src=section.img alt="lorem")
-                            span.nav-drop__item-name!=section.name
+            .nav-drop__items
+                each img in drop.cols.right
+                    .nav-drop__item
+                        img(src=img alt="lorem")
     else
         .nav-drop__links
             each i in drop.items

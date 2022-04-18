@@ -1,22 +1,41 @@
 .list {
-  padding: 0 100px;
-  padding-top: 80px;
-  display: flex;
-  justify-content: space-between;
-  @include xlg-block{
-    padding: 20px 0 0;
+  padding-top: 0px;
+
+  &__title {
+    font-size: 36px;
+    margin-bottom: 60px;
+    text-align: center;
+    @include xlg-block {
+      margin-bottom: 40px;
+    }
+    @include lg-block {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
   }
-  @include lg-block {
-    gap: 40px;
-  }
-  @include sm-block {
-    gap: 45px;
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 80px;
+    @include xlg-block {
+      padding: 0;
+    }
+    @include lg-block {
+      gap: 40px;
+    }
+    @include sm-block {
+      flex-direction: column;
+      align-items: center;
+      gap: 60px;
+    }
   }
 
   &__item {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+
     @include sm-block {
       flex-shrink: 0;
       width: 220px;
@@ -24,46 +43,43 @@
   }
 
   &__img {
-    padding-left: 65px;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     @include xlg-block {
-      padding-left: 0;
+      margin-bottom: 80px;
     }
     @include lg-block {
       margin-bottom: 40px;
     }
-    @include sm-block{
-      @include sm-block{
-        width: 220px;
-        height: 276px;
-      }
+    @include sm-block {
+      width: 190px;
+      margin-bottom: 25px;
     }
 
-    img{
+    img {
       max-height: 100%;
+      display: block;
     }
   }
 
   &__link {
-    padding: 17px 25px;
-    background-color: #bfa058;
-    color: $bg;
     font-size: 24px;
     font-weight: 500;
     text-transform: uppercase;
     margin-bottom: 15px;
+    text-align: center;
     @include lg-block {
-      font-size: 15px;
-      padding: 10px 15px;
+      font-size: 18px;
+    }
+    @include sm-block{
+      font-size: 16px;
+      margin-bottom: 10px;
     }
   }
 
   &__txt {
     font-size: 20px;
+    text-align: center;
     @include lg-block {
-      font-size: 18px;
-    }
-    @include sm-block{
       font-size: 16px;
     }
   }

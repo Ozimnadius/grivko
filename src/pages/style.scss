@@ -24,20 +24,6 @@
     }
   }
 
-  &__list {
-
-
-    .container{
-
-      @include sm-block{
-        padding-right: 0;
-        overflow-x: auto;
-        max-width: 100%;
-      }
-
-    }
-  }
-
   &__banner {
     margin-bottom: 25px;
     @include lg-block{
@@ -51,8 +37,8 @@
 
   &__breadcrumbs {
     margin-bottom: 30px;
-    @include lg-block{
-      margin-bottom: 20px;
+    @include xlg-block{
+      margin-bottom: 15px;
     }
 
     &--mb20 {

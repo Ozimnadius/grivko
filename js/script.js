@@ -91,9 +91,11 @@ class Fashion {
 
 }
 window.addEventListener('load',function () {
-    let acc = new OzimnadAccordion({
-        selector: '.footer__acc'
-    });
+    if(window.matchMedia("(max-width: 767.98px)").matches) {
+        let acc = new OzimnadAccordion({
+            selector: '.footer__acc'
+        });
+    }
 });
 //- components/actions
 window.addEventListener('load', function () {
@@ -326,6 +328,7 @@ window.addEventListener("load", function (){
                 },
                 // when window width is >= 1280px
                 1280: {
+                    slidesPerView: "auto",
                     spaceBetween: 8,
                 }
             }

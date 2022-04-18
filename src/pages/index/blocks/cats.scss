@@ -124,8 +124,9 @@
       }
 
       &__btn {
-        background: $bg;
-        color: $txt;
+        background-color: $gold;
+        border-color: $gold;
+        color: $bg;
       }
     }
   }

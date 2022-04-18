@@ -2,54 +2,27 @@
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
   background-color: $bg;
   padding: 32px;
-  @include lg-block{
+  @include lg-block {
     margin: 0 -20px;
     padding: 20px;
   }
-  @include sm-block{
+  @include sm-block {
     padding: 0;
-    margin: 0 -10px;
+    margin: 0 -15px;
   }
 
-
   &__wrap {
-    padding: 80px;
-    padding-right: 145px;
+    padding: 80px 60px 60px 460px;
     background: url("/images/content/bordered/bg.png") 0 0;
     position: relative;
     @include xlg-block {
-      padding: 65px 170px 65px 50px;
+      padding: 75px 60px 65px 55px;
     }
-    @include lg-block{
-      padding: 55px 115px 40px 35px;
+    @include lg-block {
+      padding: 50px 30px 45px 35px;
     }
-    @include sm-block{
-      padding: 30px 10px;
-    }
-
-    &:before {
-      content: 'Бесплатно';
-      font-size: 20px;
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 65px;
-      height: 100%;
-      background-color: $gold;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: $bg;
-      font-weight: 700;
-      writing-mode: vertical-rl;
-      transform: rotate(180deg);
-      @include lg-block{
-        font-size: 13px;
-        width: 44px;
-      }
-      @include sm-block{
-        display: none;
-      }
+    @include sm-block {
+      padding: 35px 15px 50px 15px;
     }
 
     &:after {
@@ -60,103 +33,93 @@
       background: url("/images/content/women/fitting/img.png") 0 0 no-repeat;
       background-size: cover;
       position: absolute;
-      right: 135px;
-      top: -25px;
+      left: -85px;
+      top: 65px;
       @include xlg-block {
-        width: 300px;
+        width: 295px;
         height: 131px;
-        top: 50px;
+        left: initial;
         right: 110px;
+        top: 50px;
       }
-      @include lg-block{
+      @include lg-block {
         width: 202px;
-        height: 90px;
-        top: 30px;
-        right: 80px;
+        height: 91px;
+        top: 35px;
+        right: 75px;
       }
-      @include sm-block{
+      @include sm-block {
         width: 184px;
         height: 82px;
-        top: 10px;
-        right: -20px;
+        top: 8px;
+        right: 15px;
       }
     }
 
   }
 
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: 65px;
+    margin-bottom: 45px;
+    @include xlg-block {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+    @include lg-block {
+      margin-bottom: 15px;
+    }
+    @include sm-block {
+      gap: 25px;
+      margin-bottom: 30px;
+    }
+  }
+
   &__title {
-    margin-bottom: 15px;
-    @include xlg-block{
-      margin-right: 170px;
-    }
-    @include lg-block{
+    @include lg-block {
       font-size: 21px;
-      margin-bottom: 10px;
     }
-    @include sm-block{
-      margin-right: 110px;
+    @include sm-block {
+      max-width: 204px;
+      font-size: 20px;
     }
   }
 
   &__txt {
-    margin-bottom: 30px;
-    @include xlg-block{
-      margin-right: 170px;
-    }
-    @include lg-block{
+    font-size: 20px;
+    @include lg-block {
       font-size: 13px;
-      margin-bottom: 20px;
     }
-    @include sm-block{
-      margin-right: 0;
+    @include sm-block {
       font-size: 16px;
-      margin-bottom: 30px;
     }
   }
 
   &__fields {
     display: grid;
-    grid-template-columns: 1fr 1fr 1.5fr;
+    grid-template-columns: 406fr 432fr 319fr;
     grid-gap: 10px;
-
     @include xlg-block {
-      grid-template-columns: repeat(24,1fr);
       grid-gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
     }
-    @include sm-block{
-        grid-template-columns: 1fr;
+    @include lg-block {
+      grid-gap: 15px 20px;
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+      grid-gap: 10px;
     }
   }
 
-  &__field{
-    @include xlg-block{
-      grid-column: span 12;
-    }
-    @include sm-block{
-      grid-column: span 1;
-    }
-    &:nth-child(3){
-      @include xlg-block{
-        grid-column: span 14;
-      }
-      @include sm-block{
-        grid-column: span 1;
-      }
-    }
-
-    &:nth-child(4){
-      @include xlg-block{
-        grid-column: span 10;
-      }
-      @include sm-block{
-        grid-column: span 1;
-      }
-    }
-
-    .input{
-      @include lg-block{
-        height: 51px;
-        font-size: 13px;
+  &__field {
+    .input {
+      @include lg-block {
+        font-size: 10px;
+        height: 53px;
       }
       @include sm-block{
         font-size: 16px;
@@ -165,19 +128,26 @@
   }
 
   &__submit {
-    width: 319px;
+    width: 100%;
+    max-width: 319px;
     height: 74px;
-    @include xlg-block {
-      margin: 0;
-      height: 74px;
-      width: 100%;
-    }
-    @include lg-block{
-      height: 51px;
-      font-size: 13px;
+    background-color: $gold;
+    color: $bg;
+    font-size: 24px;
+    border-color: $gold;
+    @include lg-block {
+      max-width: 226px;
+      height: 53px;
+      font-size: 16px;
     }
     @include sm-block{
-      font-size: 20px;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+
+    &:hover {
+      background-color: lighten($gold, 10%);
+      color: $bg;
     }
   }
 }

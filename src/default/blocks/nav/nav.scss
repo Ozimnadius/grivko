@@ -6,15 +6,18 @@
     position: relative;
 
     &:hover {
-      .nav__link{
-        color: $link;
+      .nav__link {
+        &:before {
+          display: block;
+        }
       }
+
       .nav__drop {
         display: block;
       }
     }
 
-    &.full{
+    &.full {
       position: static;
     }
   }
@@ -22,7 +25,29 @@
   &__link {
     padding: 25px 0;
     display: block;
+    font-size: 22px;
+    position: relative;
     @include tr;
+    @include xlg-block {
+      font-size: 16px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 18px;
+      left: 0;
+      width: 88%;
+      height: 1px;
+      background: currentColor;
+      display: none;
+    }
+
+    &.active{
+      &:before{
+        display: block;
+      }
+    }
   }
 
   &__drop {
@@ -32,7 +57,7 @@
     left: -30px;
     display: none;
 
-    &:before{
+    &:before {
       content: '';
       display: block;
       height: 15px;
@@ -46,13 +71,14 @@
       width: 100%;
       left: 0;
 
-      .nav-drop{
+      .nav-drop {
         width: 100%;
         padding: 60px 100px 100px 100px;
         display: grid;
         grid-template-columns: 440fr 1120fr;
         grid-gap: 20px;
-        @include xlg-block{
+        align-items: flex-end;
+        @include xlg-block {
           padding: 50px 40px;
           grid-template-columns: calc(27% - 10px) calc(73% - 10px);
         }

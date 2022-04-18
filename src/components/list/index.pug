@@ -1,7 +1,10 @@
 .list
-    each i in props.list
-        .list__item
-            .list__img
-                +image(i.img)
-            span.list__link= i.link.name
-            .list__txt!=i.txt
+    if props.title
+        h2.title.list__title= props.title
+    .list__items
+        each i in props.list
+            .list__item
+                .list__img
+                    +image(i.img)
+                span.list__link= i.link.name
+                .list__txt!=i.txt

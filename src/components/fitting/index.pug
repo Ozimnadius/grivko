@@ -10,9 +10,7 @@
                         span.fitting__txt= i.txt
                         span.fitting__btn.btn
                             span Перейти
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25.441" height="8.335" viewBox="0 0 25.441 8.335">
-                            <path id="Контур_154"d="M25.271,3.758,21.683.17a.579.579,0,0,0-.819.819l2.6,2.6H.579a.579.579,0,0,0,0,1.159H23.463l-2.6,2.6a.579.579,0,1,0,.819.819l3.588-3.588A.579.579,0,0,0,25.271,3.758Z" />
-                            </svg>
+
     .fitting__right
         .fitting__content.bordered
             form(action="/php/call.php" method="POST" data-action="validate" data-reset="true" data-success-form="formThanks").fitting__form.fitting-form.jsAction
@@ -30,10 +28,6 @@
                     .fitting-form__field
                         input(type="tel" name="tel" placeholder="Телефон" data-rule-required="true" data-msg-required="Введите телефон" data-msg-tel="Введите ваш телефон").input
                     .fitting-form__field
-                        textarea(name="message" placeholder="Напишите удобный день и время").input.input--area
-                    .fitting-form__field
-                        button(type='submit').fitting-form__submit.btn2.btn2--black
+                        button(type='submit').fitting-form__submit
                             span Отправить заявку
-                            <svg width="56" height="9" viewBox="0 0 56 9" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M55.271 3.75811L51.683 0.170109C51.5744 0.0615026 51.4271 0.000488277 51.2735 0.000488281C51.1199 0.000488286 50.9726 0.0615026 50.864 0.170109C50.7554 0.278715 50.6944 0.426016 50.6944 0.579609C50.6944 0.733201 50.7554 0.880503 50.864 0.989109L53.464 3.58911H0.579012C0.425319 3.58911 0.277921 3.65016 0.169243 3.75884C0.060566 3.86752 -0.000488281 4.01492 -0.000488281 4.16861C-0.000488281 4.3223 0.060566 4.4697 0.169243 4.57838C0.277921 4.68705 0.425319 4.74811 0.579012 4.74811H53.463L50.863 7.34811C50.7544 7.45671 50.6934 7.60402 50.6934 7.75761C50.6934 7.9112 50.7544 8.0585 50.863 8.16711C50.9716 8.27571 51.1189 8.33673 51.2725 8.33673C51.4261 8.33673 51.5734 8.27571 51.682 8.16711L55.27 4.57911C55.3242 4.52537 55.3672 4.46146 55.3965 4.39105C55.4259 4.32063 55.4411 4.24511 55.4412 4.16882C55.4413 4.09252 55.4263 4.01696 55.3971 3.94648C55.3679 3.876 55.325 3.81198 55.271 3.75811V3.75811Z"/>
-                            </svg>
+

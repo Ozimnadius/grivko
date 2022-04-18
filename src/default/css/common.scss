@@ -139,10 +139,16 @@
   font-size: 32px;
   font-weight: 500;
   text-transform: uppercase;
+  @include xlg-block{
+    font-size: 32px;
+  }
   @include sm-block{
     font-size: 20px;
   }
 
+  &--center{
+    text-align: center;
+  }
 
   &--line {
     padding-top: 30px;

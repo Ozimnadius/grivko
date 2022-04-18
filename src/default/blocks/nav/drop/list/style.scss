@@ -2,9 +2,9 @@
 
   &__title {
     color: rgba($txt, .5);
-    font-size: 20px;
+    font-size: 26px;
     font-weight: 400;
-    margin-bottom: 45px;
+    margin-bottom: 40px;
     @include xlg-block{
       font-size: 18px;
       margin-bottom: 25px;
@@ -20,18 +20,39 @@
     }
   }
 
+  &__col{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
   &__item {
-    padding: 15px 0;
+    padding: 7px 0;
     display: block;
-    font-weight: 400;
+    font-size: 20px;
+    position: relative;
     @include tr;
     @include xlg-block{
       font-size: 18px;
       padding: 12px 0;
     }
 
+    &:before{
+      content: '';
+      display: none;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: currentColor;
+    }
+
     &:hover{
-      color: $link;
+      &:before{
+        display: block;
+      }
     }
   }
 }

@@ -61,30 +61,48 @@
     color: $bg;
 
     svg{
-      fill: currentColor;
-      @include tr;
-      @include lg-block{
+      @include xlg-block{
         width: 50px;
         height: 50px;
       }
+      @include lg-block{
+        width: 35px;
+        height: 35px;
+      }
+      @include sm-block{
+        width: 50px;
+        height: 50px;
+      }
+
+      path{
+        fill: currentColor;
+        @include tr;
+
+      }
+
     }
   }
 
   &__txt{
     position: absolute;
     z-index: 2;
-    bottom: 60px;
-    left: 70px;
+    bottom: 50px;
+    left: 60px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1;
     @include xlg-block{
-      bottom: 40px;
-      left: 40px;
+      font-size: 15px;
+      bottom: 30px;
     }
     @include lg-block{
-      bottom: 30px;
-      left: 30px;
+      font-size: 9px;
+      bottom: 20px;
+      left: 40px;
     }
     @include sm-block{
-      left: 30px;
+      font-size: 14px;
+      left: 25px;
       bottom: 25px;
     }
   }

@@ -4,20 +4,6 @@
   &--small {
     .banner {
 
-      &__wrap {
-        @include xlg-block {
-          justify-content: flex-end;
-          padding-bottom: 65px;
-        }
-        @include lg-block {
-          padding-bottom: 35px;
-        }
-        @include sm-block {
-          bottom: 15px;
-          padding-bottom: 0;
-        }
-      }
-
       &__sub {
         @include xlg-block {
           margin-bottom: 20px;
@@ -45,6 +31,7 @@
       }
 
       &__big {
+        font-size: 28px;
         @include xlg-block {
           font-size: 20px;
         }
@@ -57,9 +44,9 @@
       }
 
       &__img {
-        padding-top: calc(588 / 1760 * 100%);
+        padding-top: calc(726 / 1920 * 100%);
         @include xlg-block {
-          padding-top: calc(840 / 1760 * 100%);
+          padding-top: calc(535 / 1280 * 100%);
         }
         @include sm-block {
           padding-top: 0;
@@ -104,7 +91,7 @@
 
     @include sm-block {
       padding-top: 0;
-      height: calc(100vh - 58px);
+      height: calc(100vh - 60px);
     }
 
     &:before {
@@ -243,6 +230,16 @@
     &.swiper-button-disabled {
       opacity: .5;
       pointer-events: none;
+    }
+
+
+
+    &:hover{
+      svg{
+        path{
+          fill: $gold;
+        }
+      }
     }
   }
 
