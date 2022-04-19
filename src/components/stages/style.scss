@@ -3,10 +3,12 @@
   --stage-padding: 175px;
   --stage-padding--date: 340px;
   --stage-width: 369px;
+  --stage-width-tech: 395px;
   @include xlg-block {
     --stage-padding: 105px;
     --stage-padding--date: 190px;
     --stage-width: 317px;
+    --stage-width-tech: 330px;
     --stage-pos: 80px;
   }
   @include lg-block {
@@ -20,11 +22,19 @@
 }
 
 .stages {
-  display: grid;
-  grid-gap: 80px;
-  counter-reset: li;
-  @include sm-block {
-    grid-gap: 40px;
+
+  &__title {
+    margin-bottom: 80px;
+  }
+
+  &__list {
+    display: grid;
+    grid-gap: 80px;
+    counter-reset: li;
+
+    @include sm-block {
+      grid-gap: 40px;
+    }
   }
 
   &__item {
@@ -39,6 +49,29 @@
 
           &:after {
             right: var(--stage-pos);
+          }
+        }
+
+        &.tech {
+          .stage {
+
+            &__wrap {
+              grid-template-columns:var(--stage-width-tech) 1fr;
+              @include lg-block {
+                grid-template-columns: 100%;
+              }
+            }
+
+            &__right {
+              justify-content: flex-end;
+              padding-right: 0;
+              padding-left: 30px;
+              @include lg-block {
+                padding: 0;
+                justify-content: center;
+              }
+            }
+
           }
         }
 
@@ -82,12 +115,65 @@
 .stage {
   padding-left: var(--stage-padding);
   position: relative;
-  @include xlg-block {
-
-  }
   @include sm-block {
     display: grid;
     grid-gap: 20px;
+  }
+
+  &.tech {
+
+    .stage {
+
+      &__wrap {
+        grid-template-columns: 1fr var(--stage-width-tech);
+        @include lg-block {
+          grid-template-columns: 100%;
+        }
+      }
+
+      &__title {
+        @include xlg-block {
+          font-size: 32px !important;
+        }
+        @include sm-block{
+          font-size: 20px!important;
+        }
+      }
+
+      &__sub {
+        @include xlg-block {
+          font-size: 20px;
+        }
+        @include sm-block{
+          font-size: 16px;
+        }
+      }
+
+      &__content {
+        p {
+          @include xlg-block {
+            font-size: 20px;
+          }
+          @include sm-block{
+            font-size: 16px;
+          }
+        }
+      }
+
+      &__right {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-right: 30px;
+        display: flex;
+        justify-content: flex-start;
+        @include lg-block {
+          padding: 0;
+          justify-content: center;
+        }
+      }
+
+    }
+
   }
 
   &.date {
@@ -190,7 +276,9 @@
   }
 
   &__title {
-    margin-bottom: 15px;
+    font-weight: 500 !important;
+    margin-bottom: 15px !important;
+
     @include xlg-block {
       font-size: 18px !important;
     }
@@ -218,6 +306,4 @@
       }
     }
   }
-
-
 }
