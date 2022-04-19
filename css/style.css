@@ -75,6 +75,20 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Futura PT";
+  src: local("Futura PT Extra Bold"), local("FuturaPT-ExtraBold"), url("../fonts/FuturaPT-ExtraBold.woff2") format("woff2"), url("../fonts/FuturaPT-ExtraBold.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Futura PT";
+  src: local("Futura PT Bold"), local("FuturaPT-Bold"), url("../fonts/FuturaPT-Bold.woff2") format("woff2"), url("../fonts/FuturaPT-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
 input::-ms-clear {
   display: none;
 }
@@ -3670,35 +3684,32 @@ input, textarea {
   display: block;
 }
 
-.fabrics-top__breadcrumbs {
-  position: relative;
-  padding-top: 20px;
-  margin-bottom: 20px;
+.fabrics-top__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 100px;
 }
-@media screen and (max-width: 767.98px) {
-  .fabrics-top__breadcrumbs {
-    margin-bottom: 10px;
+@media screen and (max-width: 1279.98px) {
+  .fabrics-top__grid {
+    gap: 30px;
   }
 }
-.fabrics-top__breadcrumbs:before {
-  content: "";
-  display: block;
-  width: 64px;
-  height: 8px;
-  background-color: #bfa058;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 @media screen and (max-width: 767.98px) {
-  .fabrics-top__breadcrumbs:before {
-    height: 4px;
+  .fabrics-top__grid {
+    grid-template-columns: 100%;
   }
 }
 .fabrics-top__title {
   margin-bottom: 30px;
 }
 @media screen and (max-width: 1279.98px) {
+  .fabrics-top__title {
+    font-size: 20px;
+    margin-bottom: 35px;
+  }
+}
+@media screen and (max-width: 767.98px) {
   .fabrics-top__title {
     margin-bottom: 20px;
   }
@@ -9375,7 +9386,7 @@ input, textarea {
   writing-mode: initial;
   transform: none;
   font-size: 112px;
-  font-weight: 900;
+  font-weight: 700;
 }
 @media screen and (max-width: 1919.98px) {
   .stage.date:before {
@@ -9405,6 +9416,11 @@ input, textarea {
 @media screen and (max-width: 1279.98px) {
   .stage.date:after {
     top: 64px;
+  }
+}
+@media screen and (max-width: 1919.98px) {
+  .stage.date .stage__title {
+    font-size: 22px !important;
   }
 }
 .stage:before {

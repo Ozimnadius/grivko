@@ -1,54 +1,47 @@
 .fabrics-top {
 
-  &__breadcrumbs {
-    position: relative;
-    padding-top: 20px;
-    margin-bottom: 20px;
-    @include sm-block{
-      margin-bottom: 10px;
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 100px;
+    @include lg-block {
+      gap: 30px;
     }
-
-
-    &:before {
-      content: '';
-      display: block;
-      width: 64px;
-      height: 8px;
-      background-color: $gold;
-      position: absolute;
-      top: 0;
-      left: 0;
-      @include sm-block{
-        height: 4px;
-      }
+    @include sm-block {
+      grid-template-columns: 100%;
     }
   }
 
   &__title {
     margin-bottom: 30px;
-    @include lg-block{
+    @include lg-block {
+      font-size: 20px;
+      margin-bottom: 35px;
+    }
+    @include sm-block{
       margin-bottom: 20px;
     }
   }
 
-  &__corsettech{
+  &__corsettech {
     margin: 55px 0;
-    @include lg-block{
+    @include lg-block {
       margin: 30px 0;
     }
-    @include sm-block{
+    @include sm-block {
       margin: 15px 0;
     }
   }
 
-  &__content{
-    p{
+  &__content {
+    p {
       font-size: 22px;
-      line-height: lh(22,26);
-      @include lg-block{
+      line-height: lh(22, 26);
+      @include lg-block {
         font-size: 18px;
       }
-      @include sm-block{
+      @include sm-block {
         font-size: 16px;
 
       }

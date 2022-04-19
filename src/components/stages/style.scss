@@ -184,7 +184,7 @@
       writing-mode: initial;
       transform: none;
       font-size: 112px;
-      font-weight: 900;
+      font-weight: 700;
       @include xlg-block {
         font-size: 70px;
       }
@@ -205,6 +205,14 @@
       }
       @include lg-block {
         top: 64px;
+      }
+    }
+
+    .stage{
+      &__title{
+        @include xlg-block{
+          font-size: 22px!important;
+        }
       }
     }
   }
