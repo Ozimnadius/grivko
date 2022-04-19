@@ -13,9 +13,11 @@
     "@fancyapps/fancybox": "^3.5.7",
     "inputmask": "^5.0.7",
     "jquery": "^3.6.0",
+    "jquery-form-styler": "^2.0.2",
     "jquery-validation": "^1.19.3",
     "normalize.css": "^8.0.1",
-    "ozimnad-accordion": "^1.0.7",
+    "ozimnad-accordion": "^1.0.8",
+    "ozimnad-tabs": "^1.2.17",
     "smart-grid": "^2.1.2",
     "swiper": "^7.0.5"
   }

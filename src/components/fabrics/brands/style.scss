@@ -1,0 +1,183 @@
+.fabrics-brands {
+  @include sm-block{
+    margin: 0 -15px;
+  }
+
+  &__acco {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    position: relative;
+
+    @include xlg-block {
+      gap: 10px;
+    }
+    @include lg-block {
+      grid-template-columns: repeat(2, 1fr);
+      align-content: flex-start;
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+      gap: 5px;
+    }
+  }
+
+  &__item {
+    &.active {
+      .fabrics-brands__btn{
+        background-color: $gold;
+        margin-bottom: 15px;
+
+        svg {
+          path {
+            fill: $bg;
+          }
+        }
+      }
+
+      .fabrics-brands__plus {
+        background-color: $bg;
+
+        &:before, &:after {
+          background-color: $gold;
+        }
+
+        &:before {
+          transform: translate(-50%, -50%) rotate(-90deg);
+        }
+      }
+    }
+  }
+
+  &__btn {
+    background-color: #e2e2e2;
+    position: relative;
+    aspect-ratio: 411/156;
+    cursor: pointer;
+    @include tr;
+    @include sm-block {
+      aspect-ratio: 353/119;
+      background-color: #f9f9f9;
+      margin: 0 15px;
+    }
+
+    &.active {
+      background-color: $gold;
+
+      svg {
+        path {
+          fill: $bg;
+        }
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include xlg-block {
+      left: 40px;
+      right: 40px;
+      top: 10px;
+      bottom: 10px;
+    }
+    @include sm-block {
+      left: 90px;
+      right: 90px;
+      top: 20px;
+      bottom: 20px;
+    }
+
+    img {
+      display: block;
+      max-height: 100%;
+    }
+
+    svg {
+      display: block;
+      max-height: 100%;
+
+      path {
+        fill: #66676b;
+      }
+    }
+  }
+
+  &__plus {
+    width: 32px;
+    height: 32px;
+    background-color: $gold;
+    border-radius: 50%;
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+    @include tr;
+
+    @include sm-block {
+      display: block;
+    }
+
+    &:before, &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $bg;
+      @include tr;
+    }
+
+    &:before {
+      width: 2px;
+      height: 16px;
+    }
+
+    &:after {
+      width: 16px;
+      height: 2px;
+    }
+  }
+
+  &__collapse{
+
+  }
+
+  &__tab {
+    position: absolute;
+    z-index: 0;
+    top: 155px;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    pointer-events: none;
+    padding-top: 60px;
+
+    @include lg-block {
+      padding-top: 47px;
+      top: 283px;
+    }
+    @include sm-block {
+      position: static !important;
+      opacity: 1 !important;
+      pointer-events: all !important;
+      padding: 15px 15px 25px;
+      background-color: #f0f0f0;
+    }
+
+    &.active {
+      z-index: 1;
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}

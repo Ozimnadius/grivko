@@ -3594,73 +3594,39 @@ input, textarea {
 }
 
 .fabrics {
-  padding-top: 60px;
+  padding-top: 40px;
 }
 @media screen and (max-width: 1919.98px) {
   .fabrics {
-    padding-top: 0;
+    padding-top: 35px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .fabrics {
+    padding-top: 20px;
   }
 }
 .fabrics__top {
   margin-bottom: 80px;
 }
-.fabrics__brands {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
-  margin-bottom: 40px;
-}
 @media screen and (max-width: 1279.98px) {
-  .fabrics__brands {
-    grid-template-columns: repeat(2, 1fr);
+  .fabrics__top {
+    margin-bottom: 60px;
   }
-}
-@media screen and (max-width: 767.98px) {
-  .fabrics__brands {
-    grid-template-columns: 100%;
-    grid-gap: 5px;
-  }
-}
-.fabrics__brand {
-  background-color: #f9f9f9;
-  position: relative;
-}
-.fabrics__brand:before {
-  content: "";
-  display: block;
-  padding-top: calc(164 / 432 * 100%);
-}
-.fabrics__brand:first-child {
-  background-color: #bfa058;
-}
-.fabrics__brand-img {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 @media screen and (max-width: 1919.98px) {
-  .fabrics__brand-img {
-    left: 20px;
-    right: 20px;
-    top: 10px;
-    bottom: 10px;
+  .fabrics__tabs {
+    margin: 0 -45px;
   }
 }
-.fabrics__brand-img img {
-  display: block;
-  max-height: 100%;
-}
-.fabrics__desc {
-  margin-bottom: 65px;
+@media screen and (max-width: 1279.98px) {
+  .fabrics__tabs {
+    margin: 0 -20px;
+  }
 }
 @media screen and (max-width: 767.98px) {
-  .fabrics__desc {
-    margin-bottom: 30px;
+  .fabrics__tabs {
+    margin: 0;
   }
 }
 .fabrics__list {
@@ -3668,7 +3634,7 @@ input, textarea {
   grid-template-columns: repeat(10, 1fr);
   grid-gap: 10px;
 }
-@media screen and (max-width: 1279.98px) {
+@media screen and (max-width: 1919.98px) {
   .fabrics__list {
     grid-gap: 5px;
   }
@@ -3701,63 +3667,462 @@ input, textarea {
   display: block;
 }
 
-.fabrics-top {
-  display: grid;
-  grid-template-columns: 12fr 12fr;
-  grid-gap: 100px;
+.fabrics-top__breadcrumbs {
+  position: relative;
+  padding-top: 20px;
+  margin-bottom: 20px;
 }
-@media screen and (max-width: 1919.98px) {
-  .fabrics-top {
-    grid-gap: 20px;
+@media screen and (max-width: 767.98px) {
+  .fabrics-top__breadcrumbs {
+    margin-bottom: 10px;
   }
 }
-@media screen and (max-width: 1279.98px) {
-  .fabrics-top {
-    grid-template-columns: 100%;
-    grid-gap: 30px;
-  }
+.fabrics-top__breadcrumbs:before {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 8px;
+  background-color: #bfa058;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
-.fabrics-top--center {
-  align-items: center;
+@media screen and (max-width: 767.98px) {
+  .fabrics-top__breadcrumbs:before {
+    height: 4px;
+  }
 }
 .fabrics-top__title {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 @media screen and (max-width: 1279.98px) {
   .fabrics-top__title {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 }
-.fabrics-top__breadcrumbs {
-  margin-bottom: 20px;
+.fabrics-top__corsettech {
+  margin: 55px 0;
 }
 @media screen and (max-width: 1279.98px) {
-  .fabrics-top__breadcrumbs {
-    margin-bottom: 30px;
+  .fabrics-top__corsettech {
+    margin: 30px 0;
   }
+}
+@media screen and (max-width: 767.98px) {
+  .fabrics-top__corsettech {
+    margin: 15px 0;
+  }
+}
+.fabrics-top__content p {
+  font-size: 22px;
+  line-height: 1.1818181818;
 }
 @media screen and (max-width: 1279.98px) {
   .fabrics-top__content p {
     font-size: 18px;
   }
 }
+@media screen and (max-width: 767.98px) {
+  .fabrics-top__content p {
+    font-size: 16px;
+  }
+}
+
+.fabrics-tabs__btns {
+  color: #000000;
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+}
 @media screen and (max-width: 1279.98px) {
-  .fabrics-top__right {
-    display: flex;
-    justify-content: center;
+  .fabrics-tabs__btns {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .fabrics-tabs__btns {
+    display: none;
+  }
+}
+.fabrics-tabs__select {
+  display: none;
+}
+@media screen and (max-width: 767.98px) {
+  .fabrics-tabs__select {
+    display: block;
+    margin-bottom: 30px;
+  }
+}
+.fabrics-tabs__select .jq-selectbox__select {
+  height: 75px;
+  padding: 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #bababa;
+  border-radius: 0;
+  box-shadow: none;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 500;
+  text-shadow: none;
+  color: #000000;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fabrics-tabs__select .jq-selectbox__select-text {
+  text-align: center;
+}
+.fabrics-tabs__select .jq-selectbox__trigger {
+  width: 30px;
+  border: none;
+}
+.fabrics-tabs__select .jq-selectbox__trigger-arrow {
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 5px solid #434343;
+  transition: 0.3s;
+}
+.fabrics-tabs__select .jq-selectbox__dropdown {
+  border: 1px solid #bababa;
+  border-radius: 0;
+  box-shadow: none;
+}
+.fabrics-tabs__select .jq-selectbox__dropdown li {
+  font-size: 20px;
+  font-weight: 500;
+  text-shadow: none;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+}
+.fabrics-tabs__select .jq-selectbox__dropdown li:hover {
+  background-color: #bfa058;
+  color: #ffffff;
+}
+.fabrics-tabs__select .jq-selectbox__dropdown li.selected {
+  background-color: #f9f9f9;
+  color: #000000;
+}
+.fabrics-tabs__select.focused .jq-selectbox__select {
+  border: none;
+  border-bottom: 1px solid #bababa;
+}
+.fabrics-tabs__select.opened .jq-selectbox__trigger-arrow {
+  transform: translateY(-50%) rotate(-180deg);
+}
+.fabrics-tabs__btn {
+  padding: 35px 85px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 1919.98px) {
+  .fabrics-tabs__btn {
+    width: calc(100% / 3);
+    padding: 30px 0;
+    text-align: center;
+  }
+}
+.fabrics-tabs__btn.active {
+  background-color: #f0f0f0;
+}
+.fabrics-tabs__tab {
+  background-color: #f0f0f0;
+  padding: 50px 40px;
+}
+@media screen and (max-width: 1919.98px) {
+  .fabrics-tabs__tab {
+    padding: 40px;
   }
 }
 @media screen and (max-width: 1279.98px) {
-  .fabrics-top__right .video {
-    width: 100%;
-    max-width: 548px;
+  .fabrics-tabs__tab {
+    padding: 40px 20px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .fabrics-tabs__tab {
+    padding: 0;
+    background: none;
+  }
+}
+.fabrics-tabs__grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 110px;
+  margin-bottom: 155px;
+}
+@media screen and (max-width: 1919.98px) {
+  .fabrics-tabs__grid {
+    gap: 60px;
+    margin-bottom: 70px;
   }
 }
 @media screen and (max-width: 1279.98px) {
-  .fabrics-top__right .video__txt {
+  .fabrics-tabs__grid {
+    grid-template-columns: 100%;
+    gap: 60px;
+    justify-items: center;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .fabrics-tabs__grid {
+    gap: 35px;
+    margin-bottom: 50px;
+  }
+}
+.fabrics-tabs__imgs {
+  display: grid;
+  grid-template-columns: repeat(2, 280px);
+  gap: 30px;
+}
+@media screen and (max-width: 1919.98px) {
+  .fabrics-tabs__imgs {
+    grid-template-columns: repeat(2, 245px);
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .fabrics-tabs__imgs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .fabrics-tabs__content {
+    padding: 0 35px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .fabrics-tabs__content {
+    padding: 0;
+  }
+}
+.fabrics-tabs__content h2 {
+  font-size: 52px;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 1919.98px) {
+  .fabrics-tabs__content h2 {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .fabrics-tabs__content h2 {
+    font-size: 36px;
+  }
+}
+.fabrics-tabs__content p {
+  font-size: 26px;
+  line-height: 1.1538461538;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 1919.98px) {
+  .fabrics-tabs__content p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .fabrics-tabs__content p {
+    font-size: 16px;
+  }
+}
+.fabrics-tabs__list-top {
+  display: flex;
+  align-items: baseline;
+  gap: 60px;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 1919.98px) {
+  .fabrics-tabs__list-top {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .fabrics-tabs__list-top {
+    display: none;
+  }
+}
+.fabrics-tabs__list-title {
+  text-transform: uppercase;
+}
+.fabrics-tabs__list-txt {
+  color: #cbcbcb;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 767.98px) {
+  .fabrics-brands {
+    margin: 0 -15px;
+  }
+}
+.fabrics-brands__acco {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  position: relative;
+}
+@media screen and (max-width: 1919.98px) {
+  .fabrics-brands__acco {
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .fabrics-brands__acco {
+    grid-template-columns: repeat(2, 1fr);
+    align-content: flex-start;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .fabrics-brands__acco {
+    grid-template-columns: 100%;
+    gap: 5px;
+  }
+}
+.fabrics-brands__item.active .fabrics-brands__btn {
+  background-color: #bfa058;
+  margin-bottom: 15px;
+}
+.fabrics-brands__item.active .fabrics-brands__btn svg path {
+  fill: #ffffff;
+}
+.fabrics-brands__item.active .fabrics-brands__plus {
+  background-color: #ffffff;
+}
+.fabrics-brands__item.active .fabrics-brands__plus:before, .fabrics-brands__item.active .fabrics-brands__plus:after {
+  background-color: #bfa058;
+}
+.fabrics-brands__item.active .fabrics-brands__plus:before {
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+.fabrics-brands__btn {
+  background-color: #e2e2e2;
+  position: relative;
+  aspect-ratio: 411/156;
+  cursor: pointer;
+  transition: 0.3s;
+}
+@media screen and (max-width: 767.98px) {
+  .fabrics-brands__btn {
+    aspect-ratio: 353/119;
+    background-color: #f9f9f9;
+    margin: 0 15px;
+  }
+}
+.fabrics-brands__btn.active {
+  background-color: #bfa058;
+}
+.fabrics-brands__btn.active svg path {
+  fill: #ffffff;
+}
+.fabrics-brands__img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 1919.98px) {
+  .fabrics-brands__img {
+    left: 40px;
+    right: 40px;
+    top: 10px;
+    bottom: 10px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .fabrics-brands__img {
+    left: 90px;
+    right: 90px;
+    top: 20px;
     bottom: 20px;
-    left: 20px;
   }
+}
+.fabrics-brands__img img {
+  display: block;
+  max-height: 100%;
+}
+.fabrics-brands__img svg {
+  display: block;
+  max-height: 100%;
+}
+.fabrics-brands__img svg path {
+  fill: #66676b;
+}
+.fabrics-brands__plus {
+  width: 32px;
+  height: 32px;
+  background-color: #bfa058;
+  border-radius: 50%;
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px;
+  transition: 0.3s;
+}
+@media screen and (max-width: 767.98px) {
+  .fabrics-brands__plus {
+    display: block;
+  }
+}
+.fabrics-brands__plus:before, .fabrics-brands__plus:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  transition: 0.3s;
+}
+.fabrics-brands__plus:before {
+  width: 2px;
+  height: 16px;
+}
+.fabrics-brands__plus:after {
+  width: 16px;
+  height: 2px;
+}
+.fabrics-brands__tab {
+  position: absolute;
+  z-index: 0;
+  top: 155px;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  padding-top: 60px;
+}
+@media screen and (max-width: 1279.98px) {
+  .fabrics-brands__tab {
+    padding-top: 47px;
+    top: 283px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .fabrics-brands__tab {
+    position: static !important;
+    opacity: 1 !important;
+    pointer-events: all !important;
+    padding: 15px 15px 25px;
+    background-color: #f0f0f0;
+  }
+}
+.fabrics-brands__tab.active {
+  z-index: 1;
+  opacity: 1;
+  pointer-events: all;
 }
 
 .fashion {
@@ -10096,24 +10461,6 @@ input, textarea {
 }
 .page__breadcrumbs--mb20 {
   margin-bottom: 20px;
-}
-.page__fabrics {
-  margin-top: 60px;
-}
-@media screen and (max-width: 1919.98px) {
-  .page__fabrics {
-    margin-top: 40px;
-  }
-}
-@media screen and (max-width: 1279.98px) {
-  .page__fabrics {
-    margin-top: 30px;
-  }
-}
-@media screen and (max-width: 767.98px) {
-  .page__fabrics {
-    margin-top: 20px;
-  }
 }
 @media screen and (max-width: 1919.98px) {
   .page__appointment {

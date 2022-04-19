@@ -1,59 +1,56 @@
 .fabrics-top {
-  display: grid;
-  grid-template-columns: 12fr 12fr;
-  grid-gap: 100px;
-  @include xlg-block{
-      grid-gap: 20px;
-  }
-  @include lg-block {
-    grid-template-columns: 100%;
-    grid-gap: 30px;
-  }
 
-  &--center {
-    align-items: center;
-  }
+  &__breadcrumbs {
+    position: relative;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    @include sm-block{
+      margin-bottom: 10px;
+    }
 
-  &__title {
-    margin-bottom: 10px;
-    @include lg-block{
-      //font-size: 20px;
-      margin-bottom: 15px;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 64px;
+      height: 8px;
+      background-color: $gold;
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include sm-block{
+        height: 4px;
+      }
     }
   }
 
-  &__breadcrumbs {
-    margin-bottom: 20px;
+  &__title {
+    margin-bottom: 30px;
     @include lg-block{
-      margin-bottom: 30px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__corsettech{
+    margin: 55px 0;
+    @include lg-block{
+      margin: 30px 0;
+    }
+    @include sm-block{
+      margin: 15px 0;
     }
   }
 
   &__content{
     p{
+      font-size: 22px;
+      line-height: lh(22,26);
       @include lg-block{
         font-size: 18px;
       }
-    }
-  }
+      @include sm-block{
+        font-size: 16px;
 
-  &__right {
-    @include lg-block {
-      display: flex;
-      justify-content: center;
-    }
-
-    .video {
-      @include lg-block {
-        width: 100%;
-        max-width: 548px;
-      }
-
-      &__txt{
-        @include lg-block{
-          bottom: 20px;
-          left: 20px;
-        }
       }
     }
   }

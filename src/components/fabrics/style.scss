@@ -1,68 +1,28 @@
 .fabrics {
-  padding-top: 60px;
+  padding-top: 40px;
   @include xlg-block {
-    padding-top: 0;
+    padding-top: 35px;
+  }
+  @include sm-block{
+    padding-top: 20px;
   }
 
   &__top {
     margin-bottom: 80px;
-  }
-
-  &__brands {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-    margin-bottom: 40px;
-    @include lg-block {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @include sm-block {
-      grid-template-columns: 100%;
-      grid-gap: 5px;
+    @include lg-block{
+      margin-bottom: 60px;
     }
   }
 
-  &__brand {
-    background-color: #f9f9f9;
-    position: relative;
-
-    &:before {
-      content: '';
-      display: block;
-      padding-top: calc(164 / 432 * 100%);
+  &__tabs{
+    @include xlg-block {
+      margin: 0 -45px;
     }
-
-    &:first-child {
-      background-color: $gold;
+    @include lg-block{
+      margin: 0 -20px;
     }
-
-    &-img {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      @include xlg-block {
-        left: 20px;
-        right: 20px;
-        top: 10px;
-        bottom: 10px;
-      }
-
-      img {
-        display: block;
-        max-height: 100%;
-      }
-    }
-  }
-
-  &__desc {
-    margin-bottom: 65px;
-    @include sm-block {
-      margin-bottom: 30px;
+    @include sm-block{
+      margin: 0;
     }
   }
 
@@ -70,7 +30,8 @@
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-gap: 10px;
-    @include lg-block{
+
+    @include xlg-block{
         grid-gap: 5px;
     }
     @include sm-block {
@@ -106,3 +67,5 @@
 }
 
 @import "top/style";
+@import "tabs/style";
+@import "brands/style";

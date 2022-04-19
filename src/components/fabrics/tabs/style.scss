@@ -1,0 +1,234 @@
+.fabrics-tabs {
+
+  &__btns {
+    color: #000000;
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: flex;
+    @include lg-block {
+      font-size: 20px;
+    }
+    @include sm-block {
+      display: none;
+    }
+  }
+
+  &__select {
+    display: none;
+    @include sm-block {
+      display: block;
+      margin-bottom: 30px;
+    }
+
+    .jq-selectbox {
+
+      &__select {
+        height: 75px;
+        padding: 0;
+        background: none;
+        border: none;
+        border-bottom: 1px solid #bababa;
+        border-radius: 0;
+        box-shadow: none;
+        font-family: inherit;
+        font-size: 20px;
+        font-weight: 500;
+        text-shadow: none;
+        color: #000000;
+        text-transform: uppercase;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        &-text {
+          text-align: center;
+        }
+      }
+
+      &__trigger {
+        width: 30px;
+        border: none;
+
+        &-arrow {
+          top: 50%;
+          transform: translateY(-50%);
+          border-top: 5px solid #434343;
+          @include tr;
+        }
+      }
+
+      &__dropdown{
+        border: 1px solid #bababa;
+        border-radius: 0;
+        box-shadow: none;
+
+        li{
+          font-size: 20px;
+          font-weight: 500;
+          text-shadow: none;
+          color: #000000;
+          text-transform: uppercase;
+          text-align: center;
+          padding: 10px;
+
+          &:hover{
+            background-color: $gold;
+            color: $bg;
+          }
+
+          &.selected{
+            background-color: #f9f9f9;
+            color: #000000;
+          }
+        }
+      }
+    }
+
+    &.focused {
+      .jq-selectbox {
+        &__select {
+          border: none;
+          border-bottom: 1px solid #bababa;
+        }
+      }
+    }
+
+    &.opened {
+      .jq-selectbox {
+        &__trigger {
+
+          &-arrow {
+            transform: translateY(-50%) rotate(-180deg);
+          }
+        }
+      }
+    }
+  }
+
+  &__btn {
+    padding: 35px 85px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include xlg-block {
+      width: calc(100% / 3);
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    &.active {
+      background-color: #f0f0f0;
+    }
+  }
+
+  &__tab {
+    background-color: #f0f0f0;
+    padding: 50px 40px;
+    @include xlg-block {
+      padding: 40px;
+    }
+    @include lg-block {
+      padding: 40px 20px;
+    }
+    @include sm-block {
+      padding: 0;
+      background: none;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 110px;
+    margin-bottom: 155px;
+    @include xlg-block {
+      gap: 60px;
+      margin-bottom: 70px;
+    }
+    @include lg-block {
+      grid-template-columns: 100%;
+      gap: 60px;
+      justify-items: center;
+    }
+    @include sm-block {
+      gap: 35px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__imgs {
+    display: grid;
+    grid-template-columns: repeat(2, 280px);
+    gap: 30px;
+    @include xlg-block {
+      grid-template-columns: repeat(2, 245px);
+      gap: 10px;
+    }
+    @include sm-block {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5px;
+    }
+  }
+
+  &__content {
+    @include lg-block {
+      padding: 0 35px;
+    }
+    @include sm-block{
+      padding: 0;
+    }
+
+    h2 {
+      font-size: 52px;
+      font-weight: 400;
+      margin-bottom: 40px;
+      @include xlg-block {
+        margin-bottom: 30px;
+      }
+      @include sm-block{
+        font-size: 36px;
+      }
+    }
+
+    p {
+      font-size: 26px;
+      line-height: lh(26, 30);
+      margin-bottom: 30px;
+      @include xlg-block {
+        font-size: 20px;
+      }
+      @include sm-block{
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__list {
+    &-top {
+      display: flex;
+      align-items: baseline;
+      gap: 60px;
+      margin-bottom: 50px;
+      @include xlg-block {
+        margin-bottom: 20px;
+      }
+      @include sm-block{
+        display: none;
+      }
+    }
+
+    &-title {
+      text-transform: uppercase;
+    }
+
+    &-txt {
+      color: #cbcbcb;
+      font-size: 32px;
+      font-weight: 500;
+    }
+  }
+}

@@ -1,6 +1,8 @@
-//USER
 
+//USER
 //COMPONENTS
+
+
 
 
 // common.js
@@ -1003,5 +1005,48 @@ window.addEventListener('load', function (){
             spaceBetween: 10,
         });
     }
+});
+window.addEventListener('load', function (){
+    document.querySelectorAll('.fabrics-brands').forEach((i)=>{
+        if (window.matchMedia('(max-width: 767.98px)').matches){
+            new OzimnadAccordion({
+                selector: i,
+            });
+        }else{
+            new OzimnadTabs({
+                selector: i,
+                btnSelector: '.fabrics-brands__btn',
+                tabSelector: '.fabrics-brands__tab',
+                type: 'absolute'
+            });
+        }
+
+    });
+});
+window.addEventListener('load', function (){
+
+    let type = 'absolute';
+    if (window.matchMedia('(max-width: 767.98px)').matches){
+        type = 'default';
+    }
+
+    let tabs = new OzimnadTabs({
+        selector: '.fabrics-tabs',
+        btnSelector: '.fabrics-tabs__btn',
+        tabSelector: '.fabrics-tabs__tab',
+        type: type
+    });
+
+
+    let $select = $('.fabrics-tabs__select');
+
+    $select.styler();
+
+    $select.on('change', function (){
+        tabs.deactivate();
+        tabs.activeIndex = this.value;
+        tabs.activate();
+    });
+
 });
 //# sourceMappingURL=script.js.map

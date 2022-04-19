@@ -1,0 +1,13 @@
+div(data-tabs="tabs").fabrics-tabs.absolute
+    .fabrics-tabs__btns
+        each i in ['Итальянские ткани', 'Английские ткани','Французские ткани']
+            div(data-tabs="btn").fabrics-tabs__btn= i
+    select.fabrics-tabs__select
+        each i,x in ['Итальянские ткани', 'Английские ткани','Французские ткани']
+            option(value=x)= i
+    .fabrics-tabs__tabs
+        each i,x in ['Итальянские ткани', 'Английские ткани','Французские ткани']
+            div(data-tabs="tab").fabrics-tabs__tab
+                .fabrics-tabs__brands
+                    include ../brands/index
+
