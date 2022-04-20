@@ -1,9 +1,10 @@
 .compilation{
 
   &__title{
-    margin-bottom: 25px;
+    margin-bottom: 50px;
     @include xlg-block{
       font-size: 20px;
+      margin-bottom: 20px;
     }
     @include lg-block{
       text-align: center;
@@ -28,21 +29,16 @@
       grid-gap: 40px 10px;
     }
     @include sm-block{
+      grid-template-columns: repeat(2,1fr);
       padding: 0;
-      margin-right: -10px;
-      display: flex;
-      grid-gap: initial;
-      grid-template-columns: initial;
+      margin-right: -15px;
+      grid-gap: 10px;
     }
   }
 
   &__item{
-
     display: flex;
     flex-direction: column;
-    @include sm-block{
-      width: 295px;
-    }
 
     &:hover{
       color: $gold;
@@ -50,6 +46,11 @@
         img{
           transform: scale(1.05);
         }
+      }
+      .compilation__link{
+        background-color: $gold;
+        color: $bg;
+        border-color: $gold;
       }
     }
   }
@@ -60,6 +61,9 @@
     overflow: hidden;
     @include xlg-block{
       margin-bottom: 20px;
+    }
+    @include sm-block{
+      margin-bottom: 10px;
     }
 
     &:before{
@@ -82,9 +86,34 @@
 
   &__name{
     color: currentColor;
+    text-align: center;
+    margin-bottom: 50px;
     @include tr;
     @include xlg-block{
       font-size: 20px;
+      margin-bottom: 20px;
+    }
+    @include sm-block{
+      font-size: 11px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__link{
+    max-width: 100%;
+    width: 334px;
+    height: 58px;
+    font-size: 20px;
+    border: 1px solid $txt;
+    color: #0a0a0a;
+    margin: 0 auto;
+    margin-top: auto;
+    @include tr;
+    @include xlg-block{
+      width: 100%;
+    }
+    @include sm-block{
+      display: none;
     }
   }
 }

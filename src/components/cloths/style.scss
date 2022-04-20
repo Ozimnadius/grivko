@@ -21,7 +21,7 @@
     grid-template-columns: 9fr 3fr;
     grid-gap: 10px;
     @include xlg-block {
-      grid-template-columns: 18fr 6fr;
+      grid-template-columns: 1fr 274px;
     }
     @include lg-block {
       grid-template-columns: 100%;
@@ -95,33 +95,43 @@
   }
 
   &__banner {
-    background-color: $gold;
+    background-color: #f9f9f9;
     background-image: url(/images/content/cloths/img.png);
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: contain;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
 
-    color: $bg;
-    font-size: 32px;
+    color: #212121;
+    font-size: 29px;
     font-weight: 500;
     text-transform: uppercase;
-    padding: 20px;
+    padding: 50px 60px 60px 45px;
     position: relative;
+
     @include xlg-block {
-      font-size: 20px;
+      font-size: 18px;
+      padding: 30px;
+      gap: 20px;
     }
     @include lg-block {
       background-size: 240px auto;
       font-size: 16px;
-      padding: 40px;
+      padding: 30px 40px 30px 50px;
+      background-position: right 20px bottom;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
     }
     @include sm-block{
+      flex-direction: column;
       font-size: 20px;
-      background-size: auto auto;
-      padding: 40px 20px;
+      padding: 40px 20px 70px;
+      text-align: center;
+      background-position: center bottom;
+      background-size: 400px auto;
     }
 
     &-txt {
@@ -129,6 +139,17 @@
         @include lg-block {
           display: none;
         }
+      }
+    }
+
+    &-btn{
+      width: 319px;
+      height: 74px;
+      font-size: 24px;
+      @include xlg-block{
+        width: 202px;
+        height: 47px;
+        font-size: 16px;
       }
     }
   }

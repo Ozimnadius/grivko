@@ -70,6 +70,15 @@
       }
     }
   }
+
+  &__gift{
+    @include xlg-block{
+      margin-bottom: 170px!important;
+    }
+    @include sm-block{
+      margin-bottom: 40px !important;
+    }
+  }
 }
 
 .page-desc {

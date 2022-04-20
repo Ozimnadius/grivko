@@ -15,15 +15,40 @@ block content
                     title: "Пошив женской <br> одежды на заказ",
                     big: "«Мы используем собственные <br> разработки для идеальной посадки <br> на любую фигуру, лучшие ткани <br> и вдохновляющих людей».",
                     dopCls: "banner--small",
-                    form: true
                 };
             include ../../../components/banner/index
         //- breadcrumbs
         section.page__breadcrumbs
             .container
                 include ../../../components/breadcrumbs/index
+        //- gallery
+        section.page__gallery.mb80
+            .container
+                -
+                    var props = {
+                        title: "Работы LEONID GRIVKO",
+                        link: 'Увидеть больше',
+                        list: [
+                            "/images/content/women/tailoring/gallery/1.jpg",
+                            "/images/content/women/tailoring/gallery/2.jpg",
+                            "/images/content/women/tailoring/gallery/3.jpg",
+                            "/images/content/women/tailoring/gallery/4.jpg",
+                            "/images/content/women/tailoring/gallery/5.jpg",
+                            "/images/content/women/tailoring/gallery/6.jpg",
+                            "/images/content/women/tailoring/gallery/7.jpg",
+                            "/images/content/women/tailoring/gallery/8.jpg",
+                        ]
+                    };
+                include ../../../components/gallery/index
+        //- revs
+        section.page__revs.mb120
+            include ../../../components/revs/index
+        //- tech
+        section.page__tech.mb80
+            .container
+                include ../../../components/corsettech/index
         //- collections
-        section.page__collections.mb80
+        section.page__collections.mb120
             -
                 var props = {
                     title: "каталог",
@@ -78,16 +103,8 @@ block content
                             href: "/"
                         }
                     ],
-                    link: {
-                        href: "/",
-                        name: "Открыть всю коллекцию"
-                    }
                 };
             include ../../../components/catalog/index
-        //- tech
-        section.page__tech.mb80
-            .container
-                include ../../../components/corsettech/index
         //- cloths
         section.page__cloths.mb80
             .container
@@ -96,34 +113,22 @@ block content
         section.page__principles.mb80
             .container
                 include ../../../components/principles/index
-        //- gallery
-        section.page__gallery.mb80
+        //- signup
+        section.page__signup.mb120
+            .container
+                include ../../../components/signup/index
+        //- gift
+        section.page__gift.mb120
             .container
                 -
                     var props = {
-                        title: "Работы LEONID GRIVKO",
-                        list: [
-                            "/images/content/women/tailoring/gallery/1.jpg",
-                            "/images/content/women/tailoring/gallery/2.jpg",
-                            "/images/content/women/tailoring/gallery/3.jpg",
-                            "/images/content/women/tailoring/gallery/4.jpg",
-                            "/images/content/women/tailoring/gallery/5.jpg",
-                            "/images/content/women/tailoring/gallery/6.jpg",
-                            "/images/content/women/tailoring/gallery/7.jpg",
-                            "/images/content/women/tailoring/gallery/8.jpg",
-                        ]
+                      cls: 'gift--nowrap',
+                      list: false
                     };
-                include ../../../components/gallery/index
-        //- revs
-        section.page__revs.mb80
-            .container
-                include ../../../components/revs/index
-        //- founder
-        section.page__founder.mb80
-            .container
-                include ../../../components/founder/index
+
+                include ../../../components/gift/index
         //- compilation
-        section.page__compilation.mb80
+        section.page__compilation.mb120
             .container
                 include ../../../components/compilation/index
         //- signup

@@ -1,11 +1,66 @@
 .gallery {
 
-
   &__title {
     margin-bottom: 35px;
-    @include lg-block{
+    @include lg-block {
       font-size: 20px;
       margin-bottom: 30px;
+    }
+  }
+
+  &__slider{
+    position: relative;
+  }
+
+  &__swiper {
+    overflow: hidden;
+  }
+
+  &__nav {
+    display: none;
+
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    bottom: 0;
+    left: -15px;
+    right: -15px;
+
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+
+    @include sm-block {
+      display: flex;
+    }
+  }
+
+  &__arr {
+    pointer-events: all;
+    width: 35px;
+    height: 35px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0);
+    background-color: $bg;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include tr;
+
+    &:hover {
+      transform: scale(1.125);
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    }
+
+    &.swiper-button-disabled {
+      opacity: .5;
+    }
+
+    svg {
+      display: block;
+      width: 15px;
+      height: 10px;
+
     }
   }
 
@@ -13,8 +68,11 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
-    @include lg-block{
-        grid-gap: 5px;
+    @include xlg-block {
+      grid-gap: 5px;
+    }
+    @include lg-block {
+      grid-gap: 5px;
     }
     @include sm-block {
       grid-template-columns: initial;
@@ -28,8 +86,8 @@
     cursor: pointer;
     overflow: hidden;
     box-sizing: border-box;
-    @include sm-block{
-      width: 295px;
+    @include sm-block {
+      //width: 295px;
     }
 
     &:hover {
@@ -57,16 +115,50 @@
 
     &:nth-child(3), &:nth-child(5), &:nth-child(7), &:nth-child(8) {
       grid-column: span 2;
-      @include sm-block{
-          grid-column: initial;
+      @include sm-block {
+        grid-column: initial;
       }
 
       &:before {
         padding-top: calc(667 / 876 * 100%);
-        @include sm-block{
+        @include sm-block {
           padding-top: calc(667 / 433 * 100%);
         }
       }
+    }
+  }
+
+  &__link {
+    --bg: #{$gold};
+    --bg-hover: rgba(191, 160, 88, 0.8);
+    max-width: 100%;
+    width: 876px;
+    height: 58px;
+    background-color: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: $bg;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    margin: 70px auto 0;
+    @include tr;
+
+    @include xlg-block {
+      margin-top: 50px;
+    }
+    @include lg-block {
+      margin-top: 10px;
+    }
+    @include sm-block{
+      margin-top: 20px;
+      height: 52px;
+    }
+
+    &:hover {
+      background-color: var(--bg-hover);
     }
   }
 

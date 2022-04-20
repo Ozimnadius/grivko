@@ -991,20 +991,25 @@ window.addEventListener('load', function () {
 window.addEventListener('load', function (){
    if(media.mobile.matches){
        const gallerySwiper = new Swiper('.gallery__swiper', {
-           slidesPerView: "auto",
+           slidesPerView: 2,
            // loop: true,
            spaceBetween: 10,
+           navigation: {
+               nextEl: '.gallery__next',
+               prevEl: '.gallery__prev',
+           },
        });
    }
 });
 window.addEventListener('load', function (){
-    if(media.mobile.matches){
-        const gallerySwiper = new Swiper('.compilation__swiper', {
-            slidesPerView: "auto",
-            // loop: true,
-            spaceBetween: 10,
-        });
-    }
+    // if(media.mobile.matches){
+    //     const gallerySwiper = new Swiper('.compilation__swiper', {
+    //         slidesPerView: "auto",
+    //         // loop: true,
+    //         spaceBetween: 10,
+    //     });
+    // }
+
 });
 window.addEventListener('load', function (){
     document.querySelectorAll('.fabrics-brands').forEach((i)=>{
