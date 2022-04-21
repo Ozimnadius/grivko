@@ -21,8 +21,10 @@ $vh: 1080;
 }
 
 @mixin content() {
+  --mb: 20px;
+
   ul {
-    margin: 1em 0;
+    margin: var(--mb) 0;
     padding-left: 40px;
 
     li {
@@ -32,7 +34,7 @@ $vh: 1080;
 
   h1 {
     font-size: 40px;
-    margin-bottom: 15px;
+    margin-bottom: var(--mb);
 
     @include lg-block {
       font-size: 32px;
@@ -45,7 +47,7 @@ $vh: 1080;
   }
   h2 {
     font-size: 32px;
-    margin-bottom: 15px;
+    margin-bottom: var(--mb);
 
     @include lg-block {
       font-size: 26px;
@@ -57,7 +59,7 @@ $vh: 1080;
   }
   h3 {
     font-size: 28px;
-    margin-bottom: 15px;
+    margin-bottom: var(--mb);
     @include lg-block {
       font-size: 22px;
     }
@@ -68,7 +70,7 @@ $vh: 1080;
   }
   h4 {
     font-size: 24px;
-    margin-bottom: 15px;
+    margin-bottom: var(--mb);
     @include lg-block {
       font-size: 20px;
     }
@@ -79,7 +81,7 @@ $vh: 1080;
   }
   h5 {
     font-size: 20px;
-    margin-bottom: 15px;
+    margin-bottom: var(--mb);
     @include lg-block {
       font-size: 16px;
     }
@@ -90,7 +92,7 @@ $vh: 1080;
   }
   h6 {
     font-size: 16px;
-    margin-bottom: 15px;
+    margin-bottom: var(--mb);
     @include lg-block {
       font-size: 14px;
     }
@@ -100,7 +102,7 @@ $vh: 1080;
     }
   }
   p {
-    margin-bottom: 20px;
+    margin-bottom: var(--mb);
     font-size: 20px;
     @include lg-block {
       font-size: 16px;
@@ -117,7 +119,7 @@ $vh: 1080;
 
   table {
     width: 100%;
-    margin-bottom: 60px;
+    margin-bottom: calc(var(--mb)*3);
     border-collapse: collapse;
     font-size: 16px;
     @include lg-block {
@@ -270,6 +272,41 @@ $vh: 1080;
           background: none;
         }
       }
+    }
+  }
+
+  blockquote{
+    max-width: 670px;
+    margin: 0 0 var(--mb);
+    padding-left: 90px;
+    position: relative;
+    @include xlg-block{
+      padding-left: 55px;
+    }
+    @include lg-block{
+      padding-left: 35px;
+    }
+
+    &:before{
+      content: '';
+      display: block;
+      width: 51px;
+      height: 38px;
+      background: url("/images/icons/blockquote.svg") 0 0 no-repeat;
+      background-size: cover;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include xlg-block{
+        width: 33px;
+        height: 24px;
+      }
+      @include lg-block{
+        width: 21px;
+        height: 16px;
+      }
+
     }
   }
 }

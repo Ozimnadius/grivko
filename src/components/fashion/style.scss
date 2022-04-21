@@ -1,79 +1,180 @@
 .fashion {
-  background-color: #f2f2f2;
-  padding-top: 65px;
-  padding-bottom: 80px;
-  @include xlg-block {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-  @include lg-block {
-    padding: 40px 0;
-  }
-  @include sm-block {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
 
-  &__links {
-    margin-bottom: 60px;
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    background: url("/images/content/bordered/bg.png") 0 0;
+    padding: 80px;
     @include xlg-block {
-      margin-bottom: 35px;
-    }
-  }
-
-  &__link {
-    font-size: 32px;
-    font-weight: 500;
-    text-transform: uppercase;
-    @include xlg-block {
-      font-size: 20px;
+      padding: 50px;
     }
     @include lg-block {
-      font-size: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      align-items: center;
+      padding: 40px;
     }
     @include sm-block {
-      font-size: 20px;
-      padding: 10px;
-      border-top: 1px solid #E3E3E3;
+      padding: 30px 15px;
+      gap: 30px;
     }
 
-    &:last-child {
-      @include sm-block{
-        border-bottom: 1px solid #E3E3E3;
+    &-right {
+      .fashion__content {
+        display: none;
+        @include lg-block {
+          display: block;
+          margin-bottom: 25px;
+        }
+        @include sm-block {
+          margin-bottom: 20px;
+        }
+      }
+
+      @include lg-block {
+        order: -1;
+        max-width: 544px;
+        width: 100%;
       }
     }
 
+    &-left {
+      @include sm-block {
+        padding: 0 15px;
+      }
 
-    &.active {
-      color: $link;
+      h2 {
+        @include lg-block {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__content {
+    line-height: lh(26, 30);
+    --mb: 40px;
+    @include xlg-block {
+      --mb: 25px;
+    }
+
+    h2 {
+      @include xlg-block {
+        font-size: 22px;
+      }
+      @include lg-block {
+        font-size: 20px;
+        text-align: center;
+      }
+      @include sm-block {
+        font-size: 20px;
+      }
+    }
+
+    p {
+      font-size: 26px;
+      @include xlg-block {
+        font-size: 18px;
+      }
+      @include sm-block {
+        font-size: 16px;
+      }
+    }
+
+    blockquote {
+      font-size: 26px;
+      @include xlg-block {
+        font-size: 18px;
+      }
+      @include sm-block {
+        font-size: 16px;
+      }
+
+      b {
+        font-size: 20px;
+        @include xlg-block {
+          font-size: 18px;
+        }
+        @include sm-block {
+          font-size: 16px;
+        }
+      }
     }
   }
 
   &__list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    margin-bottom: 40px;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    @include xlg-block {
+      margin-bottom: 60px;
+    }
     @include lg-block {
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 5px;
+      margin-top: 40px;
+      margin-bottom: 50px;
     }
     @include sm-block {
-      grid-template-columns: 100%;
-      grid-gap: 10px;
-      margin: 0 -10px;
-      margin-bottom: 30px;
+      margin: 40px 0;
     }
+
+    &-title {
+      margin-bottom: 35px;
+      @include lg-block {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+      @include sm-block {
+        margin-bottom: 15px;
+      }
+    }
+
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 10px;
+      @include lg-block {
+        grid-gap: 5px;
+      }
+      @include sm-block {
+        display: flex;
+        grid-template-columns: initial;
+        gap: 0;
+      }
+    }
+  }
+
+  &__slider {
+    position: relative;
+  }
+
+  &__swiper {
+    overflow: hidden;
+
   }
 
   &__item {
     position: relative;
     overflow: hidden;
+    grid-column: span 2;
+    display: block;
+    aspect-ratio: 581/887;
+    box-sizing: border-box;
+    height: 100%;
+    @include sm-block {
+      grid-column: initial;
+    }
+
+    &:nth-child(1), &:nth-child(2) {
+      grid-column: span 3;
+      aspect-ratio: 876/667;
+      @include sm-block {
+        aspect-ratio: 581/887;
+        grid-column: initial;
+      }
+    }
 
     &:hover {
-      &:after {
-        opacity: .5;
-      }
 
       img {
         transform: scale(1.05);
@@ -81,36 +182,6 @@
 
       .fashion__item-btn {
         opacity: 1;
-      }
-    }
-
-    &:nth-child(10n+10) {
-      display: none;
-      @include lg-block {
-        display: block;
-      }
-    }
-
-    &:before {
-      content: '';
-      display: block;
-      padding-top: 100%;
-    }
-
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 2;
-      background-image: linear-gradient(1deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
-      opacity: 0;
-      @include tr;
-      @include lg-block {
-        opacity: .5;
       }
     }
 
@@ -139,11 +210,7 @@
         bottom: 20px;
       }
       @include lg-block {
-        opacity: 1;
-        width: 219px;
-        height: 48px;
-        bottom: 30px;
-        font-size: 16px;
+        display: none;
       }
       @include sm-block {
         bottom: 20px;
@@ -152,25 +219,110 @@
     }
   }
 
-  &__more {
-    width: 100%;
-    max-width: 896px;
-    margin: 0 auto;
-    @include xlg-block {
-      width: 598px;
-      height: 49px;
-      font-size: 14px;
-    }
+  &__nav {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    bottom: 0;
+    left: -15px;
+    right: -15px;
+
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+    display: none;
+
     @include sm-block {
-      width: 343px;
-      height: 58px;
-      font-size: 20px;
+      display: flex;
     }
+  }
+
+  &__arr {
+    pointer-events: all;
+    width: 35px;
+    height: 35px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0);
+    background-color: $bg;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include tr;
 
     &:hover {
-      svg {
-        transform: translateX(10px) rotate(-90deg);
+      transform: scale(1.125);
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    }
+
+    &.swiper-button-disabled {
+      opacity: .5;
+    }
+
+    svg {
+      display: block;
+      width: 15px;
+      height: 10px;
+    }
+  }
+
+  &__bottom {
+    display: grid;
+    grid-template-columns: 580fr 730fr;
+    gap: 70px;
+    background: url("/images/content/bordered/bg.png") 0 0;
+    padding: 100px 80px;
+    margin: 0 100px;
+    @include xlg-block {
+      margin: 0;
+      padding: 60px;
+      gap: 50px;
+    }
+    @include lg-block {
+      padding: 40px 20px;
+      gap: 20px;
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+      gap: 30px;
+      padding: 30px 15px;
+    }
+
+    &-left{
+      @include sm-block{
+        order: 1;
       }
+    }
+  }
+
+  &__title {
+    color: #000000;
+    font-size: 54px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    @include xlg-block {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    @include lg-block {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+    @include sm-block{
+      font-size: 20px;
+    }
+  }
+
+  &__sub {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 50px;
+    @include xlg-block {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+    @include lg-block {
+      margin-bottom: 15px;
     }
   }
 }
@@ -366,7 +518,7 @@
     max-width: 406px;
     margin-bottom: 60px;
     font-size: 20px;
-    @include lg-block{
+    @include lg-block {
       margin-bottom: 30px;
     }
 
@@ -553,16 +705,16 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
-    @include lg-block{
-        grid-template-columns: 100%;
+    @include lg-block {
+      grid-template-columns: 100%;
     }
   }
 
-  &__submit{
+  &__submit {
     max-width: 319px;
     height: 74px;
     font-size: 20px;
-    @include lg-block{
+    @include lg-block {
       height: 58px;
     }
   }

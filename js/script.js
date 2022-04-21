@@ -986,6 +986,19 @@ window.addEventListener('load', function () {
                $('.fashion-drop__drop').slideUp();
            }
         });
+
+        const elem = document.querySelector('.fashion__swiper');
+        if (elem) {
+            const revsSwiper = new Swiper(elem, {
+                slidesPerView: 2,
+                spaceBetween: 5,
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.fashion__next',
+                    prevEl: '.fashion__prev',
+                },
+            });
+        }
     }
 });
 window.addEventListener('load', function (){

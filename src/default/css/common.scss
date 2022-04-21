@@ -191,7 +191,13 @@
   }
 
   &60 {
-    margin-bottom: 60px;
+    margin-bottom: 60px!important;
+    @include xlg-block{
+      margin-bottom: 40px !important;
+    }
+    @include lg-block{
+      margin-bottom: 30px !important;
+    }
   }
 
   &80 {
