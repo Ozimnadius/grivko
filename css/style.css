@@ -764,9 +764,7 @@ input, textarea {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
   color: #202020;
-  font-family: Roboto;
   font-size: 20px;
-  font-weight: 300;
   padding: 0 30px;
   border: 1px solid transparent;
   resize: none;
@@ -10685,7 +10683,7 @@ input, textarea {
   }
 }
 .tutorial__submit {
-  width: 205px;
+  width: 151px;
   height: 58px;
   font-size: 20px;
 }
