@@ -148,7 +148,7 @@
     margin-left: -65px;
     @include xlg-block {
       margin: 0;
-      display: none;
+      //display: none;
     }
     @include sm-block {
       display: block;
