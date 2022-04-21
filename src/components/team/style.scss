@@ -11,7 +11,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
-    margin-bottom: 55px;
+    margin-bottom: 40px;
     @include xlg-block {
       grid-gap: 5px;
     }

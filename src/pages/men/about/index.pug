@@ -13,7 +13,9 @@ block content
                     sub: "ДОМ МОДЫ LEONID GRIVKO",
                     title: "О нас",
                     big: "«Мы используем собственные <br> разработки для идеальной посадки <br> на любую фигуру, лучшие ткани <br> и вдохновляющих людей».",
-                    btn: "История создания"
+                    btn: "История создания",
+                    btnCls: 'btn--gold-fill',
+                    dopCls: 'banner--small'
                 };
             include ../../../components/banner/index
         //- breadcrumbs
@@ -23,6 +25,7 @@ block content
         //- team
         section.page__team.mb80
             .container
+                - var name = 'Наша команда:';
                 -
                     var list = [
                         {

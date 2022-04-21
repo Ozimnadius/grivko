@@ -52,6 +52,19 @@
     }
   }
 
+  &--gold-fill{
+    background-color: $gold;
+    color: $bg;
+    border-color: $gold;
+
+
+    &:hover{
+      background-color: lighten($gold,10);
+      border-color: lighten($gold,10);
+      color: $bg;
+    }
+  }
+
   &--revers {
     svg {
       margin-right: 15px;

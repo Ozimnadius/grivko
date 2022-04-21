@@ -588,6 +588,16 @@ input, textarea {
   border-color: #202020;
   color: #ffffff;
 }
+.btn--gold-fill {
+  background-color: #bfa058;
+  color: #ffffff;
+  border-color: #bfa058;
+}
+.btn--gold-fill:hover {
+  background-color: #cdb57d;
+  border-color: #cdb57d;
+  color: #ffffff;
+}
 .btn--revers svg {
   margin-right: 15px;
   margin-left: 0 !important;
@@ -10269,7 +10279,7 @@ input, textarea {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
-  margin-bottom: 55px;
+  margin-bottom: 40px;
 }
 @media screen and (max-width: 1919.98px) {
   .team__list {
