@@ -7755,16 +7755,16 @@ input, textarea {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   padding: 60px;
+  font-size: 22px;
 }
 @media screen and (max-width: 1919.98px) {
   .pay {
-    padding: 35px;
-    font-size: 18px;
+    padding: 60px 35px;
   }
 }
 @media screen and (max-width: 1279.98px) {
   .pay {
-    padding: 25px 15px;
+    padding: 40px 20px;
     font-size: 16px;
   }
 }
@@ -7772,8 +7772,6 @@ input, textarea {
   .pay {
     grid-template-columns: 100%;
     grid-gap: 50px;
-    padding: 30px 0 0;
-    box-shadow: none;
   }
 }
 .pay__item {
@@ -7784,11 +7782,6 @@ input, textarea {
 @media screen and (max-width: 1279.98px) {
   .pay__item {
     padding: 40px 15px;
-  }
-}
-@media screen and (max-width: 767.98px) {
-  .pay__item {
-    padding: 60px 30px 30px;
   }
 }
 .pay__icon {
@@ -7809,14 +7802,6 @@ input, textarea {
     height: 41px;
     left: 20px;
     top: -21px;
-  }
-}
-@media screen and (max-width: 767.98px) {
-  .pay__icon {
-    width: 64px;
-    height: 64px;
-    left: 32px;
-    top: -32px;
   }
 }
 
