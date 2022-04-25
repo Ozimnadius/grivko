@@ -309,6 +309,10 @@ $vh: 1080;
 
     }
   }
+
+  &--right{
+    text-align: right;
+  }
 }
 
 @mixin headers() {

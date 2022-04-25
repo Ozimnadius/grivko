@@ -1,0 +1,23 @@
+.certs-choice
+    h2.certs-choice__title.
+        Что может выбрать<br>обладатель сертификата?
+    .certs-choice__list
+        -
+            var list = [
+                {
+                    img: '/images/content/certs-choice/1.png',
+                    title: 'Пошив одежды',
+                    txt: 'Индивидуальный пошив костюмов,<br>пиджаков, сорочек, пальто'
+                },
+                {
+                    img: '/images/content/certs-choice/2.png',
+                    title: 'Пошив обуви и аксессуаров',
+                    txt: 'Изделия из натуральной кожи теленка или<br>экзотической кожи, индивидуальный пошив<br>галстуков'
+                },
+            ];
+        each i in list
+            .certs-choice__item
+                .certs-choice__img
+                    img(src=i.img alt=i.title)
+                .certs-choice__name.title= i.title
+                .certs-choice__txt!=i.txt

@@ -1,0 +1,23 @@
+.cert-items
+    .container
+        .cert-items__title.title Или можете выбрать любой понравившийся сертификат
+        .cert-items__list
+            each i in [1,2,3,4,5,6,7,8]
+                .cert-items__item.cert-item
+                    .cert-item__hover
+                        .cert-item__wrap
+                            .cert-item__title.
+                                Сертификат<br>на пошив Костюма
+                            .cert-item__img
+                                img(src=`/images/content/certs-list/${i}.png` alt="Сертификат на пошив Костюма")
+                            .cert-item__type Classic
+                            .cert-item__price 75 000 руб.
+                            .cert-item__hidden
+                                .cert-item__desc.
+                                    <p>Костюм-двойка однобортный<br>
+                                    Посадка на выбор – Regular, Slim<br>
+                                    Ручная вспушка<br>
+                                    Half canvas</p>
+                                    <p>Коллекция тканей Mauro Prato<br>
+                                    с индексом Super 100 – 140’s</p>
+                                a(href="#").cert-item__link.btn.btn--black Подробнее

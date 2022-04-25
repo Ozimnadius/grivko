@@ -1,0 +1,24 @@
+.certs-steps
+    h2.certs-steps__title.title Как приобрести сертификат
+    .certs-steps__list
+        -
+            var list = [
+                {
+                    title: 'Звонок',
+                    txt: 'для определения номинала<br>сертификата и формулировки<br>подписи'
+                },
+                {
+                    title: 'Вручение',
+                    txt: 'После того как Ваш сертификат будет готов<br>мы позвоним вам и обсудим доставку либо<br>время вручения в Бутике'
+                },
+                {
+                    title: 'Встреча',
+                    txt: 'с обладателем сертификата для снятия<br>мерок и обсуждения пожеланий'
+                },
+
+            ];
+        each i in list
+            .certs-steps__item
+                .certs-step
+                    .certs-step__title= i.title
+                    .certs-step__txt!=i.txt

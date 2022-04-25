@@ -1,0 +1,82 @@
+.certs-choice {
+
+  &__title {
+    font-size: 48px;
+    font-weight: 500;
+    line-height: lh(48, 55);
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    text-align: center;
+    @include xlg-block {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+    @include lg-block{
+      font-size: 20px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    @include xlg-block {
+      gap: 35px;
+    }
+    @include lg-block{
+        gap: 20px;
+    }
+    @include sm-block{
+        grid-template-columns: 100%;
+    }
+  }
+
+  &__item {
+    background: url("/images/content/bordered/bg.png") 0 0;
+    padding: 80px 150px 60px 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    @include xlg-block{
+      padding: 40px;
+      gap: 20px;
+    }
+    @include lg-block{
+      padding: 25px 20px;
+      padding-bottom: 40px;
+    }
+  }
+
+  &__img{
+    @include xlg-block{
+      max-width: 349px;
+    }
+    @include lg-block{
+      max-width: 220px;
+    }
+  }
+
+  &__name {
+    color: #000000;
+    @include xlg-block{
+      font-size: 20px;
+    }
+    @include lg-block{
+      font-size: 18px;
+    }
+  }
+
+  &__txt {
+    font-size: 24px;
+    color: #525252;
+    line-height: lh(24, 28);
+    @include xlg-block{
+      font-size: 18px;
+    }
+    @include lg-block{
+      font-size: 16px;
+    }
+  }
+}

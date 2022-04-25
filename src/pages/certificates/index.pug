@@ -1,0 +1,85 @@
+extends ./../../main
+
+block variables
+    - var title = 'Cертификаты'
+    - var isMain = true
+
+block content
+    main.page.certs
+        //- banner
+        section.page__banner
+            -
+                var props = {
+                    imgPath: "/images/content/certificates/banner/",
+                    sub: "ДОМ МОДЫ LEONID GRIVKO",
+                    title: "Сделайте подарок<br>Настоящей леди",
+                    big: "Подарочный сертификат родным и близким на <br> индивидуальный пошив мужского костюма и <br> сорочки",
+                    dopCls: "banner--small"
+                };
+            include ../../components/banner/index
+        //- breadcrumbs
+        section.page__breadcrumbs
+            .container
+                include ../../components/breadcrumbs/index
+        //certs-choice
+        section.page__section.mb70
+            .container
+                include ../../components/certs-choice/index
+        //- gallery
+        section.page__section.mb80
+            .container
+                -
+                    var props = {
+                        title: "Работы LEONID GRIVKO",
+                        link: 'Увидеть больше',
+                        list: [
+                            "/images/content/women/tailoring/gallery/1.jpg",
+                            "/images/content/women/tailoring/gallery/2.jpg",
+                            "/images/content/women/tailoring/gallery/3.jpg",
+                            "/images/content/women/tailoring/gallery/4.jpg",
+                            "/images/content/women/tailoring/gallery/5.jpg",
+                            "/images/content/women/tailoring/gallery/6.jpg",
+                            "/images/content/women/tailoring/gallery/7.jpg",
+                            "/images/content/women/tailoring/gallery/8.jpg",
+                        ]
+                    };
+                include ../../components/gallery/index
+        //certs-subscrube
+        section.page__section.mb70
+            .container
+                include ../../components/certs-subscrube/index
+        //certs-items
+        section.page__section.mb70
+            include ../../components/certs-items/index
+        //certs-desc
+        section.page__section.mb80
+            .container
+                include ../../components/certs-desc/index
+        //certs-steps
+        section.page__section.mb140
+            .container
+                include ../../components/certs-steps/index
+        //certs-banner
+        section.page__section.mb80
+            .container
+                include ../../components/certs-banner/index
+        //- cloths
+        section.page__cloths.mb80
+            .container
+                include ../../components/cloths/index
+        //subscribe
+        section.page__subscribe
+            .container
+                -
+                    var props = {
+                        title: "С Leonid grivko ВЫБРАТЬ ПОДХОДЯЩИЙ ПОДАРОК ДЛЯ женщин ЛЕГКО",
+                        txt: "Мы создаем подарки, которые приятно получать",
+                        fields: {
+                            name: true,
+                            tel: true,
+                        },
+                        btnName: "Отправить заявку",
+                        img: "/images/content/index/subscribe/img"
+                    };
+                include ../../components/subscribe/index
+

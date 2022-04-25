@@ -13,15 +13,15 @@
   &:hover {
     background: $bg;
     color: $txt;
-    @include lg-block{
+    @include lg-block {
       background: transparent;
       color: $bg;
     }
 
     svg {
       transform: translateX(10px);
-      @include lg-block{
-          transform: none;
+      @include lg-block {
+        transform: none;
       }
     }
   }
@@ -33,7 +33,7 @@
     &:hover {
       background: $txt;
       color: $bg;
-      @include lg-block{
+      @include lg-block {
         color: $txt;
         background: transparent;
       }
@@ -52,15 +52,15 @@
     }
   }
 
-  &--gold-fill{
+  &--gold-fill {
     background-color: $gold;
     color: $bg;
     border-color: $gold;
 
 
-    &:hover{
-      background-color: lighten($gold,10);
-      border-color: lighten($gold,10);
+    &:hover {
+      background-color: lighten($gold, 10);
+      border-color: lighten($gold, 10);
       color: $bg;
     }
   }
@@ -113,7 +113,7 @@
     background: transparent;
     color: $txt;
 
-    svg{
+    svg {
       fill: $txt;
     }
   }
@@ -129,7 +129,7 @@
     color: $bg;
     border-color: $txt;
 
-    svg{
+    svg {
       fill: $bg;
     }
 
@@ -137,7 +137,7 @@
       background: transparent;
       color: $txt;
 
-      svg{
+      svg {
         fill: $txt;
       }
     }
@@ -152,21 +152,21 @@
   font-size: 32px;
   font-weight: 500;
   text-transform: uppercase;
-  @include xlg-block{
+  @include xlg-block {
     font-size: 32px;
   }
-  @include sm-block{
+  @include sm-block {
     font-size: 20px;
   }
 
-  &--center{
+  &--center {
     text-align: center;
   }
 
   &--line {
     padding-top: 30px;
     position: relative;
-    @include sm-block{
+    @include sm-block {
       padding-top: 20px;
     }
 
@@ -179,7 +179,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      @include sm-block{
+      @include sm-block {
         height: 4px;
       }
     }
@@ -204,69 +204,88 @@
   }
 
   &60 {
-    margin-bottom: 60px!important;
-    @include xlg-block{
+    margin-bottom: 60px !important;
+    @include xlg-block {
       margin-bottom: 40px !important;
     }
-    @include lg-block{
+    @include lg-block {
       margin-bottom: 30px !important;
+    }
+  }
+
+  &70 {
+    margin-bottom: 70px !important;
+    @include lg-block{
+      margin-bottom: 35px !important;
     }
   }
 
   &80 {
     margin-bottom: 80px !important;
     @include xlg-block {
-      margin-bottom: 50px!important;
+      margin-bottom: 50px !important;
     }
-    @include lg-block{
-      margin-bottom: 30px!important;
+    @include lg-block {
+      margin-bottom: 30px !important;
     }
   }
 
-  &100{
+  &100 {
     margin-bottom: 100px !important;
     @include xlg-block {
-      margin-bottom: 60px!important;
+      margin-bottom: 60px !important;
     }
-    @include lg-block{
-      margin-bottom: 40px!important;
+    @include lg-block {
+      margin-bottom: 40px !important;
     }
   }
 
   &120 {
     margin-bottom: 120px !important;
-    @include xlg-block{
+    @include xlg-block {
       margin-bottom: 80px !important;
     }
-    @include sm-block{
+    @include sm-block {
       margin-bottom: 30px !important;
+    }
+  }
+
+  &140 {
+    margin-bottom: 140px !important;
+    @include xlg-block{
+      margin-bottom: 100px !important;
     }
   }
 
 }
 
 //Form elements
+:root{
+  --height:74px;
+  --fz: 20px;
+  --padding: 0 30px;
+  @include lg-block{
+    --height:60px;
+    --padding: 0 25px;
+  }
+  @include sm-block {
+    --fz: 16px;
+    --height: 51px;
+  }
+}
+
 .input {
   display: block;
   width: 100%;
-  height: 74px;
+  height: var(--height);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   background-color: $bg;
   color: $txt;
-  font-size: 20px;
-  padding: 0 30px;
+  font-size: var(--fz);
+  padding: var(--padding);
   border: 1px solid transparent;
   resize: none;
   @include tr;
-
-  @include lg-block{
-    height: 60px;
-    padding: 0 25px;
-  }
-  @include sm-block{
-    font-size: 16px;
-    height: 51px;
-  }
 
   &--area {
     height: 123px;
@@ -274,7 +293,7 @@
   }
 
   &:focus {
-    border-color: $link;
+    border-color: $gold;
   }
 
   &.error {
@@ -291,6 +310,6 @@
 
 }
 
-.ovh{
+.ovh {
   overflow: hidden;
 }

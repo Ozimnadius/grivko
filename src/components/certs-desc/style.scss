@@ -1,0 +1,83 @@
+.certs-desc {
+  padding: 105px 65px 70px 95px;
+  display: grid;
+  grid-template-columns: 680fr 800fr;
+  @include xlg-block {
+    border-width: 40px;
+    padding: 65px 30px 80px 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include lg-block {
+    border-width: 30px;
+    padding: 40px 20px 70px 20px;
+  }
+  @include sm-block {
+    box-shadow: none;
+    border: none;
+    grid-template-columns: 100%;
+    gap: 60px;
+    background: none;
+    padding: 30px 15px;
+  }
+
+  &__left-img {
+    margin-top: -140px;
+    margin-left: -150px;
+    margin-bottom: -90px;
+    @include xlg-block {
+      margin: -100px 65px -60px -75px;
+    }
+    @include lg-block {
+      margin: -5px 40px 65px -50px;
+    }
+    @include sm-block {
+      margin-top: 0;
+      margin-left: -30px;
+      margin-right: 25px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__right {
+    @include sm-block {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__right-img {
+    margin-top: 25px;
+    margin-left: 125px;
+    margin-bottom: -200px;
+    @include xlg-block {
+      margin: 10px 30px -70px 50px;
+    }
+    @include lg-block {
+      margin: 35px 0 -20px 30px;
+    }
+    @include sm-block{
+      order: -1;
+      margin: 0 0 -10px 35px;
+    }
+  }
+
+  &__content {
+    @include sm-block {
+      text-align: left !important;
+    }
+
+    h2 {
+      @include xlg-block {
+        font-size: 20px;
+      }
+    }
+
+    p {
+      @include xlg-block {
+        font-size: 16px;
+      }
+    }
+
+  }
+
+}

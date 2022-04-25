@@ -1,0 +1,62 @@
+.certs-banner {
+  margin: 0 -20px;
+  display: grid;
+  grid-template-columns: 850fr 936fr;
+  align-items: flex-end;
+  @include xlg-block{
+      grid-template-columns: repeat(2,1fr);
+  }
+  @include lg-block{
+      grid-template-columns: 100%;
+  }
+  @include sm-block{
+    margin: 0 -15px;
+  }
+
+  &__left {
+    border-width: 40px;
+    margin-right: -140px;
+    transform: translateY(-20px);
+    padding: 20px 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    aspect-ratio: 1021/727;
+    @include xlg-block{
+      padding: 30px 40px;
+    }
+    @include lg-block{
+      order: 1;
+      margin: 0;
+      transform: none;
+    }
+    @include sm-block{
+      border: none;
+      box-shadow: none;
+      background: none;
+      padding: 30px 15px 0;
+    }
+  }
+
+  &__content {
+    margin-bottom: 25px;
+
+    h2 {
+      font-size: 32px;
+      @include sm-block{
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__btn {
+    width: 349px;
+    height: 74px;
+    font-size: 24px;
+    @include sm-block{
+      width: 222px;
+      height: 47px;
+      font-size: 14px;
+    }
+  }
+}
