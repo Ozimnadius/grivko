@@ -3643,7 +3643,7 @@ input, textarea {
 }
 @media screen and (max-width: 767.98px) {
   .docs {
-    grid-gap: 60px;
+    grid-gap: 10px;
   }
 }
 .docs__item:nth-child(even) .doc__left {
@@ -3669,9 +3669,77 @@ input, textarea {
     grid-template-columns: 100%;
   }
 }
+@media screen and (max-width: 767.98px) {
+  .doc {
+    background: #ffffff url("/images/content/bordered/bg.png") 0 0;
+  }
+}
+.doc__title {
+  font-size: 32px;
+  margin-bottom: 25px;
+  font-weight: 500;
+  position: relative;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1919.98px) {
+  .doc__title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .doc__title {
+    font-size: 18px;
+    margin-bottom: 0;
+    padding: 25px 15px;
+  }
+}
+.doc__title.active .doc__title-plus:after {
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+.doc__title-plus {
+  display: none;
+  width: 28px;
+  height: 28px;
+  background-color: #bfa058;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+@media screen and (max-width: 767.98px) {
+  .doc__title-plus {
+    display: block;
+  }
+}
+.doc__title-plus:before, .doc__title-plus:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+}
+.doc__title-plus:before {
+  width: 14px;
+  height: 2px;
+}
+.doc__title-plus:after {
+  width: 2px;
+  height: 14px;
+}
 @media screen and (max-width: 1279.98px) {
   .doc__left {
     order: 1;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .doc__left {
+    display: none;
+    padding: 50px 15px 30px 15px;
   }
 }
 .doc__img {
@@ -3696,6 +3764,12 @@ input, textarea {
   height: 100%;
   object-fit: cover;
 }
+@media screen and (max-width: 767.98px) {
+  .doc__right {
+    background: none;
+    box-shadow: none;
+  }
+}
 .doc__wrap {
   position: relative;
   margin-left: -80px;
@@ -3714,7 +3788,15 @@ input, textarea {
 @media screen and (max-width: 767.98px) {
   .doc__wrap {
     border-width: 0;
-    padding: 30px 15px;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .doc__content {
+    display: none;
+    padding: 0 15px;
   }
 }
 @media screen and (max-width: 1919.98px) {

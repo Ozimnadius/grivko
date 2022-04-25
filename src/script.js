@@ -19,6 +19,7 @@
 // @prepros-append components/compilation/script.js
 // @prepros-append components/fabrics/brands/script.js
 // @prepros-append components/fabrics/tabs/script.js
+// @prepros-append components/docs/script.js
 
 
 

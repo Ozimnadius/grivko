@@ -5,11 +5,11 @@
   @include xlg-block {
     grid-gap: 55px;
   }
-  @include lg-block{
-      grid-gap: 80px;
+  @include lg-block {
+    grid-gap: 80px;
   }
-  @include sm-block{
-      grid-gap: 60px;
+  @include sm-block {
+    grid-gap: 10px;
   }
 
   &__item {
@@ -23,7 +23,7 @@
         &__wrap {
           margin-left: 0;
           margin-right: -80px;
-          @include lg-block{
+          @include lg-block {
             margin: 0;
           }
         }
@@ -36,13 +36,82 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  @include lg-block{
-      grid-template-columns: 100%;
+  @include lg-block {
+    grid-template-columns: 100%;
+  }
+  @include sm-block {
+    background: $bg url("/images/content/bordered/bg.png") 0 0;
   }
 
-  &__left{
-    @include lg-block{
+  &__title {
+    font-size: 32px;
+    margin-bottom: 25px;
+    font-weight: 500;
+    position: relative;
+    text-transform: uppercase;
+    @include xlg-block {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    @include sm-block {
+      font-size: 18px;
+      margin-bottom: 0;
+      padding: 25px 15px;
+    }
+
+    &.active{
+      .doc__title-plus{
+        &:after{
+          transform: translate(-50%, -50%) rotate(-90deg);
+        }
+      }
+    }
+
+    &-plus {
+      display: none;
+      width: 28px;
+      height: 28px;
+      background-color: $gold;
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      @include sm-block {
+        display: block;
+      }
+
+      &:before, &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background: $bg;
+        transform: translate(-50%, -50%);
+        @include tr;
+      }
+
+      &:before {
+        width: 14px;
+        height: 2px;
+      }
+
+      &:after {
+        width: 2px;
+        height: 14px;
+      }
+    }
+
+  }
+
+  &__left {
+    @include lg-block {
       order: 1;
+    }
+    @include sm-block {
+      display: none;
+      padding: 50px 15px 30px 15px;
     }
   }
 
@@ -53,7 +122,7 @@
       content: '';
       display: block;
       padding-top: calc(1008 / 880 * 100%);
-      @include lg-block{
+      @include lg-block {
         padding-top: calc(424 / 725 * 100%);
       }
     }
@@ -69,8 +138,11 @@
     }
   }
 
-  &__right{
-
+  &__right {
+    @include sm-block {
+      background: none;
+      box-shadow: none;
+    }
   }
 
   &__wrap {
@@ -80,29 +152,36 @@
       border-width: 40px;
       padding: 40px 30px;
     }
-    @include lg-block{
+    @include lg-block {
       margin: 0;
     }
-    @include sm-block{
+    @include sm-block {
       border-width: 0;
-      padding: 30px 15px;
+      padding: 0;
+      background: none;
+      box-shadow: none;
     }
 
   }
 
-  &__content{
-    h2{
-      @include xlg-block{
+  &__content {
+    @include sm-block {
+      display: none;
+      padding: 0 15px;
+    }
+
+    h2 {
+      @include xlg-block {
         font-size: 20px;
         margin-bottom: 20px;
       }
     }
 
-    p{
-      @include xlg-block{
+    p {
+      @include xlg-block {
         font-size: 20px;
       }
-      @include sm-block{
+      @include sm-block {
         font-size: 16px;
       }
     }
@@ -112,12 +191,12 @@
     position: absolute;
     bottom: -145px;
     right: -145px;
-    @include xlg-block{
+    @include xlg-block {
       width: 252px;
       bottom: -75px;
       right: -65px;
     }
-    @include lg-block{
+    @include lg-block {
       display: none;
     }
   }
