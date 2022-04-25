@@ -5,75 +5,35 @@ block variables
 
 block content
     main.page
-        //- banner
-        section.page__banner
-            -
-                var props = {
-                    imgPath: "/images/content/index/banner/",
-                    sub: "ДОМ МОДЫ LEONID GRIVKO",
-                    title: "Пошив мужских <br> костюмов на заказ",
-                    txt: "по индивидуальным меркам <br> с гарантией идеальной посадки",
-                    dopCls: "banner--small",
-                    form: true
-                };
-            include ../../../../components/banner/index
-        //- breadcrumbs
-        section.page__breadcrumbs
+        //- desc
+        section.page__desc
             .container
-                include ../../../../components/breadcrumbs/index
+                .page-desc
+                    .page-desc__breadcrumbs
+                        include ../../../../components/breadcrumbs/index
+                    h2.page-desc__title.title.title--line Пошив женских костюмов на заказ
+                    .page-desc__content
+                        p Наша цель — подарить миру идеальные костюмы, подчёркивающие образ и индивидуальность каждой женщины. Команда бренда провела колоссальную работу и создала коллекцию костюмов, сочетающую красоту, элегантность и неповторимый запоминающийся стиль
+        //- tech
+        section.page__tech.mb80
+            .container
+                include ../../../../components/corsettech/index
         //- suit
         section.page__suit.mb80
             .container
                 -
                     var props = {
-                      img: "/images/content/men/services/suits/img.png"
+                        img: "/images/content/men/services/suits/img.png",
+                        bottomNo: true
                     };
                 include ../../../../components/suit/index
         //- prices
-        section.page__prices.mb40
-            -
-                var props = {
-                    title: "Цены",
-                    listClass: "catalog__list--3",
-                    list: [
-                        {
-                            img: "/images/content/men/services/suits/prices/1.jpg",
-                            title: "Classic",
-                            price: "от 75 000 руб.",
-                            txt: "Костюм для повседневной носки, сшитый по индивидуальным лекалам из итальянских и английских тканей высокого качества. <br> Основные операции при пошиве осуществляются с помощью современных технологий.",
-                            href: "/"
-                        },
-                        {
-                            img: "/images/content/men/services/suits/prices/2.jpg",
-                            title: "Premium",
-                            price: "от 95 000р.",
-                            txt: "Лучший выбор, чтобы подчеркнуть высокий статус. Изделие шьется из английских и итальянских тканей по традиционной технологии с использованием большого объёма ручной работы. Костюм отличает особая мягкость и удобство.",
-                            href: "/"
-                        },
-                        {
-                            img: "/images/content/men/services/suits/prices/3.jpg",
-                            title: "Luxury",
-                            price: "от 190 000р.",
-                            txt: "Шедевр для настоящих ценителей эксклюзива. Сшит по старинной английской технологии из лучших английских и итальянских тканей. Костюм практически весь собирается портным вручную.",
-                            href: "/"
-                        },
-
-                    ],
-                    desc: "Костюм, который идеально выглядит и сидит — <br> не давит, не тянет, не висит и не полнит — это реальность."
-                };
-            include ../../../../components/catalog/index
-        //- appointment
+        section.page__prices.mb80
+            include ../../../../components/prices/index
+        //- tabs
         section.page__appointment.mb80
             .container
-                include ../../../../components/appointment/index
-        //- tech
-        section.page__tech.mb80
-            .container
-                include ../../../../components/corsettech/index
-        //- cloths
-        section.page__cloths.mb80
-            .container
-                include ../../../../components/cloths/index
+                include ../../../../components/fabrics/tabs/index
         //- principles
         section.page__principles.mb80
             .container
@@ -97,15 +57,10 @@ block content
                     };
                 include ../../../../components/gallery/index
         //- revs
-        section.page__revs.mb80
-            .container
-                include ../../../../components/revs/index
-        //- appointment
-        section.page__appointment.mb80
-            .container
-                include ../../../../components/appointment/index
+        section.page__revs.mb160
+            include ../../../../components/revs/index
         //- gift
-        section.page__gift.mb80
+        section.page__gift.mb140
             .container
                 -
                     var props = {

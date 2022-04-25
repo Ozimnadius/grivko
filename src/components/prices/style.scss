@@ -1,0 +1,233 @@
+.prices {
+  background-color: #f2f2f2;
+  padding: 70px 0;
+  @include lg-block {
+    padding: 45px 0;
+  }
+  @include sm-block {
+    padding: 30px 0;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    @include lg-block {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 40px;
+    @include lg-block {
+      margin-bottom: 30px;
+    }
+    @include sm-block {
+      grid-template-columns: 100%;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__desc {
+    padding: 40px;
+    text-align: center;
+    background-color: $gold;
+
+    color: $bg;
+    font-size: 32px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: lh(32, 42);
+    @include xlg-block {
+      font-size: 24px;
+    }
+    @include lg-block {
+      padding: 25px;
+      font-size: 16px;
+    }
+    @include sm-block{
+      font-size: 20px;
+      padding: 40px 0;
+    }
+  }
+}
+
+.prices-item {
+  background-color: $bg;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+
+  @include xlg-block {
+    grid-template-columns: 125px 1fr;
+  }
+  @include lg-block {
+    grid-template-columns: 80px 1fr;
+  }
+  @include sm-block {
+    grid-template-columns: 140px 1fr;
+  }
+
+
+  &__left {
+    padding: 15px 0;
+    @include xlg-block {
+      padding: 40px 0;
+    }
+    @include lg-block {
+      padding: 25px 0;
+    }
+  }
+
+  &__img {
+    @include xlg-block {
+      max-width: 110px;
+    }
+    @include lg-block {
+      max-width: 72px;
+    }
+    @include sm-block {
+      max-width: 120px;
+    }
+
+    img {
+      display: block;
+    }
+  }
+
+  &__right {
+    padding: 70px 10px 70px 0;
+    display: flex;
+    flex-direction: column;
+    @include xlg-block {
+      padding: 40px 10px 80px 0;
+    }
+    @include lg-block {
+      padding: 25px 10px 35px 0;
+    }
+    @include sm-block {
+      padding: 40px 10px 40px 0;
+    }
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    @include xlg-block {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    @include lg-block {
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+    @include sm-block {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__ul {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    margin-bottom: 40px;
+    @include xlg-block {
+      gap: 5px;
+      margin-bottom: 45px;
+    }
+    @include lg-block {
+      margin-bottom: 20px;
+    }
+    @include sm-block {
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__li {
+    font-size: 18px;
+    padding-left: 35px;
+    position: relative;
+    @include xlg-block {
+      font-size: 14px;
+      padding-left: 20px;
+    }
+    @include lg-block {
+      font-size: 12px;
+      padding-left: 15px;
+      line-height: 1;
+    }
+    @include sm-block {
+      font-size: 14px;
+      padding-left: 25px;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: url("/images/icons/li.svg") 0 0 no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      @include xlg-block {
+        width: 14px;
+        height: 14px;
+      }
+      @include lg-block {
+        width: 9px;
+        height: 9px;
+      }
+      @include sm-block {
+        width: 13px;
+        height: 13px;
+      }
+    }
+  }
+
+  &__price {
+    font-size: 32px;
+    margin-top: auto;
+    margin-bottom: 20px;
+    @include xlg-block {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    @include lg-block {
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+    @include sm-block {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__link {
+    width: 158px;
+    height: 49px;
+    font-size: 18px;
+    @include xlg-block {
+      width: 100px;
+      height: 31px;
+      font-size: 11px;
+    }
+    @include lg-block {
+      width: 65px;
+      height: 20px;
+      font-size: 7px;
+    }
+    @include sm-block {
+      width: 94px;
+      height: 29px;
+      font-size: 10px;
+    }
+  }
+}

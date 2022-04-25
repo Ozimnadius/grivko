@@ -257,6 +257,20 @@
     }
   }
 
+  &160 {
+    margin-bottom: 160px !important;
+    @include sm-block{
+      margin-bottom: 40px!important;
+    }
+  }
+
+  &200{
+    margin-bottom: 200px !important;
+    @include sm-block{
+      margin-bottom: 100px !important;
+    }
+  }
+
 }
 
 //Form elements

@@ -1,0 +1,60 @@
+.prices
+    .container
+        h2.prices__title.title Цены
+        .prices__list
+            -
+                var list = [
+                    {
+                        img: '/images/content/prices/1.jpg',
+                        title: 'Classic',
+                        ul: [
+                            'Машинный пошив (4 недели)',
+                            'Ткани Mauro Prato с индексом 130’s',
+                            'Полубортовка',
+                            'Ручная вспушка',
+                        ],
+                        price: 'от 65 000р.'
+                    },
+                    {
+                        img: '/images/content/prices/2.jpg',
+                        title: 'Premium',
+                        ul: [
+                            'Машинный пошив (4 недели)',
+                            'Ткани Mauro Prato с индексом 130’s',
+                            'Полная канва',
+                            'Монограмма',
+                            'Ручная работа 25%',
+                        ],
+                        price: 'от 95 000р.'
+                    },
+                    {
+                        img: '/images/content/prices/3.jpg',
+                        title: 'Luxury',
+                        ul: [
+                            'Машинный пошив (4 недели)',
+                            'Машинный пошив (4 недели)',
+                            'Полная канва',
+                            'Полная канва',
+                            'Индивидуальный принт на подкладе',
+                            'Летний вариант без подклада',
+                            'Ручная работа 50%',
+                        ],
+                        price: 'от 190 000р.'
+                    },
+
+                ];
+            each i in list
+                .prices__item.prices-item
+                    .prices-item__left
+                        .prices-item__img
+                            img(src=i.img alt=i.title)
+                    .prices-item__right
+                        .prices-item__title=i.title
+                        ul.prices-item__ul
+                            each li in i.ul
+                                li.prices-item__li= li
+                        .prices-item__price= i.price
+                        a(href="#").prices-item__link.btn.btn--black Подробнее
+        .prices__desc.
+            Костюм, который идеально выглядит и сидит — <br>
+            не давит, не тянет, не висит и не полнит — это реальность.

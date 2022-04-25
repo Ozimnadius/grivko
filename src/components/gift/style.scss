@@ -25,6 +25,9 @@
     @include lg-block{
       padding-top: 385px;
     }
+    @include sm-block{
+      padding: 0;
+    }
 
     .gift {
       &__grid {
