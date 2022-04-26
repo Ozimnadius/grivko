@@ -116,6 +116,7 @@
 
     img {
       @include tr;
+      max-height: 100%;
     }
   }
 

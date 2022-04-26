@@ -8,7 +8,8 @@ div(class=props.cls).catalog
         if props.filters
             .catalog__filters
                 include ../../components/filters/index
-
+        if props.count
+            .catalog__count Показано:14 из 140
         div(class=props.listClass).catalog__list
             each i in props.list
                 .catalog__item
@@ -20,6 +21,9 @@ div(class=props.cls).catalog
                     <svg xmlns="http://www.w3.org/2000/svg" width="25.441" height="8.335" viewBox="0 0 25.441 8.335">
                     <path id="Контур_154" data-name="Контур 154" d="M25.271,3.758,21.683.17a.579.579,0,0,0-.819.819l2.6,2.6H.579a.579.579,0,0,0,0,1.159H23.463l-2.6,2.6a.579.579,0,1,0,.819.819l3.588-3.588A.579.579,0,0,0,25.271,3.758Z"/>
                     </svg>
+        if props.more
+            a(href="#").catalog__more.btn.btn--gold-fill Загрузить еще
+
         if props.nav
             .catalog__nav
                 include ../../components/pagination/index

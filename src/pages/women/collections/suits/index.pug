@@ -10,17 +10,16 @@ block content
         section.page__desc
             .container
                 .page-desc
-                    h2.page-desc__title.title.title--line Женские костюмы
                     .page-desc__breadcrumbs
                         include ../../../../components/breadcrumbs/index
-                    .page-desc__content.content
-                        p Наша цель — подарить миру идеальные костюмы, подчёркивающие образ и индивидуальность каждой женщины. Команда бренда провела колоссальную работу и создала коллекцию костюмов, сочетающую красоту, элегантность и неповторимый запоминающийся стиль
+                    h2.page-desc__title.title.title--line Женские костюмы
         //- catalog
         section.page__catalog.mb80
             -
                 var props = {
+                    count: true,
                     filters: true,
-                    listClass: "jsFiltersContent",
+                    listClass: "jsFiltersContent catalog__list--3",
                     list: [
                         {
                             img: "/images/content/women/collections/9.jpg",
@@ -96,7 +95,7 @@ block content
                         }
                     ],
                     cls: "catalog--small-title",
-                    nav: true
+                    more: true
                 }
             include ../../../../components/catalog/index
         //- faq

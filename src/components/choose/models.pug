@@ -2,7 +2,11 @@
     each i,x in ["Костюм однобортный с брюками","Костюм двубортный с брюками","Костюм тройка с брюками","Костюм с юбкой"]
         .choose-models__item
             label.choose-model
-                input(type="radio" name="model" value=i).choose-slide__input
+                if x == 0
+                    - var checked = true;
+                else
+                    - var checked = false;
+                input(type="radio" name="model" value=i checked=checked).choose-slide__input
                 span.choose-model__wrap
                     span.choose-model__round
                     span.choose-model__img

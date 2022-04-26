@@ -1,66 +1,47 @@
 .filters {
   --size: 20px;
-  @include xlg-block {
-    --size: 16px;
-  }
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #bababa;
   @include sm-block {
-    --size: 18px;
-    border-bottom: none;
-    position: relative;
-
+    --size: 14px;
+    gap: 10px;
+    padding-bottom: 10px;
   }
 
   &__btn {
-    display: none;
-    background: $bg;
-    height: 93px;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 20px;
-    padding: 10px 25px;
-    @include sm-block {
-      width: 100%;
-      display: flex;
-      border: 1px solid #dfdfdf;
+    font-size: var(--size);
+    svg {
+      display: none;
     }
   }
 
-  &__drop{
-    @include sm-block{
-      display: none;
-      position: absolute;
-      z-index: 10;
-      top: calc(100% - 1px);
-      left: 0;
-      right: 0;
-      background: $bg;
-      border: 1px solid #dfdfdf;
-    }
+  &__drop {
+    flex-grow: 1;
   }
 
   &__list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-
-    @include lg-block {
-      grid-template-columns: repeat(2, 1fr);
-    }
+    display: flex;
+    align-items: center;
+    grid-gap: 30px;
     @include sm-block {
-      grid-template-columns: 100%;
-      grid-gap: 0;
+      gap: 15px;
     }
   }
 
   &__item {
-    @include sm-block {
-      border-bottom: 1px solid #dfdfdf;
-      background-color: $bg;
+    &:last-child {
+      margin-left: auto;
     }
 
-    &:nth-child(odd) {
-      @include sm-block {
-        background-color: #f6f6f6;
+    &:nth-child(2){
+      .filter__drop{
+        @include sm-block{
+          left: 50%;
+          transform: translateX(-50%);
+        }
       }
     }
   }
@@ -71,9 +52,6 @@
     display: none;
     justify-content: center;
     border-bottom: 1px solid #dfdfdf;
-    @include sm-block{
-      display: flex;
-    }
   }
 
   &__submit {
@@ -89,8 +67,8 @@
   z-index: 1;
   user-select: none;
   cursor: pointer;
-  @include lg-block{
-      cursor: initial;
+  @include lg-block {
+    cursor: initial;
   }
 
   &:hover {
@@ -99,67 +77,63 @@
     .filter-view {
       &__arr {
         transform: translateY(-50%) rotate(-180deg);
+        @include sm-block{
+            transform: none;
+        }
       }
     }
   }
 
-  &__btn {
-    height: 90px;
-    border: 1px solid #dfdfdf;
-    @include xlg-block {
-      height: 70px;
+  &.active{
+
+    .filter__drop{
+      height: auto;
     }
-    @include sm-block {
-      height: 60px;
-      border: none;
+    .filter-view {
+      &__arr {
+        transform: translateY(-50%) rotate(-180deg);
+      }
     }
   }
 
   &__drop {
     position: absolute;
     z-index: 1;
-    top: 0;
-    left: 0;
-    right: 0;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
     height: 0;
     overflow: hidden;
     @include tr;
-    @include sm-block {
-      position: static;
-      height: initial!important;
+    @include lg-block {
+      left: 0;
+      transform: translateX(-10%);
     }
   }
 }
 
 .filter-view {
   position: relative;
-  padding: 10px 30px;
-  padding-right: 45px;
+  padding-right: 15px;
 
   display: flex;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  @include xlg-block {
-    padding: 10px 20px;
-    padding-right: 35px;
-  }
-  @include sm-block {
-    padding: 10px 25px;
-  }
 
   &__name {
     font-size: var(--size);
     position: relative;
     z-index: 10;
-    margin-right: 20px;
   }
 
   &__vals {
+    display: none;
     font-size: var(--size);
     position: relative;
     z-index: 10;
-    margin-right: 15px;
+
+    &--visible {
+      display: block;
+    }
 
     &--right {
       margin-left: auto;
@@ -170,18 +144,16 @@
     position: absolute;
     z-index: 10;
     top: 50%;
-    right: 30px;
+    right: 0;
     transform: translateY(-50%);
     @include tr;
-    @include xlg-block {
-      right: 20px;
-    }
-    @include sm-block {
-      display: none;
-    }
 
     svg {
       display: block;
+      @include sm-block{
+        width: 7px;
+        height: 5px;
+      }
     }
   }
 }
@@ -189,27 +161,10 @@
 .filter-drop {
   background: $bg;
   border: 1px solid #dfdfdf;
-  padding-top: 90px;
-  @include xlg-block {
-    padding-top: 70px;
-  }
-  @include sm-block {
-    padding-top: 20px;
-    border: none;
-    background-color: transparent;
-  }
-  @include sm-block {
-    padding-top: 10px;
-  }
+  padding: 30px;
 
-  &__vals {
-    padding: 0 30px 35px;
-    @include xlg-block {
-      padding: 0 20px 20px;
-    }
-    @include sm-block {
-      padding: 0 25px 25px;
-    }
+  @include sm-block {
+    padding: 20px;
   }
 }
 
@@ -217,6 +172,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 200px;
+  @include sm-block{
+    width: 130px;
+  }
 
   &__option {
     cursor: pointer;
@@ -230,6 +189,10 @@
         text-decoration: underline;
       }
     }
+
+    span {
+      white-space: nowrap;
+    }
   }
 }
 
@@ -237,7 +200,10 @@
   display: flex;
   align-items: flex-start;
   gap: 25px;
-
+  width: 300px;
+  @include sm-block{
+    width: 240px;
+  }
 
   &__list {
     display: flex;
@@ -296,8 +262,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: 15px 35px;
+  width: 300px;
   @include sm-block {
     gap: 25px;
+    width: 240px;
   }
 
   &--view {

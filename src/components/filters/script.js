@@ -2,16 +2,18 @@
 window.addEventListener("load", function () {
 
     if (document.querySelector('.jsFilters')) {
-        const filters = new Filters('.jsFilters');
+
+        const filtersObj = new Filters('.jsFilters');
+
+        document.querySelectorAll('.jsFilter').forEach(function (i) {
+            new Filter(i, filtersObj);
+        });
+
+        // $('.filters__btn').on("click", function (e) {
+        //     $(this).next().slideToggle();
+        // });
+
     }
-
-    document.querySelectorAll('.jsFilter').forEach(function (i) {
-        new Filter(i,filters);
-    });
-
-    $('.filters__btn').on("click", function (e) {
-        $(this).next().slideToggle();
-    });
 
 
 });
@@ -35,10 +37,11 @@ class Filter {
     init() {
         if (!media.mobile.matches) {
             $(this.filter).hover(this.slideDown, this.slideUp);
+        } else{
+            $(this.filter).on('click',(e)=>$(this.filter).toggleClass('active'));
         }
 
         this.renderView();
-
 
         this.items.forEach((i) => {
             i.addEventListener('change', () => {
@@ -48,7 +51,6 @@ class Filter {
                 }
             });
         });
-
 
         if (this.btnAll) {
             this.btnAll.addEventListener('click', this.selectAll);

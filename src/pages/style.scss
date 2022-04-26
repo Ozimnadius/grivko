@@ -79,6 +79,16 @@
       margin-bottom: 40px !important;
     }
   }
+
+  &__cjoose{
+    .container{
+      @include xlg-block{
+        max-width: 100%;
+        width: 100%;
+        padding: 0;
+      }
+    }
+  }
 }
 
 .page-desc {
