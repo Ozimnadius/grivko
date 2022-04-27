@@ -1,0 +1,158 @@
+.suit-card {
+  width: 100%;
+  @include sm-block{
+    padding: 30px 10px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 110px;
+    @include xlg-block {
+      grid-template-columns: 7fr 5fr;
+      margin-bottom: 60px;
+    }
+    @include lg-block {
+      grid-template-columns: 100%;
+      gap: 30px;
+      margin: 0;
+    }
+  }
+
+  &__left {
+    border-right: 1px solid #eaeaea;
+    @include lg-block {
+      border: none;
+    }
+  }
+
+  &__left-grid {
+    display: grid;
+    grid-template-columns: 325px 1fr;
+    gap: 35px;
+    margin-bottom: 30px;
+    @include sm-block{
+        grid-template-columns: 100%;
+    }
+  }
+
+  &__img {
+    img {
+      display: block;
+    }
+  }
+
+  &__title {
+    font-size: 42px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  &__price {
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
+
+  &__ul {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  &__li {
+    font-size: 18px;
+    padding-left: 35px;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: url("/images/icons/li.svg") 0 0 no-repeat;
+      background-size: cover;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__sub {
+    color: #080808;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  &__txt {
+    font-size: 16px;
+  }
+
+  &__right {
+    padding-left: 110px;
+    @include xlg-block {
+      padding-left: 30px;
+    }
+    @include lg-block {
+      padding-left: 0;
+    }
+  }
+
+  &__content {
+    max-width: 600px;
+    margin-bottom: 50px;
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  &__send {
+    width: 100%;
+    max-width: 319px;
+    height: 74px;
+    font-size: 24px;
+    @include sm-block{
+      height: 40px;
+      font-size: 16px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    @include lg-block {
+      display: none;
+    }
+  }
+
+  &__item {
+    padding-left: 60px;
+    position: relative;
+    font-size: 29px;
+    @include xlg-block {
+      font-size: 24px;
+      padding-left: 40px;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      width: 34px;
+      height: 34px;
+      background: url("/images/icons/li.svg") 0 0 no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      @include xlg-block {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
+
+}

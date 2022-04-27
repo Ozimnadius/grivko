@@ -630,6 +630,51 @@ class Faq {
 
 
 
+
+window.addEventListener('load', function () {
+
+    if  (document.querySelector('.product-layers')) {
+        new OzimnadTabs({
+            selector: '.product-layers'
+        });
+    }
+
+    document.querySelectorAll('.product-slider').forEach(i => {
+        let swiper = i.querySelector('.product-slider__swiper'),
+            pag = i.querySelector('.product-slider__pag'),
+            prev = i.querySelector('.product-slider__prev'),
+            next = i.querySelector('.product-slider__next');
+
+        new Swiper(swiper, {
+            slidesPerView: 2,
+            spaceBetween: 10,
+            watchOverflow: true,
+            pagination: {
+                el: pag,
+                clickable: true,
+            },
+            navigation: {
+                nextEl: next,
+                prevEl: prev,
+            },
+            breakpoints: {
+                // when window width is >= 768px
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 10
+                },
+                // when window width is >= 1280px
+                1280: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 10,
+                }
+            }
+        });
+    });
+});
+window.addEventListener('load', function () {
+    $('.product-size__select').styler();
+});
 //photo.js
 window.addEventListener('load', function () {
     if (document.querySelector('.jsPhotos')) {
@@ -638,11 +683,16 @@ window.addEventListener('load', function () {
 
     if (media.mobile.matches) {
         const photoSwiper = new Swiper('.photo__swiper', {
-            slidesPerView: "auto",
+            slidesPerView: 1,
             loop: true,
             spaceBetween: 10,
+            pagination: {
+                el: '.photo__pag',
+                type: 'bullets',
+            },
         });
     }
+
 
 });
 
@@ -682,6 +732,11 @@ class Photo {
 
 }
 window.addEventListener('load', function (){
+    new OzimnadAccordion({
+        selector: '.product-acco'
+    });
+});
+window.addEventListener('load', function (){
     if(document.querySelector('.jsTabs')) {
         new Tabs();
     }
@@ -716,53 +771,6 @@ class Tabs{
         this.btnsList[this.activeIndex].classList.add('active');
         this.tabsList[this.activeIndex].classList.add('active');
     }
-}
-// product-revs.js
-window.addEventListener('load', function () {
-    if (document.querySelector('.jsRevs')) {
-        const revs = new Revs();
-    }
-
-});
-
-class Revs {
-    constructor() {
-        this.revs = document.querySelector('.jsRevs');
-        this.hiddens = {
-            items: this.revs.querySelectorAll('.jsRev[data-more]'),
-            open: false,
-            btn: this.revs.querySelector('.jsRevs__more')
-        };
-        this.init();
-    }
-
-    init() {
-        this.hiddens.btn.addEventListener('click', this.hiddensBtnClick);
-    }
-
-    hiddensBtnClick = () => {
-        if (this.hiddens.open) {
-            this.hiddensHide();
-        } else {
-            this.hiddensShow();
-        }
-    }
-
-    hiddensShow() {
-        this.hiddens.items.forEach(i => i.hidden = false);
-        this.hiddens.btn.classList.add('active');
-        this.hiddens.btn.firstElementChild.innerText = "Скрыть";
-        this.hiddens.open = true;
-    }
-
-    hiddensHide() {
-        this.hiddens.items.forEach(i => i.hidden = true);
-        this.hiddens.btn.classList.remove('active');
-        this.hiddens.btn.firstElementChild.innerText = "Все отзывы";
-        this.hiddens.open = false;
-    }
-
-
 }
 //- content.js
 window.addEventListener('load', function () {

@@ -11,12 +11,10 @@
     background: none;
     white-space: nowrap;
     padding: 25px 40px;
-
     font-size: 24px;
     font-weight: 500;
     text-transform: uppercase;
-
-    @include xlg-block{
+    @include lg-block{
       font-size: 18px;
     }
 
@@ -30,7 +28,6 @@
       display: grid;
       grid-template-columns: 100%;
       grid-gap: 10px;
-      margin: 0 -10px;
     }
   }
 
@@ -51,6 +48,11 @@
 
     &.active{
       display: block;
+      .product-tabs__tab-plus{
+        &:after{
+          transform: translate(-50%,-50%) rotate(-90deg);
+        }
+      }
     }
 
     &-btn{
@@ -60,9 +62,44 @@
       text-transform: uppercase;
       text-align: center;
       width: 100%;
-      padding: 25px 10px;
+      padding: 25px 15px;
       @include sm-block{
         display: block;
+        position: relative;
+        text-align: left;
+      }
+    }
+
+    &-plus{
+      display: block;
+      width: 28px;
+      height: 28px;
+      background-color: $gold;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%);
+
+      &:before,&:after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: $bg;
+        @include tr;
+      }
+
+      &:before{
+        width: 14px;
+        height: 2px;
+      }
+
+      &:after{
+        width: 2px;
+        height: 14px;
       }
     }
 

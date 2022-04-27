@@ -1,73 +1,60 @@
 .sizes {
-  max-width: 1365px;
+  padding: 30px 50px 50px 50px;
+  max-width: 620px;
   width: 100%;
-  @include xlg-block {
-    max-width: 1170px;
-  }
-  @include lg-block {
-    max-width: 710px;
-    padding: 30px;
-  }
-  @include sm-block {
-    padding: 50px 20px 20px;
+  @include sm-block{
+    padding: 30px 20px;
   }
 
   &__title {
-    margin-bottom: 30px;
-    @include xlg-block {
-      font-size: 27px;
-    }
-    @include sm-block {
-      display: none;
+    font-size: 24px;
+    text-transform: none;
+    font-weight: 400;
+    color: #454545;
+
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+
+    &:after {
+      content: '';
+      width: 147px;
+      height: 2px;
+      background-color: $gold;
     }
   }
 
   &__table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 18px;
-    @include xlg-block {
-      font-size: 16px;
-    }
-    @include lg-block {
-      margin: 0 -30px;
-      width: calc(100% + 60px);
-    }
-    @include sm-block {
-      margin: 0 -20px;
-      width: calc(100% + 40px);
-      font-size: 15px;
-    }
+    color: #454545;
 
     th {
-      padding: 15px;
-      text-align: center;
-      background: #F8F8F8;
+      font-size: 13px;
       font-weight: 500;
-      text-transform: uppercase;
-      @include lg-block {
-        padding: 10px;
-      }
-      @include sm-block {
-        padding: 10px 5px;
-        font-size: 10px;
-      }
+      padding: 12px;
+      text-align: center;
+      border: 1px solid #dbdbdb;
     }
 
     td {
-      font-weight: 500;
+      font-size: 14px;
+      font-weight: 400;
       text-align: center;
-      padding: 10px;
-      border-right: 1px solid #D5D5D5;
-      @include lg-block {
-        padding: 8px 10px;
-      }
-      @include sm-block{
-        padding: 8px 5px;
-      }
+      padding: 12px;
+      border: 1px solid #dbdbdb;
+      width: 25%;
+    }
 
-      &:last-child {
-        border-right: none;
+    tbody{
+      tr{
+        &:nth-child(odd){
+          background-color: #f4f4f4;
+        }
       }
     }
   }

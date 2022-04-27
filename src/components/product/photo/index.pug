@@ -20,6 +20,7 @@
                 {
                     thumb: "/images/content/women/collections/product/thumb3.jpg",
                     img: "https://www.youtube.com/watch?v=_sI_Ps7JSEk",
+                    cls: "photo__thumb--video",
                     fancy: true
                 }
             ]
@@ -59,11 +60,28 @@
                     img: "/images/content/women/collections/product/img3.jpg",
                     thumb: "/images/content/women/collections/product/thumb3.jpg",
                     cls: "jsThumb"
-                }
+                },
+                {
+                    img: "/images/content/women/collections/product/img1.jpg",
+                    thumb: "/images/content/women/collections/product/thumb1.jpg",
+                    cls: "jsThumb"
+                },
+                {
+                    img: "/images/content/women/collections/product/img2.jpg",
+                    thumb: "/images/content/women/collections/product/thumb2.jpg",
+                    cls: "jsThumb"
+                },
+                {
+                    img: "/images/content/women/collections/product/img3.jpg",
+                    thumb: "/images/content/women/collections/product/thumb3.jpg",
+                    cls: "jsThumb"
+                },
+
             ]
         .swiper-wrapper
             each i in slides
                 .swiper-slide.photo__slide
                     .photo__img-img
                         img(src=i.img alt="lorem")
+        .photo__pag
 

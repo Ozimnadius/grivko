@@ -6,11 +6,16 @@ window.addEventListener('load', function () {
 
     if (media.mobile.matches) {
         const photoSwiper = new Swiper('.photo__swiper', {
-            slidesPerView: "auto",
+            slidesPerView: 1,
             loop: true,
             spaceBetween: 10,
+            pagination: {
+                el: '.photo__pag',
+                type: 'bullets',
+            },
         });
     }
+
 
 });
 

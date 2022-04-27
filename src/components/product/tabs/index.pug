@@ -1,21 +1,33 @@
 .product-tabs.jsTabs
     .product-tabs__btns
-        button(type='button').product-tabs__btn.jsTabs__btn Подробнее о модели
-        button(type='button').product-tabs__btn.jsTabs__btn Доставка
-        button(type='button').product-tabs__btn.jsTabs__btn Костюм на заказ
+        button(type='button').product-tabs__btn.jsTabs__btn
+            span.product-tabs__btn-title Подробнее о модели
+            span.product-tabs__btn-plus
+        button(type='button').product-tabs__btn.jsTabs__btn
+            span.product-tabs__btn-title Доставка
+            span.product-tabs__btn-plus
+        button(type='button').product-tabs__btn.jsTabs__btn
+            span.product-tabs__btn-title Костюм на заказ
+            span.product-tabs__btn-plus
     .product-tabs__tabs.jsFaq
         .product-tabs__tab.jsTabs__tab.jsFaq__item
-            button(type='button').product-tabs__tab-btn Подробнее о модели
+            button(type='button').product-tabs__tab-btn
+                span.product-tabs__tab-title Подробнее о модели
+                span.product-tabs__tab-plus
             .product-tabs__tab-drop.jsFaq__wrap
                 .product-tabs__tab-content.jsFaq__content
                     include about/index
         .product-tabs__tab.jsTabs__tab.jsFaq__item
-            button(type='button').product-tabs__tab-btn Доставка
+            button(type='button').product-tabs__tab-btn
+                span.product-tabs__tab-title Доставка
+                span.product-tabs__tab-plus
             .product-tabs__tab-drop.jsFaq__wrap
                 .product-tabs__tab-content.jsFaq__content
                     include delivery/index
         .product-tabs__tab.jsTabs__tab.jsFaq__item
-            button(type='button').product-tabs__tab-btn Костюм на заказ
+            button(type='button').product-tabs__tab-btn
+                span.product-tabs__tab-title Костюм на заказ
+                span.product-tabs__tab-plus
             .product-tabs__tab-drop.jsFaq__wrap
                 .product-tabs__tab-content.jsFaq__content
                     include custom/index

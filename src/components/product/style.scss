@@ -10,57 +10,167 @@
   }
 
   &__grid {
+    max-width: 1560px;
+    width: 100%;
+    margin: 0 auto 110px;
+
+    grid-template-columns: 1fr 475px;
     display: grid;
-    grid-template-columns: 900fr 860fr;
-    grid-gap: 60px;
-    margin-bottom: 70px;
+    grid-template-areas: 'left info' 'left right';
+    grid-template-rows: auto 1fr;
+    align-content: flex-start;
+    align-items: flex-start;
+    gap: 30px 90px;
     @include xlg-block {
-      grid-gap: 40px;
-      grid-template-columns: 105fr 135fr;
+      gap: 30px 20px;
     }
-    @include lg-block  {
-      grid-gap: 50px;
+    @include lg-block {
       grid-template-columns: 100%;
+      grid-template-areas: 'info' 'left' 'right';
+      gap: 30px;
     }
-    @include sm-block{
-        grid-gap: 30px;
+    @include sm-block {
+      gap: 20px;
+      margin-bottom: 60px;
     }
   }
 
-  &__top {
-    margin-bottom: 27px;
+  &__left {
+    grid-area: left;
+  }
+
+  &__info {
+    grid-area: info;
+    @include lg-block {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+    @include sm-block {
+      gap: 5px;
+      text-align: center;
+      justify-content: center;
+    }
   }
 
   &__title {
+    font-size: 30px;
     margin-bottom: 15px;
-  }
-
-  &__price {
-    display: flex;
-    align-items: center;
-
-    font-size: 24px;
-    font-weight: 500;
-    text-transform: uppercase;
-
-    svg {
-      margin-left: 15px;
+    @include lg-block {
+      width: 100%;
+      margin-bottom: 0;
+    }
+    @include sm-block {
+      font-size: 20px;
     }
   }
 
-  &__composition {
+  &__prices {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
     margin-bottom: 25px;
-    @include xlg-block {
-      margin-bottom: 35px;
+    @include lg-block {
+      margin-bottom: 0;
+    }
+  }
+
+  &__price {
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    @include sm-block {
+      font-size: 22px;
+    }
+
+
+    &--old {
+      color: #c1c1c1;
+      font-size: 20px;
+      text-decoration: line-through;
+      @include sm-block {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__spot {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #000000;
+    font-size: 20px;
+    text-decoration: underline;
+    cursor: pointer;
+    @include sm-block {
+      font-size: 16px;
+      gap: 5px;
+    }
+
+    svg {
+      @include sm-block {
+        width: 21px;
+        height: 25px;
+      }
+    }
+  }
+
+  &__right {
+    grid-area: right;
+    @include lg-block {
+      width: 100%;
+      max-width: 475px;
+      margin: 0 auto;
     }
   }
 
   &__size {
-    margin-bottom: 35px;
+    margin-bottom: 10px;
+    @include sm-block{
+      margin-bottom: 25px;
+    }
   }
 
-  &__delivery {
-    margin-bottom: 35px;
+  &__btns {
+    margin-bottom: 40px;
+  }
+
+  &__composition {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 200px;
+    @include lg-block {
+      display: block;
+      margin-bottom: 80px;
+    }
+    @include sm-block{
+      margin-bottom: 100px;
+    }
+
+    &-title {
+      margin-bottom: 40px;
+      @include lg-block {
+        font-size: 24px;
+        margin-bottom: 30px;
+      }
+      @include sm-block{
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__layers {
+    margin-bottom: 140px;
+    @include lg-block {
+      margin-bottom: 100px;
+    }
+    @include sm-block{
+      margin-bottom: 130px;
+    }
   }
 
   &__tabs {
@@ -72,60 +182,156 @@
 
 }
 
-.product-top {
-  display: flex;
-  justify-content: space-between;
-  @include sm-block {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  &__left {
-    @include sm-block {
-      order: 1;
-    }
-  }
-}
-
-.convert {
+.product-slider {
   position: relative;
-  display: inline-flex;
+  @include lg-block {
+    width: 100%;
+  }
 
-  &:hover {
-    .convert__drop {
-      opacity: 1;
-      pointer-events: all;
+  &__swiper {
+    @include lg-block {
+      width: 100%;
     }
   }
 
-  &__drop {
-    display: block;
+  &__slide {
+    width: 433px;
+    box-sizing: border-box;
+    @include xlg-block {
+      width: 368px;
+    }
+    @include lg-block {
+      width: auto;
+    }
+  }
+
+  &__nav {
     position: absolute;
-    top: 100%;
-    left: 0;
-    border: 1px solid #707070;
-    padding: 12px 20px;
-    background: $bg;
-    pointer-events: none;
-    opacity: 0;
-  }
-
-  &__list {
+    z-index: 10;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    pointer-events: none;
+    @include sm-block{
+      display: none;
+    }
   }
 
-  &__item {
-    white-space: nowrap;
+  &__arr {
+    padding: 15px;
+    pointer-events: all;
+
+    &:hover {
+      svg {
+        path {
+          fill: $gold;
+        }
+      }
+    }
+
+    &.swiper-button-disabled {
+      opacity: .5;
+
+      svg {
+        path {
+          fill: #acacac;
+        }
+      }
+    }
+
+    svg {
+      path {
+        @include tr;
+      }
+    }
+
+
+  }
+
+  &__pag {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    top: calc(100% + 25px);
+    bottom: initial !important;
+
+    .swiper-pagination-bullet {
+      margin: 0 !important;
+      width: 24px;
+      height: 24px;
+      border: 2px solid #9f9f9f;
+      background: none;
+      padding: 3px;
+      opacity: 1;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: $gold;
+        opacity: 0;
+      }
+    }
+
+    .swiper-pagination-bullet-active {
+      border-color: $gold;
+
+      &:before {
+        opacity: 1;
+      }
+    }
   }
 }
 
-@import "avaible/style";
-@import "composition/style";
+.product-layers {
+  &__btns {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 40px;
+    @include lg-block {
+      gap: 130px;
+    }
+    @include sm-block{
+        gap: 0;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__btn {
+    color: #a5a5a5;
+    font-size: 32px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 4px solid transparent;
+    @include tr;
+    @include lg-block {
+      font-size: 24px;
+    }
+    @include sm-block{
+      font-size: 18px;
+      padding-bottom: 5px;
+    }
+
+
+    &.active {
+      border-color: $gold;
+      color: $txt;
+    }
+  }
+}
+
 @import "photo/style";
 @import "size/style";
-@import "delivery/style";
 @import "btns/style";
+@import "acco/style";
 @import "tabs/style";
-@import "revs/style";

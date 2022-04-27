@@ -1,0 +1,17 @@
+.product-acco
+    each i in ['Описание','Технология пошива','Состав и уход','Размер изделия']
+        div(data-accordion="item").product-acco__item
+            div(data-accordion="btn").product-acco__btn
+                span= i
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="7.41" viewBox="0 0 12 7.41">
+                <path id="Icon_material-chevron-left" data-name="Icon material-chevron-left" d="M19.41,10.41,18,9l-6,6,6,6,1.41-1.41L14.83,15Z" transform="translate(-9 19.41) rotate(-90)" fill="#030303"/>
+                </svg>
+            div(data-accordion="collapse").product-acco__collapse
+                div(data-accordion="content").product-acco__content.content
+                    p.
+                        Цвет: Белый<br>
+                        Состав: Ткань: 60 % - вискоза, 35% - ацетат, 5% - эластан. Подкладка: 95% - вискоза, 5% - эластан.<br>
+                        Страна производства: Россия<br>
+                        Страна дизайна: Россия<br>
+                        Готовые изделия представлены в размерах 38-52 в трех размерных ростах, а также на заказ от 52 до 64.<br>
+                        Артикул: 7TP202160-05-JK0010;

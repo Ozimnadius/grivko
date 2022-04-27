@@ -10,45 +10,10 @@ block content
         section.page__product.mb80
             .container
                 include ../../../../components/product/index
-        //- similar
-        section.page__similar.mb80
-            -
-                var props = {
-                    title: "Похожие костюмы",
-                    link: {
-                        href: "/women/collections/suits/",
-                        name: "Открыть всю коллекцию"
-                    },
-                    list: [
-                        {
-                            img: "/images/content/women/collections/9.jpg",
-                            title: "КОСТЮМ-ТРОЙКА",
-                            price: "от 75 000 руб.",
-                            href: "/"
-                        },
-                        {
-                            img: "/images/content/women/collections/10.jpg",
-                            title: "ОДНОБОРТНЫЙ КОСТЮМ",
-                            price: "от 75 000 руб.",
-                            href: "/"
-                        },
-                        {
-                            img: "/images/content/women/collections/11.jpg",
-                            title: "ОДНОБОРТНЫЙ КОСТЮМ",
-                            price: "от 75 000 руб.",
-                            href: "/"
-                        },
-                        {
-                            img: "/images/content/women/collections/12.jpg",
-                            title: "КОСТЮМ-ТРОЙКА",
-                            price: "от 75 000 руб.",
-                            href: "/"
-                        }
-                    ],
-                    cls: "catalog--small-title"
-                };
-            include ../../../../components/catalog/index
+        //- revs
+        section.page__section.mb80
+            include ../../../../components/revs/index
         //- choose
-        section.page__choose
+        section.page__cjoose
             .container
                 include ../../../../components/choose/index

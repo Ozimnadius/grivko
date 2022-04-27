@@ -1,16 +1,102 @@
-.product-size{
-
-  &__standart{
-    margin-bottom: 30px;
+.product-size {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  @include sm-block{
+      grid-template-columns: 100%;
   }
 
-  &__filters{
-    margin-bottom: 20px;
+  &__item {
+    border: 1px solid $txt;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-left: 15px;
+    padding-right: 10px;
+    cursor: pointer;
+    position: relative;
   }
 
+  &__title {
+    white-space: nowrap;
+    font-size: 20px;
+  }
 
+  &__select {
+    flex-grow: 1;
+  }
+
+  .jq-selectbox {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    --font: 20px/28px "Futura PT", sans-serif;
+
+    &.focused{
+      .jq-selectbox__select{
+        border: none;
+      }
+    }
+
+    &.opened{
+      .jq-selectbox__trigger-arrow{
+        transform: rotate(-180deg);
+      }
+    }
+
+    &__select {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: none;
+      border-radius: 0;
+      background: none;
+      box-shadow: none;
+      font: var(--font);
+      font-weight: 500;
+      color: $txt;
+      text-shadow: none;
+      padding: 0 10px 0 15px;
+    }
+
+    &__select-text {
+      text-align: right;
+    }
+
+    &__trigger {
+      position: static;
+      width: auto;
+      height: auto;
+      border: none;
+    }
+
+    &__trigger-arrow {
+      position: static;
+      border: none;
+      background: url("/images/icons/chevron-down.svg") 0 0 no-repeat;
+      background-size: cover;
+      width: 12px;
+      height: 8px;
+      @include tr;
+    }
+
+    &__dropdown {
+      top: 100% !important;
+      font: var(--font);
+      font-weight: 500;
+    }
+
+    li {
+      &:hover {
+        background-color: $gold;
+      }
+    }
+  }
 }
-
-@import "standart/style";
-@import "select/style";
-@import "desc/style";

@@ -54,7 +54,7 @@
                             each li in i.ul
                                 li.prices-item__li= li
                         .prices-item__price= i.price
-                        a(href="#").prices-item__link.btn.btn--black Подробнее
+                        a(href="#" data-id="99" data-action="openAjaxForm" data-ajax="/php/suit.php").prices-item__link.btn.btn--black.jsAction Подробнее
         .prices__desc.
             Костюм, который идеально выглядит и сидит — <br>
             не давит, не тянет, не висит и не полнит — это реальность.

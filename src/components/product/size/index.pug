@@ -1,7 +1,11 @@
 .product-size
-    .product-size__standart
-        include standart/index
-    .product-size__filters.jsFilters
-        include select/index
-    .product-size__desc
-        include desc/index
+    .product-size__item
+        .product-size__title Выбрать размер:
+        select(name='size').product-size__select
+            each i in [38,39,40]
+                option(value=i)= i
+    .product-size__item
+        .product-size__title Выбрать рост:
+        select(name='height').product-size__select
+            each i in ['168-175','168-175','168-175',]
+                option(value=i)= i
