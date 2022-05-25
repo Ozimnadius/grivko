@@ -41,6 +41,16 @@
     }
   }
 
+  &__img{
+    overflow: hidden;
+    img{
+      @include tr;
+      &:hover{
+        transform: scale(1.1);
+      }
+    }
+  }
+
   &__bottom {
     margin-top: 80px;
     padding-bottom: 280px;

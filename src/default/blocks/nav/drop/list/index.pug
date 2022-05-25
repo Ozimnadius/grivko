@@ -1,8 +1,10 @@
 - var cols = drop.cols.left;
+- var index = 0;
 .nav-list
     .nav-list__title= i.name
     .nav-list__cols
         each col in cols
             .nav-list__col
                 each item in col
-                    a(href="/").nav-list__item= item
+                    a(href="/" data-id=index).nav-list__item= item
+                    - index++;

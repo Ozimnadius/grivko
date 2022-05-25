@@ -104,10 +104,7 @@
     width: 334px;
     height: 58px;
     font-size: 20px;
-    border: 1px solid $txt;
-    color: #0a0a0a;
-    margin: 0 auto;
-    margin-top: auto;
+    margin: auto auto 0;
     @include tr;
     @include xlg-block{
       width: 100%;

@@ -55,12 +55,10 @@
   &--gold-fill {
     background-color: $gold;
     color: $bg;
-    border-color: $gold;
-
+    border: none;
 
     &:hover {
-      background-color: lighten($gold, 10);
-      border-color: lighten($gold, 10);
+      background-color: darken($gold, 10);
       color: $bg;
     }
   }
@@ -91,7 +89,6 @@
     margin-left: 15px;
     transition: transform 0.3s;
   }
-
 
 }
 
@@ -213,7 +210,7 @@
 
   &70 {
     margin-bottom: 70px !important;
-    @include lg-block{
+    @include lg-block {
       margin-bottom: 35px !important;
     }
   }
@@ -250,21 +247,21 @@
 
   &140 {
     margin-bottom: 140px !important;
-    @include xlg-block{
+    @include xlg-block {
       margin-bottom: 100px !important;
     }
   }
 
   &160 {
     margin-bottom: 160px !important;
-    @include sm-block{
-      margin-bottom: 40px!important;
+    @include sm-block {
+      margin-bottom: 40px !important;
     }
   }
 
-  &200{
+  &200 {
     margin-bottom: 200px !important;
-    @include sm-block{
+    @include sm-block {
       margin-bottom: 100px !important;
     }
   }
@@ -272,12 +269,12 @@
 }
 
 //Form elements
-:root{
-  --height:74px;
+:root {
+  --height: 74px;
   --fz: 20px;
   --padding: 0 30px;
-  @include lg-block{
-    --height:60px;
+  @include lg-block {
+    --height: 60px;
     --padding: 0 25px;
   }
   @include sm-block {
@@ -324,4 +321,46 @@
 
 .ovh {
   overflow: hidden;
+}
+
+.flash {
+  --duration: 4s;
+  overflow: hidden;
+  position: relative;
+  border: none;
+  background-color: #F0B732;
+  color: $bg;
+  width: 333px;
+  max-width: 100%;
+  height: 58px;
+
+  &:before {
+    content: '';
+    display: block;
+    background-image: linear-gradient(90deg, rgba(240, 183, 50, 0) 5.65%, #FFF2D3 51.2%, rgba(240, 183, 50, 0) 94.9%);
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    width: 300px;
+    transform: skew(-28deg);
+    animation-name: blick;
+    animation-duration: 6s;
+    animation-iteration-count: infinite
+  }
+
+  span {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+@keyframes blick {
+  50%{
+    left: -100%;
+  }
+  to {
+    left: 110%
+  }
 }

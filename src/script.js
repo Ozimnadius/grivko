@@ -1,6 +1,7 @@
 
 //USER
 // @prepros-append default/js/common.js
+// @prepros-append default/blocks/nav/script.js
 // @prepros-append default/blocks/nav/drop/fashions/script.js
 // @prepros-append default/blocks/footer/script.js
 //COMPONENTS

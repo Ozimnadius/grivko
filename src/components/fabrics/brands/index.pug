@@ -136,7 +136,7 @@
             }
         ];
     .fabrics-brands__acco
-        each i in list
+        each i,x in list
             div(data-accordion="item").fabrics-brands__item
                 div(data-tabs="btn" data-accordion="btn").fabrics-brands__btn
                     .fabrics-brands__img!=i.svg
@@ -146,9 +146,9 @@
                         .fabrics-tabs__grid
                             .fabrics-tabs__left
                                 .fabrics-tabs__imgs
-                                    each i in [1,2]
-                                        .fabrics-tabs__img
-                                            img(src="/images/content/women/tailoring/fabrics/" + i + ".png" alt="lorem")
+                                    each img in [1,2]
+                                        a(href="/images/content/women/tailoring/fabrics/" + img + ".png" data-fancybox="images").fabrics-tabs__img
+                                            img(src="/images/content/women/tailoring/fabrics/" + img + ".png" alt="lorem")
                             .fabrics-tabs__right
                                 .fabrics-tabs__content.content
                                     h2= i.name+x
@@ -161,10 +161,10 @@
                             .fabrics-tabs__list-top
                                 .fabrics-tabs__list-title.title Палитра тканей
                                 .fabrics-tabs__list-txt И это лишь малая часть
-                            - var i = 1;
+                            - var img = 1;
                             .fabrics__list
-                                while i < 31
-                                    .fabrics__item
+                                while img < 31
+                                    a(href="/images/content/women/tailoring/fabrics/list/" + img + ".jpg" data-fancybox="items").fabrics__item
                                         .fabrics__item-img
-                                            img(src="/images/content/women/tailoring/fabrics/list/" + i + ".jpg" alt="lorem")
-                                        - i++
+                                            img(src="/images/content/women/tailoring/fabrics/list/" + img + ".jpg" alt="lorem")
+                                        - img++

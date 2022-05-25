@@ -41,15 +41,50 @@
 
   &__item {
     position: relative;
+    aspect-ratio: 1/1;
 
-    &:before {
+
+    &:hover{
+      &:before,&:after{
+        opacity: 1;
+      }
+    }
+
+    &:before{
       content: '';
       display: block;
-      padding-top: 100%;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(#000,.3);
+      opacity: 0;
+      pointer-events: none;
+      @include tr;
+    }
+
+    &:after{
+      content: '';
+      display: block;
+      width: 40px;
+      height: 40px;
+      background-image: url(/images/icons/zoom-in.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      opacity: 0;
+      @include tr;
     }
 
     &-img {
       position: absolute;
+      z-index: 0;
       top: 0;
       bottom: 0;
       left: 0;

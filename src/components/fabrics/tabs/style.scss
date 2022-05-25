@@ -114,13 +114,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include tr;
     @include xlg-block {
       width: calc(100% / 3);
       padding: 30px 0;
       text-align: center;
     }
 
+    &:hover{
+      color: $gold;
+    }
+
     &.active {
+      color: currentColor;
       background-color: #f0f0f0;
     }
   }
@@ -171,6 +177,52 @@
     @include sm-block {
       grid-template-columns: repeat(2, 1fr);
       gap: 5px;
+    }
+  }
+
+  &__img{
+    position: relative;
+
+    &:hover{
+      &:before,&:after{
+        opacity: 1;
+      }
+    }
+
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(#000,.3);
+      opacity: 0;
+      pointer-events: none;
+      @include tr;
+    }
+
+    &:after{
+      content: '';
+      display: block;
+      width: 40px;
+      height: 40px;
+      background-image: url(/images/icons/zoom-in.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      opacity: 0;
+      @include tr;
+    }
+
+    img{
+      display: block;
     }
   }
 

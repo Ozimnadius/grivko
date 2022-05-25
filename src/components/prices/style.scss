@@ -69,9 +69,21 @@
     grid-template-columns: 140px 1fr;
   }
 
+  &:hover{
+    .prices-item__img{
+      transform: translateX(15%);
+    }
+    .prices-item__link{
+      background-color: $gold;
+      border-color: $gold;
+      color: $bg;
+    }
+  }
+
 
   &__left {
     padding: 15px 0;
+    overflow: hidden;
     @include xlg-block {
       padding: 40px 0;
     }
@@ -81,15 +93,8 @@
   }
 
   &__img {
-    @include xlg-block {
-      max-width: 110px;
-    }
-    @include lg-block {
-      max-width: 72px;
-    }
-    @include sm-block {
-      max-width: 120px;
-    }
+    margin-left: -50%;
+    @include tr;
 
     img {
       display: block;

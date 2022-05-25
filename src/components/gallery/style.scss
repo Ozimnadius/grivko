@@ -91,15 +91,41 @@
     }
 
     &:hover {
+      &:before,&:after{
+        opacity: 1;
+      }
+
       img {
         transform: scale(1.05);
       }
+    }
+
+    &:after{
+      content: '';
+      display: block;
+      width: 40px;
+      height: 40px;
+      background-image: url(/images/icons/zoom-in.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      opacity: 0;
+      @include tr;
     }
 
     &:before {
       content: '';
       display: block;
       padding-top: calc(667 / 433 * 100%);
+      position: relative;
+      z-index: 2;
+      background: rgba(#000,.3);
+      opacity: 0;
+      @include tr;
     }
 
     img {

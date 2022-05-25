@@ -131,10 +131,7 @@
     width: 100%;
     max-width: 319px;
     height: 74px;
-    background-color: $gold;
-    color: $bg;
     font-size: 24px;
-    border-color: $gold;
     @include lg-block {
       max-width: 226px;
       height: 53px;
@@ -145,9 +142,5 @@
       margin-top: 20px;
     }
 
-    &:hover {
-      background-color: lighten($gold, 10%);
-      color: $bg;
-    }
   }
 }

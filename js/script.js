@@ -51,6 +51,18 @@ window.addEventListener("load", function () {
 
 });
 
+window.addEventListener('load', function (){
+
+   let imgs = $('.nav-drop__items');
+
+   $('.nav-list__item').hover(function (){
+      let elem = $(this).closest('.nav-drop').find(`.nav-drop__items[data-id=${this.dataset.id}]`);
+      elem.addClass('active');
+   }, function (){
+      let elem = $(this).closest('.nav-drop').find(`.nav-drop__items[data-id=${this.dataset.id}]`);
+      elem.removeClass('active');
+   });
+});
 //- nav-fashions.js
 window.addEventListener('load', function () {
     document.querySelectorAll('.nav-fashions').forEach(i => new Fashion(i));

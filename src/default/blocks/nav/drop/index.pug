@@ -5,10 +5,14 @@
             .nav-drop__list
                 include list/index
         .nav-drop__right
-            .nav-drop__items
-                each img in drop.cols.right
-                    .nav-drop__item
-                        img(src=img alt="lorem")
+            - var index = 0;
+            each col in drop.cols.left
+                each item in col
+                    div(data-id=index).nav-drop__items
+                        - index++;
+                        each img in drop.cols.right
+                            .nav-drop__item
+                                img(src=img alt="lorem")
     else
         .nav-drop__links
             each i in drop.items
